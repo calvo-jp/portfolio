@@ -17,9 +17,7 @@ const sans = Inter({
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={sans.className}>
-      <body className="min-h-screen bg-white font-sans text-gray-900">
-        {children}
-      </body>
+      {children}
     </html>
   );
 }
