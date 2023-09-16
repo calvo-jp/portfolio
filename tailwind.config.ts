@@ -91,7 +91,7 @@ const config: Config = {
         31.5: '7.875rem',
         32: '8rem',
 
-        'mobile-navbar-height': '4rem',
+        'mobile-navbar-height': '4.5rem',
       },
     },
   },
