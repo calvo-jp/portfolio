@@ -29,7 +29,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         type="button"
         disabled={loading || disabled}
         className={twMerge(
-          'flex items-center justify-center gap-1.5 rounded-lg outline-none transition-all duration-150 active:scale-95 disabled:cursor-not-allowed disabled:active:scale-100',
+          'inline-flex shrink-0 grow-0 items-center justify-center gap-1.5 rounded-lg outline-none transition-all duration-150 active:scale-95 disabled:cursor-not-allowed disabled:active:scale-100',
 
           size === 'sm' && 'h-9 px-2.5 text-sm',
           size === 'md' && 'h-10 px-3 text-base',

@@ -1,5 +1,11 @@
 import { Assign } from '@/types/utils';
-import { cloneElement, forwardRef } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  SVGProps,
+  cloneElement,
+  forwardRef,
+  isValidElement,
+} from 'react';
 import { twMerge } from 'tailwind-merge';
 import { Button, ButtonProps } from './button';
 
@@ -13,31 +19,42 @@ export interface IconButtonProps extends Assign<ButtonProps, CustomProps> {}
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   (props, ref) => {
-    const { icon, className, ...others } = props;
+    const {
+      icon,
+      size = 'md',
+      variant = 'solid',
+      className,
+      ...others
+    } = props;
 
     return (
       <Button
         ref={ref}
+        size={size}
+        variant={variant}
         className={twMerge(
           'p-0',
-          props.size === 'sm' && 'w-9',
-          props.size === 'md' && 'w-10',
-          props.size === 'lg' && 'w-11',
-          props.size === 'xl' && 'w-12',
+          size === 'sm' && 'w-9',
+          size === 'md' && 'w-10',
+          size === 'lg' && 'w-11',
+          size === 'xl' && 'w-12',
           className,
         )}
         {...others}
       >
-        {cloneElement<any>(icon, {
-          ...icon.props,
-          className: twMerge(
-            props.size === 'sm' && 'w-4 h-4',
-            props.size === 'md' && 'w-4.5 h-4.5',
-            props.size === 'lg' && 'w-5 h-5',
-            props.size === 'xl' && 'w-5.5 h-5.5',
-            icon.props.className,
-          ),
-        })}
+        {!isValidElement<SVGProps<SVGSVGElement>>(icon)
+          ? null
+          : cloneElement<ComponentPropsWithoutRef<'svg'>>(icon, {
+              className: twMerge(
+                size === 'sm' && 'w-4 h-4',
+                size === 'md' && 'w-4.5 h-4.5',
+                size === 'lg' && 'w-5 h-5',
+                size === 'xl' && 'w-5.5 h-5.5',
+                icon.props.className,
+              ),
+            })}
+
+        <span className="sr-only">{props['aria-label']}</span>
       </Button>
     );
   },
