@@ -1,3 +1,3 @@
-export default function About() {
-  return <div className="p-4">Hello world</div>;
+export default function Landing() {
+  return <div>Hello world</div>;
 }

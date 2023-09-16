@@ -1,3 +1,3 @@
-export default function About() {
+export default function Landing() {
   return <div>Hello world</div>;
 }
