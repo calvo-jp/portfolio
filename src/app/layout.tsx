@@ -2,7 +2,7 @@ import '@/styles/globals.css';
 import { Metadata } from 'next';
 import { Fira_Code, Oxygen } from 'next/font/google';
 import { PropsWithChildren } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { twJoin } from 'tailwind-merge';
 
 export const metadata: Metadata = {
   title: 'Calvo JP',
@@ -26,7 +26,7 @@ const mono = Fira_Code({
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" className={twMerge(sans.variable, mono.variable)}>
+    <html lang="en" className={twJoin(sans.variable, mono.variable)}>
       {children}
     </html>
   );
