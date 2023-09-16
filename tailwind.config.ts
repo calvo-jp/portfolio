@@ -7,6 +7,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: 'var(--font-sans)',
+        mono: 'var(--font-mono)',
       },
       zIndex: {
         hide: '-1',
