@@ -1,0 +1,8 @@
+html {
+  font-size: var(--fontSize);
+  overflow-y: auto;
+  min-width: 64rem;
+}
+
+@media all and ( min-width: 0px    ) { :root { --fontSize: 16px; } }
+@media all and ( min-width: 1536px ) { :root { --fontSize: 18px; } }
