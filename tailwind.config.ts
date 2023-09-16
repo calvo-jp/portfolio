@@ -2,11 +2,7 @@ import typography from '@tailwindcss/typography';
 import { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/app/**/*.{ts,tsx}', './src/lib/**/*.{ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
