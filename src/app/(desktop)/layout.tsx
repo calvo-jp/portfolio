@@ -1,6 +1,12 @@
 import '@/styles/desktop.css';
-import { Fragment, PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
+import { Navbar } from './navbar';
 
 export default function DesktopRootLayout({ children }: PropsWithChildren<{}>) {
-  return <Fragment>{children}</Fragment>;
+  return (
+    <>
+      <Navbar />
+      <main>{children}</main>
+    </>
+  );
 }

@@ -1,13 +1,13 @@
 import '@/styles/mobile.css';
-import { Fragment, PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { Navbar } from './navbar';
 
 export default function MobileRootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Fragment>
+    <>
       <Navbar />
 
-      <main className="p-4">{children}</main>
-    </Fragment>
+      <main className="pb-mobile-navbar-height p-4">{children}</main>
+    </>
   );
 }

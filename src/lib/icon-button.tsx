@@ -11,6 +11,7 @@ import { Button, ButtonProps } from './button';
 
 interface CustomProps {
   icon: JSX.Element;
+  round?: boolean;
   'aria-label': string;
   children?: never;
 }
@@ -22,6 +23,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
     const {
       icon,
       size = 'md',
+      round = false,
       variant = 'solid',
       className,
       ...others
@@ -38,6 +40,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
           size === 'md' && 'w-10',
           size === 'lg' && 'w-11',
           size === 'xl' && 'w-12',
+          round && 'rounded-full',
           className,
         )}
         {...others}
@@ -46,10 +49,10 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
           ? null
           : cloneElement<ComponentPropsWithoutRef<'svg'>>(icon, {
               className: twMerge(
-                size === 'sm' && 'w-4 h-4',
-                size === 'md' && 'w-5 h-5',
-                size === 'lg' && 'w-6 h-6',
-                size === 'xl' && 'w-7 h-7',
+                size === 'sm' && 'w-5 h-5',
+                size === 'md' && 'w-6 h-6',
+                size === 'lg' && 'w-7 h-7',
+                size === 'xl' && 'w-8 h-8',
                 icon.props.className,
               ),
             })}
