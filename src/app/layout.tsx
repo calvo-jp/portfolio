@@ -24,7 +24,7 @@ const mono = Fira_Code({
   variable: '--font-mono',
 });
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
     <html lang="en" className={twJoin(sans.variable, mono.variable)}>
       <body className="min-h-screen bg-white font-sans text-gray-900">
