@@ -7,22 +7,21 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-@media all and ( min-width: 0px    ) { :root { --fontSize: 12px; } }
-@media all and ( min-width: 350px  ) { :root { --fontSize: 14px; } }
-@media all and ( min-width: 450px  ) { :root { --fontSize: 16px; } }
-@media all and ( min-width: 550px  ) { :root { --fontSize: 18px; } }
-@media all and ( min-width: 650px  ) { :root { --fontSize: 20px; } }
-@media all and ( min-width: 750px  ) { :root { --fontSize: 22px; } }
-@media all and ( min-width: 850px  ) { :root { --fontSize: 24px; } }
-@media all and ( min-width: 950px  ) { :root { --fontSize: 26px; } }
-@media all and ( min-width: 1050px ) { :root { --fontSize: 28px; } }
-@media all and ( min-width: 1150px ) { :root { --fontSize: 30px; } }
-@media all and ( min-width: 1250px ) { :root { --fontSize: 32px; } }
-@media all and ( min-width: 1350px ) { :root { --fontSize: 34px; } }
-@media all and ( min-width: 1450px ) { :root { --fontSize: 36px; } }
-@media all and ( min-width: 1550px ) { :root { --fontSize: 38px; } }
-@media all and ( min-width: 1650px ) { :root { --fontSize: 40px; } }
-@media all and ( min-width: 1750px ) { :root { --fontSize: 42px; } }
-@media all and ( min-width: 1850px ) { :root { --fontSize: 44px; } }
-@media all and ( min-width: 1950px ) { :root { --fontSize: 46px; } }
-@media all and ( min-width: 2050px ) { :root { --fontSize: 48px; } }
+@media all and ( min-width: 0px    ) { :root { --fontSize: 14px; } }
+@media all and ( min-width: 350px  ) { :root { --fontSize: 16px; } }
+@media all and ( min-width: 450px  ) { :root { --fontSize: 18px; } }
+@media all and ( min-width: 550px  ) { :root { --fontSize: 20px; } }
+@media all and ( min-width: 650px  ) { :root { --fontSize: 22px; } }
+@media all and ( min-width: 750px  ) { :root { --fontSize: 24px; } }
+@media all and ( min-width: 850px  ) { :root { --fontSize: 26px; } }
+@media all and ( min-width: 950px  ) { :root { --fontSize: 28px; } }
+@media all and ( min-width: 1050px ) { :root { --fontSize: 30px; } }
+@media all and ( min-width: 1150px ) { :root { --fontSize: 32px; } }
+@media all and ( min-width: 1250px ) { :root { --fontSize: 34px; } }
+@media all and ( min-width: 1350px ) { :root { --fontSize: 36px; } }
+@media all and ( min-width: 1450px ) { :root { --fontSize: 38px; } }
+@media all and ( min-width: 1550px ) { :root { --fontSize: 40px; } }
+@media all and ( min-width: 1650px ) { :root { --fontSize: 42px; } }
+@media all and ( min-width: 1750px ) { :root { --fontSize: 44px; } }
+@media all and ( min-width: 1850px ) { :root { --fontSize: 46px; } }
+@media all and ( min-width: 1950px ) { :root { --fontSize: 48px; } }
