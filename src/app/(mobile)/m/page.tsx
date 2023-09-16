@@ -1,3 +1,3 @@
 export default function Landing() {
-  return null;
+  return <div className="p-4">Hello world</div>;
 }
