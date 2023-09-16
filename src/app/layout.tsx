@@ -27,7 +27,9 @@ const mono = Fira_Code({
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={twJoin(sans.variable, mono.variable)}>
-      {children}
+      <body className="min-h-screen bg-white font-sans text-gray-900">
+        {children}
+      </body>
     </html>
   );
 }
