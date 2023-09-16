@@ -22,7 +22,6 @@ const config: Config = {
       data: {
         loading: 'loading="true"',
         disabled: 'disabled="true"',
-        selected: 'selected="true"',
       },
     },
   },
