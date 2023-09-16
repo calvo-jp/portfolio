@@ -5,4 +5,5 @@ html {
 }
 
 @media all and ( min-width: 0px    ) { :root { --fontSize: 16px; } }
-@media all and ( min-width: 1536px ) { :root { --fontSize: 18px; } }
+@media all and ( min-width: 1280px ) { :root { --fontSize: 18px; } }
+@media all and ( min-width: 1536px ) { :root { --fontSize: 20px; } }
