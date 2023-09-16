@@ -1,6 +1,5 @@
 html {
   font-size: var(--fontSize);
-  overflow-y: auto;
   min-width: 64rem;
 }
 
