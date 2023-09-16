@@ -47,9 +47,9 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
           : cloneElement<ComponentPropsWithoutRef<'svg'>>(icon, {
               className: twMerge(
                 size === 'sm' && 'w-4 h-4',
-                size === 'md' && 'w-4.5 h-4.5',
-                size === 'lg' && 'w-5 h-5',
-                size === 'xl' && 'w-5.5 h-5.5',
+                size === 'md' && 'w-5 h-5',
+                size === 'lg' && 'w-6 h-6',
+                size === 'xl' && 'w-7 h-7',
                 icon.props.className,
               ),
             })}

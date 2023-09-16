@@ -37,9 +37,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           size === 'xl' && 'h-12 px-4 text-xl',
 
           variant === 'solid' &&
-            'bg-gray-900 text-gray-100 disabled:bg-gray-400',
+            'bg-gray-900 text-gray-100 focus:ring-4 focus:ring-gray-300/50 disabled:bg-gray-400',
 
-          variant === 'outline' && '',
+          variant === 'outline' &&
+            'border border-gray-300 hover:border-gray-400 focus:border-gray-600 focus:ring-4 focus:ring-gray-300/50 disabled:border-gray-100 disabled:text-gray-400',
 
           className,
         )}
