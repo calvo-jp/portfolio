@@ -90,6 +90,8 @@ const config: Config = {
         31: '7.75rem',
         31.5: '7.875rem',
         32: '8rem',
+
+        'mobile-navbar-height': '4rem',
       },
     },
   },
