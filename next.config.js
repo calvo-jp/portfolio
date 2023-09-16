@@ -13,6 +13,9 @@ const config = {
       },
     ],
   },
+  experimental: {
+    serverMinification: true,
+  },
 };
 
 module.exports = config;
