@@ -1,4 +1,5 @@
 import '@/styles/desktop.css';
+
 import { PropsWithChildren } from 'react';
 import { Navbar } from './navbar';
 

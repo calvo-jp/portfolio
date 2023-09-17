@@ -22,10 +22,10 @@ export function ThemeSwitcher() {
         <SwitchThumb className="data-checked:translate-x-8 absolute left-1 top-1 block h-8 w-8 rounded-full bg-white shadow-md transition-all duration-150" />
 
         <div className="flex h-8 w-8 items-center justify-center">
-          <IconSun />
+          <IconSun className="h-5 w-5" />
         </div>
         <div className="flex h-8 w-8 items-center justify-center">
-          <IconMoon />
+          <IconMoon className="h-5 w-5" />
         </div>
       </SwitchControl>
       <SwitchLabel className="sr-only">Toggle Dark Mode</SwitchLabel>
