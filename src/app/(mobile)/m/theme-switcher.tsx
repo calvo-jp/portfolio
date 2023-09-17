@@ -5,7 +5,7 @@ import { Switch, SwitchControl, SwitchLabel, SwitchThumb } from '@ark-ui/react';
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import { useTheme } from 'next-themes';
 
-export function ColorModeToggle() {
+export function ThemeSwitcher() {
   const hydrated = useHydrated();
 
   const { theme, setTheme } = useTheme();

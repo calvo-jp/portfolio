@@ -4,8 +4,8 @@ import logo from '@/assets/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PropsWithChildren } from 'react';
-import { ColorModeToggle } from './color-mode-toggle';
 import { Navbar } from './navbar';
+import { ThemeSwitcher } from './theme-switcher';
 
 export default function MobileRootLayout({ children }: PropsWithChildren<{}>) {
   return (
@@ -24,7 +24,7 @@ export default function MobileRootLayout({ children }: PropsWithChildren<{}>) {
 
           <div className="grow" />
 
-          <ColorModeToggle />
+          <ThemeSwitcher />
         </section>
         <section>{children}</section>
         <section className="h-mobile-navbar-height" />
