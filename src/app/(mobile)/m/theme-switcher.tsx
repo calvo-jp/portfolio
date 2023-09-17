@@ -12,14 +12,14 @@ export function ThemeSwitcher() {
 
   return (
     <Switch
-      className="w-18 relative h-10 cursor-pointer rounded-full bg-gray-200 p-1"
+      className="relative h-10 w-18 cursor-pointer rounded-full bg-gray-200 p-1"
       checked={hydrated && theme === 'dark'}
       onChange={(o) => {
         setTheme(o.checked ? 'dark' : 'light');
       }}
     >
       <SwitchControl className="flex">
-        <SwitchThumb className="data-checked:translate-x-8 absolute left-1 top-1 block h-8 w-8 rounded-full bg-white shadow-md transition-all duration-150" />
+        <SwitchThumb className="absolute left-1 top-1 block h-8 w-8 rounded-full bg-white shadow-md transition-all duration-150 data-checked:translate-x-8" />
 
         <div className="flex h-8 w-8 items-center justify-center">
           <IconSun className="h-5 w-5" />
