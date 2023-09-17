@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const config = {
+  output: 'export',
   images: {
     dangerouslyAllowSVG: true,
     remotePatterns: [
@@ -12,9 +13,6 @@ const config = {
         hostname: '*',
       },
     ],
-  },
-  experimental: {
-    serverMinification: true,
   },
 };
 
