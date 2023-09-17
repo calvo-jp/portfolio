@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 import { Metadata } from 'next';
-import { Fira_Code, Oxygen } from 'next/font/google';
+import { Fira_Code, Lato } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import { twJoin } from 'tailwind-merge';
 
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Calvo JP',
 };
 
-const sans = Oxygen({
+const sans = Lato({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',

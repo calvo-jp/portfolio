@@ -22,6 +22,7 @@ const config: Config = {
         tooltip: '1600',
       },
       data: {
+        checked: 'state="checked"',
         loading: 'loading="true"',
         disabled: 'disabled="true"',
       },
