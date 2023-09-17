@@ -32,7 +32,7 @@ export function NavbarLinks() {
       onChange={(o) => router.push(o.value)}
       className="flex h-full py-2"
     >
-      <SegmentGroupIndicator className="rounded-full bg-gray-800/25" />
+      <SegmentGroupIndicator className="rounded-2xl bg-gray-800/25" />
 
       {links.map(({ path, label, icon: SVGIcon }) => (
         <Segment
