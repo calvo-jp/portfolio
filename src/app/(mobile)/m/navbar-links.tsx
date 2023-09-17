@@ -1,6 +1,5 @@
 'use client';
 
-import { parseEnum } from '@/lib/parse-enum';
 import {
   Segment,
   SegmentControl,
@@ -21,18 +20,15 @@ export function NavbarLinks() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const paths = links.map((link) => link.path);
-  const value = parseEnum(paths, pathname) ?? paths[0];
-
   useEffect(() => {
-    paths.forEach((path) => {
-      router.prefetch(path);
+    links.forEach((o) => {
+      router.prefetch(o.path);
     });
-  }, [paths, router]);
+  }, [router]);
 
   return (
     <SegmentGroup
-      value={value}
+      value={pathname}
       onChange={(o) => router.push(o.value)}
       className="flex h-full py-2"
     >
