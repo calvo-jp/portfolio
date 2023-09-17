@@ -6,7 +6,8 @@ export default function DesktopRootLayout({ children }: PropsWithChildren<{}>) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+
+      <main className="p-8">{children}</main>
     </>
   );
 }
