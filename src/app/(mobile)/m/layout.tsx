@@ -7,7 +7,9 @@ export default function MobileRootLayout({ children }: PropsWithChildren<{}>) {
     <>
       <Navbar />
 
-      <main className="pb-mobile-navbar-height p-4">{children}</main>
+      <main className="pb-mobile-navbar-height min-h-screen">
+        <div className="p-4">{children}</div>
+      </main>
     </>
   );
 }
