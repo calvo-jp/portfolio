@@ -15,6 +15,7 @@ import {
   IconSmartHome,
 } from '@tabler/icons-react';
 import { usePathname, useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export function NavbarLinks() {
   const router = useRouter();
@@ -23,12 +24,16 @@ export function NavbarLinks() {
   const paths = links.map((link) => link.path);
   const value = parseEnum(paths, pathname) ?? paths[0];
 
+  useEffect(() => {
+    paths.forEach((path) => {
+      router.prefetch(path);
+    });
+  }, [paths, router]);
+
   return (
     <SegmentGroup
       value={value}
-      onChange={({ value }) => {
-        router.push(value);
-      }}
+      onChange={(o) => router.push(o.value)}
       className="flex h-full py-2"
     >
       <SegmentGroupIndicator className="rounded-full bg-gray-800/25" />
