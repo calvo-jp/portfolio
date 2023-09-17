@@ -12,6 +12,7 @@
     "@ark-ui/react": "0.15.0",
     "@tabler/icons-react": "2.34.0",
     "next": "13.4.19",
+    "next-themes": "0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-merge": "1.14.0"

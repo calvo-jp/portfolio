@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Fira_Code, Lato } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import { twJoin } from 'tailwind-merge';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: 'Calvo JP',
@@ -26,9 +27,13 @@ const mono = Fira_Code({
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <html lang="en" className={twJoin(sans.variable, mono.variable)}>
+    <html
+      lang="en"
+      className={twJoin(sans.variable, mono.variable)}
+      suppressHydrationWarning
+    >
       <body className="min-h-screen bg-white font-sans text-gray-900">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

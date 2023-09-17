@@ -18,6 +18,7 @@ export default function MobileRootLayout({ children }: PropsWithChildren<{}>) {
               alt="logo"
               className="h-12 w-auto"
               draggable={false}
+              priority
             />
           </Link>
 
