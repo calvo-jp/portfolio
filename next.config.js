@@ -2,6 +2,7 @@
 const config = {
   output: 'export',
   images: {
+    unoptimized: true,
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
