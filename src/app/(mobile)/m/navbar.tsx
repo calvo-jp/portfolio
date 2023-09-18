@@ -1,4 +1,4 @@
-import { NavbarLinks } from './navbar-links';
+import {NavbarLinks} from './navbar-links';
 
 export function Navbar() {
   return (

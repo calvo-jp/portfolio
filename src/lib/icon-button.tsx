@@ -1,4 +1,4 @@
-import { Assign } from '@/types/utils';
+import {Assign} from '@/types/utils';
 import {
   ComponentPropsWithoutRef,
   SVGProps,
@@ -6,8 +6,8 @@ import {
   forwardRef,
   isValidElement,
 } from 'react';
-import { twMerge } from 'tailwind-merge';
-import { Button, ButtonProps } from './button';
+import {twMerge} from 'tailwind-merge';
+import {Button, ButtonProps} from './button';
 
 interface CustomProps {
   icon: JSX.Element;
@@ -49,10 +49,10 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
           ? null
           : cloneElement<ComponentPropsWithoutRef<'svg'>>(icon, {
               className: twMerge(
-                size === 'sm' && 'w-5 h-5',
-                size === 'md' && 'w-6 h-6',
-                size === 'lg' && 'w-7 h-7',
-                size === 'xl' && 'w-8 h-8',
+                size === 'sm' && 'h-5 w-5',
+                size === 'md' && 'h-6 w-6',
+                size === 'lg' && 'h-7 w-7',
+                size === 'xl' && 'h-8 w-8',
                 icon.props.className,
               ),
             })}

@@ -13,8 +13,8 @@ import {
   IconMailBolt,
   IconSmartHome,
 } from '@tabler/icons-react';
-import { usePathname, useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import {usePathname, useRouter} from 'next/navigation';
+import {useEffect} from 'react';
 
 export function NavbarLinks() {
   const router = useRouter();
@@ -34,7 +34,7 @@ export function NavbarLinks() {
     >
       <SegmentGroupIndicator className="rounded-2xl bg-gray-800/25" />
 
-      {links.map(({ path, label, icon: SVGIcon }) => (
+      {links.map(({path, label, icon: SVGIcon}) => (
         <Segment
           key={path}
           value={path}
