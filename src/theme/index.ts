@@ -7,7 +7,7 @@ import {zIndex} from './z-index';
 
 export const preset: Config = {
   content: [],
-  darkMode: 'class',
+  darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
       zIndex,
