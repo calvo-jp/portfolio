@@ -14,6 +14,9 @@ const config = {
       },
     ],
   },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 };
 
 module.exports = config;
