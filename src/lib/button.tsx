@@ -1,6 +1,6 @@
-import { Assign } from '@/types/utils';
-import { ComponentPropsWithoutRef, forwardRef } from 'react';
-import { twMerge } from 'tailwind-merge';
+import {Assign} from '@/types/utils';
+import {ComponentPropsWithoutRef, forwardRef} from 'react';
+import {twMerge} from 'tailwind-merge';
 
 interface CustomProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';

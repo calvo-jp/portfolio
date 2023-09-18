@@ -1,9 +1,9 @@
 import '@/styles/globals.css';
-import { Metadata } from 'next';
-import { Fira_Code, Lato } from 'next/font/google';
-import { PropsWithChildren } from 'react';
-import { twJoin } from 'tailwind-merge';
-import { Providers } from './providers';
+import {Metadata} from 'next';
+import {Fira_Code, Lato} from 'next/font/google';
+import {PropsWithChildren} from 'react';
+import {twJoin} from 'tailwind-merge';
+import {Providers} from './providers';
 
 export const metadata: Metadata = {
   title: 'Calvo JP',
@@ -25,7 +25,7 @@ const mono = Fira_Code({
   variable: '--font-mono',
 });
 
-export default function RootLayout({ children }: PropsWithChildren<{}>) {
+export default function RootLayout({children}: PropsWithChildren<{}>) {
   return (
     <html
       lang="en"

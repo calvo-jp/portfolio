@@ -1,14 +1,14 @@
 'use client';
 
-import { useHydrated } from '@/lib/use-hydrated';
-import { Switch, SwitchControl, SwitchLabel, SwitchThumb } from '@ark-ui/react';
-import { IconMoon, IconSun } from '@tabler/icons-react';
-import { useTheme } from 'next-themes';
+import {useHydrated} from '@/lib/use-hydrated';
+import {Switch, SwitchControl, SwitchLabel, SwitchThumb} from '@ark-ui/react';
+import {IconMoon, IconSun} from '@tabler/icons-react';
+import {useTheme} from 'next-themes';
 
 export function ThemeSwitcher() {
   const hydrated = useHydrated();
 
-  const { theme, setTheme } = useTheme();
+  const {theme, setTheme} = useTheme();
 
   return (
     <Switch

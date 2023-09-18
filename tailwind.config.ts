@@ -1,6 +1,6 @@
 import aspectRatio from '@tailwindcss/aspect-ratio';
 import typography from '@tailwindcss/typography';
-import { Config } from 'tailwindcss';
+import {Config} from 'tailwindcss';
 
 const config: Config = {
   content: ['./src/app/**/*.{ts,tsx}', './src/lib/**/*.{ts,tsx}'],
