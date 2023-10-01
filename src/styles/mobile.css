@@ -1,10 +1,9 @@
 html {
   font-size: var(--fontSize);
-  overflow-y: auto;
 }
 
 html::-webkit-scrollbar {
-  display: none;
+  @apply hidden;
 }
 
 @media all and ( min-width: 0px    ) { :root { --fontSize: 12px; } }
