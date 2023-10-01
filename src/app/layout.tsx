@@ -13,7 +13,6 @@ const sans = Lato({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
-  preload: true,
   variable: '--font-sans',
 });
 
@@ -21,7 +20,6 @@ const mono = Fira_Code({
   weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
-  preload: true,
   variable: '--font-mono',
 });
 
