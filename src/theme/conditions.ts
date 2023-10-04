@@ -1,3 +1,6 @@
 export const conditions = {
-  data: {},
+  data: {
+    loading: 'loading',
+    disabled: 'disabled',
+  },
 };

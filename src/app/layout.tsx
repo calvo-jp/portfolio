@@ -29,7 +29,7 @@ export default function RootLayout({children}: PropsWithChildren<{}>) {
       className={twJoin(
         sans.variable,
         mono.variable,
-        'overflow-y-auto overflow-x-hidden overscroll-none',
+        'overflow-x-hidden overflow-y-hidden overscroll-none lg:overflow-y-auto',
       )}
     >
       <body className="min-h-screen bg-white font-sans text-gray-900">
