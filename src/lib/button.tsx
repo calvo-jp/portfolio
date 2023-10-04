@@ -1,10 +1,14 @@
 import {Assign} from '@/types/utils';
 import {ComponentPropsWithoutRef, forwardRef} from 'react';
-import {twJoin, twMerge} from 'tailwind-merge';
+import {twMerge} from 'tailwind-merge';
+import * as styles from './button.styles';
+
+type Size = 'sm' | 'md' | 'lg' | 'xl';
+type Variant = 'outline' | 'solid';
 
 interface BaseProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'outline' | 'solid';
+  size?: Size;
+  variant?: Variant;
   loading?: boolean;
 }
 
@@ -29,15 +33,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         type="button"
         disabled={loading || disabled}
         className={twMerge(
-          baseClass,
+          styles.base,
 
-          size === 'sm' && smClass,
-          size === 'md' && mdClass,
-          size === 'lg' && lgClass,
-          size === 'xl' && xlClass,
+          size === 'sm' && styles.sm,
+          size === 'md' && styles.md,
+          size === 'lg' && styles.lg,
+          size === 'xl' && styles.xl,
 
-          variant === 'solid' && solidClass,
-          variant === 'outline' && outlineClass,
+          variant === 'solid' && styles.solid,
+          variant === 'outline' && styles.outline,
 
           className,
         )}
@@ -47,23 +51,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       </button>
     );
   },
-);
-
-const baseClass = twJoin(
-  'inline-flex shrink-0 grow-0 items-center justify-center gap-1.5 rounded-lg outline-none transition-all duration-150 active:scale-95 disabled:cursor-not-allowed disabled:active:scale-100',
-);
-
-const smClass = twJoin('h-9 px-2.5 text-sm');
-const mdClass = twJoin('h-10 px-3 text-base');
-const lgClass = twJoin('h-11 px-3.5 text-lg');
-const xlClass = twJoin('h-12 px-4 text-xl');
-
-const solidClass = twJoin(
-  'bg-gray-900 text-gray-100 focus:ring-4 focus:ring-gray-300/50 disabled:bg-gray-400',
-);
-
-const outlineClass = twJoin(
-  'border border-gray-300 hover:border-gray-400 focus:border-gray-600 focus:ring-4 focus:ring-gray-300/50 disabled:border-gray-100 disabled:text-gray-400',
 );
 
 Button.displayName = 'Button';
