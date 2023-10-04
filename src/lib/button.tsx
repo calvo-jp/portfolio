@@ -2,14 +2,14 @@ import {Assign} from '@/types/utils';
 import {ComponentPropsWithoutRef, forwardRef} from 'react';
 import {twJoin, twMerge} from 'tailwind-merge';
 
-interface CustomProps {
+interface BaseProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'outline' | 'solid';
   loading?: boolean;
 }
 
 export interface ButtonProps
-  extends Assign<ComponentPropsWithoutRef<'button'>, CustomProps> {}
+  extends Assign<ComponentPropsWithoutRef<'button'>, BaseProps> {}
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {

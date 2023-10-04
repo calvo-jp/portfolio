@@ -9,14 +9,14 @@ import {
 import {twMerge} from 'tailwind-merge';
 import {Button, ButtonProps} from './button';
 
-interface CustomProps {
+interface BaseProps {
   icon: JSX.Element;
   round?: boolean;
   'aria-label': string;
   children?: never;
 }
 
-export interface IconButtonProps extends Assign<ButtonProps, CustomProps> {}
+export interface IconButtonProps extends Assign<ButtonProps, BaseProps> {}
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   (props, ref) => {
