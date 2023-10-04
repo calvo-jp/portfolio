@@ -9,7 +9,7 @@ export interface UseDisclosureProps {
 export type UseDisclosureReturn = ReturnType<typeof useDisclosure>;
 
 export function useDisclosure(props: UseDisclosureProps = {}) {
-  const [open, setOpen] = useState(!!props.defaultOpen);
+  const [open, setOpen] = useState(props.defaultOpen ?? false);
 
   const onOpen = () => {
     setOpen(true);
