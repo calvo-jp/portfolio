@@ -1,6 +1,5 @@
 {
   "singleQuote": true,
-  "trailingComma": "all",
   "bracketSpacing": false,
   "plugins": ["prettier-plugin-tailwindcss"],
   "tailwindConfig": "./tailwind.config.ts",

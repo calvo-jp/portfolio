@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const config = {
-  output: 'export',
   images: {
-    unoptimized: true,
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {

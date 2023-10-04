@@ -3,7 +3,6 @@ import {Metadata} from 'next';
 import {Fira_Code, Lato} from 'next/font/google';
 import {PropsWithChildren} from 'react';
 import {twJoin} from 'tailwind-merge';
-import {Providers} from './providers';
 
 export const metadata: Metadata = {
   title: 'Calvo JP',
@@ -32,10 +31,9 @@ export default function RootLayout({children}: PropsWithChildren<{}>) {
         mono.variable,
         'overflow-y-auto overflow-x-hidden overscroll-none',
       )}
-      suppressHydrationWarning
     >
       <body className="min-h-screen bg-white font-sans text-gray-900">
-        <Providers>{children}</Providers>
+        {children}
       </body>
     </html>
   );
