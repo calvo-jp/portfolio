@@ -1,13 +1,15 @@
 import {useState} from 'react';
 
-interface UseDisclosureProps {
+export interface UseDisclosureProps {
   onOpen?(): void;
   onClose?(): void;
-  defaultValue?: boolean;
+  defaultOpen?: boolean;
 }
 
+export type UseDisclosureReturn = ReturnType<typeof useDisclosure>;
+
 export function useDisclosure(props: UseDisclosureProps = {}) {
-  const [open, setOpen] = useState(!!props.defaultValue);
+  const [open, setOpen] = useState(!!props.defaultOpen);
 
   const onOpen = () => {
     setOpen(true);
