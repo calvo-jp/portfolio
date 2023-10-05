@@ -1,23 +1,22 @@
 import aspectRatio from '@tailwindcss/aspect-ratio';
 import typography from '@tailwindcss/typography';
 import {Config} from 'tailwindcss';
-import {conditions} from './conditions';
+import {colors} from './colors';
 import {spacing} from './spacing';
 import {zIndex} from './z-index';
 
 export const preset: Config = {
   content: [],
   theme: {
+    colors,
     extend: {
       zIndex,
       spacing,
 
       minWidth: spacing,
-      minHeight: spacing,
       maxWidth: spacing,
+      minHeight: spacing,
       maxHeight: spacing,
-
-      ...conditions,
     },
   },
   plugins: [typography, aspectRatio],
