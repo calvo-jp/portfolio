@@ -12,10 +12,10 @@ export const preset: Config = {
       zIndex,
       spacing,
 
-      maxWidth: spacing,
       minWidth: spacing,
-      maxHeight: spacing,
       minHeight: spacing,
+      maxWidth: spacing,
+      maxHeight: spacing,
 
       ...conditions,
     },
