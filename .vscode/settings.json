@@ -6,8 +6,5 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "tailwindCSS.experimental.classRegex": [
-    ["twJoin\\(([^)]*)\\)", "'([^']*)'"],
-    ["twMerge\\(([^)]*)\\)", "'([^']*)'"]
-  ]
+  "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "'([^']*)'"]]
 }

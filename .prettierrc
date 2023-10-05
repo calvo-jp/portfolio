@@ -3,6 +3,6 @@
   "bracketSpacing": false,
   "plugins": ["prettier-plugin-tailwindcss"],
   "tailwindConfig": "./tailwind.config.ts",
-  "tailwindFunctions": ["twMerge", "twJoin"],
+  "tailwindFunctions": ["clsx"],
   "tailwindAttributes": []
 }
