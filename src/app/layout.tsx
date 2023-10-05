@@ -1,8 +1,8 @@
 import '@/styles/globals.css';
+import clsx from 'clsx';
 import {Metadata} from 'next';
 import {Fira_Code, Lato} from 'next/font/google';
 import {PropsWithChildren} from 'react';
-import {twJoin} from 'tailwind-merge';
 
 export const metadata: Metadata = {
   title: 'Calvo JP',
@@ -26,7 +26,7 @@ export default function RootLayout({children}: PropsWithChildren<{}>) {
   return (
     <html
       lang="en"
-      className={twJoin(
+      className={clsx(
         sans.variable,
         mono.variable,
         'overflow-x-hidden overflow-y-hidden overscroll-none lg:overflow-y-auto',

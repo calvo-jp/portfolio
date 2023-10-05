@@ -1,6 +1,6 @@
 import {Assign} from '@/types/utils';
+import clsx from 'clsx';
 import {ComponentPropsWithoutRef, forwardRef} from 'react';
-import {twMerge} from 'tailwind-merge';
 import * as styles from './button.styles';
 
 type Size = 'sm' | 'md' | 'lg' | 'xl';
@@ -32,7 +32,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         type="button"
         disabled={loading || disabled}
-        className={twMerge(
+        className={clsx(
           styles.base,
 
           size === 'sm' && styles.sm,

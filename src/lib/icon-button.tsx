@@ -1,4 +1,5 @@
 import {Assign} from '@/types/utils';
+import clsx from 'clsx';
 import {
   ComponentPropsWithoutRef,
   SVGProps,
@@ -6,7 +7,6 @@ import {
   forwardRef,
   isValidElement,
 } from 'react';
-import {twMerge} from 'tailwind-merge';
 import {Button, ButtonProps} from './button';
 
 interface BaseProps {
@@ -34,7 +34,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         ref={ref}
         size={size}
         variant={variant}
-        className={twMerge(
+        className={clsx(
           'p-0',
           size === 'sm' && 'w-9',
           size === 'md' && 'w-10',
@@ -48,7 +48,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         {!isValidElement<SVGProps<SVGSVGElement>>(icon)
           ? null
           : cloneElement<ComponentPropsWithoutRef<'svg'>>(icon, {
-              className: twMerge(
+              className: clsx(
                 size === 'sm' && 'h-5 w-5',
                 size === 'md' && 'h-6 w-6',
                 size === 'lg' && 'h-7 w-7',
