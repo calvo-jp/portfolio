@@ -1,5 +1,3 @@
-import aspectRatio from '@tailwindcss/aspect-ratio';
-import typography from '@tailwindcss/typography';
 import {Config} from 'tailwindcss';
 import {colors} from './colors';
 import {spacing} from './spacing';
@@ -19,5 +17,4 @@ export const preset: Config = {
       maxHeight: spacing,
     },
   },
-  plugins: [typography, aspectRatio],
 };
