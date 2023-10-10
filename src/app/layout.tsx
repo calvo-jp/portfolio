@@ -1,17 +1,37 @@
 import '@/styles/globals.css';
 import clsx from 'clsx';
 import {Metadata} from 'next';
-import {Fira_Code, Lato} from 'next/font/google';
+import {Fira_Code} from 'next/font/google';
+import localFont from 'next/font/local';
 import {PropsWithChildren} from 'react';
 
 export const metadata: Metadata = {
   title: 'Calvo JP',
 };
 
-const sans = Lato({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  display: 'swap',
+const sans = localFont({
+  src: [
+    {
+      path: '../assets/fonts/CalibreRegular.otf',
+      weight: '400',
+    },
+    {
+      path: '../assets/fonts/CalibreMedium.otf',
+      weight: '500',
+    },
+    {
+      path: '../assets/fonts/CalibreSemibold.otf',
+      weight: '600',
+    },
+    {
+      path: '../assets/fonts/CalibreBold.otf',
+      weight: '700',
+    },
+    {
+      path: '../assets/fonts/CalibreBlack.otf',
+      weight: '900',
+    },
+  ],
   variable: '--font-sans',
 });
 
@@ -32,7 +52,7 @@ export default function RootLayout({children}: PropsWithChildren<{}>) {
         'overflow-x-hidden overflow-y-hidden overscroll-none lg:overflow-y-auto',
       )}
     >
-      <body className="min-h-screen bg-white font-sans text-gray-900">
+      <body className="min-h-screen bg-navy font-sans text-slate">
         {children}
       </body>
     </html>
