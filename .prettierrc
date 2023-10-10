@@ -1,8 +1,6 @@
 {
   "singleQuote": true,
-  "bracketSpacing": false,
   "plugins": ["prettier-plugin-tailwindcss"],
   "tailwindConfig": "./tailwind.config.ts",
-  "tailwindFunctions": ["clsx"],
-  "tailwindAttributes": []
+  "tailwindFunctions": ["clsx"]
 }
