@@ -4,10 +4,6 @@ const config = {
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: '*',
-      },
-      {
         protocol: 'https',
         hostname: '*',
       },
