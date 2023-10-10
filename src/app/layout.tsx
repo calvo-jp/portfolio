@@ -1,9 +1,9 @@
 import '@/styles/globals.css';
 import clsx from 'clsx';
-import {Metadata} from 'next';
-import {Fira_Code} from 'next/font/google';
+import { Metadata } from 'next';
+import { Fira_Code } from 'next/font/google';
 import localFont from 'next/font/local';
-import {PropsWithChildren} from 'react';
+import { PropsWithChildren } from 'react';
 
 export const metadata: Metadata = {
   title: 'Calvo JP',
@@ -42,7 +42,7 @@ const mono = Fira_Code({
   variable: '--font-mono',
 });
 
-export default function RootLayout({children}: PropsWithChildren<{}>) {
+export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
     <html
       lang="en"

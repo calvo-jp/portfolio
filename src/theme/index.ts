@@ -1,7 +1,7 @@
-import {Config} from 'tailwindcss';
-import {colors} from './colors';
-import {spacing} from './spacing';
-import {zIndex} from './z-index';
+import { Config } from 'tailwindcss';
+import { colors } from './colors';
+import { spacing } from './spacing';
+import { zIndex } from './z-index';
 
 export const preset: Config = {
   content: [],
