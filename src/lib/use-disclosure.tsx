@@ -8,17 +8,23 @@ export interface UseDisclosureProps {
 
 export type UseDisclosureReturn = ReturnType<typeof useDisclosure>;
 
-export function useDisclosure(props: UseDisclosureProps = {}) {
-  const [open, setOpen] = useState(props.defaultOpen ?? false);
+export function useDisclosure(props?: UseDisclosureProps) {
+  const [open, setOpen] = useState(props?.defaultOpen ?? false);
 
   const onOpen = () => {
     setOpen(true);
-    props.onOpen?.();
+
+    if (props?.onOpen) {
+      props.onOpen();
+    }
   };
 
   const onClose = () => {
     setOpen(false);
-    props.onClose?.();
+
+    if (props?.onClose) {
+      props.onClose();
+    }
   };
 
   const onToggle = () => {
