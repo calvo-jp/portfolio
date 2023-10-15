@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 };
 
 const sans = Lato({
-  weight: ['400'],
+  weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-sans',
 });
 
 const mono = JetBrains_Mono({
-  weight: ['400'],
+  weight: '400',
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-mono',
