@@ -1,4 +1,4 @@
-import '@/styles/assets/globals.css';
+import '@/assets/styles/globals.css';
 
 import { cx } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';

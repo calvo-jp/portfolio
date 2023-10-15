@@ -1,3 +1,5 @@
+import { styled } from '@/styled-system/jsx';
+
 export default function Index() {
-  return null;
+  return <styled.p p={4}>Hello world</styled.p>;
 }

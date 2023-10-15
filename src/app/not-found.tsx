@@ -1,7 +1,9 @@
+import { styled } from '@/styled-system/jsx';
+
 export default function NotFound() {
   return (
-    <div className="p-4">
-      <h2>Error 404</h2>
-    </div>
+    <styled.div p={4}>
+      <styled.h2>Error 404</styled.h2>
+    </styled.div>
   );
 }
