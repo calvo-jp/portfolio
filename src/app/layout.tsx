@@ -18,22 +18,27 @@ const sans = localFont({
     {
       path: '../assets/fonts/CalibreRegular.otf',
       weight: '400',
+      style: 'normal',
     },
     {
       path: '../assets/fonts/CalibreMedium.otf',
       weight: '500',
+      style: 'normal',
     },
     {
       path: '../assets/fonts/CalibreSemibold.otf',
       weight: '600',
+      style: 'normal',
     },
     {
       path: '../assets/fonts/CalibreBold.otf',
       weight: '700',
+      style: 'normal',
     },
     {
       path: '../assets/fonts/CalibreBlack.otf',
       weight: '900',
+      style: 'normal',
     },
   ],
   variable: '--font-sans',
