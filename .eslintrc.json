@@ -6,6 +6,21 @@
       {
         "endOfLine": "auto"
       }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "next/link",
+            "message": "Please import from '@/lib/next-js'"
+          },
+          {
+            "name": "next/image",
+            "message": "Please import from '@/lib/next-js'"
+          }
+        ]
+      }
     ]
   }
 }
