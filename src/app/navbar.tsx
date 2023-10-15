@@ -25,7 +25,15 @@ export function Navbar() {
           ))}
         </styled.ul>
 
-        <Button size="sm">Resume</Button>
+        <Button size="sm" asChild>
+          <a
+            href="https://drive.google.com/file/d/1NHdv61o59_02jr8XGD3h5yInPy3JWsF6/view?usp=drive_link"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Resume
+          </a>
+        </Button>
       </styled.nav>
     </styled.header>
   );
