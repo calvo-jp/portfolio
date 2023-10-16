@@ -13,18 +13,30 @@ export function Navbar() {
 
       <styled.nav display="flex" alignItems="center" gap={8}>
         <styled.ul display="flex" alignItems="center" gap={8}>
-          {links.map(({ path, label }, index) => (
-            <styled.li key={path}>
-              <Link href={path} display="flex" alignItems="center" gap={1}>
-                <styled.span fontFamily="mono" color="brand.teal" fontSize="xs">
-                  {(index + 1).toString().padStart(2, '0')}.
-                </styled.span>
-                <styled.span fontSize="sm" color="brand.slate.lighter">
-                  {label}
-                </styled.span>
-              </Link>
-            </styled.li>
-          ))}
+          {links.map(({ path, label }, index) => {
+            const n = index + 1;
+
+            return (
+              <styled.li key={path}>
+                <Link href={path} display="flex" alignItems="center" gap={1}>
+                  <styled.span fontFamily="mono" color="brand.teal" fontSize="xs">
+                    {n.toString().padStart(2, '0')}.
+                  </styled.span>
+                  <styled.span
+                    fontSize="sm"
+                    transition="colors"
+                    transitionDuration="slow"
+                    color={{
+                      base: 'brand.slate.lighter',
+                      _hover: 'brand.teal',
+                    }}
+                  >
+                    {label}
+                  </styled.span>
+                </Link>
+              </styled.li>
+            );
+          })}
         </styled.ul>
 
         <Button size="sm" asChild>
