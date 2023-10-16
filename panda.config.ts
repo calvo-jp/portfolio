@@ -7,27 +7,51 @@ export default defineConfig({
     extend: {
       tokens: {
         fonts: {
-          sans: { value: 'var(--font-sans)' },
-          mono: { value: 'var(--font-mono)' },
+          sans: {
+            value: 'var(--font-sans)',
+          },
+          mono: {
+            value: 'var(--font-mono)',
+          },
         },
         colors: {
           brand: {
             navy: {
-              DEFAULT: { value: '#0a192f' },
-              light: { value: '#112240' },
-              lighter: { value: '#233554' },
+              DEFAULT: {
+                value: '#0a192f',
+              },
+              light: {
+                value: '#112240',
+              },
+              lighter: {
+                value: '#233554',
+              },
             },
             slate: {
-              DEFAULT: { value: '#8892b0' },
-              light: { value: '#a8b2d1' },
-              lighter: { value: '#ccd6f6' },
+              DEFAULT: {
+                value: '#8892b0',
+              },
+              light: {
+                value: '#a8b2d1',
+              },
+              lighter: {
+                value: '#ccd6f6',
+              },
             },
-            white: { value: '#e6f1ff' },
-            teal: { value: '#64ffda' },
+            white: {
+              value: '#e6f1ff',
+            },
+            teal: {
+              value: '#64ffda',
+            },
           },
         },
       },
     },
+  },
+  hash: {
+    className: true,
+    cssVar: false,
   },
   outdir: 'styled-system',
   jsxFramework: 'react',
