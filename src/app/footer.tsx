@@ -28,13 +28,13 @@ export function Footer() {
         <styled.div>Designed & Built by John Paul Calvo</styled.div>
         <HStack gap={4}>
           <HStack>
-            <Icon w={4} h={4} asChild>
+            <Icon asChild>
               <StarIcon />
             </Icon>
             <styled.span>1,001</styled.span>
           </HStack>
           <HStack>
-            <Icon w={4} h={4} asChild>
+            <Icon asChild>
               <GitBranchIcon />
             </Icon>
             <styled.span>6,205</styled.span>
