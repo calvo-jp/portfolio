@@ -30,6 +30,4 @@ export const buttonRecipe = cva({
   },
 });
 
-export type ButtonVariants = NonNullable<
-  RecipeVariantProps<typeof buttonRecipe>
->;
+export type ButtonVariants = NonNullable<RecipeVariantProps<typeof buttonRecipe>>;

@@ -7,27 +7,21 @@ import { ButtonVariants, buttonRecipe } from './button.recipe';
 
 const StyledArkButton = styled(ark.button);
 
-type StyledArkButtonProps = Assign<
-  HTMLArkProps<'button'>,
-  HTMLStyledProps<'button'>
->;
+type StyledArkButtonProps = Assign<HTMLArkProps<'button'>, HTMLStyledProps<'button'>>;
 
-export interface ButtonProps
-  extends Assign<StyledArkButtonProps, ButtonVariants> {}
+export interface ButtonProps extends Assign<StyledArkButtonProps, ButtonVariants> {}
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (props, ref) => {
-    const [variantProps, otherProps] = buttonRecipe.splitVariantProps(props);
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+  const [variantProps, otherProps] = buttonRecipe.splitVariantProps(props);
 
-    return (
-      <StyledArkButton
-        ref={ref}
-        type="button"
-        {...otherProps}
-        className={cx(buttonRecipe(variantProps), otherProps.className)}
-      />
-    );
-  },
-);
+  return (
+    <StyledArkButton
+      ref={ref}
+      type="button"
+      {...otherProps}
+      className={cx(buttonRecipe(variantProps), otherProps.className)}
+    />
+  );
+});
 
 Button.displayName = 'Button';

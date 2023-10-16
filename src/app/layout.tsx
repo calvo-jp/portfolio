@@ -33,12 +33,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       className={cx(sans.variable, mono.variable)}
       scrollBehavior="smooth"
     >
-      <styled.body
-        bg="brand.navy"
-        color="brand.slate"
-        minHeight="dvh"
-        fontFamily="sans"
-      >
+      <styled.body bg="brand.navy" color="brand.slate" minHeight="dvh" fontFamily="sans">
         <Navbar />
         <styled.main>{children}</styled.main>
         <Footer />
