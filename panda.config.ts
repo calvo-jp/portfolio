@@ -23,7 +23,7 @@ export default defineConfig({
               lighter: { value: '#ccd6f6' },
             },
             white: { value: '#e6f1ff' },
-            green: { value: '#64ffda' },
+            teal: { value: '#64ffda' },
           },
         },
       },

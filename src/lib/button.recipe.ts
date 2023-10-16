@@ -5,10 +5,10 @@ export const buttonRecipe = cva({
   base: {
     display: 'flex',
     alignItems: 'center',
-    color: 'green',
+    color: 'brand.teal',
     borderWidth: '1px',
     borderStyle: 'solid',
-    borderColor: 'green',
+    borderColor: 'brand.teal',
     rounded: 'sm',
     fontFamily: 'mono',
     cursor: 'pointer',

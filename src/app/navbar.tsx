@@ -16,11 +16,7 @@ export function Navbar() {
           {links.map(({ path, label }, index) => (
             <styled.li key={path}>
               <Link href={path} display="flex" alignItems="center" gap={1}>
-                <styled.span
-                  fontFamily="mono"
-                  color="brand.green"
-                  fontSize="xs"
-                >
+                <styled.span fontFamily="mono" color="brand.teal" fontSize="xs">
                   {(index + 1).toString().padStart(2, '0')}.
                 </styled.span>
                 <styled.span fontSize="sm" color="brand.slate.lighter">
