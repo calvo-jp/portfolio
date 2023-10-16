@@ -5,8 +5,9 @@ import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 export function Navbar() {
   return (
     <styled.header px={10} py={6} display="flex" alignItems="center">
-      <Link href="#">
+      <Link href="/">
         <VisuallyHidden>Home</VisuallyHidden>
+        Logo
       </Link>
 
       <Spacer />
@@ -40,13 +41,7 @@ export function Navbar() {
         </styled.ul>
 
         <Button size="sm" asChild>
-          <a
-            href="https://drive.google.com/file/d/1NHdv61o59_02jr8XGD3h5yInPy3JWsF6/view?usp=drive_link"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Resume
-          </a>
+          <Link href="/resume">Resume</Link>
         </Button>
       </styled.nav>
     </styled.header>
@@ -55,19 +50,19 @@ export function Navbar() {
 
 const links = [
   {
-    path: '#about',
+    path: '/#about',
     label: 'About',
   },
   {
-    path: '#experience',
+    path: '/#experience',
     label: 'Experience',
   },
   {
-    path: '#work',
+    path: '/#work',
     label: 'Work',
   },
   {
-    path: '#contact',
+    path: '/#contact',
     label: 'Contact',
   },
 ];
