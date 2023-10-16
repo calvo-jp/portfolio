@@ -1,5 +1,17 @@
-import { styled } from '@/styled-system/jsx';
+import { About } from './about';
+import { Contact } from './contact';
+import { Experience } from './experience';
+import { Hero } from './hero';
+import { Work } from './work';
 
 export default function Index() {
-  return <styled.div></styled.div>;
+  return (
+    <>
+      <Hero />
+      <About />
+      <Experience />
+      <Work />
+      <Contact />
+    </>
+  );
 }

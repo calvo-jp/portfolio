@@ -29,7 +29,12 @@ const mono = JetBrains_Mono({
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
     <styled.html lang="en" className={cx(sans.variable, mono.variable)}>
-      <styled.body bg="navy" color="slate" minHeight="dvh" fontFamily="sans">
+      <styled.body
+        bg="brand.navy"
+        color="brand.slate"
+        minHeight="dvh"
+        fontFamily="sans"
+      >
         <Navbar />
         <styled.main>{children}</styled.main>
         <Footer />
