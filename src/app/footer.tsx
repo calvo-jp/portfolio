@@ -1,3 +1,5 @@
+import { styled } from '@/styled-system/jsx';
+
 export function Footer() {
-  return null;
+  return <styled.footer></styled.footer>;
 }

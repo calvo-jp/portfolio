@@ -14,21 +14,25 @@ export const metadata: Metadata = {
 
 const sans = Lato({
   weight: ['400', '700'],
-  subsets: ['latin'],
   display: 'swap',
+  subsets: ['latin'],
   variable: '--font-sans',
 });
 
 const mono = JetBrains_Mono({
   weight: '400',
-  subsets: ['latin'],
   display: 'swap',
+  subsets: ['latin'],
   variable: '--font-mono',
 });
 
-export default function RootLayout({ children }: PropsWithChildren<{}>) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <styled.html lang="en" className={cx(sans.variable, mono.variable)}>
+    <styled.html
+      lang="en"
+      className={cx(sans.variable, mono.variable)}
+      scrollBehavior="smooth"
+    >
       <styled.body
         bg="brand.navy"
         color="brand.slate"
