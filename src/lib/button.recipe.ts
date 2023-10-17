@@ -17,16 +17,18 @@ export const buttonRecipe = cva({
     size: {
       sm: {
         h: 8,
-        px: 3,
-        minW: 8,
+        px: 4,
         fontSize: 'xs',
       },
-      md: {},
-      lg: {},
+      lg: {
+        h: 14,
+        px: 8,
+        fontSize: 'sm',
+      },
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'lg',
   },
 });
 
