@@ -5,8 +5,10 @@ import { styled } from '@/styled-system/jsx';
 import { Metadata } from 'next';
 import { JetBrains_Mono, Lato } from 'next/font/google';
 import { PropsWithChildren } from 'react';
+import { EmailAd } from './email-ad';
 import { Footer } from './footer';
 import { Navbar } from './navbar';
+import { Socials } from './socials';
 
 export const metadata: Metadata = {
   title: 'Calvo JP',
@@ -35,7 +37,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
     >
       <styled.body bg="brand.navy" color="brand.slate" minHeight="dvh" fontFamily="sans">
         <Navbar />
-        <styled.main>{children}</styled.main>
+
+        <styled.main w="75vw" px={4} maxW="breakpoint-lg" mx="auto">
+          {children}
+
+          <Socials />
+          <EmailAd />
+        </styled.main>
+
         <Footer />
       </styled.body>
     </styled.html>
