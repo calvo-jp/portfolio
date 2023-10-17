@@ -11,19 +11,19 @@
   },
   "dependencies": {
     "@ark-ui/react": "0.15.0",
-    "lucide-react": "0.286.0",
-    "next": "13.5.4",
+    "lucide-react": "0.287.0",
+    "next": "13.5.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sharp": "0.32.6"
   },
   "devDependencies": {
     "@pandacss/dev": "0.16.0",
-    "@types/node": "20.8.5",
+    "@types/node": "20.8.6",
     "@types/react": "18.2.28",
     "@types/react-dom": "18.2.13",
     "eslint": "8.51.0",
-    "eslint-config-next": "13.5.4",
+    "eslint-config-next": "13.5.5",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-prettier": "5.0.1",
     "prettier": "3.0.3",
