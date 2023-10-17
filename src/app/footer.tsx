@@ -7,7 +7,7 @@ export function Footer() {
     <styled.footer>
       <Center>
         <styled.a
-          href={process.env.NEXT_PUBLIC_CREATOR_GITHUB}
+          href="https://github.com/calvo-jp/calvo-jp"
           target="_blank"
           rel="noreferrer noopener"
           fontFamily="mono"
@@ -20,9 +20,7 @@ export function Footer() {
           transitionDuration="slow"
         >
           <VStack gap={2}>
-            <styled.p>
-              Designed & Built by {process.env.NEXT_PUBLIC_CREATOR_NAME}
-            </styled.p>
+            <styled.p>Designed & Built by JP Calvo</styled.p>
 
             <HStack gap={4}>
               <HStack>
