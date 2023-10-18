@@ -34,11 +34,9 @@ export function About() {
         building accessible, human-centered products at{' '}
         <styled.a
           href="https://scaleforge.tech"
-          transition="colors"
-          transitionDuration="slow"
+          color="brand.teal"
           textUnderlineOffset="0.5rem"
           _hover={{
-            color: 'brand.teal',
             textDecoration: 'underline',
           }}
         >
