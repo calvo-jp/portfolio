@@ -1,7 +1,7 @@
 import { Icon } from '@/lib/icon';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
-import { GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
 
 export function Socials() {
   return (
@@ -19,6 +19,8 @@ export function Socials() {
             <styled.li key={name}>
               <styled.a
                 href={url}
+                target="_blank"
+                rel="noreferrer noopener"
                 transition="colors"
                 transitionDuration="slow"
                 color={{
@@ -45,22 +47,17 @@ export function Socials() {
 
 const links = [
   {
-    url: '',
+    url: 'https://github.com/calvo-jp',
     icon: <GithubIcon />,
     name: 'GitHub',
   },
   {
-    url: '',
-    icon: <InstagramIcon />,
-    name: 'Instagram',
-  },
-  {
-    url: '',
+    url: 'https://twitter.com/calvojp92',
     icon: <TwitterIcon />,
     name: 'Twitter',
   },
   {
-    url: '',
+    url: 'https://www.linkedin.com/in/calvojp92/',
     icon: <LinkedinIcon />,
     name: 'LinkedIn',
   },
