@@ -9,7 +9,7 @@ export function Navbar() {
     <styled.header px={12} py={6} display="flex" alignItems="center">
       <Link href="/" color="brand.teal">
         <VisuallyHidden>Home</VisuallyHidden>
-        <Icon w={5} h={5} asChild>
+        <Icon w={6} h={6} asChild>
           <TerminalIcon />
         </Icon>
       </Link>
