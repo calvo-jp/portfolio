@@ -7,7 +7,17 @@ import { TerminalIcon } from 'lucide-react';
 
 export function Navbar() {
   return (
-    <styled.header px={12} py={6} display="flex" alignItems="center">
+    <styled.header
+      px={12}
+      py={6}
+      bg="#0a192fe0"
+      pos="sticky"
+      top={0}
+      zIndex="sticky"
+      backdropFilter="blur(8px)"
+      display="flex"
+      alignItems="center"
+    >
       <Link href="/" color="brand.teal">
         <VisuallyHidden>Home</VisuallyHidden>
         <Icon w={6} h={6} asChild>
