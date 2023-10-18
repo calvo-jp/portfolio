@@ -1,3 +1,4 @@
+import { AUTHOR } from '@/config/constants';
 import { Icon } from '@/lib/icon';
 import { Center, HStack, VStack, styled } from '@/styled-system/jsx';
 import { GitBranchIcon, StarIcon } from 'lucide-react';
@@ -20,7 +21,7 @@ export function Footer() {
           transitionDuration="slow"
         >
           <VStack gap={2}>
-            <styled.p>Designed & Built by JP Calvo</styled.p>
+            <styled.p>Made with ❤︎ by {AUTHOR.name}</styled.p>
 
             <HStack gap={4}>
               <HStack>
