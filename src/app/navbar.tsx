@@ -4,7 +4,7 @@ import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 
 export function Navbar() {
   return (
-    <styled.header px={10} py={6} display="flex" alignItems="center">
+    <styled.header px={12} py={6} display="flex" alignItems="center">
       <Link href="/">
         <VisuallyHidden>Home</VisuallyHidden>
         Logo
