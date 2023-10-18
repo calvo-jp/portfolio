@@ -3,7 +3,17 @@ import { Icon } from '@/lib/icon';
 import { Center, HStack, VStack, styled } from '@/styled-system/jsx';
 import { GitBranchIcon, StarIcon } from 'lucide-react';
 
-export function Footer() {
+const numberFormatter = new Intl.NumberFormat('en-US', {
+  maximumFractionDigits: 0,
+  minimumFractionDigits: 0,
+});
+
+// 📝 TODO: Github integration
+
+export async function Footer() {
+  const stars = numberFormatter.format(1001);
+  const forks = numberFormatter.format(6205);
+
   return (
     <styled.footer>
       <Center>
@@ -28,13 +38,13 @@ export function Footer() {
                 <Icon asChild>
                   <StarIcon />
                 </Icon>
-                <styled.span>1,001</styled.span>
+                <styled.span>{stars}</styled.span>
               </HStack>
               <HStack>
                 <Icon asChild>
                   <GitBranchIcon />
                 </Icon>
-                <styled.span>6,205</styled.span>
+                <styled.span>{forks}</styled.span>
               </HStack>
             </HStack>
           </VStack>
