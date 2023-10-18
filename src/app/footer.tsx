@@ -15,7 +15,7 @@ export async function Footer() {
   const forks = numberFormatter.format(6205);
 
   return (
-    <styled.footer>
+    <styled.footer py={8}>
       <Center>
         <styled.a
           href="https://github.com/calvo-jp/calvo-jp"
@@ -30,7 +30,7 @@ export async function Footer() {
           transition="colors"
           transitionDuration="slow"
         >
-          <VStack gap={2}>
+          <VStack>
             <styled.p>Made with ❤︎ by {AUTHOR.name}</styled.p>
 
             <HStack gap={4}>

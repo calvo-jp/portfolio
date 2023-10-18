@@ -10,7 +10,7 @@ export function Navbar() {
     <styled.header
       px={12}
       py={6}
-      bg="#0a192fe0"
+      bg="#0a192fe0" /* change to "brand.navy/75" once supported */
       pos="sticky"
       top={0}
       zIndex="sticky"
