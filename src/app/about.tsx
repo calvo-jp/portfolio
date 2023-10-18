@@ -31,7 +31,20 @@ export function About() {
       <styled.p mt={4} fontSize="lg" lineHeight="normal" maxW="34rem">
         I&rsquo;m a software engineer specializing in building &#40;and occasionally
         designing&#41; exceptional digital experiences. Currently, I&rsquo;m focused on
-        building accessible, human-centered products at Upstatement.
+        building accessible, human-centered products at{' '}
+        <styled.a
+          href="https://scaleforge.tech"
+          transition="colors"
+          transitionDuration="slow"
+          textUnderlineOffset="0.5rem"
+          _hover={{
+            color: 'brand.teal',
+            textDecoration: 'underline',
+          }}
+        >
+          ScaleForge
+        </styled.a>
+        .
       </styled.p>
 
       <Button mt={14}>Check out my course!</Button>
