@@ -1,3 +1,4 @@
+import { AUTHOR } from '@/config/constants';
 import { styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
 
@@ -14,7 +15,7 @@ export function EmailAd() {
       >
         <styled.div w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
           <styled.a
-            href="mailto:calvojp92@gmail.com"
+            href={`mailto:${AUTHOR.contact.email}`}
             fontFamily="mono"
             fontSize="xs"
             writingMode="vertical-rl"
@@ -26,7 +27,7 @@ export function EmailAd() {
               _hover: 'brand.teal',
             }}
           >
-            calvojp92@gmail.com
+            {AUTHOR.contact.email}
           </styled.a>
           <styled.div h="15vh" w="1px" bg="brand.slate" roundedTop="full" />
         </styled.div>

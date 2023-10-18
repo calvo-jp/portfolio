@@ -1,3 +1,4 @@
+import { AUTHOR } from '@/config/constants';
 import { Button } from '@/lib/button';
 import { styled } from '@/styled-system/jsx';
 
@@ -15,7 +16,7 @@ export function About() {
         fontWeight="black"
         lineHeight="none"
       >
-        JP Calvo.
+        {AUTHOR.name}.
       </styled.h1>
 
       <styled.h2
@@ -33,14 +34,14 @@ export function About() {
         designing&#41; exceptional digital experiences. Currently, I&rsquo;m focused on
         building accessible, human-centered products at{' '}
         <styled.a
-          href="https://scaleforge.tech"
+          href={AUTHOR.company.website}
           color="brand.teal"
           textUnderlineOffset="0.5rem"
           _hover={{
             textDecoration: 'underline',
           }}
         >
-          ScaleForge
+          {AUTHOR.company.name}
         </styled.a>
         .
       </styled.p>

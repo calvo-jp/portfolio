@@ -1,3 +1,4 @@
+import { AUTHOR } from '@/config/constants';
 import { Button } from '@/lib/button';
 import { Icon } from '@/lib/icon';
 import { Link } from '@/lib/next-js';
@@ -41,7 +42,9 @@ export function Navbar() {
         </styled.ul>
 
         <Button size="sm" asChild>
-          <Link href="/resume">Resume</Link>
+          <styled.a href={AUTHOR.resume} target="_blank" rel="noreferrer noopener">
+            <VisuallyHidden>Download </VisuallyHidden>Resume
+          </styled.a>
         </Button>
       </styled.nav>
     </styled.header>

@@ -1,3 +1,4 @@
+import { AUTHOR } from '@/config/constants';
 import { Icon } from '@/lib/icon';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
@@ -47,17 +48,17 @@ export function Socials() {
 
 const links = [
   {
-    url: 'https://github.com/calvo-jp',
+    url: AUTHOR.socials.github,
     icon: <GithubIcon />,
     name: 'GitHub',
   },
   {
-    url: 'https://twitter.com/calvojp92',
+    url: AUTHOR.socials.twitter,
     icon: <TwitterIcon />,
     name: 'Twitter',
   },
   {
-    url: 'https://www.linkedin.com/in/calvojp92/',
+    url: AUTHOR.socials.linkedin,
     icon: <LinkedinIcon />,
     name: 'LinkedIn',
   },
