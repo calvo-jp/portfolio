@@ -1,13 +1,17 @@
 import { Button } from '@/lib/button';
+import { Icon } from '@/lib/icon';
 import { Link } from '@/lib/next-js';
 import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { TerminalIcon } from 'lucide-react';
 
 export function Navbar() {
   return (
     <styled.header px={12} py={6} display="flex" alignItems="center">
-      <Link href="/">
+      <Link href="/" color="brand.teal">
         <VisuallyHidden>Home</VisuallyHidden>
-        Logo
+        <Icon w={5} h={5} asChild>
+          <TerminalIcon />
+        </Icon>
       </Link>
 
       <Spacer />
