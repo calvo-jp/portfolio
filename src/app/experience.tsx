@@ -5,8 +5,6 @@ import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@ark-ui/rea
 import { format, isSameYear } from 'date-fns';
 import { AsteriskIcon } from 'lucide-react';
 
-const items = AUTHOR.workHistory;
-
 export function Experience() {
   return (
     <styled.section id="experience" py={32} mx="auto">
@@ -26,7 +24,7 @@ export function Experience() {
         <styled.div ml={3} flexGrow={1} h="1px" bg="brand.navy.lighter" />
       </styled.h2>
 
-      <Tabs defaultValue={items.at(0)?.company.name} orientation="vertical" asChild>
+      <Tabs defaultValue={workHistory.at(0)?.company.name} orientation="vertical" asChild>
         <styled.div mt={16} display="flex" gap={12}>
           <TabList asChild>
             <styled.div w="20%" flexShrink={0}>
@@ -59,7 +57,9 @@ export function Experience() {
             </styled.div>
           </TabList>
 
-          {items.map(({ company, dateOfEmployment, position, responsibilities }) => {
+          {workHistory.map((o) => {
+            const { company, dateOfEmployment, position, responsibilities } = o;
+
             const monthStart = format(dateOfEmployment.start, 'MMMM');
             const yearStart = format(dateOfEmployment.start, 'yyyy');
 
@@ -135,3 +135,5 @@ export function Experience() {
     </styled.section>
   );
 }
+
+const { workHistory } = AUTHOR;
