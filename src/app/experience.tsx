@@ -70,14 +70,15 @@ export function Experience() {
   );
 }
 
-function Item({ company, dateOfEmployment, position, responsibilities }: IWorkHistory) {
-  const monthStart = format(dateOfEmployment.start, 'MMMM');
-  const yearStart = format(dateOfEmployment.start, 'yyyy');
+function Item(props: IWorkHistory) {
+  const { company, dateOfEmployment, position, responsibilities } = props;
 
+  const monthStart = format(dateOfEmployment.start, 'MMMM');
   const monthUntil = dateOfEmployment.until
     ? format(dateOfEmployment.until, 'MMMM')
     : 'Present';
 
+  const yearStart = format(dateOfEmployment.start, 'yyyy');
   const yearUntil = dateOfEmployment.until
     ? format(dateOfEmployment.until, 'yyyy')
     : null;

@@ -34,7 +34,9 @@ export function Work() {
   );
 }
 
-function Item({ title, description, featured, website, repository, tags }: IProject) {
+function Item(props: IProject) {
+  const { title, description, featured, website, repository, tags } = props;
+
   return (
     <styled.div key={title}>
       {featured && <styled.div>Featured</styled.div>}
