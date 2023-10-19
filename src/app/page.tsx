@@ -3,6 +3,7 @@ import { Contact } from './contact';
 import { Experience } from './experience';
 import { Faqs } from './faqs';
 import { Hero } from './hero';
+import { NoteworthyProjects } from './noteworthy-projects';
 import { Work } from './work';
 
 export default function Index() {
@@ -12,6 +13,7 @@ export default function Index() {
       <About />
       <Experience />
       <Work />
+      <NoteworthyProjects />
       <Faqs />
       <Contact />
     </>

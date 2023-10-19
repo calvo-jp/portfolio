@@ -35,6 +35,8 @@ export function Hero() {
         building accessible, human-centered products at{' '}
         <styled.a
           href={AUTHOR.company.website}
+          target="_blank"
+          rel="noreferrer noopener"
           color="brand.teal"
           textUnderlineOffset="0.5rem"
           _hover={{
