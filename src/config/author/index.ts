@@ -1,6 +1,7 @@
 'server-only';
 
 import { about } from './about';
+import { faqs } from './faqs';
 import { projects } from './projects';
 import { Author, Company, Contact, ExternalLink, Name, Skill, Socials } from './types';
 import { workHistory } from './work-history';
@@ -30,11 +31,12 @@ const skills: Skill[] = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Ne
 export const AUTHOR: Author = {
   name,
   about,
-  skills,
   resume,
+  skills,
   contact,
-  socials,
   company,
-  projects,
+  socials,
   workHistory,
+  projects,
+  faqs,
 };

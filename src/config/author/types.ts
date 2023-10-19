@@ -57,6 +57,11 @@ export interface Project {
 
 export type Skill = ProgrammingLanguageOrFramework | (string & {});
 
+export interface Faq {
+  question: string;
+  answer: string;
+}
+
 export interface Author {
   name: string;
   about: ReactNode;
@@ -67,6 +72,7 @@ export interface Author {
   socials: Socials;
   workHistory: WorkHistory[];
   projects: Project[];
+  faqs: Faq[];
 }
 
 export enum Month {
