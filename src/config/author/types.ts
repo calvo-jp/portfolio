@@ -17,7 +17,7 @@ export interface Contact {
 
 export interface EmploymentDate {
   start: Date;
-  until?: Date;
+  until: Date | null;
 }
 
 export interface WorkHistory {
