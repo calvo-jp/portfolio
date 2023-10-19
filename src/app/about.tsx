@@ -1,15 +1,15 @@
 import selfie from '@/assets/images/selfie.jpg';
-import { AUTHOR } from '@/config/constants';
+import { AUTHOR } from '@/config/author';
 import { Icon } from '@/lib/icon';
 import { Image } from '@/lib/next-js';
-import { Grid, styled } from '@/styled-system/jsx';
+import { Flex, styled } from '@/styled-system/jsx';
 import { AsteriskIcon } from 'lucide-react';
 import { Fragment } from 'react';
 
 export function About() {
   return (
-    <styled.section id="about" py={16} w="90%" mx="auto">
-      <styled.h2 display="flex" alignItems="center" w="60%">
+    <styled.section id="about" py={32}>
+      <styled.h2 display="flex" alignItems="center" w="50%">
         <styled.span color="brand.teal" fontSize="lg" fontFamily="mono" lineHeight="none">
           01.
         </styled.span>
@@ -25,8 +25,8 @@ export function About() {
         <styled.div ml={3} flexGrow={1} h="1px" bg="brand.navy.lighter" />
       </styled.h2>
 
-      <Grid mt={8} gridTemplateColumns="60% 40%" gap={16}>
-        <styled.div>
+      <Flex mt={16} gap={24}>
+        <styled.div w="50%" flexShrink={0}>
           <styled.div
             css={{
               fontSize: 'lg',
@@ -47,10 +47,9 @@ export function About() {
                 },
               },
             }}
-            dangerouslySetInnerHTML={{
-              __html: AUTHOR.about,
-            }}
-          />
+          >
+            {AUTHOR.about}
+          </styled.div>
 
           <styled.p mt={5} fontSize="lg">
             Here are a few technologies I&rsquo;ve been working with&nbsp;recently:
@@ -72,7 +71,7 @@ export function About() {
           </styled.ul>
         </styled.div>
 
-        <styled.div>
+        <styled.div flexGrow={1}>
           <styled.div
             p={4}
             pos="relative"
@@ -82,7 +81,7 @@ export function About() {
             <Image src={selfie} alt="" rounded="sm" placeholder="blur" />
           </styled.div>
         </styled.div>
-      </Grid>
+      </Flex>
     </styled.section>
   );
 }

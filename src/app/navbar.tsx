@@ -1,4 +1,4 @@
-import { AUTHOR } from '@/config/constants';
+import { AUTHOR } from '@/config/author';
 import { Button } from '@/lib/button';
 import { Icon } from '@/lib/icon';
 import { Link } from '@/lib/next-js';
@@ -73,6 +73,10 @@ const links = [
   {
     path: '/#work',
     label: 'Work',
+  },
+  {
+    path: '/#faqs',
+    label: 'FAQ',
   },
   {
     path: '/#contact',

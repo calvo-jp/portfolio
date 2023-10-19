@@ -1,4 +1,4 @@
-import { AUTHOR } from '@/config/constants';
+import { AUTHOR } from '@/config/author';
 import { Button } from '@/lib/button';
 import { styled } from '@/styled-system/jsx';
 

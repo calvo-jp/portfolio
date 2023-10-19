@@ -1,4 +1,4 @@
-import { AUTHOR } from '@/config/constants';
+import { AUTHOR } from '@/config/author';
 import { Icon } from '@/lib/icon';
 import { Center, HStack, VStack, styled } from '@/styled-system/jsx';
 import { GitBranchIcon, StarIcon } from 'lucide-react';
@@ -15,7 +15,7 @@ export async function Footer() {
   const forks = numberFormatter.format(6205);
 
   return (
-    <styled.footer py={8}>
+    <styled.footer pt={32} pb={8}>
       <Center>
         <styled.a
           href="https://github.com/calvo-jp/calvo-jp"

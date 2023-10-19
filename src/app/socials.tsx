@@ -1,4 +1,4 @@
-import { AUTHOR } from '@/config/constants';
+import { AUTHOR } from '@/config/author';
 import { Icon } from '@/lib/icon';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
