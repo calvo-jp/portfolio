@@ -16,7 +16,7 @@ export function Socials() {
         justifyContent="end"
       >
         <styled.ul w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
-          {links.map(({ icon, url, name }) => (
+          {Object.entries(AUTHOR.socials).map(([name, url]) => (
             <styled.li key={name}>
               <styled.a
                 href={url}
@@ -30,7 +30,7 @@ export function Socials() {
                 }}
               >
                 <Icon asChild w={5} h={5}>
-                  {icon}
+                  {getIcon(name)}
                 </Icon>
                 <VisuallyHidden>{name}</VisuallyHidden>
               </styled.a>
@@ -46,20 +46,15 @@ export function Socials() {
   );
 }
 
-const links = [
-  {
-    url: AUTHOR.socials.github,
-    icon: <GithubIcon />,
-    name: 'GitHub',
-  },
-  {
-    url: AUTHOR.socials.twitter,
-    icon: <TwitterIcon />,
-    name: 'Twitter',
-  },
-  {
-    url: AUTHOR.socials.linkedin,
-    icon: <LinkedinIcon />,
-    name: 'LinkedIn',
-  },
-];
+function getIcon(name: 'github' | 'linkedin' | 'twitter' | (string & {})) {
+  switch (name.toLowerCase()) {
+    case 'github':
+      return <GithubIcon />;
+    case 'twitter':
+      return <TwitterIcon />;
+    case 'linkedin':
+      return <LinkedinIcon />;
+    default:
+      throw new Error(`Unknown social: '${name}'`);
+  }
+}
