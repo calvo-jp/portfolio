@@ -1,3 +1,3 @@
-import { Faq } from './types';
+import { IFaq } from './types';
 
-export const faqs: Faq[] = [];
+export const faqs: IFaq[] = [];

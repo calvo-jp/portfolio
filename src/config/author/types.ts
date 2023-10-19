@@ -2,38 +2,38 @@ import { ReactNode } from 'react';
 
 type Alias<T> = T & { _?: never };
 
-export type Name = Alias<string>;
-export type Email = Alias<string>;
-export type ExternalLink = Alias<string>;
+export type TName = Alias<string>;
+export type TEmail = Alias<string>;
+export type TExternalLink = Alias<string>;
 
-export interface Company {
-  name: Name;
-  website: ExternalLink;
+export interface ICompany {
+  name: TName;
+  website: TExternalLink;
 }
 
-export interface Contact {
-  email: Email;
+export interface IContact {
+  email: TEmail;
 }
 
-export interface EmploymentDate {
+export interface IEmploymentDate {
   start: Date;
   until: Date | null;
 }
 
-export interface WorkHistory {
-  company: Company;
+export interface IWorkHistory {
+  company: ICompany;
   position: string;
-  dateOfEmployment: EmploymentDate;
+  dateOfEmployment: IEmploymentDate;
   responsibilities: string[];
 }
 
-export interface Socials {
-  github: ExternalLink;
-  twitter: ExternalLink;
-  linkedin: ExternalLink;
+export interface ISocials {
+  github: TExternalLink;
+  twitter: TExternalLink;
+  linkedin: TExternalLink;
 }
 
-export type ProgrammingLanguageOrFramework =
+export type TProgrammingLanguageOrFramework =
   | 'HTML'
   | 'CSS'
   | 'TypeScript'
@@ -43,36 +43,36 @@ export type ProgrammingLanguageOrFramework =
   | 'React'
   | 'NextJs';
 
-export type Tag = ProgrammingLanguageOrFramework | (string & {});
+export type TTag = TProgrammingLanguageOrFramework | (string & {});
 
-export interface Project {
+export interface IProject {
   title: string;
-  description: string;
-  image: ExternalLink;
-  website?: ExternalLink;
-  repository: ExternalLink;
-  tags: Tag[];
+  description: ReactNode;
+  image: TExternalLink;
+  website?: TExternalLink;
+  repository: TExternalLink;
+  tags: TTag[];
   featured?: boolean;
 }
 
-export type Skill = ProgrammingLanguageOrFramework | (string & {});
+export type TSkill = TProgrammingLanguageOrFramework | (string & {});
 
-export interface Faq {
+export interface IFaq {
   question: string;
-  answer: string;
+  answer: ReactNode;
 }
 
-export interface Author {
+export interface IAuthor {
   name: string;
   about: ReactNode;
-  skills: Skill[];
-  resume: ExternalLink;
-  contact: Contact;
-  company: Company;
-  socials: Socials;
-  workHistory: WorkHistory[];
-  projects: Project[];
-  faqs: Faq[];
+  skills: TSkill[];
+  resume: TExternalLink;
+  contact: IContact;
+  company: ICompany;
+  socials: ISocials;
+  workHistory: IWorkHistory[];
+  projects: IProject[];
+  faqs: IFaq[];
 }
 
 export enum Month {

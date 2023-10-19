@@ -1,6 +1,6 @@
-import { Month, WorkHistory } from './types';
+import { IWorkHistory, Month } from './types';
 
-export const workHistory: WorkHistory[] = [
+export const workHistory: IWorkHistory[] = [
   {
     position: 'Lead Engineer',
     company: {

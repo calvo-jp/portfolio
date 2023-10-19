@@ -1,19 +1,7 @@
 import { AUTHOR } from '@/config/author';
-import { Icon } from '@/lib/icon';
-import { Center, HStack, VStack, styled } from '@/styled-system/jsx';
-import { GitBranchIcon, StarIcon } from 'lucide-react';
+import { Center, styled } from '@/styled-system/jsx';
 
-const numberFormatter = new Intl.NumberFormat('en-US', {
-  maximumFractionDigits: 0,
-  minimumFractionDigits: 0,
-});
-
-// 📝 TODO: Github integration
-
-export async function Footer() {
-  const stars = numberFormatter.format(1001);
-  const forks = numberFormatter.format(6205);
-
+export function Footer() {
   return (
     <styled.footer pt={32} pb={8}>
       <Center>
@@ -30,24 +18,7 @@ export async function Footer() {
           transition="colors"
           transitionDuration="slow"
         >
-          <VStack>
-            <styled.p>Made with ❤︎ by {AUTHOR.name}</styled.p>
-
-            <HStack gap={4}>
-              <HStack>
-                <Icon asChild>
-                  <StarIcon />
-                </Icon>
-                <styled.span>{stars}</styled.span>
-              </HStack>
-              <HStack>
-                <Icon asChild>
-                  <GitBranchIcon />
-                </Icon>
-                <styled.span>{forks}</styled.span>
-              </HStack>
-            </HStack>
-          </VStack>
+          Made with ❤︎ by {AUTHOR.name}
         </styled.a>
       </Center>
     </styled.footer>
