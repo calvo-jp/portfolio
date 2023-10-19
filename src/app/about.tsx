@@ -4,26 +4,12 @@ import { Icon } from '@/lib/icon';
 import { Image } from '@/lib/next-js';
 import { Flex, styled } from '@/styled-system/jsx';
 import { AsteriskIcon } from 'lucide-react';
-import { Fragment } from 'react';
+import { SectionHeading } from './section-heading';
 
 export function About() {
   return (
     <styled.section id="about" py={32}>
-      <styled.h2 display="flex" alignItems="center" w="50%">
-        <styled.span color="brand.teal" fontSize="lg" fontFamily="mono" lineHeight="none">
-          01.
-        </styled.span>
-        <styled.span
-          ml={2}
-          fontSize="3xl"
-          fontWeight="black"
-          lineHeight="none"
-          color="brand.slate.lighter"
-        >
-          About Me
-        </styled.span>
-        <styled.div ml={3} flexGrow={1} h="1px" bg="brand.navy.lighter" />
-      </styled.h2>
+      <SectionHeading index={1} title="About Me" w="50%" />
 
       <Flex mt={16} gap={24}>
         <styled.div w="50%" flexShrink={0}>
@@ -51,24 +37,11 @@ export function About() {
             {AUTHOR.about}
           </styled.div>
 
-          <styled.p mt={5} fontSize="lg">
+          <styled.div mt={5} fontSize="lg">
             Here are a few technologies I&rsquo;ve been working with&nbsp;recently:
-          </styled.p>
+          </styled.div>
 
-          <styled.ul mt={5} display="grid" gap={1} gridTemplateColumns="repeat(3,1fr)">
-            {AUTHOR.skills.map((skill, i) => (
-              <Fragment key={skill}>
-                <styled.li fontFamily="mono" display="flex" alignItems="center" gap={1}>
-                  <Icon color="brand.teal" w={3} h={3} asChild>
-                    <AsteriskIcon />
-                  </Icon>
-                  <styled.span fontSize="sm">{skill}</styled.span>
-                </styled.li>
-
-                {(i + 1) % 2 === 0 && <li />}
-              </Fragment>
-            ))}
-          </styled.ul>
+          <Skills />
         </styled.div>
 
         <styled.div flexGrow={1}>
@@ -83,5 +56,27 @@ export function About() {
         </styled.div>
       </Flex>
     </styled.section>
+  );
+}
+
+function Skills() {
+  return (
+    <styled.ul mt={5} display="grid" gap={1} gridTemplateColumns="repeat(3,1fr)">
+      {AUTHOR.skills.map((skill, i) => (
+        <styled.li
+          key={skill}
+          fontFamily="mono"
+          display="flex"
+          alignItems="center"
+          gap={1}
+          gridColumn={(i + 1) % 2 === 0 ? 2 : 1}
+        >
+          <Icon color="brand.teal" w={3} h={3} asChild>
+            <AsteriskIcon />
+          </Icon>
+          <styled.span fontSize="sm">{skill}</styled.span>
+        </styled.li>
+      ))}
+    </styled.ul>
   );
 }

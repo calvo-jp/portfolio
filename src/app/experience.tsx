@@ -4,27 +4,14 @@ import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/tabs'
 import { styled } from '@/styled-system/jsx';
 import { format, isSameYear } from 'date-fns';
 import { AsteriskIcon } from 'lucide-react';
+import { SectionHeading } from './section-heading';
 
 const { workHistory } = AUTHOR;
 
 export function Experience() {
   return (
     <styled.section id="experience" py={32}>
-      <styled.h2 display="flex" alignItems="center" w="50%">
-        <styled.span color="brand.teal" fontSize="lg" fontFamily="mono" lineHeight="none">
-          02.
-        </styled.span>
-        <styled.span
-          ml={2}
-          fontSize="3xl"
-          fontWeight="black"
-          lineHeight="none"
-          color="brand.slate.lighter"
-        >
-          Where I&rsquo;ve Worked
-        </styled.span>
-        <styled.div ml={3} flexGrow={1} h="1px" bg="brand.navy.lighter" />
-      </styled.h2>
+      <SectionHeading w="50%" index={2} title={<>Where I&rsquo;ve Worked</>} />
 
       <Tabs
         mt={16}

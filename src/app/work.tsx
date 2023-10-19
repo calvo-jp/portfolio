@@ -3,27 +3,14 @@ import { Icon } from '@/lib/icon';
 import { Link } from '@/lib/next-js';
 import { HStack, styled } from '@/styled-system/jsx';
 import { ExternalLinkIcon, GitBranchIcon } from 'lucide-react';
+import { SectionHeading } from './section-heading';
 
-const { projects } = AUTHOR;
+const projects = AUTHOR.projects.filter((p) => p.featured);
 
 export function Work() {
   return (
     <styled.section id="work" py={32}>
-      <styled.h2 display="flex" alignItems="center" w="50%">
-        <styled.span color="brand.teal" fontSize="lg" fontFamily="mono" lineHeight="none">
-          03.
-        </styled.span>
-        <styled.span
-          ml={2}
-          fontSize="3xl"
-          fontWeight="black"
-          lineHeight="none"
-          color="brand.slate.lighter"
-        >
-          Some things I&rsquo;ve built
-        </styled.span>
-        <styled.div ml={3} flexGrow={1} h="1px" bg="brand.navy.lighter" />
-      </styled.h2>
+      <SectionHeading index={3} title={<>Some things I&rsquo;ve built</>} w="50%" />
 
       <styled.div mt={16}>
         {projects.map((o) => (
@@ -39,8 +26,7 @@ function Item(props: IProject) {
 
   return (
     <styled.div key={title}>
-      {featured && <styled.div>Featured</styled.div>}
-
+      <styled.div>Featured</styled.div>
       <styled.div>{title}</styled.div>
       <styled.div>{description}</styled.div>
 
