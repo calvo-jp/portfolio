@@ -33,7 +33,7 @@ export function Navbar() {
             <styled.li key={path}>
               <Link href={path} display="flex" alignItems="center" gap={1}>
                 <styled.span fontFamily="mono" color="brand.teal" fontSize="xs">
-                  {(++index).toString().padStart(2, '0')}&#46;
+                  {(++index).toString().padStart(2, '0')}.
                 </styled.span>
                 <styled.span
                   fontSize="sm"
