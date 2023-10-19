@@ -1,6 +1,6 @@
 import { AUTHOR, IWorkHistory } from '@/config/author';
+import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/ark-ui';
 import { Icon } from '@/lib/icon';
-import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/tabs';
 import { styled } from '@/styled-system/jsx';
 import { format, isSameYear } from 'date-fns';
 import { AsteriskIcon } from 'lucide-react';
