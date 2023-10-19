@@ -1,6 +1,6 @@
 import { AUTHOR } from '@/config/author';
+import { Portal } from '@/lib/ark-ui';
 import { styled } from '@/styled-system/jsx';
-import { Portal } from '@ark-ui/react';
 
 export function EmailAd() {
   return (

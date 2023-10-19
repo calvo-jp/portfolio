@@ -10,14 +10,14 @@
     "no-restricted-imports": [
       "error",
       {
-        "paths": [
+        "patterns": [
           {
-            "name": "next/link",
+            "group": ["next/link", "next/image"],
             "message": "Please import from '@/lib/next-js'"
           },
           {
-            "name": "next/image",
-            "message": "Please import from '@/lib/next-js'"
+            "group": ["@ark-ui/react", "@ark-ui/react/*"],
+            "message": "Please import from '@/lib/ark-ui'"
           }
         ]
       }
