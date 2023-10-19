@@ -1,27 +1,37 @@
-import { cx } from '@/styled-system/css';
-import { HTMLStyledProps, styled } from '@/styled-system/jsx';
-import { Assign } from '@/styled-system/types';
-import { HTMLArkProps, ark } from '@ark-ui/react';
-import { forwardRef } from 'react';
-import { ButtonVariants, buttonRecipe } from './button.recipe';
+import { cva } from '@/styled-system/css';
+import { styled } from '@/styled-system/jsx';
+import { ark } from '@ark-ui/react';
 
-const StyledArkButton = styled(ark.button);
-
-type StyledArkButtonProps = Assign<HTMLArkProps<'button'>, HTMLStyledProps<'button'>>;
-
-export interface ButtonProps extends Assign<StyledArkButtonProps, ButtonVariants> {}
-
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-  const [variantProps, otherProps] = buttonRecipe.splitVariantProps(props);
-
-  return (
-    <StyledArkButton
-      ref={ref}
-      type="button"
-      {...otherProps}
-      className={cx(buttonRecipe(variantProps), otherProps.className)}
-    />
-  );
-});
-
-Button.displayName = 'Button';
+export const Button = styled(
+  ark.button,
+  cva({
+    base: {
+      display: 'flex',
+      alignItems: 'center',
+      color: 'brand.teal',
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      borderColor: 'brand.teal',
+      rounded: 'sm',
+      fontFamily: 'mono',
+      cursor: 'pointer',
+    },
+    variants: {
+      size: {
+        sm: {
+          h: 8,
+          px: 4,
+          fontSize: 'xs',
+        },
+        lg: {
+          h: 14,
+          px: 8,
+          fontSize: 'sm',
+        },
+      },
+    },
+    defaultVariants: {
+      size: 'lg',
+    },
+  }),
+);
