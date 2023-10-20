@@ -72,11 +72,11 @@ const links = [
     label: 'Work',
   },
   {
-    path: '/#faqs',
-    label: 'FAQ',
-  },
-  {
     path: '/#contact',
     label: 'Contact',
+  },
+  {
+    path: '/#faqs',
+    label: 'FAQ',
   },
 ];
