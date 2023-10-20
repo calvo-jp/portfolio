@@ -1,4 +1,4 @@
-import { IProject } from './types';
+import { IProject } from '../../types';
 
 export const projects: IProject[] = [
   {
@@ -21,5 +21,49 @@ export const projects: IProject[] = [
     repository: 'https://github.com/bla',
     tags: ['NextJs', 'TailwindCss'],
     featured: true,
+  },
+
+  //
+  // Others
+
+  {
+    title: 'Integrating Algolia Search with WordPress Multisite',
+    description:
+      'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
+    image: '',
+    repository: 'https://github.com/bla',
+    tags: ['NextJs', 'TailwindCss'],
+  },
+  {
+    title: 'Integrating Algolia Search with WordPress Multisite',
+    description:
+      'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
+    image: '',
+    repository: 'https://github.com/bla',
+    tags: ['NextJs', 'TailwindCss'],
+  },
+  {
+    title: 'Integrating Algolia Search with WordPress Multisite',
+    description:
+      'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
+    image: '',
+    repository: 'https://github.com/bla',
+    tags: ['NextJs', 'TailwindCss'],
+  },
+  {
+    title: 'Integrating Algolia Search with WordPress Multisite',
+    description:
+      'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
+    image: '',
+    repository: 'https://github.com/bla',
+    tags: ['NextJs', 'TailwindCss'],
+  },
+  {
+    title: 'Integrating Algolia Search with WordPress Multisite',
+    description:
+      'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
+    image: '',
+    repository: 'https://github.com/bla',
+    tags: ['NextJs', 'TailwindCss'],
   },
 ];

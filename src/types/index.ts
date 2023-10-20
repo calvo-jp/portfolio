@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 type Alias<T> = T & { _?: never };
+type Nullable<T> = T | null;
 
 export type TName = Alias<string>;
 export type TEmail = Alias<string>;
@@ -17,7 +18,7 @@ export interface IContact {
 
 export interface IEmploymentDate {
   start: Date;
-  until: Date | null;
+  until: Nullable<Date>;
 }
 
 export interface IWorkHistory {
@@ -33,17 +34,28 @@ export interface ISocials {
   linkedin: TExternalLink;
 }
 
-export type TProgrammingLanguageOrFramework =
+export type TProgrammingLanguage =
   | 'HTML'
   | 'CSS'
   | 'TypeScript'
   | 'JavaScript'
-  | 'Python'
   | 'NodeJs'
-  | 'React'
-  | 'NextJs';
+  | 'Python'
+  | 'PHP';
 
-export type TTag = TProgrammingLanguageOrFramework | (string & {});
+export type TFramework =
+  | 'React'
+  | 'NextJs'
+  | 'Svelte'
+  | 'SvelteKit'
+  | 'Vue'
+  | 'Nuxt'
+  | 'Tailwind'
+  | 'ChakraUi'
+  | 'PandaCss'
+  | 'Prisma';
+
+export type TTag = TProgrammingLanguage | TFramework | (string & {});
 
 export interface IProject {
   title: string;
@@ -55,7 +67,7 @@ export interface IProject {
   featured?: boolean;
 }
 
-export type TSkill = TProgrammingLanguageOrFramework | (string & {});
+export type TSkill = TProgrammingLanguage | TFramework | (string & {});
 
 export interface IFaq {
   question: string;

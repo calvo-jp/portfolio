@@ -1,8 +1,5 @@
 'server-only';
 
-import { about } from './about';
-import { faqs } from './faqs';
-import { projects } from './projects';
 import {
   IAuthor,
   ICompany,
@@ -11,7 +8,10 @@ import {
   TExternalLink,
   TName,
   TSkill,
-} from './types';
+} from '../../types';
+import { about } from './about';
+import { faqs } from './faqs';
+import { projects } from './projects';
 import { workHistory } from './work-history';
 
 const name: TName = 'JP Calvo';
@@ -48,5 +48,3 @@ export const AUTHOR: IAuthor = {
   projects,
   faqs,
 };
-
-export * from './types';

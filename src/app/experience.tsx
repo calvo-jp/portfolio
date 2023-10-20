@@ -1,7 +1,8 @@
-import { AUTHOR, IWorkHistory } from '@/config/author';
+import { AUTHOR } from '@/config/author';
 import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/ark-ui';
 import { Icon } from '@/lib/icon';
 import { styled } from '@/styled-system/jsx';
+import { IWorkHistory } from '@/types';
 import { format, isSameYear } from 'date-fns';
 import { AsteriskIcon } from 'lucide-react';
 import { SectionHeading } from './section-heading';

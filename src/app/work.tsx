@@ -1,7 +1,8 @@
-import { AUTHOR, IProject } from '@/config/author';
+import { AUTHOR } from '@/config/author';
 import { Icon } from '@/lib/icon';
 import { Link } from '@/lib/next-js';
 import { HStack, styled } from '@/styled-system/jsx';
+import { IProject } from '@/types';
 import { ExternalLinkIcon, GitBranchIcon } from 'lucide-react';
 import { SectionHeading } from './section-heading';
 
