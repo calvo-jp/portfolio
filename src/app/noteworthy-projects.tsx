@@ -1,13 +1,22 @@
 import { AUTHOR } from '@/config/author';
 import { styled } from '@/styled-system/jsx';
-import { IProject } from '@/types';
-
-const projects = AUTHOR.projects.filter((p) => !p.featured);
+import { TProject } from '@/types';
 
 export function NoteworthyProjects() {
-  return <styled.section id="noteworthy-projects"></styled.section>;
+  return (
+    <styled.section id="noteworthy-projects">
+      <styled.div></styled.div>
+      <styled.div>
+        {AUTHOR.projects.map((o) => {
+          return o.featured ? null : <Item key={o.title} {...o} />;
+        })}
+      </styled.div>
+    </styled.section>
+  );
 }
 
-function Item(props: IProject) {
+type ItemProps = Extract<TProject, { featured?: false }>;
+
+function Item(props: ItemProps) {
   return null;
 }
