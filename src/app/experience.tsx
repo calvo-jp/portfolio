@@ -35,7 +35,7 @@ export function Experience() {
               color="inherit"
               _selected={{
                 bg: 'brand.navy.light',
-                color: 'brand.teal',
+                color: 'brand.accent',
               }}
               transitionProperty="colors"
               transitionDuration="slow"
@@ -44,7 +44,7 @@ export function Experience() {
             </TabTrigger>
           ))}
 
-          <TabIndicator w={0.5} bg="brand.teal" h="5" />
+          <TabIndicator w={0.5} bg="brand.accent" h="5" />
         </TabList>
 
         {workHistory.map((o) => (
@@ -74,7 +74,7 @@ function Item(props: IWorkHistory) {
     <styled.div display="flex" flexDir="column">
       <styled.div fontSize="xl" fontWeight="bold" letterSpacing="wide">
         <styled.span color="brand.slate.lighter">{position}</styled.span>{' '}
-        <styled.span color="brand.teal">@ {company.name}</styled.span>
+        <styled.span color="brand.accent">@ {company.name}</styled.span>
       </styled.div>
 
       <styled.div
@@ -110,7 +110,7 @@ function Item(props: IWorkHistory) {
             display="flex"
             gap={2.5}
           >
-            <AsteriskIcon w={3} h={3} my={1.5} color="brand.teal" flexShrink={0} />
+            <AsteriskIcon w={3} h={3} my={1.5} color="brand.accent" flexShrink={0} />
             <styled.div>{responsibility}</styled.div>
           </styled.li>
         ))}

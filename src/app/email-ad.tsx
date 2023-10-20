@@ -24,7 +24,7 @@ export function EmailAd() {
             transitionDuration="slow"
             color={{
               base: 'brand.slate.light',
-              _hover: 'brand.teal',
+              _hover: 'brand.accent',
             }}
           >
             {AUTHOR.contact.email}

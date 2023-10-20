@@ -19,7 +19,7 @@ export function Navbar() {
     >
       <Link href="/">
         <VisuallyHidden>Home</VisuallyHidden>
-        <TerminalIcon w={6} h={6} color="brand.teal" />
+        <TerminalIcon w={6} h={6} color="brand.accent" />
       </Link>
 
       <Spacer />
@@ -29,7 +29,7 @@ export function Navbar() {
           {links.map(({ path, label }, index) => (
             <styled.li key={path}>
               <Link href={path} display="flex" alignItems="center" gap={1}>
-                <styled.span fontFamily="mono" color="brand.teal" fontSize="xs">
+                <styled.span fontFamily="mono" color="brand.accent" fontSize="xs">
                   {(++index).toString().padStart(2, '0')}.
                 </styled.span>
                 <styled.span
@@ -38,7 +38,7 @@ export function Navbar() {
                   transitionDuration="slow"
                   color={{
                     base: 'brand.slate.lighter',
-                    _hover: 'brand.teal',
+                    _hover: 'brand.accent',
                   }}
                 >
                   {label}

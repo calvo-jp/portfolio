@@ -13,7 +13,7 @@ export function Footer() {
           fontSize="xs"
           color={{
             base: 'brand.slate.light',
-            _hover: 'brand.teal',
+            _hover: 'brand.accent',
           }}
           transitionProperty="colors"
           transitionDuration="slow"

@@ -1,7 +1,7 @@
 import { AUTHOR } from '@/config/author';
 import { ExternalLinkIcon, GitBranchIcon } from '@/lib/icons';
 import { Image, Link } from '@/lib/next-js';
-import { Flex, HStack, styled } from '@/styled-system/jsx';
+import { Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { TProject } from '@/types';
 import { SectionHeading } from './section-heading';
 
@@ -41,7 +41,12 @@ function Item(props: ItemProps) {
       </styled.div>
 
       <styled.div>
-        <styled.div fontFamily="mono" fontSize="sm" color="brand.teal" lineHeight="none">
+        <styled.div
+          fontFamily="mono"
+          fontSize="sm"
+          color="brand.accent"
+          lineHeight="none"
+        >
           Featured Project
         </styled.div>
 
@@ -62,6 +67,7 @@ function Item(props: ItemProps) {
           py={4}
           rounded="sm"
           color="brand.slate.light"
+          hyphens="auto"
         >
           {description}
         </styled.p>
@@ -74,17 +80,18 @@ function Item(props: ItemProps) {
 
         <HStack mt={8} gap={4}>
           {website && (
-            <Link href={repository}>
+            <Link href={website}>
               <ExternalLinkIcon
                 w={6}
                 h={6}
                 color={{
                   base: 'brand.slate.light',
-                  _hover: 'brand.teal',
+                  _hover: 'brand.accent',
                 }}
                 transitionProperty="colors"
                 transitionDuration="slow"
               />
+              <VisuallyHidden>Go to website</VisuallyHidden>
             </Link>
           )}
 
@@ -94,11 +101,12 @@ function Item(props: ItemProps) {
               h={6}
               color={{
                 base: 'brand.slate.light',
-                _hover: 'brand.teal',
+                _hover: 'brand.accent',
               }}
               transitionProperty="colors"
               transitionDuration="slow"
             />
+            <VisuallyHidden>Go to repository</VisuallyHidden>
           </Link>
         </HStack>
       </styled.div>
