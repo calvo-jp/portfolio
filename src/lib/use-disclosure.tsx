@@ -8,13 +8,13 @@ export interface UseDisclosureProps {
 
 export type UseDisclosureReturn = ReturnType<typeof useDisclosure>;
 
-export function useDisclosure(props?: UseDisclosureProps) {
-  const [open, setOpen] = useState(props?.defaultOpen ?? false);
+export function useDisclosure(props: UseDisclosureProps = {}) {
+  const [open, setOpen] = useState(props.defaultOpen ?? false);
 
   const onOpen = () => {
     setOpen(true);
 
-    if (props?.onOpen) {
+    if (props.onOpen) {
       props.onOpen();
     }
   };
@@ -22,7 +22,7 @@ export function useDisclosure(props?: UseDisclosureProps) {
   const onClose = () => {
     setOpen(false);
 
-    if (props?.onClose) {
+    if (props.onClose) {
       props.onClose();
     }
   };
