@@ -14,8 +14,8 @@ export default function Index() {
       <Experience />
       <Work />
       <NoteworthyProjects />
-      <Faqs />
       <Contact />
+      <Faqs />
     </>
   );
 }

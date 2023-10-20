@@ -17,7 +17,7 @@ export default defineConfig({
         colors: {
           brand: {
             white: { value: '#e6f1ff' },
-            teal: { value: '#64ffda' },
+            accent: { value: '#64ffda' },
             navy: {
               DEFAULT: { value: '#0a192f' },
               light: { value: '#112240' },

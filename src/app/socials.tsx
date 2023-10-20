@@ -25,7 +25,7 @@ export function Socials() {
                 transitionDuration="slow"
                 color={{
                   base: 'brand.slate.light',
-                  _hover: 'brand.teal',
+                  _hover: 'brand.accent',
                 }}
               >
                 {getIcon(name)}

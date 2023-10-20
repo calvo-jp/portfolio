@@ -25,8 +25,8 @@ export function About() {
               },
 
               '& a': {
-                color: 'brand.teal',
-                textUnderlineOffset: '2px',
+                color: 'brand.accent',
+                textUnderlineOffset: '0.35rem',
                 _hover: {
                   textDecoration: 'underline',
                 },
@@ -47,7 +47,7 @@ export function About() {
           <styled.div
             p={4}
             pos="relative"
-            border="2px solid token(colors.brand.teal)"
+            border="2px solid token(colors.brand.accent)"
             rounded="md"
           >
             <Image src={selfie} alt="" rounded="sm" placeholder="blur" />
@@ -70,7 +70,7 @@ function Skills() {
           gap={1}
           gridColumn={(i + 1) % 2 === 0 ? 2 : 1}
         >
-          <AsteriskIcon color="brand.teal" w={3} h={3} />
+          <AsteriskIcon color="brand.accent" w={3} h={3} />
           <styled.span fontSize="sm">{skill}</styled.span>
         </styled.li>
       ))}

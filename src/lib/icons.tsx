@@ -4,6 +4,7 @@ import {
   AsteriskIcon as asterisk,
   ChevronLeftIcon as chevronLeft,
   ExternalLinkIcon as externalLink,
+  FolderIcon as folder,
   GitBranchIcon as gitBranch,
   GithubIcon as github,
   LinkedinIcon as linkedin,
@@ -26,3 +27,4 @@ export const TerminalIcon = styled(terminal, recipe);
 export const ChevronLeftIcon = styled(chevronLeft, recipe);
 export const ExternalLinkIcon = styled(externalLink, recipe);
 export const GitBranchIcon = styled(gitBranch, recipe);
+export const FolderIcon = styled(folder, recipe);

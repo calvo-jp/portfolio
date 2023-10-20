@@ -1,11 +1,9 @@
 import { AUTHOR } from '@/config/author';
 import { ExternalLinkIcon, GitBranchIcon } from '@/lib/icons';
-import { Link } from '@/lib/next-js';
-import { HStack, styled } from '@/styled-system/jsx';
-import { IProject } from '@/types';
+import { Image, Link } from '@/lib/next-js';
+import { Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { TProject } from '@/types';
 import { SectionHeading } from './section-heading';
-
-const projects = AUTHOR.projects.filter((p) => p.featured);
 
 export function Work() {
   return (
@@ -13,40 +11,105 @@ export function Work() {
       <SectionHeading index={3} title={<>Some things I&rsquo;ve built</>} w="50%" />
 
       <styled.div mt={16}>
-        {projects.map((o) => (
-          <Item key={o.title} {...o} />
-        ))}
+        {AUTHOR.projects.map((o) => {
+          return !o.featured ? null : <Item key={o.title} {...o} />;
+        })}
       </styled.div>
     </styled.section>
   );
 }
 
-function Item(props: IProject) {
-  const { title, description, featured, website, repository, tags } = props;
+type ItemProps = Extract<TProject, { featured: true }>;
+
+function Item(props: ItemProps) {
+  const { image, title, description, website, repository, tags } = props;
 
   return (
-    <styled.div key={title}>
-      <styled.div>Featured</styled.div>
-      <styled.div>{title}</styled.div>
-      <styled.div>{description}</styled.div>
+    <Flex
+      mt={{
+        base: 24,
+        _first: 0,
+      }}
+      _even={{
+        flexDir: 'row-reverse',
+      }}
+      gap={10}
+      alignItems="center"
+    >
+      <styled.div flexShrink={0} w="50%">
+        <Image src={image} alt="" width={450} height={450} w="full" h="auto" />
+      </styled.div>
 
-      <styled.ul display="flex" gap={2} fontFamily="mono" fontSize="smaller">
-        {tags.map((tag) => (
-          <styled.li key={tag}>{tag}</styled.li>
-        ))}
-      </styled.ul>
+      <styled.div>
+        <styled.div
+          fontFamily="mono"
+          fontSize="sm"
+          color="brand.accent"
+          lineHeight="none"
+        >
+          Featured Project
+        </styled.div>
 
-      <HStack>
-        {website && (
+        <styled.h3
+          mt={1}
+          fontSize="2xl"
+          fontWeight="bold"
+          lineHeight="none"
+          color="brand.slate.lighter"
+        >
+          {title}
+        </styled.h3>
+
+        <styled.p
+          mt={5}
+          bg="brand.navy.light"
+          px={5}
+          py={4}
+          rounded="sm"
+          color="brand.slate.light"
+          hyphens="auto"
+        >
+          {description}
+        </styled.p>
+
+        <styled.ul mt={4} display="flex" gap={4} fontFamily="mono" fontSize="smaller">
+          {tags.map((tag) => (
+            <styled.li key={tag}>{tag}</styled.li>
+          ))}
+        </styled.ul>
+
+        <HStack mt={8} gap={4}>
+          {website && (
+            <Link href={website}>
+              <ExternalLinkIcon
+                w={6}
+                h={6}
+                color={{
+                  base: 'brand.slate.light',
+                  _hover: 'brand.accent',
+                }}
+                transitionProperty="colors"
+                transitionDuration="slow"
+              />
+              <VisuallyHidden>Go to website</VisuallyHidden>
+            </Link>
+          )}
+
           <Link href={repository}>
-            <ExternalLinkIcon />
+            <GitBranchIcon
+              w={6}
+              h={6}
+              color={{
+                base: 'brand.slate.light',
+                _hover: 'brand.accent',
+              }}
+              transitionProperty="colors"
+              transitionDuration="slow"
+            />
+            <VisuallyHidden>Go to repository</VisuallyHidden>
           </Link>
-        )}
-
-        <Link href={repository}>
-          <GitBranchIcon />
-        </Link>
-      </HStack>
-    </styled.div>
+        </HStack>
+      </styled.div>
+    </Flex>
   );
 }

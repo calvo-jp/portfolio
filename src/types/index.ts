@@ -57,15 +57,24 @@ export type TFramework =
 
 export type TTag = TProgrammingLanguage | TFramework | (string & {});
 
-export interface IProject {
-  title: string;
-  description: ReactNode;
-  image: TExternalLink;
-  website?: TExternalLink;
-  repository: TExternalLink;
-  tags: TTag[];
-  featured?: boolean;
-}
+export type TProject =
+  | {
+      image: TExternalLink;
+      title: string;
+      description: ReactNode;
+      repository: TExternalLink;
+      website: TExternalLink;
+      tags: TTag[];
+      featured: true;
+    }
+  | {
+      title: string;
+      description: ReactNode;
+      repository: TExternalLink;
+      website?: TExternalLink;
+      tags: TTag[];
+      featured?: false;
+    };
 
 export type TSkill = TProgrammingLanguage | TFramework | (string & {});
 
@@ -83,7 +92,7 @@ export interface IAuthor {
   company: ICompany;
   socials: ISocials;
   workHistory: IWorkHistory[];
-  projects: IProject[];
+  projects: TProject[];
   faqs: IFaq[];
 }
 
