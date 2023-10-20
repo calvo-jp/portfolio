@@ -1,8 +1,7 @@
 import { AUTHOR } from '@/config/author';
-import { Icon } from '@/lib/icon';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/lib/icons';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
 
 export function Socials() {
   return (
@@ -29,9 +28,7 @@ export function Socials() {
                   _hover: 'brand.teal',
                 }}
               >
-                <Icon asChild w={5} h={5}>
-                  {getIcon(name)}
-                </Icon>
+                {getIcon(name)}
                 <VisuallyHidden>{name}</VisuallyHidden>
               </styled.a>
             </styled.li>
@@ -49,11 +46,11 @@ export function Socials() {
 function getIcon(name: 'github' | 'linkedin' | 'twitter' | (string & {})) {
   switch (name.toLowerCase()) {
     case 'github':
-      return <GithubIcon />;
+      return <GithubIcon w={5} h={5} />;
     case 'twitter':
-      return <TwitterIcon />;
+      return <TwitterIcon w={5} h={5} />;
     case 'linkedin':
-      return <LinkedinIcon />;
+      return <LinkedinIcon w={5} h={5} />;
     default:
       throw new Error(`Unknown social: '${name}'`);
   }

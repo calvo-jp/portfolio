@@ -1,8 +1,7 @@
 import { Button } from '@/lib/button';
-import { Icon } from '@/lib/icon';
+import { ChevronLeftIcon } from '@/lib/icons';
 import { Link } from '@/lib/next-js';
 import { styled } from '@/styled-system/jsx';
-import { ChevronLeftIcon } from 'lucide-react';
 
 export default function NotFound() {
   return (
@@ -30,10 +29,7 @@ export default function NotFound() {
           alignItems="center"
           justifyContent="center"
         >
-          <Icon asChild>
-            <ChevronLeftIcon />
-          </Icon>
-
+          <ChevronLeftIcon />
           <styled.span>Go Home</styled.span>
         </Link>
       </Button>

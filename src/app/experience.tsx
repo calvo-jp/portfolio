@@ -1,10 +1,9 @@
 import { AUTHOR } from '@/config/author';
 import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/ark-ui';
-import { Icon } from '@/lib/icon';
+import { AsteriskIcon } from '@/lib/icons';
 import { styled } from '@/styled-system/jsx';
 import { IWorkHistory } from '@/types';
 import { format, isSameYear } from 'date-fns';
-import { AsteriskIcon } from 'lucide-react';
 import { SectionHeading } from './section-heading';
 
 const { workHistory } = AUTHOR;
@@ -111,9 +110,7 @@ function Item(props: IWorkHistory) {
             display="flex"
             gap={2.5}
           >
-            <Icon w={3} h={3} my={1.5} color="brand.teal" flexShrink={0} asChild>
-              <AsteriskIcon />
-            </Icon>
+            <AsteriskIcon w={3} h={3} my={1.5} color="brand.teal" flexShrink={0} />
             <styled.div>{responsibility}</styled.div>
           </styled.li>
         ))}

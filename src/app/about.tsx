@@ -1,9 +1,8 @@
 import selfie from '@/assets/images/selfie.jpg';
 import { AUTHOR } from '@/config/author';
-import { Icon } from '@/lib/icon';
+import { AsteriskIcon } from '@/lib/icons';
 import { Image } from '@/lib/next-js';
 import { Flex, styled } from '@/styled-system/jsx';
-import { AsteriskIcon } from 'lucide-react';
 import { SectionHeading } from './section-heading';
 
 export function About() {
@@ -71,9 +70,7 @@ function Skills() {
           gap={1}
           gridColumn={(i + 1) % 2 === 0 ? 2 : 1}
         >
-          <Icon color="brand.teal" w={3} h={3} asChild>
-            <AsteriskIcon />
-          </Icon>
+          <AsteriskIcon color="brand.teal" w={3} h={3} />
           <styled.span fontSize="sm">{skill}</styled.span>
         </styled.li>
       ))}

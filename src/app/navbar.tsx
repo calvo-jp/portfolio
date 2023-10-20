@@ -1,9 +1,8 @@
 import { AUTHOR } from '@/config/author';
 import { Button } from '@/lib/button';
-import { Icon } from '@/lib/icon';
+import { TerminalIcon } from '@/lib/icons';
 import { Link } from '@/lib/next-js';
 import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { TerminalIcon } from 'lucide-react';
 
 export function Navbar() {
   return (
@@ -18,11 +17,9 @@ export function Navbar() {
       display="flex"
       alignItems="center"
     >
-      <Link href="/" color="brand.teal">
+      <Link href="/">
         <VisuallyHidden>Home</VisuallyHidden>
-        <Icon w={6} h={6} asChild>
-          <TerminalIcon />
-        </Icon>
+        <TerminalIcon w={6} h={6} color="brand.teal" />
       </Link>
 
       <Spacer />
