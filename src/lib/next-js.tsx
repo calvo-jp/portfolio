@@ -7,8 +7,8 @@ export const Image = styled(
   image,
   {},
   {
-    shouldForwardProp(propKey) {
-      return ['width', 'height'].includes(propKey);
+    shouldForwardProp(key) {
+      return ['width', 'height'].includes(key);
     },
   },
 );
