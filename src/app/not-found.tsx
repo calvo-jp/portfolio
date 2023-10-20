@@ -6,17 +6,17 @@ import { ChevronLeftIcon } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <styled.div px={8} pt={36} pb={24} textAlign="center">
+    <styled.div px={8} pt={40} pb={32} textAlign="center">
       <styled.h1
         fontFamily="mono"
-        fontSize="12rem"
+        fontSize="9xl"
         fontWeight="bold"
         lineHeight="none"
         color="brand.teal"
       >
         404
       </styled.h1>
-      <styled.h2 fontSize="5xl" lineHeight="none" color="brand.slate.light">
+      <styled.h2 fontSize="3xl" lineHeight="none" color="brand.slate.light">
         Page Not Found
       </styled.h2>
       <Button asChild>
