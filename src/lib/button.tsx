@@ -43,4 +43,9 @@ export const Button = styled(
       size: 'lg',
     },
   }),
+  {
+    defaultProps: {
+      type: 'button',
+    },
+  },
 );
