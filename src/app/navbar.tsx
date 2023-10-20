@@ -34,7 +34,7 @@ export function Navbar() {
                 </styled.span>
                 <styled.span
                   fontSize="sm"
-                  transition="colors"
+                  transitionProperty="colors"
                   transitionDuration="slow"
                   color={{
                     base: 'brand.slate.lighter',

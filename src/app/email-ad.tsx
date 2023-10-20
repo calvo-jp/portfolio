@@ -20,7 +20,7 @@ export function EmailAd() {
             fontSize="xs"
             writingMode="vertical-rl"
             letterSpacing="widest"
-            transition="colors"
+            transitionProperty="colors"
             transitionDuration="slow"
             color={{
               base: 'brand.slate.light',

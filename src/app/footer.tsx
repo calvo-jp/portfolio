@@ -15,7 +15,7 @@ export function Footer() {
             base: 'brand.slate.light',
             _hover: 'brand.teal',
           }}
-          transition="colors"
+          transitionProperty="colors"
           transitionDuration="slow"
         >
           Made with ❤︎ by {AUTHOR.name}

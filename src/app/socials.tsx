@@ -21,7 +21,7 @@ export function Socials() {
                 href={url}
                 target="_blank"
                 rel="noreferrer noopener"
-                transition="colors"
+                transitionProperty="colors"
                 transitionDuration="slow"
                 color={{
                   base: 'brand.slate.light',
