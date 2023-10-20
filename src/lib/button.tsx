@@ -6,17 +6,15 @@ export const Button = styled(
   ark.button,
   cva({
     base: {
+      color: 'brand.teal',
+      border: '1px solid token(colors.brand.teal)',
+      cursor: 'pointer',
       display: 'flex',
       alignItems: 'center',
-      color: 'brand.teal',
-      borderWidth: '1px',
-      borderStyle: 'solid',
-      borderColor: 'brand.teal',
       rounded: 'sm',
       fontFamily: 'mono',
       transitionProperty: 'transform',
       transitionDuration: 'slow',
-      cursor: 'pointer',
 
       _active: {
         transform: 'scale(0.95)',
