@@ -22,7 +22,7 @@ const sans = Lato({
 });
 
 const mono = JetBrains_Mono({
-  weight: '400',
+  weight: ['400', '700'],
   display: 'swap',
   subsets: ['latin'],
   variable: '--font-mono',
