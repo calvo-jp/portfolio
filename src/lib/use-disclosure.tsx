@@ -13,18 +13,12 @@ export function useDisclosure(props: UseDisclosureProps = {}) {
 
   const onOpen = () => {
     setOpen(true);
-
-    if (props.onOpen) {
-      props.onOpen();
-    }
+    props.onOpen?.();
   };
 
   const onClose = () => {
     setOpen(false);
-
-    if (props.onClose) {
-      props.onClose();
-    }
+    props.onClose?.();
   };
 
   const onToggle = () => {
