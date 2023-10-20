@@ -6,7 +6,7 @@ export interface UseDisclosureProps {
   defaultOpen?: boolean;
 }
 
-export type UseDisclosureReturn = ReturnType<typeof useDisclosure>;
+export interface UseDisclosureReturn extends ReturnType<typeof useDisclosure> {}
 
 export function useDisclosure(props: UseDisclosureProps = {}) {
   const [open, setOpen] = useState(props.defaultOpen ?? false);
