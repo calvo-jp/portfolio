@@ -14,7 +14,18 @@ export const Button = styled(
       borderColor: 'brand.teal',
       rounded: 'sm',
       fontFamily: 'mono',
+      transitionProperty: 'transform',
+      transitionDuration: 'slow',
       cursor: 'pointer',
+
+      _active: {
+        transform: 'scale(0.95)',
+      },
+
+      _focusVisible: {
+        outline: '2px solid token(colors.brand.slate.light)',
+        outlineOffset: 0.5,
+      },
     },
     variants: {
       size: {
