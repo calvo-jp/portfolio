@@ -5,8 +5,8 @@ import * as tabs from '@ark-ui/react/tabs';
 
 export const Tabs = styled(tabs.Tabs);
 export const TabList = styled(tabs.TabList);
-export const TabTrigger = styled(tabs.TabTrigger);
 export const TabContent = styled(tabs.TabContent);
+export const TabTrigger = styled(tabs.TabTrigger);
 export const TabIndicator = styled(tabs.TabIndicator);
 
 export const Accordion = styled(accordion.Accordion);
@@ -15,10 +15,10 @@ export const AccordionTrigger = styled(accordion.AccordionTrigger);
 export const AccordionContent = styled(accordion.AccordionContent);
 
 export const Dialog = styled(dialog.Dialog);
-export const DialogBackdrop = styled(dialog.DialogBackdrop);
-export const DialogCloseTrigger = styled(dialog.DialogCloseTrigger);
 export const DialogContainer = styled(dialog.DialogContainer);
+export const DialogBackdrop = styled(dialog.DialogBackdrop);
 export const DialogContent = styled(dialog.DialogContent);
-export const DialogDescription = styled(dialog.DialogDescription);
 export const DialogTitle = styled(dialog.DialogTitle);
 export const DialogTrigger = styled(dialog.DialogTrigger);
+export const DialogDescription = styled(dialog.DialogDescription);
+export const DialogCloseTrigger = styled(dialog.DialogCloseTrigger);
