@@ -1,7 +1,7 @@
 import { AUTHOR } from '@/config/author';
-import { Portal } from '@/lib/ark-ui';
 import { Icon } from '@/lib/icon';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Portal } from '@ark-ui/react';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
 
 export function Socials() {
