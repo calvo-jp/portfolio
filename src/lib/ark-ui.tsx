@@ -35,3 +35,5 @@ export const CarouselItemGroup = styled(carousel.CarouselItemGroup);
 export const CarouselNextTrigger = styled(carousel.CarouselNextTrigger);
 export const CarouselPrevTrigger = styled(carousel.CarouselPrevTrigger);
 export const CarouselViewport = styled(carousel.CarouselViewport);
+
+export { Portal, Presence } from '@ark-ui/react';

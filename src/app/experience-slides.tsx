@@ -4,10 +4,11 @@ import {
   CarouselControl,
   CarouselItem,
   CarouselItemGroup,
+  CarouselNextTrigger,
+  CarouselPrevTrigger,
   CarouselViewport,
 } from '@/lib/ark-ui';
 import { ChevronLeftIcon, ChevronRightIcon } from '@/lib/icons';
-import { CarouselNextTrigger, CarouselPrevTrigger } from '@ark-ui/react';
 import { ExperienceItem } from './experience-item';
 
 export function ExperienceSlides() {

@@ -8,12 +8,13 @@ import {
   DialogContent,
   DialogPositioner,
   DialogTrigger,
+  Portal,
+  Presence,
 } from '@/lib/ark-ui';
 import { Button } from '@/lib/button';
 import { MenuIcon, XIcon } from '@/lib/icons';
 import { Link } from '@/lib/next-js';
 import { Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { Portal, Presence } from '@ark-ui/react';
 
 export function NavbarDrawer() {
   return (
@@ -32,7 +33,7 @@ export function NavbarDrawer() {
           </DialogTrigger>
 
           <Portal>
-            <Presence present={isOpen} lazyMount unmountOnExit>
+            <Presence present={isOpen} lazyMount>
               <DialogBackdrop
                 bg="#0a192fbf" // change to "brand.navy/50" once supported
                 pos="fixed"
@@ -49,7 +50,7 @@ export function NavbarDrawer() {
             </Presence>
 
             <DialogPositioner>
-              <Presence present={isOpen} lazyMount unmountOnExit>
+              <Presence present={isOpen} lazyMount>
                 <DialogContent
                   p={4}
                   h="full"
