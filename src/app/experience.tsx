@@ -1,4 +1,5 @@
 import { styled } from '@/styled-system/jsx';
+import { ExperienceSlides } from './experience-slides';
 import { ExperienceTabs } from './experience-tabs';
 import { SectionHeading } from './section-heading';
 
@@ -14,6 +15,7 @@ export function Experience() {
       />
 
       <ExperienceTabs />
+      <ExperienceSlides />
     </styled.section>
   );
 }

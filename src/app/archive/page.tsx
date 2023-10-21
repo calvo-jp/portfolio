@@ -24,7 +24,7 @@ export default function Archive() {
         Archive
       </styled.h1>
       <styled.p fontFamily="mono" color="brand.accent">
-        A big list of things I&rsquo; worked on
+        A big list of things I&rsquo;ve worked on
       </styled.p>
 
       <styled.div mt={16}>

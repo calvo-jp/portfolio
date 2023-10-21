@@ -3,6 +3,7 @@ import { styled } from '@/styled-system/jsx';
 import {
   AsteriskIcon as asterisk,
   ChevronLeftIcon as chevronLeft,
+  ChevronRightIcon as chevronRight,
   ExternalLinkIcon as externalLink,
   FolderIcon as folder,
   GitBranchIcon as gitBranch,
@@ -27,6 +28,7 @@ export const TwitterIcon = styled(twitter, recipe);
 export const AsteriskIcon = styled(asterisk, recipe);
 export const TerminalIcon = styled(terminal, recipe);
 export const ChevronLeftIcon = styled(chevronLeft, recipe);
+export const ChevronRightIcon = styled(chevronRight, recipe);
 export const ExternalLinkIcon = styled(externalLink, recipe);
 export const GitBranchIcon = styled(gitBranch, recipe);
 export const FolderIcon = styled(folder, recipe);
