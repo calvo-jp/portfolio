@@ -12,7 +12,7 @@ import {
 import { Button } from '@/lib/button';
 import { MenuIcon, XIcon } from '@/lib/icons';
 import { Link } from '@/lib/next-js';
-import { Flex, Spacer, styled } from '@/styled-system/jsx';
+import { Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal, Presence } from '@ark-ui/react';
 
 export function NavbarDrawer() {
@@ -28,6 +28,7 @@ export function NavbarDrawer() {
             }}
           >
             <MenuIcon w={8} h={8} />
+            <VisuallyHidden>Toggle menu</VisuallyHidden>
           </DialogTrigger>
 
           <Portal>
@@ -77,6 +78,7 @@ export function NavbarDrawer() {
                     <Spacer />
                     <DialogCloseTrigger cursor="pointer" color="brand.white">
                       <XIcon w={8} h={8} />
+                      <VisuallyHidden>Close menu</VisuallyHidden>
                     </DialogCloseTrigger>
                   </Flex>
 
