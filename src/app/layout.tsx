@@ -1,5 +1,6 @@
 import '@/assets/styles/globals.css';
 
+import { AUTHOR } from '@/config/author';
 import { cx } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';
 import { Metadata } from 'next';
@@ -10,8 +11,19 @@ import { Footer } from './footer';
 import { Navbar } from './navbar';
 import { Socials } from './socials';
 
+const title = AUTHOR.name;
+const description = `${AUTHOR.name} is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.`;
+
 export const metadata: Metadata = {
-  title: 'Calvo JP',
+  title,
+  description,
+  metadataBase: new URL('https://calvo-jp.vercel.app'),
+  openGraph: {
+    type: 'website',
+    title,
+    description,
+    images: ['/open-graph-banner.jpeg'],
+  },
 };
 
 const sans = Lato({
