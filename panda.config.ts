@@ -73,6 +73,11 @@ export default defineConfig({
       },
     },
   },
+  conditions: {
+    extend: {
+      current: '&[data-current]',
+    },
+  },
   outdir: 'styled-system',
   jsxFramework: 'react',
 });
