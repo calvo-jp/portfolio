@@ -80,11 +80,6 @@ export type TProject =
 
 export type TSkill = TProgrammingLanguage | TFramework | (string & {});
 
-export interface IFaq {
-  question: string;
-  answer: ReactNode;
-}
-
 export interface IAuthor {
   name: string;
   about: ReactNode;
@@ -95,7 +90,6 @@ export interface IAuthor {
   socials: ISocials;
   workHistory: IWorkHistory[];
   projects: TProject[];
-  faqs: IFaq[];
 }
 
 export enum Month {

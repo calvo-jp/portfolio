@@ -10,7 +10,6 @@ import {
   TSkill,
 } from '../../types';
 import { about } from './about';
-import { faqs } from './faqs';
 import { projects } from './projects';
 import { workHistory } from './work-history';
 
@@ -46,5 +45,4 @@ export const AUTHOR: IAuthor = {
   socials,
   workHistory,
   projects,
-  faqs,
 };

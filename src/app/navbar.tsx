@@ -75,8 +75,4 @@ const links = [
     path: '/#contact',
     label: 'Contact',
   },
-  {
-    path: '/#faqs',
-    label: 'FAQ',
-  },
 ];
