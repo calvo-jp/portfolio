@@ -39,21 +39,25 @@ export type TProgrammingLanguage =
   | 'CSS'
   | 'TypeScript'
   | 'JavaScript'
-  | 'NodeJs'
+  | 'Node.js'
   | 'Python'
   | 'PHP';
 
 export type TFramework =
   | 'React'
-  | 'NextJs'
+  | 'React Native'
+  | 'Next.js'
+  | 'Solid.js'
+  | 'SolidStart'
   | 'Svelte'
   | 'SvelteKit'
-  | 'Vue'
-  | 'Nuxt'
+  | 'Chakra UI'
   | 'Tailwind'
-  | 'ChakraUi'
-  | 'PandaCss'
-  | 'Prisma';
+  | 'Panda'
+  | 'Ark UI'
+  | 'Prisma'
+  | 'Ionic'
+  | 'Capacitor';
 
 export type TTag = TProgrammingLanguage | TFramework | (string & {});
 

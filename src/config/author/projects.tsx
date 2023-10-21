@@ -9,7 +9,7 @@ export const projects: TProject[] = [
       'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     repository: 'https://github.com/calvo-jp/bla',
     website: 'https://vercel.bla.app',
-    tags: ['NextJs', 'TailwindCss'],
+    tags: ['Next.js', 'Tailwind'],
     featured: true,
     createdAt: new Date(),
   },
@@ -21,7 +21,7 @@ export const projects: TProject[] = [
       'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     repository: 'https://github.com/calvo-jp/bla',
     website: 'https://vercel.bla.app',
-    tags: ['NextJs', 'TailwindCss'],
+    tags: ['Next.js', 'Tailwind'],
     featured: true,
     createdAt: new Date(),
   },
@@ -34,7 +34,7 @@ export const projects: TProject[] = [
     description: 'A simple Google Keep clone built with Vue and Firebase.',
     repository: 'https://github.com/calvo-jp/bla',
     website: 'https://vercel.bla.app',
-    tags: ['NextJs', 'TailwindCss'],
+    tags: ['Next.js', 'Tailwind'],
     createdAt: new Date(),
   },
   {
@@ -42,7 +42,7 @@ export const projects: TProject[] = [
     description:
       'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
     repository: 'https://github.com/calvo-jp/bla',
-    tags: ['NextJs', 'TailwindCss'],
+    tags: ['Next.js', 'Tailwind'],
     createdAt: new Date(),
   },
   {
@@ -50,7 +50,7 @@ export const projects: TProject[] = [
     description:
       'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
     repository: 'https://github.com/calvo-jp/bla',
-    tags: ['NextJs', 'TailwindCss'],
+    tags: ['Next.js', 'Tailwind'],
     createdAt: new Date(),
   },
   {
@@ -58,7 +58,7 @@ export const projects: TProject[] = [
     description:
       'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
     repository: 'https://github.com/calvo-jp/bla',
-    tags: ['NextJs', 'TailwindCss'],
+    tags: ['Next.js', 'Tailwind'],
     createdAt: new Date(),
   },
   {
@@ -67,7 +67,7 @@ export const projects: TProject[] = [
       'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
     website: 'https://vercel.bla.app',
     repository: 'https://github.com/calvo-jp/bla',
-    tags: ['NextJs', 'TailwindCss'],
+    tags: ['Next.js', 'Tailwind'],
     createdAt: new Date(),
   },
 ];

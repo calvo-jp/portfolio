@@ -33,7 +33,7 @@ const socials: ISocials = {
   linkedin: 'https://www.linkedin.com/in/calvojp92',
 };
 
-const skills: TSkill[] = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'NextJs'];
+const skills: TSkill[] = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js'];
 
 export const AUTHOR: IAuthor = {
   name,
