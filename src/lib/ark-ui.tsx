@@ -11,11 +11,10 @@ export const TabIndicator = styled(tabs.TabIndicator);
 
 export const Accordion = styled(accordion.Accordion);
 export const AccordionItem = styled(accordion.AccordionItem);
-export const AccordionTrigger = styled(accordion.AccordionTrigger);
-export const AccordionContent = styled(accordion.AccordionContent);
+export const AccordionItemTrigger = styled(accordion.AccordionItemTrigger);
+export const AccordionItemContent = styled(accordion.AccordionItemContent);
 
 export const Dialog = styled(dialog.Dialog);
-export const DialogContainer = styled(dialog.DialogContainer);
 export const DialogBackdrop = styled(dialog.DialogBackdrop);
 export const DialogContent = styled(dialog.DialogContent);
 export const DialogTitle = styled(dialog.DialogTitle);
