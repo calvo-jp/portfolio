@@ -10,7 +10,13 @@ const projects = [...AUTHOR.projects].filter((o) => o.featured) as IFeaturedProj
 export function Work() {
   return (
     <styled.section id="work" py={32}>
-      <SectionHeading index={3} title={<>Some things I&rsquo;ve built</>} w="50%" />
+      <SectionHeading
+        index={3}
+        title={<>Some things I&rsquo;ve built</>}
+        lg={{
+          w: '50%',
+        }}
+      />
 
       <styled.div mt={16}>
         {projects.map((o) => (
@@ -37,7 +43,13 @@ function Item(props: IFeaturedProject) {
       gap={10}
       alignItems="center"
     >
-      <styled.div flexShrink={0} w="50%">
+      <styled.div
+        w="50%"
+        flexShrink={0}
+        lgDown={{
+          display: 'none',
+        }}
+      >
         <Image src={image} alt="" width={450} height={450} w="full" h="auto" />
       </styled.div>
 

@@ -8,8 +8,10 @@ import {
   GitBranchIcon as gitBranch,
   GithubIcon as github,
   LinkedinIcon as linkedin,
+  MenuIcon as menu,
   TerminalIcon as terminal,
   TwitterIcon as twitter,
+  XIcon as x,
 } from 'lucide-react';
 
 const recipe = cva({
@@ -28,3 +30,5 @@ export const ChevronLeftIcon = styled(chevronLeft, recipe);
 export const ExternalLinkIcon = styled(externalLink, recipe);
 export const GitBranchIcon = styled(gitBranch, recipe);
 export const FolderIcon = styled(folder, recipe);
+export const MenuIcon = styled(menu, recipe);
+export const XIcon = styled(x, recipe);

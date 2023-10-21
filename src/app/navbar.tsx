@@ -3,12 +3,12 @@ import { Button } from '@/lib/button';
 import { TerminalIcon } from '@/lib/icons';
 import { Link } from '@/lib/next-js';
 import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { NavbarDrawer } from './navbar-drawer';
 
 export function Navbar() {
   return (
     <styled.header
-      px={12}
-      py={6}
+      p={4}
       bg="#0a192fe0" /* change to "brand.navy/75" once supported */
       pos="sticky"
       top={0}
@@ -16,15 +16,33 @@ export function Navbar() {
       backdropFilter="blur(8px)"
       display="flex"
       alignItems="center"
+      lg={{
+        px: 12,
+        py: 6,
+      }}
     >
       <Link href="/">
-        <TerminalIcon w={6} h={6} color="brand.accent" />
+        <TerminalIcon
+          w={8}
+          h={8}
+          color="brand.accent"
+          lg={{
+            w: 6,
+            h: 6,
+          }}
+        />
         <VisuallyHidden>Home</VisuallyHidden>
       </Link>
 
       <Spacer />
-
-      <styled.nav display="flex" alignItems="center" gap={8}>
+      <styled.nav
+        display="flex"
+        alignItems="center"
+        gap={8}
+        lgDown={{
+          display: 'none',
+        }}
+      >
         <styled.ul display="flex" alignItems="center" gap={8}>
           {links.map(({ path, label }, index) => (
             <styled.li key={path}>
@@ -54,6 +72,8 @@ export function Navbar() {
           </styled.a>
         </Button>
       </styled.nav>
+
+      <NavbarDrawer />
     </styled.header>
   );
 }

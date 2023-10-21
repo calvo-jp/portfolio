@@ -8,10 +8,31 @@ import { SectionHeading } from './section-heading';
 export function About() {
   return (
     <styled.section id="about" py={32}>
-      <SectionHeading index={1} title="About Me" w="50%" />
+      <SectionHeading
+        index={1}
+        title="About Me"
+        w={{
+          lg: '50%',
+        }}
+      />
 
-      <Flex mt={16} gap={24}>
-        <styled.div w="50%" flexShrink={0}>
+      <Flex
+        mt={16}
+        gap={{
+          base: 12,
+          lg: 24,
+        }}
+        flexDir={{
+          base: 'column',
+          lg: 'row',
+        }}
+      >
+        <styled.div
+          w={{
+            lg: '50%',
+          }}
+          flexShrink={0}
+        >
           <styled.div
             css={{
               fontSize: 'lg',
@@ -60,7 +81,14 @@ export function About() {
 
 function Skills() {
   return (
-    <styled.ul mt={5} display="grid" gap={1} gridTemplateColumns="repeat(3,1fr)">
+    <styled.ul
+      mt={5}
+      display="grid"
+      gap={1}
+      gridTemplateColumns={{
+        lg: 'repeat(3,1fr)',
+      }}
+    >
       {AUTHOR.skills.map((skill, i) => (
         <styled.li
           key={skill}
@@ -68,7 +96,9 @@ function Skills() {
           display="flex"
           alignItems="center"
           gap={1}
-          gridColumn={(i + 1) % 2 === 0 ? 2 : 1}
+          gridColumn={{
+            lg: (i + 1) % 2 === 0 ? 2 : 1,
+          }}
         >
           <AsteriskIcon color="brand.accent" w={3} h={3} />
           <styled.span fontSize="sm">{skill}</styled.span>

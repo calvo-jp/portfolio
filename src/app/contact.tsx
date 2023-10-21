@@ -8,7 +8,14 @@ export function Contact() {
       <styled.p color="brand.accent" fontFamily="mono">
         04. What&rsquo;s next?
       </styled.p>
-      <styled.h2 color="brand.slate.lighter" fontSize="6xl" fontWeight="bold">
+      <styled.h2
+        color="brand.slate.lighter"
+        fontSize={{
+          base: '4xl',
+          lg: '6xl',
+        }}
+        fontWeight="bold"
+      >
         Get In Touch
       </styled.h2>
       <styled.p mt={4} maxW="600px" mx="auto" fontSize="lg">

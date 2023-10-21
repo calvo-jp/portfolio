@@ -46,11 +46,25 @@ export default defineConfig({
           tooltip: { value: 1800 },
         },
       },
+      keyframes: {
+        slideInLeft: {
+          from: { transform: 'translateX(100%)' },
+          to: { transform: 'translateX(0)' },
+        },
+        slideOutLeft: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(100%)' },
+        },
+        fadeIn: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
+        fadeOut: {
+          from: { opacity: 1 },
+          to: { opacity: 0 },
+        },
+      },
     },
-  },
-  hash: {
-    className: true,
-    cssVar: false,
   },
   outdir: 'styled-system',
   jsxFramework: 'react',

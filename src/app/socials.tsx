@@ -13,6 +13,9 @@ export function Socials() {
         bottom={0}
         display="flex"
         justifyContent="end"
+        lgDown={{
+          display: 'none',
+        }}
       >
         <styled.ul w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
           {Object.entries(AUTHOR.socials).map(([name, url]) => (

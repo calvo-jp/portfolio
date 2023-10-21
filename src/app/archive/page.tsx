@@ -13,7 +13,14 @@ export default function Archive() {
 
   return (
     <styled.div py={24}>
-      <styled.h1 fontSize="7xl" fontWeight="bold" color="brand.slate.lighter">
+      <styled.h1
+        fontSize={{
+          base: '5xl',
+          lg: '7xl',
+        }}
+        fontWeight="bold"
+        color="brand.slate.lighter"
+      >
         Archive
       </styled.h1>
       <styled.p fontFamily="mono" color="brand.accent">
@@ -25,10 +32,17 @@ export default function Archive() {
           return (
             <Flex
               key={year}
-              gap={12}
+              gap={{
+                base: 4,
+                lg: 12,
+              }}
               mt={{
                 base: 8,
                 _first: 0,
+              }}
+              flexDir={{
+                base: 'column',
+                lg: 'row',
               }}
             >
               <styled.div

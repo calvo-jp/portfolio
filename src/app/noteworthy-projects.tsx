@@ -8,7 +8,14 @@ export function NoteworthyProjects() {
   return (
     <styled.section id="noteworthy-projects" py={32}>
       <styled.div textAlign="center">
-        <styled.h2 fontSize="3xl" fontWeight="black" color="brand.slate.lighter">
+        <styled.h2
+          fontSize={{
+            base: '2xl',
+            lg: '3xl',
+          }}
+          fontWeight="black"
+          color="brand.slate.lighter"
+        >
           Other Noteworthy Projects
         </styled.h2>
         <Link
@@ -29,7 +36,13 @@ export function NoteworthyProjects() {
         </Link>
       </styled.div>
 
-      <Grid mt={16} gap={4} gridTemplateColumns="repeat(3,1fr)">
+      <Grid
+        mt={16}
+        gap={4}
+        gridTemplateColumns={{
+          lg: 'repeat(3,1fr)',
+        }}
+      >
         {AUTHOR.projects.map((o) => {
           return o.featured ? null : <Item key={o.title} {...o} />;
         })}

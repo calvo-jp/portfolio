@@ -12,6 +12,9 @@ export function EmailAd() {
         bottom={0}
         display="flex"
         justifyContent="start"
+        lgDown={{
+          display: 'none',
+        }}
       >
         <styled.div w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
           <styled.a

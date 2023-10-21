@@ -24,7 +24,10 @@ export function SectionHeading(props: SectionHeadingProps) {
       <styled.span
         ml={2}
         color="brand.slate.lighter"
-        fontSize="3xl"
+        fontSize={{
+          base: '2xl',
+          lg: '3xl',
+        }}
         fontWeight="black"
         lineHeight="none"
       >

@@ -12,7 +12,10 @@ export function Hero() {
       <styled.h1
         mt={5}
         color="brand.slate.lighter"
-        fontSize="7xl"
+        fontSize={{
+          base: '4xl',
+          lg: '7xl',
+        }}
         fontWeight="black"
         lineHeight="none"
       >
@@ -20,13 +23,19 @@ export function Hero() {
       </styled.h1>
 
       <styled.h2
-        mt={4}
+        mt={{
+          base: 3,
+          lg: 4,
+        }}
         color="brand.slate.light"
-        fontSize="7xl"
+        fontSize={{
+          base: '4xl',
+          lg: '7xl',
+        }}
         fontWeight="black"
         lineHeight="none"
       >
-        I build things for the web.
+        I build things for the&nbsp;web.
       </styled.h2>
 
       <styled.p mt={4} fontSize="lg" lineHeight="normal" maxW="34rem">
@@ -48,7 +57,15 @@ export function Hero() {
         .
       </styled.p>
 
-      <Button mt={14}>Check out my course!</Button>
+      <Button
+        mt={14}
+        lgDown={{
+          w: 'full',
+          justifyContent: 'center',
+        }}
+      >
+        Check out my course!
+      </Button>
     </styled.section>
   );
 }

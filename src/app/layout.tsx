@@ -47,13 +47,25 @@ export default function RootLayout({ children }: PropsWithChildren) {
       lang="en"
       className={cx(sans.variable, mono.variable)}
       scrollBehavior="smooth"
-      overscrollBehavior="none"
+      lgDown={{
+        '&::-webkit-scrollbar': {
+          display: 'none',
+        },
+      }}
     >
       <styled.body bg="brand.navy" color="brand.slate" minHeight="dvh" fontFamily="sans">
         <SkipNav />
         <Navbar />
 
-        <styled.main id="content" w="75vw" px={4} maxW="breakpoint-lg" mx="auto">
+        <styled.main
+          id="content"
+          px={4}
+          lg={{
+            w: '75vw',
+            mx: 'auto',
+            maxW: 'breakpoint-lg',
+          }}
+        >
           {children}
 
           <Socials />
