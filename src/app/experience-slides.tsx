@@ -58,7 +58,7 @@ export function ExperienceSlides() {
           ))}
         </CarouselItemGroup>
       </CarouselViewport>
-      <CarouselIndicatorGroup mt={10} display="flex" gap={4} justifyContent="center">
+      <CarouselIndicatorGroup mt={10} display="flex" gap={3} justifyContent="center">
         {items.map((o, index) => (
           <CarouselIndicator
             key={o.company.name}
@@ -67,9 +67,12 @@ export function ExperienceSlides() {
             h={3}
             cursor="pointer"
             rounded="full"
-            border="1px solid token(colors.brand.white)"
+            border="1px solid token(colors.brand.slate.light)"
+            transitionProperty="all"
+            transitionDuration="slow"
             _current={{
-              bg: 'brand.white',
+              bg: 'brand.slate.lighter',
+              borderColor: 'brand.slate.lighter',
             }}
           >
             <VisuallyHidden>Go to slide {++index}</VisuallyHidden>
