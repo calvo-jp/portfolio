@@ -3,6 +3,7 @@ import '@/assets/styles/globals.css';
 import { AUTHOR } from '@/config/author';
 import { cx } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';
+import { visuallyHidden } from '@/styled-system/patterns';
 import { Metadata } from 'next';
 import { JetBrains_Mono, Lato } from 'next/font/google';
 import { PropsWithChildren } from 'react';
@@ -48,9 +49,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
       scrollBehavior="smooth"
     >
       <styled.body bg="brand.navy" color="brand.slate" minHeight="dvh" fontFamily="sans">
+        <SkipNav />
         <Navbar />
 
-        <styled.main w="75vw" px={4} maxW="breakpoint-lg" mx="auto">
+        <styled.main id="content" w="75vw" px={4} maxW="breakpoint-lg" mx="auto">
           {children}
 
           <Socials />
@@ -60,5 +62,13 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <Footer />
       </styled.body>
     </styled.html>
+  );
+}
+
+function SkipNav() {
+  return (
+    <styled.a href="#content" className={visuallyHidden()}>
+      Skip to Content
+    </styled.a>
   );
 }
