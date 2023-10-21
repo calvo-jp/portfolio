@@ -37,7 +37,7 @@ export function Experience() {
                 bg: 'brand.navy.light',
                 color: 'brand.accent',
               }}
-              transitionProperty="colors"
+              transitionProperty="all"
               transitionDuration="slow"
             >
               {company.name}
