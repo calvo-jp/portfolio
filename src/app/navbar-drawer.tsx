@@ -32,6 +32,7 @@ export function NavbarDrawer() {
       }}
     >
       <DialogTrigger
+        cursor="pointer"
         color="brand.white"
         lg={{
           display: 'none',
@@ -70,6 +71,12 @@ export function NavbarDrawer() {
               right={0}
               shadow="2xl"
               zIndex="modal"
+              overflowY="auto"
+              css={{
+                '&::-webkit-scrollbar': {
+                  display: 'none',
+                },
+              }}
               _open={{
                 animation: 'slide-in-right 250ms',
               }}
@@ -79,7 +86,7 @@ export function NavbarDrawer() {
             >
               <Flex>
                 <Spacer />
-                <DialogCloseTrigger color="brand.white">
+                <DialogCloseTrigger cursor="pointer" color="brand.white">
                   <XIcon w={8} h={8} />
                 </DialogCloseTrigger>
               </Flex>

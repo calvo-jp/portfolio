@@ -52,6 +52,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
           display: 'none',
         },
       }}
+      smOnly={{
+        fontSize: 'lg',
+      }}
+      mdOnly={{
+        fontSize: 'xl',
+      }}
     >
       <styled.body bg="brand.navy" color="brand.slate" minHeight="dvh" fontFamily="sans">
         <SkipNav />
