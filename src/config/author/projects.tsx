@@ -11,6 +11,7 @@ export const projects: TProject[] = [
     website: 'https://vercel.bla.app',
     tags: ['NextJs', 'TailwindCss'],
     featured: true,
+    createdAt: new Date(),
   },
   {
     title: 'Halcyon Theme',
@@ -22,6 +23,7 @@ export const projects: TProject[] = [
     website: 'https://vercel.bla.app',
     tags: ['NextJs', 'TailwindCss'],
     featured: true,
+    createdAt: new Date(),
   },
 
   //
@@ -33,6 +35,7 @@ export const projects: TProject[] = [
     repository: 'https://github.com/calvo-jp/bla',
     website: 'https://vercel.bla.app',
     tags: ['NextJs', 'TailwindCss'],
+    createdAt: new Date(),
   },
   {
     title: 'Integrating Algolia Search with WordPress Multisite',
@@ -40,6 +43,7 @@ export const projects: TProject[] = [
       'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
     repository: 'https://github.com/calvo-jp/bla',
     tags: ['NextJs', 'TailwindCss'],
+    createdAt: new Date(),
   },
   {
     title: 'Integrating Algolia Search with WordPress Multisite',
@@ -47,6 +51,7 @@ export const projects: TProject[] = [
       'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
     repository: 'https://github.com/calvo-jp/bla',
     tags: ['NextJs', 'TailwindCss'],
+    createdAt: new Date(),
   },
   {
     title: 'Integrating Algolia Search with WordPress Multisite',
@@ -54,6 +59,7 @@ export const projects: TProject[] = [
       'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
     repository: 'https://github.com/calvo-jp/bla',
     tags: ['NextJs', 'TailwindCss'],
+    createdAt: new Date(),
   },
   {
     title: 'Integrating Algolia Search with WordPress Multisite',
@@ -62,5 +68,6 @@ export const projects: TProject[] = [
     website: 'https://vercel.bla.app',
     repository: 'https://github.com/calvo-jp/bla',
     tags: ['NextJs', 'TailwindCss'],
+    createdAt: new Date(),
   },
 ];

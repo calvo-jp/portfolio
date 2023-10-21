@@ -65,6 +65,7 @@ export type TProject =
       repository: TExternalLink;
       website: TExternalLink;
       tags: TTag[];
+      createdAt: Date;
       featured: true;
     }
   | {
@@ -73,6 +74,7 @@ export type TProject =
       repository: TExternalLink;
       website?: TExternalLink;
       tags: TTag[];
+      createdAt: Date;
       featured?: false;
     };
 
