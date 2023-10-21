@@ -17,6 +17,7 @@ export function ExperienceSlides() {
       lg={{
         display: 'none',
       }}
+      loop
     >
       <CarouselViewport overflowX="hidden" pos="relative">
         <CarouselItemGroup>

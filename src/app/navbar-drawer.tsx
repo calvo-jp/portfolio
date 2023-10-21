@@ -32,7 +32,7 @@ export function NavbarDrawer() {
           </DialogTrigger>
 
           <Portal>
-            <Presence present={isOpen}>
+            <Presence present={isOpen} lazyMount unmountOnExit>
               <DialogBackdrop
                 bg="#0a192fbf" // change to "brand.navy/50" once supported
                 pos="fixed"
@@ -49,7 +49,7 @@ export function NavbarDrawer() {
             </Presence>
 
             <DialogPositioner>
-              <Presence present={isOpen}>
+              <Presence present={isOpen} lazyMount unmountOnExit>
                 <DialogContent
                   p={4}
                   h="full"
