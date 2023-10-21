@@ -15,6 +15,7 @@ import { Button } from '@/lib/button';
 import { MenuIcon, XIcon } from '@/lib/icons';
 import { Link } from '@/lib/next-js';
 import { Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { NAVBAR_LINKS } from './navbar-nav';
 
 export function NavbarDrawer() {
   return (
@@ -85,7 +86,7 @@ export function NavbarDrawer() {
 
                   <styled.nav py={16}>
                     <styled.ul textAlign="center">
-                      {links.map(({ label, path }, index) => (
+                      {NAVBAR_LINKS.map(({ label, path }, index) => (
                         <styled.li
                           key={path}
                           mb={{
@@ -124,22 +125,3 @@ export function NavbarDrawer() {
     </Dialog>
   );
 }
-
-const links = [
-  {
-    path: '/#about',
-    label: 'About',
-  },
-  {
-    path: '/#experience',
-    label: 'Experience',
-  },
-  {
-    path: '/#work',
-    label: 'Work',
-  },
-  {
-    path: '/#contact',
-    label: 'Contact',
-  },
-];
