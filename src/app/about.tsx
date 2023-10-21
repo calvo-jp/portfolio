@@ -11,15 +11,15 @@ export function About() {
       <SectionHeading
         index={1}
         title="About Me"
-        w={{
-          lg: '50%',
+        lg={{
+          w: '1/2',
         }}
       />
 
       <Flex
         mt={16}
         gap={{
-          base: 12,
+          base: 6,
           lg: 24,
         }}
         flexDir={{
@@ -28,17 +28,20 @@ export function About() {
         }}
       >
         <styled.div
-          w={{
-            lg: '50%',
-          }}
           flexShrink={0}
+          lg={{
+            w: '1/2',
+          }}
         >
           <styled.div
             css={{
               fontSize: 'lg',
 
               '& div': {
-                mt: 5,
+                mt: {
+                  base: 4,
+                  lg: 5,
+                },
                 hyphens: 'auto',
                 _first: {
                   mt: 0,

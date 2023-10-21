@@ -1,5 +1,6 @@
 'use client';
 
+import { AUTHOR } from '@/config/author';
 import {
   Dialog,
   DialogBackdrop,
@@ -8,26 +9,34 @@ import {
   DialogPositioner,
   DialogTrigger,
 } from '@/lib/ark-ui';
+import { Button } from '@/lib/button';
 import { MenuIcon, XIcon } from '@/lib/icons';
 import { useDisclosure } from '@/lib/use-disclosure';
-import { Flex, Spacer } from '@/styled-system/jsx';
+import { Flex, Spacer, styled } from '@/styled-system/jsx';
 import { Portal, Presence } from '@ark-ui/react';
+import { useRouter } from 'next/navigation';
 
 export function NavbarDrawer() {
+  const router = useRouter();
   const disclosure = useDisclosure();
 
   return (
     <Dialog
       open={disclosure.open}
-      onOpenChange={({ open }) => {
-        if (open) {
+      onOpenChange={(details) => {
+        if (details.open) {
           disclosure.onOpen();
         } else {
           disclosure.onClose();
         }
       }}
     >
-      <DialogTrigger color="brand.white">
+      <DialogTrigger
+        color="brand.white"
+        lg={{
+          display: 'none',
+        }}
+      >
         <MenuIcon w={8} h={8} />
       </DialogTrigger>
 
@@ -39,6 +48,12 @@ export function NavbarDrawer() {
             inset={0}
             zIndex="overlay"
             backdropFilter="blur(4px)"
+            _open={{
+              animation: 'fade-in 250ms',
+            }}
+            _closed={{
+              animation: 'fade-out 250ms',
+            }}
           />
         </Presence>
 
@@ -56,10 +71,10 @@ export function NavbarDrawer() {
               shadow="2xl"
               zIndex="modal"
               _open={{
-                animation: 'slideInLeft 200ms',
+                animation: 'slide-in-right 250ms',
               }}
               _closed={{
-                animation: 'slideOutLeft 200ms',
+                animation: 'slide-out-right 250ms',
               }}
             >
               <Flex>
@@ -68,6 +83,46 @@ export function NavbarDrawer() {
                   <XIcon w={8} h={8} />
                 </DialogCloseTrigger>
               </Flex>
+
+              <styled.nav py={16}>
+                <styled.ul textAlign="center">
+                  {links.map(({ label, path }, index) => (
+                    <styled.li
+                      key={path}
+                      mb={{
+                        base: 6,
+                        _last: 0,
+                      }}
+                    >
+                      <styled.button
+                        type="button"
+                        py={1}
+                        onClick={() => {
+                          disclosure.onClose();
+                          router.push(path);
+                        }}
+                      >
+                        <styled.div fontFamily="mono" color="brand.accent">
+                          {(++index).toString().padStart(2, '0')}.
+                        </styled.div>
+                        <styled.div fontSize="lg" color="brand.slate.lighter">
+                          {label}
+                        </styled.div>
+                      </styled.button>
+                    </styled.li>
+                  ))}
+                </styled.ul>
+
+                <Button w="2/3" mx="auto" mt={12} asChild>
+                  <styled.a
+                    href={AUTHOR.resume}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Resume
+                  </styled.a>
+                </Button>
+              </styled.nav>
             </DialogContent>
           </Presence>
         </DialogPositioner>

@@ -8,8 +8,8 @@ export function Experience() {
       <SectionHeading
         index={2}
         title={<>Where I&rsquo;ve Worked</>}
-        w={{
-          lg: '50%',
+        lg={{
+          w: '1/2',
         }}
       />
 

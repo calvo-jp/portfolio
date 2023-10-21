@@ -45,21 +45,28 @@ export default defineConfig({
           toast: { value: 1700 },
           tooltip: { value: 1800 },
         },
+        spacing: {
+          '1/4': { value: '25%' },
+          '1/3': { value: '33.3333333333%' },
+          '1/2': { value: '50%' },
+          '2/3': { value: '66.6666666667%' },
+          '3/4': { value: '75%' },
+        },
       },
       keyframes: {
-        slideInLeft: {
+        'slide-in-right': {
           from: { transform: 'translateX(100%)' },
-          to: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(0%)' },
         },
-        slideOutLeft: {
-          from: { transform: 'translateX(0)' },
+        'slide-out-right': {
+          from: { transform: 'translateX(0%)' },
           to: { transform: 'translateX(100%)' },
         },
-        fadeIn: {
+        'fade-in': {
           from: { opacity: 0 },
           to: { opacity: 1 },
         },
-        fadeOut: {
+        'fade-out': {
           from: { opacity: 1 },
           to: { opacity: 0 },
         },

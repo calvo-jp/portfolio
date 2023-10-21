@@ -14,7 +14,7 @@ export function Work() {
         index={3}
         title={<>Some things I&rsquo;ve built</>}
         lg={{
-          w: '50%',
+          w: '1/2',
         }}
       />
 
@@ -34,17 +34,26 @@ function Item(props: IFeaturedProject) {
     <Flex
       w="full"
       mt={{
-        base: 24,
+        base: 12,
         _first: 0,
       }}
-      _even={{
-        flexDir: 'row-reverse',
+      flexDir={{
+        base: 'column',
+        lg: {
+          base: 'row',
+          _even: 'row-reverse',
+        },
       }}
       gap={10}
       alignItems="center"
+      lg={{
+        mt: {
+          base: 24,
+        },
+      }}
     >
       <styled.div
-        w="50%"
+        w="1/2"
         flexShrink={0}
         lgDown={{
           display: 'none',
@@ -73,14 +82,25 @@ function Item(props: IFeaturedProject) {
           {title}
         </styled.h3>
 
+        <styled.div
+          mt={4}
+          lg={{
+            display: 'none',
+          }}
+        >
+          <Image src={image} alt="" width={450} height={450} w="full" h="auto" />
+        </styled.div>
+
         <styled.p
           mt={5}
-          bg="brand.navy.light"
-          px={5}
-          py={4}
           rounded="sm"
           color="brand.slate.light"
           hyphens="auto"
+          lg={{
+            px: 5,
+            py: 4,
+            bg: 'brand.navy.light',
+          }}
         >
           {description}
         </styled.p>

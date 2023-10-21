@@ -9,6 +9,7 @@ const recipe = cva({
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     rounded: 'sm',
     fontFamily: 'mono',
     transitionProperty: 'transform',
