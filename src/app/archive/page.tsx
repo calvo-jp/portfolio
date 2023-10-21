@@ -1,9 +1,10 @@
 import { AUTHOR } from '@/config/author';
 import { styled } from '@/styled-system/jsx';
-import { TProject } from '@/types';
-import { format, isBefore } from 'date-fns';
+import { INonFeaturedProject } from '@/types';
 
 export default function Archive() {
+  const items = getItems();
+
   return (
     <styled.div py={24}>
       <styled.h1 fontSize="7xl" fontWeight="bold" color="brand.slate.lighter">
@@ -13,38 +14,44 @@ export default function Archive() {
         A big list of things I&rsquo; worked on
       </styled.p>
 
-      <styled.nav mt={24}>
-        <styled.ul>
-          {AUTHOR.projects
-            .sort((i, j) => (isBefore(i.createdAt, j.createdAt) ? 1 : 0))
-            .map((o) => {
-              return o.featured ? null : (
-                <styled.li key={o.title}>
-                  <Item {...o} />
-                </styled.li>
-              );
-            })}
-        </styled.ul>
-      </styled.nav>
+      <styled.div mt={16}>
+        {items.map(([year, projects]) => {
+          return (
+            <styled.div key={year}>
+              <styled.div>{year}</styled.div>
+              <styled.div>
+                {projects.map((project) => (
+                  <styled.div key={project.title}>
+                    <styled.h2>{project.title}</styled.h2>
+                  </styled.div>
+                ))}
+              </styled.div>
+            </styled.div>
+          );
+        })}
+      </styled.div>
     </styled.div>
   );
 }
 
-type ItemProps = Extract<TProject, { featured?: false }>;
+function getItems() {
+  const f = [...AUTHOR.projects].filter((p) => !p.featured) as INonFeaturedProject[];
+  const r: Record<string, INonFeaturedProject[]> = {};
 
-function Item(props: ItemProps) {
-  const { title, description, repository, website, tags, createdAt } = props;
+  f.forEach((i) => {
+    const k = i.createdAt.getFullYear().toString();
 
-  return (
-    <styled.div>
-      <styled.div>{format(createdAt, 'yyyy')}</styled.div>
-      <styled.h2>{title}</styled.h2>
-      <styled.p>{description}</styled.p>
-      <styled.ul>
-        {tags.map((tag) => (
-          <styled.li key={tag}>{tag}</styled.li>
-        ))}
-      </styled.ul>
-    </styled.div>
-  );
+    if (r[k]) {
+      r[k].push(i);
+    } else {
+      r[k] = [i];
+    }
+  });
+
+  const e = Object.entries(r);
+  const s = [...e];
+
+  s.sort(([i], [j]) => j.localeCompare(i));
+
+  return s;
 }

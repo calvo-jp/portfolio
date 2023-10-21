@@ -2,8 +2,10 @@ import { AUTHOR } from '@/config/author';
 import { ExternalLinkIcon, GitBranchIcon } from '@/lib/icons';
 import { Image, Link } from '@/lib/next-js';
 import { Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { TProject } from '@/types';
+import { IFeaturedProject } from '@/types';
 import { SectionHeading } from './section-heading';
+
+const projects = [...AUTHOR.projects].filter((o) => o.featured) as IFeaturedProject[];
 
 export function Work() {
   return (
@@ -11,21 +13,20 @@ export function Work() {
       <SectionHeading index={3} title={<>Some things I&rsquo;ve built</>} w="50%" />
 
       <styled.div mt={16}>
-        {AUTHOR.projects.map((o) => {
-          return !o.featured ? null : <Item key={o.title} {...o} />;
-        })}
+        {projects.map((o) => (
+          <Item key={o.title} {...o} />
+        ))}
       </styled.div>
     </styled.section>
   );
 }
 
-type ItemProps = Extract<TProject, { featured: true }>;
-
-function Item(props: ItemProps) {
+function Item(props: IFeaturedProject) {
   const { image, title, description, website, repository, tags } = props;
 
   return (
     <Flex
+      w="full"
       mt={{
         base: 24,
         _first: 0,
@@ -40,7 +41,7 @@ function Item(props: ItemProps) {
         <Image src={image} alt="" width={450} height={450} w="full" h="auto" />
       </styled.div>
 
-      <styled.div>
+      <styled.div flexGrow={1}>
         <styled.div
           fontFamily="mono"
           fontSize="sm"

@@ -2,7 +2,7 @@ import { AUTHOR } from '@/config/author';
 import { ExternalLinkIcon, FolderIcon, GitBranchIcon } from '@/lib/icons';
 import { Link } from '@/lib/next-js';
 import { Flex, Grid, HStack, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { TProject } from '@/types';
+import { INonFeaturedProject } from '@/types';
 
 export function NoteworthyProjects() {
   return (
@@ -38,9 +38,7 @@ export function NoteworthyProjects() {
   );
 }
 
-type ItemProps = Extract<TProject, { featured?: false }>;
-
-function Item(props: ItemProps) {
+function Item(props: INonFeaturedProject) {
   const { title, description, repository, website, tags } = props;
 
   return (

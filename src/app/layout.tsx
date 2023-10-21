@@ -47,6 +47,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       lang="en"
       className={cx(sans.variable, mono.variable)}
       scrollBehavior="smooth"
+      overscrollBehavior="none"
     >
       <styled.body bg="brand.navy" color="brand.slate" minHeight="dvh" fontFamily="sans">
         <SkipNav />
