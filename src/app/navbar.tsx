@@ -17,7 +17,7 @@ export function Navbar() {
       display="flex"
       alignItems="center"
     >
-      <Link href="/">
+      <Link href="/#">
         <VisuallyHidden>Home</VisuallyHidden>
         <TerminalIcon w={6} h={6} color="brand.accent" />
       </Link>
