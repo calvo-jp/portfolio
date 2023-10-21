@@ -1,6 +1,6 @@
 import { AUTHOR } from '@/config/author';
 import { ExternalLinkIcon, GitBranchIcon } from '@/lib/icons';
-import { Image, Link } from '@/lib/next-js';
+import { Image } from '@/lib/next-js';
 import { Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { IFeaturedProject } from '@/types';
 import { SectionHeading } from './section-heading';
@@ -81,34 +81,36 @@ function Item(props: IFeaturedProject) {
 
         <HStack mt={8} gap={4}>
           {website && (
-            <Link href={website}>
-              <ExternalLinkIcon
-                w={6}
-                h={6}
-                color={{
-                  base: 'brand.slate.light',
-                  _hover: 'brand.accent',
-                }}
-                transitionProperty="colors"
-                transitionDuration="slow"
-              />
-              <VisuallyHidden>Go to website</VisuallyHidden>
-            </Link>
-          )}
-
-          <Link href={repository}>
-            <GitBranchIcon
-              w={6}
-              h={6}
+            <styled.a
+              href={website}
+              target="_blank"
+              rel="noreferrer noopener"
               color={{
                 base: 'brand.slate.light',
                 _hover: 'brand.accent',
               }}
               transitionProperty="colors"
               transitionDuration="slow"
-            />
+            >
+              <ExternalLinkIcon w={6} h={6} />
+              <VisuallyHidden>Go to website</VisuallyHidden>
+            </styled.a>
+          )}
+
+          <styled.a
+            href={repository}
+            target="_blank"
+            rel="noreferrer noopener"
+            color={{
+              base: 'brand.slate.light',
+              _hover: 'brand.accent',
+            }}
+            transitionProperty="colors"
+            transitionDuration="slow"
+          >
+            <GitBranchIcon w={6} h={6} />
             <VisuallyHidden>Go to repository</VisuallyHidden>
-          </Link>
+          </styled.a>
         </HStack>
       </styled.div>
     </Flex>
