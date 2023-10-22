@@ -29,11 +29,12 @@ export function Socials() {
           {Object.entries(AUTHOR.socials).map(([name, url]) => (
             <styled.li key={name}>
               <Tooltip
+                id={`tooltip:socials:${name}`}
                 positioning={{
                   placement: 'right',
                 }}
               >
-                <TooltipTrigger>
+                <TooltipTrigger asChild>
                   <styled.a
                     href={url}
                     target="_blank"
