@@ -38,7 +38,6 @@ export function NavbarDrawer() {
                 bg="#0a192fbf" // change to "brand.navy/50" once supported
                 pos="fixed"
                 inset={0}
-                zIndex="overlay"
                 backdropFilter="blur(4px)"
                 _open={{
                   animation: 'fade-in 250ms',
@@ -61,7 +60,6 @@ export function NavbarDrawer() {
                   top={0}
                   right={0}
                   shadow="2xl"
-                  zIndex="modal"
                   overflowY="auto"
                   css={{
                     '&::-webkit-scrollbar': {

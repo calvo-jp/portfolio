@@ -1,7 +1,16 @@
 import { AUTHOR } from '@/config/author';
 import { ExternalLinkIcon, GitBranchIcon } from '@/lib/icons';
+import {
+  Tooltip,
+  TooltipArrow,
+  TooltipArrowTip,
+  TooltipContent,
+  TooltipPositioner,
+  TooltipTrigger,
+} from '@/lib/tooltip';
 import { Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { INonFeaturedProject } from '@/types';
+import { Portal } from '@ark-ui/react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -90,34 +99,64 @@ function Item(props: INonFeaturedProject) {
 
       <HStack mt={5} gap={4}>
         {website && (
-          <styled.a
-            href={website}
-            target="_blank"
-            rel="noreferrer noopener"
-            transitionProperty="colors"
-            transitionDuration="slow"
-            _hover={{
-              color: 'brand.accent',
-            }}
-          >
-            <ExternalLinkIcon w={5} h={5} />
-            <VisuallyHidden>Go to website</VisuallyHidden>
-          </styled.a>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <styled.a
+                href={website}
+                target="_blank"
+                rel="noreferrer noopener"
+                transitionProperty="colors"
+                transitionDuration="slow"
+                _hover={{
+                  color: 'brand.accent',
+                }}
+              >
+                <ExternalLinkIcon w={5} h={5} />
+                <VisuallyHidden>Go to website</VisuallyHidden>
+              </styled.a>
+            </TooltipTrigger>
+
+            <Portal>
+              <TooltipPositioner>
+                <TooltipContent>
+                  <TooltipArrow>
+                    <TooltipArrowTip />
+                  </TooltipArrow>
+                  <styled.span>Website</styled.span>
+                </TooltipContent>
+              </TooltipPositioner>
+            </Portal>
+          </Tooltip>
         )}
 
-        <styled.a
-          href={repository}
-          target="_blank"
-          rel="noreferrer noopener"
-          transitionProperty="colors"
-          transitionDuration="slow"
-          _hover={{
-            color: 'brand.accent',
-          }}
-        >
-          <GitBranchIcon w={5} h={5} />
-          <VisuallyHidden>Go to repository</VisuallyHidden>
-        </styled.a>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <styled.a
+              href={repository}
+              target="_blank"
+              rel="noreferrer noopener"
+              transitionProperty="colors"
+              transitionDuration="slow"
+              _hover={{
+                color: 'brand.accent',
+              }}
+            >
+              <GitBranchIcon w={5} h={5} />
+              <VisuallyHidden>Go to repository</VisuallyHidden>
+            </styled.a>
+          </TooltipTrigger>
+
+          <Portal>
+            <TooltipPositioner>
+              <TooltipContent>
+                <TooltipArrow>
+                  <TooltipArrowTip />
+                </TooltipArrow>
+                <styled.span>Repository</styled.span>
+              </TooltipContent>
+            </TooltipPositioner>
+          </Portal>
+        </Tooltip>
       </HStack>
     </styled.div>
   );
