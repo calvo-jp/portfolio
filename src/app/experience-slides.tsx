@@ -49,7 +49,7 @@ export function ExperienceSlides() {
         setCurrentIndex(details.index);
       }}
     >
-      <CarouselViewport overflowX="hidden" pos="relative">
+      <CarouselViewport>
         <CarouselItemGroup ref={ref}>
           {items.map((o, index) => (
             <CarouselItem w="full" key={o.company.name} index={index}>
