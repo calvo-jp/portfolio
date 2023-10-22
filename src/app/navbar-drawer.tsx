@@ -49,7 +49,7 @@ export function NavbarDrawer() {
             </Presence>
 
             <DialogPositioner>
-              <Presence present={isOpen} lazyMount>
+              <Presence present={isOpen}>
                 <DialogContent
                   p={4}
                   h="full"

@@ -43,7 +43,6 @@ export function ExperienceSlides() {
       lg={{
         display: 'none',
       }}
-      loop
       index={currentIndex}
       onIndexChange={(details) => {
         setCurrentIndex(details.index);

@@ -10,11 +10,20 @@ export const DialogBackdrop = styled(dialog.DialogBackdrop, {
 });
 
 export const DialogPositioner = styled(dialog.DialogPositioner);
-export const DialogContent = styled(dialog.DialogContent, {
-  base: {
-    zIndex: 'modal',
+export const DialogContent = styled(
+  dialog.DialogContent,
+  {
+    base: {
+      zIndex: 'modal',
+    },
   },
-});
+  {
+    defaultProps: {
+      lazyMount: true,
+      unmountOnExit: false,
+    },
+  },
+);
 
 export const DialogTitle = styled(dialog.DialogTitle);
 export const DialogDescription = styled(dialog.DialogDescription);

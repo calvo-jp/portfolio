@@ -1,7 +1,16 @@
 import { styled } from '@/styled-system/jsx';
 import * as carousel from '@ark-ui/react/carousel';
 
-export const Carousel = styled(carousel.Carousel);
+export const Carousel = styled(
+  carousel.Carousel,
+  {},
+  {
+    defaultProps: {
+      loop: true,
+    },
+  },
+);
+
 export const CarouselControl = styled(carousel.CarouselControl);
 export const CarouselIndicator = styled(carousel.CarouselIndicator);
 export const CarouselIndicatorGroup = styled(carousel.CarouselIndicatorGroup);

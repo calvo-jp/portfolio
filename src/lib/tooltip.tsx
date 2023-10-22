@@ -14,17 +14,26 @@ export const Tooltip = styled(
 
 export const TooltipTrigger = styled(tooltip.TooltipTrigger);
 export const TooltipPositioner = styled(tooltip.TooltipPositioner);
-export const TooltipContent = styled(tooltip.TooltipContent, {
-  base: {
-    px: 4,
-    py: 2,
-    bg: 'brand.white',
-    color: 'brand.navy',
-    zIndex: 'tooltip',
-    rounded: 'lg',
-    fontSize: 'sm',
+export const TooltipContent = styled(
+  tooltip.TooltipContent,
+  {
+    base: {
+      px: 4,
+      py: 2,
+      bg: 'brand.white',
+      color: 'brand.navy',
+      zIndex: 'tooltip',
+      rounded: 'lg',
+      fontSize: 'sm',
+    },
   },
-});
+  {
+    defaultProps: {
+      lazyMount: true,
+      unmountOnExit: false,
+    },
+  },
+);
 
 export const TooltipArrow = styled(tooltip.TooltipArrow, {
   base: {
