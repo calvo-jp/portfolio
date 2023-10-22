@@ -1,4 +1,4 @@
-import { AsteriskIcon } from '@/lib/icons';
+import { AsteriskIcon } from '@/components/icons';
 import { styled } from '@/styled-system/jsx';
 import { IWorkHistory } from '@/types';
 import { format, isSameYear } from 'date-fns';

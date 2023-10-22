@@ -1,5 +1,5 @@
+import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/components/tabs';
 import { AUTHOR } from '@/config/author';
-import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/tabs';
 import { ExperienceItem } from './experience-item';
 
 export function ExperienceTabs() {

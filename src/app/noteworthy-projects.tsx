@@ -1,6 +1,5 @@
-import { AUTHOR } from '@/config/author';
-import { ExternalLinkIcon, FolderIcon, GitBranchIcon } from '@/lib/icons';
-import { Link } from '@/lib/link';
+import { ExternalLinkIcon, FolderIcon, GitBranchIcon } from '@/components/icons';
+import { Link } from '@/components/link';
 import {
   Tooltip,
   TooltipArrow,
@@ -8,7 +7,8 @@ import {
   TooltipContent,
   TooltipPositioner,
   TooltipTrigger,
-} from '@/lib/tooltip';
+} from '@/components/tooltip';
+import { AUTHOR } from '@/config/author';
 import { Flex, Grid, HStack, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { INonFeaturedProject } from '@/types';
 import { Portal } from '@ark-ui/react';

@@ -1,5 +1,4 @@
-import { AUTHOR } from '@/config/author';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/lib/icons';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/components/icons';
 import {
   Tooltip,
   TooltipArrow,
@@ -7,7 +6,8 @@ import {
   TooltipContent,
   TooltipPositioner,
   TooltipTrigger,
-} from '@/lib/tooltip';
+} from '@/components/tooltip';
+import { AUTHOR } from '@/config/author';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
 

@@ -1,6 +1,5 @@
 'use client';
 
-import { AUTHOR } from '@/config/author';
 import {
   Carousel,
   CarouselIndicator,
@@ -8,7 +7,8 @@ import {
   CarouselItem,
   CarouselItemGroup,
   CarouselViewport,
-} from '@/lib/carousel';
+} from '@/components/carousel';
+import { AUTHOR } from '@/config/author';
 import { VisuallyHidden } from '@/styled-system/jsx';
 import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';

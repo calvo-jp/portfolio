@@ -1,6 +1,6 @@
-import { Button } from '@/lib/button';
-import { ChevronLeftIcon } from '@/lib/icons';
-import { Link } from '@/lib/link';
+import { Button } from '@/components/button';
+import { ChevronLeftIcon } from '@/components/icons';
+import { Link } from '@/components/link';
 import { styled } from '@/styled-system/jsx';
 
 export default function NotFound() {

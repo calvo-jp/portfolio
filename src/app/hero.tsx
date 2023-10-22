@@ -1,5 +1,5 @@
+import { Button } from '@/components/button';
 import { AUTHOR } from '@/config/author';
-import { Button } from '@/lib/button';
 import { styled } from '@/styled-system/jsx';
 
 export function Hero() {

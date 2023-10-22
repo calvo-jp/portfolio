@@ -1,7 +1,6 @@
 'use client';
 
-import { AUTHOR } from '@/config/author';
-import { Button } from '@/lib/button';
+import { Button } from '@/components/button';
 import {
   Dialog,
   DialogBackdrop,
@@ -9,9 +8,10 @@ import {
   DialogContent,
   DialogPositioner,
   DialogTrigger,
-} from '@/lib/dialog';
-import { MenuIcon, XIcon } from '@/lib/icons';
-import { Link } from '@/lib/link';
+} from '@/components/dialog';
+import { MenuIcon, XIcon } from '@/components/icons';
+import { Link } from '@/components/link';
+import { AUTHOR } from '@/config/author';
 import { Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal, Presence } from '@ark-ui/react';
 import { NAVBAR_LINKS } from './navbar-nav';
