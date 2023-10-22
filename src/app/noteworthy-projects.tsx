@@ -13,7 +13,7 @@ import { Flex, Grid, HStack, Spacer, VisuallyHidden, styled } from '@/styled-sys
 import { INonFeaturedProject } from '@/types';
 import { Portal } from '@ark-ui/react';
 
-const items = AUTHOR.projects.filter((o) => o.featured) as INonFeaturedProject[];
+const items = AUTHOR.projects.filter((o) => !o.featured) as INonFeaturedProject[];
 
 export function NoteworthyProjects() {
   return (
