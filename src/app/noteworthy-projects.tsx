@@ -1,6 +1,6 @@
 import { AUTHOR } from '@/config/author';
 import { ExternalLinkIcon, FolderIcon, GitBranchIcon } from '@/lib/icons';
-import { Link } from '@/lib/next-js';
+import { Link } from '@/lib/link';
 import { Flex, Grid, HStack, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { INonFeaturedProject } from '@/types';
 

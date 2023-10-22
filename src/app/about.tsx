@@ -1,7 +1,7 @@
 import selfie from '@/assets/images/selfie.jpg';
 import { AUTHOR } from '@/config/author';
 import { AsteriskIcon } from '@/lib/icons';
-import { Image } from '@/lib/next-js';
+import { Image } from '@/lib/image';
 import { Flex, styled } from '@/styled-system/jsx';
 import { SectionHeading } from './section-heading';
 

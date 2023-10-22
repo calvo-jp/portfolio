@@ -1,5 +1,5 @@
 import { AUTHOR } from '@/config/author';
-import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/ark-ui';
+import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/tabs';
 import { ExperienceItem } from './experience-item';
 
 export function ExperienceTabs() {

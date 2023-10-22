@@ -1,6 +1,6 @@
 import { AUTHOR } from '@/config/author';
 import { Button } from '@/lib/button';
-import { Link } from '@/lib/next-js';
+import { Link } from '@/lib/link';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
 
 export function NavbarNav() {

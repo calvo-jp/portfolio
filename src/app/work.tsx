@@ -1,6 +1,14 @@
 import { AUTHOR } from '@/config/author';
 import { ExternalLinkIcon, GitBranchIcon } from '@/lib/icons';
-import { Image } from '@/lib/next-js';
+import { Image } from '@/lib/image';
+import {
+  Tooltip,
+  TooltipArrow,
+  TooltipArrowTip,
+  TooltipContent,
+  TooltipPositioner,
+  TooltipTrigger,
+} from '@/lib/tooltip';
 import { Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { IFeaturedProject } from '@/types';
 import { SectionHeading } from './section-heading';
@@ -113,36 +121,62 @@ function Item(props: IFeaturedProject) {
 
         <HStack mt={8} gap={4}>
           {website && (
-            <styled.a
-              href={website}
-              target="_blank"
-              rel="noreferrer noopener"
-              color={{
-                base: 'brand.slate.light',
-                _hover: 'brand.accent',
-              }}
-              transitionProperty="colors"
-              transitionDuration="slow"
-            >
-              <ExternalLinkIcon w={6} h={6} />
-              <VisuallyHidden>Go to website</VisuallyHidden>
-            </styled.a>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <styled.a
+                  href={website}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  color={{
+                    base: 'brand.slate.light',
+                    _hover: 'brand.accent',
+                  }}
+                  transitionProperty="colors"
+                  transitionDuration="slow"
+                >
+                  <ExternalLinkIcon w={6} h={6} />
+                  <VisuallyHidden>Go to website</VisuallyHidden>
+                </styled.a>
+              </TooltipTrigger>
+              <TooltipPositioner>
+                <TooltipContent>
+                  <TooltipArrow>
+                    <TooltipArrowTip />
+                  </TooltipArrow>
+
+                  <styled.span>Website</styled.span>
+                </TooltipContent>
+              </TooltipPositioner>
+            </Tooltip>
           )}
 
-          <styled.a
-            href={repository}
-            target="_blank"
-            rel="noreferrer noopener"
-            color={{
-              base: 'brand.slate.light',
-              _hover: 'brand.accent',
-            }}
-            transitionProperty="colors"
-            transitionDuration="slow"
-          >
-            <GitBranchIcon w={6} h={6} />
-            <VisuallyHidden>Go to repository</VisuallyHidden>
-          </styled.a>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <styled.a
+                href={repository}
+                target="_blank"
+                rel="noreferrer noopener"
+                color={{
+                  base: 'brand.slate.light',
+                  _hover: 'brand.accent',
+                }}
+                transitionProperty="colors"
+                transitionDuration="slow"
+              >
+                <GitBranchIcon w={6} h={6} />
+                <VisuallyHidden>Go to repository</VisuallyHidden>
+              </styled.a>
+            </TooltipTrigger>
+            <TooltipPositioner>
+              <TooltipContent>
+                <TooltipArrow>
+                  <TooltipArrowTip />
+                </TooltipArrow>
+
+                <styled.span>Repository</styled.span>
+              </TooltipContent>
+            </TooltipPositioner>
+          </Tooltip>
         </HStack>
       </styled.div>
     </Flex>

@@ -1,5 +1,5 @@
 import { TerminalIcon } from '@/lib/icons';
-import { Link } from '@/lib/next-js';
+import { Link } from '@/lib/link';
 import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { NavbarDrawer } from './navbar-drawer';
 import { NavbarNav } from './navbar-nav';

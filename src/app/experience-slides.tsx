@@ -8,7 +8,7 @@ import {
   CarouselItem,
   CarouselItemGroup,
   CarouselViewport,
-} from '@/lib/ark-ui';
+} from '@/lib/carousel';
 import { VisuallyHidden } from '@/styled-system/jsx';
 import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';

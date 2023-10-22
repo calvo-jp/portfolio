@@ -1,7 +1,7 @@
 import { AUTHOR } from '@/config/author';
-import { Portal } from '@/lib/ark-ui';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/lib/icons';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Portal } from '@ark-ui/react';
 
 export function Socials() {
   return (
