@@ -1,5 +1,13 @@
 import { AUTHOR } from '@/config/author';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/lib/icons';
+import {
+  Tooltip,
+  TooltipArrow,
+  TooltipArrowTip,
+  TooltipContent,
+  TooltipPositioner,
+  TooltipTrigger,
+} from '@/lib/tooltip';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
 
@@ -20,20 +28,39 @@ export function Socials() {
         <styled.ul w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
           {Object.entries(AUTHOR.socials).map(([name, url]) => (
             <styled.li key={name}>
-              <styled.a
-                href={url}
-                target="_blank"
-                rel="noreferrer noopener"
-                transitionProperty="colors"
-                transitionDuration="slow"
-                color={{
-                  base: 'brand.slate.light',
-                  _hover: 'brand.accent',
+              <Tooltip
+                positioning={{
+                  placement: 'right',
                 }}
               >
-                {getIcon(name)}
-                <VisuallyHidden>{name}</VisuallyHidden>
-              </styled.a>
+                <TooltipTrigger>
+                  <styled.a
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    transitionProperty="colors"
+                    transitionDuration="slow"
+                    color={{
+                      base: 'brand.slate.light',
+                      _hover: 'brand.accent',
+                    }}
+                  >
+                    {getIcon(name)}
+                    <VisuallyHidden>{name}</VisuallyHidden>
+                  </styled.a>
+                </TooltipTrigger>
+
+                <Portal>
+                  <TooltipPositioner>
+                    <TooltipContent>
+                      <TooltipArrow>
+                        <TooltipArrowTip />
+                      </TooltipArrow>
+                      <styled.span>{name}</styled.span>
+                    </TooltipContent>
+                  </TooltipPositioner>
+                </Portal>
+              </Tooltip>
             </styled.li>
           ))}
 

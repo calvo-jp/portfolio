@@ -11,6 +11,7 @@ import {
 } from '@/lib/tooltip';
 import { Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { IFeaturedProject } from '@/types';
+import { Portal } from '@ark-ui/react';
 import { SectionHeading } from './section-heading';
 
 const projects = [...AUTHOR.projects].filter((o) => o.featured) as IFeaturedProject[];
@@ -138,15 +139,17 @@ function Item(props: IFeaturedProject) {
                   <VisuallyHidden>Go to website</VisuallyHidden>
                 </styled.a>
               </TooltipTrigger>
-              <TooltipPositioner>
-                <TooltipContent>
-                  <TooltipArrow>
-                    <TooltipArrowTip />
-                  </TooltipArrow>
+              <Portal>
+                <TooltipPositioner>
+                  <TooltipContent>
+                    <TooltipArrow>
+                      <TooltipArrowTip />
+                    </TooltipArrow>
 
-                  <styled.span>Website</styled.span>
-                </TooltipContent>
-              </TooltipPositioner>
+                    <styled.span>Website</styled.span>
+                  </TooltipContent>
+                </TooltipPositioner>
+              </Portal>
             </Tooltip>
           )}
 
@@ -167,15 +170,17 @@ function Item(props: IFeaturedProject) {
                 <VisuallyHidden>Go to repository</VisuallyHidden>
               </styled.a>
             </TooltipTrigger>
-            <TooltipPositioner>
-              <TooltipContent>
-                <TooltipArrow>
-                  <TooltipArrowTip />
-                </TooltipArrow>
+            <Portal>
+              <TooltipPositioner>
+                <TooltipContent>
+                  <TooltipArrow>
+                    <TooltipArrowTip />
+                  </TooltipArrow>
 
-                <styled.span>Repository</styled.span>
-              </TooltipContent>
-            </TooltipPositioner>
+                  <styled.span>Repository</styled.span>
+                </TooltipContent>
+              </TooltipPositioner>
+            </Portal>
           </Tooltip>
         </HStack>
       </styled.div>

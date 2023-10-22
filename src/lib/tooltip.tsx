@@ -20,13 +20,15 @@ export const TooltipContent = styled(tooltip.TooltipContent, {
     py: 2,
     bg: 'brand.white',
     color: 'brand.navy',
+    zIndex: 'tooltip',
     rounded: 'lg',
+    fontSize: 'sm',
   },
 });
 
 export const TooltipArrow = styled(tooltip.TooltipArrow, {
   base: {
-    '--arrow-size': 'token(sizes.4)',
+    '--arrow-size': 'token(sizes.3)',
     '--arrow-background': 'token(colors.brand.white)',
   },
 });
