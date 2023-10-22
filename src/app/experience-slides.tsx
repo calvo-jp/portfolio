@@ -17,23 +17,23 @@ import { ExperienceItem } from './experience-item';
 const items = AUTHOR.workHistory;
 const length = items.length;
 
+/*
+ * FIXME: drop "react-swipeable" once ark-ui carousel supports swipe
+ */
+
 export function ExperienceSlides() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const { ref } = useSwipeable({
-    onSwipedLeft() {
-      if (currentIndex <= 0) {
-        setCurrentIndex(length - 1);
-      } else {
-        setCurrentIndex((v) => v - 1);
-      }
-    },
     onSwipedRight() {
-      if (currentIndex + 1 >= length) {
-        setCurrentIndex(0);
-      } else {
-        setCurrentIndex((v) => v + 1);
-      }
+      if (currentIndex <= 0) return;
+
+      setCurrentIndex((v) => v - 1);
+    },
+    onSwipedLeft() {
+      if (currentIndex + 1 >= length) return;
+
+      setCurrentIndex((v) => v + 1);
     },
   });
 
