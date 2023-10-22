@@ -55,7 +55,7 @@ export function NavbarDrawer() {
                 <DialogContent
                   p={4}
                   h="full"
-                  w="20rem"
+                  w={80}
                   maxW="full"
                   bg="brand.navy.light"
                   pos="fixed"
@@ -70,10 +70,10 @@ export function NavbarDrawer() {
                     },
                   }}
                   _open={{
-                    animation: 'slide-in-right 250ms',
+                    animation: 'slide-in-right token(durations.slow)',
                   }}
                   _closed={{
-                    animation: 'slide-out-right 250ms',
+                    animation: 'slide-out-right token(durations.slow)',
                   }}
                 >
                   <Flex>

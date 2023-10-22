@@ -78,6 +78,9 @@ export default defineConfig({
       current: '&[data-current]',
     },
   },
+  clean: true,
   outdir: 'styled-system',
+  separator: '-',
+  gitignore: true,
   jsxFramework: 'react',
 });
