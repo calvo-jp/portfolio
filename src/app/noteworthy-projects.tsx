@@ -13,6 +13,8 @@ import { Flex, Grid, HStack, Spacer, VisuallyHidden, styled } from '@/styled-sys
 import { INonFeaturedProject } from '@/types';
 import { Portal } from '@ark-ui/react';
 
+const items = AUTHOR.projects.filter((o) => o.featured) as INonFeaturedProject[];
+
 export function NoteworthyProjects() {
   return (
     <styled.section id="noteworthy-projects" py={32}>
@@ -52,9 +54,9 @@ export function NoteworthyProjects() {
           lg: 'repeat(3,1fr)',
         }}
       >
-        {AUTHOR.projects.map((o) => {
-          return o.featured ? null : <Item key={o.title} {...o} />;
-        })}
+        {items.map((o) => (
+          <Item key={o.title} {...o} />
+        ))}
       </Grid>
     </styled.section>
   );

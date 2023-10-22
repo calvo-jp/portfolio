@@ -37,39 +37,37 @@ export default function Archive() {
       </styled.p>
 
       <styled.div mt={16}>
-        {items.map(([year, projects]) => {
-          return (
-            <Flex
-              key={year}
-              gap={{
-                base: 4,
-                lg: 12,
-              }}
-              mt={{
-                base: 8,
-                _first: 0,
-              }}
-              flexDir={{
-                base: 'column',
-                lg: 'row',
-              }}
+        {items.map(([year, projects]) => (
+          <Flex
+            key={year}
+            gap={{
+              base: 4,
+              lg: 12,
+            }}
+            mt={{
+              base: 8,
+              _first: 0,
+            }}
+            flexDir={{
+              base: 'column',
+              lg: 'row',
+            }}
+          >
+            <styled.div
+              fontFamily="mono"
+              fontSize="sm"
+              lineHeight="loose"
+              color="brand.accent"
             >
-              <styled.div
-                fontFamily="mono"
-                fontSize="sm"
-                lineHeight="loose"
-                color="brand.accent"
-              >
-                {year}
-              </styled.div>
-              <styled.div>
-                {projects.map((o) => (
-                  <Item key={o.title} {...o} />
-                ))}
-              </styled.div>
-            </Flex>
-          );
-        })}
+              {year}
+            </styled.div>
+            <styled.div>
+              {projects.map((o) => (
+                <Item key={o.title} {...o} />
+              ))}
+            </styled.div>
+          </Flex>
+        ))}
       </styled.div>
     </styled.div>
   );
