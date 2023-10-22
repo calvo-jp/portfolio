@@ -23,7 +23,7 @@ export const TooltipContent = styled(
       bg: 'brand.white',
       color: 'brand.navy',
       zIndex: 'tooltip',
-      rounded: 'lg',
+      rounded: 'md',
       fontSize: 'sm',
     },
   },
