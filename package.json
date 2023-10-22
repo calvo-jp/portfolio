@@ -10,7 +10,6 @@
     "prepare": "panda codegen"
   },
   "dependencies": {
-    "@ark-ui/anatomy": "0.1.0",
     "@ark-ui/react": "1.0.0-beta.1",
     "date-fns": "2.30.0",
     "lucide-react": "0.288.0",
