@@ -33,22 +33,28 @@ export function NavbarDrawer() {
           </DialogTrigger>
 
           <Portal>
-            <Presence present={isOpen} lazyMount>
+            <Presence present={isOpen}>
               <DialogBackdrop
-                bg="#0a192fbf" // change to "brand.navy/50" once supported
+                bg="#0a192fbf" // FIXME: change to "brand.navy/50" once supported
                 pos="fixed"
                 inset={0}
                 backdropFilter="blur(4px)"
                 _open={{
-                  animation: 'fade-in 250ms',
+                  animation: 'fade-in token(durations.slow)',
                 }}
                 _closed={{
-                  animation: 'fade-out 250ms',
+                  animation: 'fade-out token(durations.slow)',
                 }}
               />
             </Presence>
 
-            <DialogPositioner>
+            <DialogPositioner
+              pos="fixed"
+              inset={0}
+              zIndex="modal"
+              display="flex"
+              justifyContent="flex-end"
+            >
               <Presence present={isOpen}>
                 <DialogContent
                   p={4}
@@ -56,9 +62,6 @@ export function NavbarDrawer() {
                   w={80}
                   maxW="full"
                   bg="brand.navy.light"
-                  pos="fixed"
-                  top={0}
-                  right={0}
                   shadow="2xl"
                   overflowY="auto"
                   css={{

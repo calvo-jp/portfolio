@@ -8,7 +8,7 @@ export function Navbar() {
   return (
     <styled.header
       p={4}
-      bg="#0a192fe0" /* change to "brand.navy/75" once supported */
+      bg="#0a192fe0" /* FIXME: change to "brand.navy/75" once supported */
       pos="sticky"
       top={0}
       zIndex="sticky"
