@@ -114,7 +114,14 @@ function Item(props: IFeaturedProject) {
           {description}
         </styled.p>
 
-        <styled.ul mt={4} display="flex" gap={4} fontFamily="mono" fontSize="smaller">
+        <styled.ul
+          mt={4}
+          display="flex"
+          columnGap={4}
+          fontFamily="mono"
+          fontSize="sm"
+          flexWrap="wrap"
+        >
           {tags.map((tag) => (
             <styled.li key={tag}>{tag}</styled.li>
           ))}
