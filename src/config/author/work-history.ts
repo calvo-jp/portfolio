@@ -8,7 +8,7 @@ export const workHistory: IWorkHistory[] = [
       website: '',
     },
     dateOfEmployment: {
-      start: new Date(2018, Month.May),
+      start: new Date(2018, Month.May, 1),
       until: null,
     },
     responsibilities: [
@@ -25,8 +25,8 @@ export const workHistory: IWorkHistory[] = [
       website: '',
     },
     dateOfEmployment: {
-      start: new Date(2017, Month.Apr),
-      until: new Date(2017, Month.Oct),
+      start: new Date(2017, Month.Apr, 1),
+      until: new Date(2017, Month.Oct, 1),
     },
     responsibilities: [
       'Developed and styled interactive web applications for Apple Music using Ember and SCSS',
