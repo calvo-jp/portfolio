@@ -9,6 +9,7 @@ import {
 } from '@/components/tooltip';
 import { AUTHOR } from '@/config/author';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
+import { capitalize } from '@/utils/capitalize';
 import { Portal } from '@ark-ui/react';
 
 export function Socials() {
@@ -85,15 +86,4 @@ function getIcon(name: 'github' | 'linkedin' | 'twitter' | (string & {})) {
     default:
       throw new Error(`Unknown social: '${name}'`);
   }
-}
-
-function capitalize(subject: string, delimiter = ' ') {
-  subject = subject.trim();
-
-  if (subject.length <= 1) return subject.toUpperCase();
-
-  return subject
-    .split(delimiter)
-    .map((word) => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase())
-    .join(delimiter);
 }
