@@ -19,12 +19,7 @@ export function Footer() {
                   href={url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  transitionProperty="colors"
-                  transitionDuration="slow"
-                  color={{
-                    base: 'brand.slate.light',
-                    _hover: 'brand.accent',
-                  }}
+                  color="brand.slate.light"
                 >
                   {getSocialIcon(name)}
                   <VisuallyHidden>{name}</VisuallyHidden>
