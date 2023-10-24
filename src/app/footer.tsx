@@ -12,7 +12,7 @@ export function Footer() {
         }}
       >
         <styled.nav>
-          <styled.ul display="flex" alignItems="center" gap={4}>
+          <styled.ul display="flex" alignItems="center" gap={5}>
             {Object.entries(AUTHOR.socials).map(([name, url]) => (
               <styled.li key={name}>
                 <styled.a
