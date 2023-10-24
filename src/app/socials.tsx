@@ -16,6 +16,7 @@ export function Socials() {
   return (
     <Portal>
       <styled.nav
+        id="socials"
         w="12.5vh"
         pos="fixed"
         left={0}
@@ -30,7 +31,7 @@ export function Socials() {
           {Object.entries(AUTHOR.socials).map(([name, url]) => (
             <styled.li key={name}>
               <Tooltip
-                id={`tooltip:socials:${name}`}
+                id={`socials:${name}`}
                 positioning={{
                   placement: 'right',
                 }}

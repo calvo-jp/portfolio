@@ -6,6 +6,7 @@ export function EmailAd() {
   return (
     <Portal>
       <styled.div
+        id="email-ad"
         w="12.5vh"
         pos="fixed"
         right={0}
