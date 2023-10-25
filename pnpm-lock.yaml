@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ark-ui/react':
-    specifier: 1.0.0-beta.1
-    version: 1.0.0-beta.1(@internationalized/date@3.5.0)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 1.0.0-beta.2
+    version: 1.0.0-beta.2(@internationalized/date@3.5.0)(react-dom@18.2.0)(react@18.2.0)
   date-fns:
     specifier: 2.30.0
     version: 2.30.0
@@ -76,8 +76,8 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.19
 
-  /@ark-ui/anatomy@1.0.0-beta.0(@internationalized/date@3.5.0):
-    resolution: {integrity: sha512-N2QCvYsXhf/9t7riD2hPwIW56//EdCHicshHlt97lExFVUSJ4jBYSq6Ega+KnKZT+CeIDc1CO90xaaoU2KZ2mg==}
+  /@ark-ui/anatomy@1.0.0-beta.1(@internationalized/date@3.5.0):
+    resolution: {integrity: sha512-vUGlfCVEM+HB1MPwa4Td8l4UnmjZLt+PMtXx4E3eAWuxduw99gkAY7MkjJuOL4GYS5FNSTS7rULwLn7rvJmglQ==}
     dependencies:
       '@zag-js/accordion': 0.26.0
       '@zag-js/anatomy': 0.26.0
@@ -91,6 +91,7 @@ packages:
       '@zag-js/date-utils': 0.26.0(@internationalized/date@3.5.0)
       '@zag-js/dialog': 0.26.0
       '@zag-js/editable': 0.26.0
+      '@zag-js/file-upload': 0.26.0
       '@zag-js/hover-card': 0.26.0
       '@zag-js/menu': 0.26.0
       '@zag-js/number-input': 0.26.0
@@ -158,13 +159,13 @@ packages:
       - '@internationalized/date'
     dev: true
 
-  /@ark-ui/react@1.0.0-beta.1(@internationalized/date@3.5.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-tLbTgDHzpQ1MsArVcJjEhh97DfgiJ81A74JKOJc9muWfXcQqpPjx9D0vE7/vZn+SuickJPhjEo4gFglVa02kMA==}
+  /@ark-ui/react@1.0.0-beta.2(@internationalized/date@3.5.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Qwp5QdYkXEk5q62U0vPR/n4sAygagpQ9SujV+Af8z7Oeh6+qhp0wkXOv95AkbPrZPgpq6rMSXOPDrbNbCOjtyg==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
     dependencies:
-      '@ark-ui/anatomy': 1.0.0-beta.0(@internationalized/date@3.5.0)
+      '@ark-ui/anatomy': 1.0.0-beta.1(@internationalized/date@3.5.0)
       '@zag-js/accordion': 0.26.0
       '@zag-js/anatomy': 0.26.0
       '@zag-js/avatar': 0.26.0
@@ -2076,6 +2077,22 @@ packages:
 
   /@zag-js/element-size@0.26.0:
     resolution: {integrity: sha512-8Xhc0eXLrzrV6d3wZ7eVn+ciC83hEWqNVR1OTd/5uzL95gnLPIEVIG3xUOE3k3rMJrUjJqn07SYQMAaCrK6HOw==}
+    dev: false
+
+  /@zag-js/file-upload@0.26.0:
+    resolution: {integrity: sha512-1BnZM2WaZHxoyDKdk59p98tdsZMCWpQsSk7KiO1lsu2yXWybDUfG77brkiD7VH+kdfnZQG3NOUTVXSIzdHlBMQ==}
+    dependencies:
+      '@zag-js/anatomy': 0.26.0
+      '@zag-js/core': 0.26.0
+      '@zag-js/dom-query': 0.26.0
+      '@zag-js/file-utils': 0.26.0
+      '@zag-js/types': 0.26.0
+      '@zag-js/utils': 0.26.0
+      '@zag-js/visually-hidden': 0.26.0
+    dev: false
+
+  /@zag-js/file-utils@0.26.0:
+    resolution: {integrity: sha512-Z1J+KcUwJYzzh2EY7jwcruo5tAKOsXUX+ClzlH4C2Tv11YffavGZ2BUlW/5cY/Y5flIlTm8sPUYgbYEW/LgmHA==}
     dev: false
 
   /@zag-js/form-utils@0.12.0:
