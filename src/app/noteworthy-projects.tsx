@@ -67,7 +67,13 @@ function Item(props: INonFeaturedProject) {
   const { title, description, repository, website, tags } = props;
 
   return (
-    <Flex bg="brand.navy.light" p={8} rounded="sm" flexDir="column" minH="16rem">
+    <Flex
+      bg="brand.navy.light"
+      p={8}
+      rounded="sm"
+      flexDir="column"
+      minH="token(spacing.80)"
+    >
       <Flex>
         <FolderIcon w={9} h={9} color="brand.accent" />
         <Spacer />
