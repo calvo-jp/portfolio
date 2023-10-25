@@ -51,7 +51,8 @@ export function NoteworthyProjects() {
         mt={16}
         gap={4}
         gridTemplateColumns={{
-          lg: 'repeat(3,1fr)',
+          lg: 'repeat(2,1fr)',
+          xl: 'repeat(3,1fr)',
         }}
       >
         {items.map((o) => (
