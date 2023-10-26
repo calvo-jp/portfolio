@@ -6,8 +6,8 @@ export const Tooltip = styled(
   {},
   {
     defaultProps: {
-      openDelay: 0,
-      closeDelay: 0,
+      openDelay: 150,
+      closeDelay: 100,
     },
   },
 );
@@ -20,8 +20,8 @@ export const TooltipContent = styled(
     base: {
       px: 4,
       py: 2,
-      bg: 'neutral.200',
-      color: 'neutral.800',
+      bg: 'neutral.800',
+      color: 'neutral.100',
       zIndex: 'tooltip',
       rounded: 'md',
       fontSize: 'sm',
@@ -38,7 +38,7 @@ export const TooltipContent = styled(
 export const TooltipArrow = styled(tooltip.TooltipArrow, {
   base: {
     '--arrow-size': 'token(sizes.3)',
-    '--arrow-background': 'token(colors.neutral.200)',
+    '--arrow-background': 'token(colors.neutral.800)',
   },
 });
 
