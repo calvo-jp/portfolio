@@ -66,12 +66,12 @@ export function ExperienceSlides() {
             h={3}
             cursor="pointer"
             rounded="full"
-            border="1px solid token(colors.brand.slate.light)"
+            border="1px solid token(colors.neutral.300)"
             transitionProperty="all"
             transitionDuration="slow"
             _current={{
-              bg: 'brand.slate.lighter',
-              borderColor: 'brand.slate.lighter',
+              bg: 'neutral.200',
+              borderColor: 'neutral.200',
             }}
           >
             <VisuallyHidden>Go to slide {++index}</VisuallyHidden>

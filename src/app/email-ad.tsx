@@ -27,13 +27,12 @@ export function EmailAd() {
             transitionProperty="colors"
             transitionDuration="slow"
             color={{
-              base: 'brand.slate.light',
-              _hover: 'brand.accent',
+              _hover: 'purple.400',
             }}
           >
             {AUTHOR.contact.email}
           </styled.a>
-          <styled.div h="15vh" w="1px" bg="brand.slate" roundedTop="full" />
+          <styled.div h="15vh" w="1px" bg="neutral.800" roundedTop="full" />
         </styled.div>
       </styled.div>
     </Portal>

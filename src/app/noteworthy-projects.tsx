@@ -1,4 +1,4 @@
-import { ExternalLinkIcon, FolderIcon, GitBranchIcon } from '@/components/icons';
+import { IconExternalLink, IconFolder, IconGitBranch } from '@/components/icons';
 import { Link } from '@/components/link';
 import {
   Tooltip,
@@ -25,7 +25,7 @@ export function NoteworthyProjects() {
             lg: '3xl',
           }}
           fontWeight="black"
-          color="brand.slate.lighter"
+          color="neutral.200"
         >
           Other Noteworthy Projects
         </styled.h2>
@@ -34,7 +34,7 @@ export function NoteworthyProjects() {
           w="fit"
           mx="auto"
           mt={2}
-          color="brand.accent"
+          color="purple.400"
           fontFamily="mono"
           fontSize="sm"
           display="block"
@@ -67,15 +67,9 @@ function Item(props: INonFeaturedProject) {
   const { title, description, repository, website, tags } = props;
 
   return (
-    <Flex
-      bg="brand.navy.light"
-      p={8}
-      rounded="sm"
-      flexDir="column"
-      minH="token(spacing.80)"
-    >
+    <Flex bg="neutral.800" p={8} rounded="sm" flexDir="column" minH="token(spacing.80)">
       <Flex>
-        <FolderIcon w={9} h={9} color="brand.accent" />
+        <IconFolder w={9} h={9} color="purple.400" />
         <Spacer />
         <HStack gap={4}>
           {website && (
@@ -88,11 +82,11 @@ function Item(props: INonFeaturedProject) {
                   transitionProperty="colors"
                   transitionDuration="slow"
                   _hover={{
-                    color: 'brand.accent',
+                    color: 'purple.400',
                   }}
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
-                  <ExternalLinkIcon w={5} h={5} />
+                  <IconExternalLink w={5} h={5} />
                 </styled.a>
               </TooltipTrigger>
 
@@ -118,11 +112,11 @@ function Item(props: INonFeaturedProject) {
                 transitionProperty="colors"
                 transitionDuration="slow"
                 _hover={{
-                  color: 'brand.accent',
+                  color: 'purple.400',
                 }}
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>
-                <GitBranchIcon w={5} h={5} />
+                <IconGitBranch w={5} h={5} />
               </styled.a>
             </TooltipTrigger>
 
@@ -140,17 +134,11 @@ function Item(props: INonFeaturedProject) {
         </HStack>
       </Flex>
 
-      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="brand.slate.lighter">
+      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="neutral.200">
         {title}
       </styled.h3>
 
-      <styled.p
-        mt={2}
-        fontSize="sm"
-        color="brand.slate.light"
-        flexGrow={1}
-        hyphens="auto"
-      >
+      <styled.p mt={2} fontSize="sm" color="neutral.300" flexGrow={1} hyphens="auto">
         {description}
       </styled.p>
 

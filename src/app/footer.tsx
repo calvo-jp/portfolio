@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/components/icons';
+import { IconGithub, IconLinkedin, IconTwitter } from '@/components/icons';
 import { AUTHOR } from '@/config/author';
 import { Center, VisuallyHidden, styled } from '@/styled-system/jsx';
 
@@ -19,7 +19,7 @@ export function Footer() {
                   href={url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  color="brand.slate.light"
+                  color="neutral.300"
                 >
                   {getSocialIcon(name)}
                   <VisuallyHidden>{name}</VisuallyHidden>
@@ -40,11 +40,11 @@ export function Footer() {
 function getSocialIcon(name: 'github' | 'linkedin' | 'twitter' | (string & {})) {
   switch (name.toLowerCase()) {
     case 'github':
-      return <GithubIcon w={5} h={5} />;
+      return <IconGithub w={5} h={5} />;
     case 'twitter':
-      return <TwitterIcon w={5} h={5} />;
+      return <IconTwitter w={5} h={5} />;
     case 'linkedin':
-      return <LinkedinIcon w={5} h={5} />;
+      return <IconLinkedin w={5} h={5} />;
     default:
       throw new Error(`Unknown social: '${name}'`);
   }

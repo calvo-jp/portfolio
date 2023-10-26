@@ -1,4 +1,4 @@
-import { TerminalIcon } from '@/components/icons';
+import { IconTerminal } from '@/components/icons';
 import { Link } from '@/components/link';
 import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { NavbarDrawer } from './navbar-drawer';
@@ -8,7 +8,7 @@ export function Navbar() {
   return (
     <styled.header
       p={4}
-      bg="#0a192fe0" /* FIXME: change to "brand.navy/75" once supported */
+      bg="#171717db" /* FIXME: use neutral.800/<opacity> once supported */
       pos="sticky"
       top={0}
       zIndex="sticky"
@@ -21,10 +21,10 @@ export function Navbar() {
       }}
     >
       <Link href="/">
-        <TerminalIcon
+        <IconTerminal
           w={8}
           h={8}
-          color="brand.accent"
+          color="purple.400"
           lg={{
             w: 6,
             h: 6,

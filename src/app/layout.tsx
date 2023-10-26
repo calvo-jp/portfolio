@@ -59,7 +59,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         fontSize: 'xl',
       }}
     >
-      <styled.body bg="brand.navy" color="brand.slate" minHeight="dvh" fontFamily="sans">
+      <styled.body bg="neutral.900" color="neutral.400" minHeight="dvh" fontFamily="sans">
         <SkipNav />
         <Navbar />
 

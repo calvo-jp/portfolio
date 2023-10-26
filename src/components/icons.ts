@@ -1,36 +1,46 @@
-import { cva } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';
 import {
-  AsteriskIcon as asterisk,
-  ChevronLeftIcon as chevronLeft,
-  ChevronRightIcon as chevronRight,
-  ExternalLinkIcon as externalLink,
-  FolderIcon as folder,
-  GitBranchIcon as gitBranch,
-  GithubIcon as github,
-  LinkedinIcon as linkedin,
-  MenuIcon as menu,
-  TerminalIcon as terminal,
-  TwitterIcon as twitter,
-  XIcon as x,
+  AsteriskIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ExternalLinkIcon,
+  FolderIcon,
+  GitBranchIcon,
+  GithubIcon,
+  LinkedinIcon,
+  LucideIcon,
+  MenuIcon,
+  TerminalIcon,
+  TwitterIcon,
+  XIcon,
 } from 'lucide-react';
 
-const recipe = cva({
-  base: {
-    w: 4,
-    h: 4,
-  },
-});
+function i(icon: LucideIcon) {
+  return styled(
+    icon,
+    {
+      base: {
+        w: 4,
+        h: 4,
+      },
+    },
+    {
+      defaultProps: {
+        strokeWidth: '1.25px',
+      },
+    },
+  );
+}
 
-export const GithubIcon = styled(github, recipe);
-export const LinkedinIcon = styled(linkedin, recipe);
-export const TwitterIcon = styled(twitter, recipe);
-export const AsteriskIcon = styled(asterisk, recipe);
-export const TerminalIcon = styled(terminal, recipe);
-export const ChevronLeftIcon = styled(chevronLeft, recipe);
-export const ChevronRightIcon = styled(chevronRight, recipe);
-export const ExternalLinkIcon = styled(externalLink, recipe);
-export const GitBranchIcon = styled(gitBranch, recipe);
-export const FolderIcon = styled(folder, recipe);
-export const MenuIcon = styled(menu, recipe);
-export const XIcon = styled(x, recipe);
+export const IconGithub = i(GithubIcon);
+export const IconLinkedin = i(LinkedinIcon);
+export const IconTwitter = i(TwitterIcon);
+export const IconAsterisk = i(AsteriskIcon);
+export const IconTerminal = i(TerminalIcon);
+export const IconChevronLeft = i(ChevronLeftIcon);
+export const IconChevronRight = i(ChevronRightIcon);
+export const IconExternalLink = i(ExternalLinkIcon);
+export const IconGitBranch = i(GitBranchIcon);
+export const IconFolder = i(FolderIcon);
+export const IconMenu = i(MenuIcon);
+export const IconX = i(XIcon);

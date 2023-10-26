@@ -1,4 +1,4 @@
-import { ExternalLinkIcon, GitBranchIcon } from '@/components/icons';
+import { IconExternalLink, IconGitBranch } from '@/components/icons';
 import {
   Tooltip,
   TooltipArrow,
@@ -28,11 +28,11 @@ export default function Archive() {
           lg: '7xl',
         }}
         fontWeight="bold"
-        color="brand.slate.lighter"
+        color="neutral.200"
       >
         Archive
       </styled.h1>
-      <styled.p fontFamily="mono" color="brand.accent">
+      <styled.p fontFamily="mono" color="purple.400">
         A big list of things I&rsquo;ve worked on
       </styled.p>
 
@@ -57,7 +57,7 @@ export default function Archive() {
               fontFamily="mono"
               fontSize="sm"
               lineHeight="loose"
-              color="brand.accent"
+              color="purple.400"
             >
               {year}
             </styled.div>
@@ -84,10 +84,10 @@ function Item(props: INonFeaturedProject) {
       }}
     >
       <styled.div>
-        <styled.h2 fontSize="xl" fontWeight="bold" color="brand.slate.lighter">
+        <styled.h2 fontSize="xl" fontWeight="bold" color="neutral.200">
           {title}
         </styled.h2>
-        <styled.p color="brand.slate.light">{description}</styled.p>
+        <styled.p color="neutral.300">{description}</styled.p>
         <styled.ul mt={3} display="flex" gap={3} fontFamily="mono" fontSize="sm">
           {tags.map((tag) => (
             <styled.li key={tag}>{tag}</styled.li>
@@ -106,10 +106,10 @@ function Item(props: INonFeaturedProject) {
                 transitionProperty="colors"
                 transitionDuration="slow"
                 _hover={{
-                  color: 'brand.accent',
+                  color: 'purple.400',
                 }}
               >
-                <ExternalLinkIcon w={5} h={5} />
+                <IconExternalLink w={5} h={5} />
                 <VisuallyHidden>Go to website</VisuallyHidden>
               </styled.a>
             </TooltipTrigger>
@@ -136,10 +136,10 @@ function Item(props: INonFeaturedProject) {
               transitionProperty="colors"
               transitionDuration="slow"
               _hover={{
-                color: 'brand.accent',
+                color: 'purple.400',
               }}
             >
-              <GitBranchIcon w={5} h={5} />
+              <IconGitBranch w={5} h={5} />
               <VisuallyHidden>Go to repository</VisuallyHidden>
             </styled.a>
           </TooltipTrigger>

@@ -1,5 +1,5 @@
 import selfie from '@/assets/images/selfie.jpg';
-import { AsteriskIcon } from '@/components/icons';
+import { IconAsterisk } from '@/components/icons';
 import { Image } from '@/components/image';
 import { AUTHOR } from '@/config/author';
 import { Flex, styled } from '@/styled-system/jsx';
@@ -49,7 +49,7 @@ export function About() {
               },
 
               '& a': {
-                color: 'brand.accent',
+                color: 'purple.400',
                 textUnderlineOffset: '0.35rem',
                 _hover: {
                   textDecoration: 'underline',
@@ -71,7 +71,7 @@ export function About() {
           <styled.div
             p={4}
             pos="relative"
-            border="2px solid token(colors.brand.accent)"
+            border="2px solid token(colors.purple.400)"
             rounded="md"
           >
             <Image src={selfie} alt="" rounded="sm" placeholder="blur" />
@@ -103,7 +103,7 @@ function Skills() {
             lg: (i + 1) % 2 === 0 ? 2 : 1,
           }}
         >
-          <AsteriskIcon color="brand.accent" w={3} h={3} />
+          <IconAsterisk color="purple.400" w={3} h={3} />
           <styled.span fontSize="sm">{skill}</styled.span>
         </styled.li>
       ))}

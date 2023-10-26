@@ -1,5 +1,5 @@
 import { Button } from '@/components/button';
-import { ChevronLeftIcon } from '@/components/icons';
+import { IconChevronLeft } from '@/components/icons';
 import { Link } from '@/components/link';
 import { styled } from '@/styled-system/jsx';
 
@@ -11,11 +11,11 @@ export default function NotFound() {
         fontSize="9xl"
         fontWeight="bold"
         lineHeight="none"
-        color="brand.accent"
+        color="purple.400"
       >
         404
       </styled.h1>
-      <styled.h2 fontSize="3xl" lineHeight="none" color="brand.slate.light">
+      <styled.h2 fontSize="3xl" lineHeight="none" color="neutral.300">
         Page Not Found
       </styled.h2>
       <Button asChild>
@@ -29,7 +29,7 @@ export default function NotFound() {
           alignItems="center"
           justifyContent="center"
         >
-          <ChevronLeftIcon />
+          <IconChevronLeft />
           <styled.span>Go Home</styled.span>
         </Link>
       </Button>

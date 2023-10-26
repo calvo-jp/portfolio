@@ -5,15 +5,15 @@ import { styled } from '@/styled-system/jsx';
 export function Hero() {
   return (
     <styled.section id="hero" py={20}>
-      <styled.h3 fontFamily="mono" color="brand.accent">
+      <styled.h3 fontFamily="mono" color="purple.400">
         Hi, my name is
       </styled.h3>
 
       <styled.h1
         mt={5}
-        color="brand.slate.lighter"
+        color="white"
         fontSize={{
-          base: '4xl',
+          base: '5xl',
           lg: '7xl',
         }}
         fontWeight="black"
@@ -27,7 +27,7 @@ export function Hero() {
           base: 3,
           lg: 4,
         }}
-        color="brand.slate.light"
+        color="neutral.300"
         fontSize={{
           base: '4xl',
           lg: '7xl',
@@ -46,7 +46,7 @@ export function Hero() {
           href={AUTHOR.company.website}
           target="_blank"
           rel="noreferrer noopener"
-          color="brand.accent"
+          color="purple.400"
           textUnderlineOffset="0.35rem"
           _hover={{
             textDecoration: 'underline',

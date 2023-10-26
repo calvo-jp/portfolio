@@ -9,7 +9,7 @@ import {
   DialogPositioner,
   DialogTrigger,
 } from '@/components/dialog';
-import { MenuIcon, XIcon } from '@/components/icons';
+import { IconMenu, IconX } from '@/components/icons';
 import { Link } from '@/components/link';
 import { AUTHOR } from '@/config/author';
 import { Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
@@ -23,19 +23,19 @@ export function NavbarDrawer() {
         <>
           <DialogTrigger
             cursor="pointer"
-            color="brand.white"
+            color="neutral.100"
             lg={{
               display: 'none',
             }}
           >
-            <MenuIcon w={8} h={8} />
+            <IconMenu w={8} h={8} />
             <VisuallyHidden>Toggle menu</VisuallyHidden>
           </DialogTrigger>
 
           <Portal>
             <Presence present={isOpen}>
               <DialogBackdrop
-                bg="#0a192fbf" // FIXME: change to "brand.navy/50" once supported
+                bg="#d4d4d417" /* FIXME: use neutral.800/<opacity> once supported */
                 pos="fixed"
                 inset={0}
                 backdropFilter="blur(4px)"
@@ -61,7 +61,7 @@ export function NavbarDrawer() {
                   h="full"
                   w={80}
                   maxW="full"
-                  bg="brand.navy.light"
+                  bg="neutral.900"
                   shadow="2xl"
                   overflowY="auto"
                   css={{
@@ -78,8 +78,8 @@ export function NavbarDrawer() {
                 >
                   <Flex>
                     <Spacer />
-                    <DialogCloseTrigger cursor="pointer" color="brand.white">
-                      <XIcon w={8} h={8} />
+                    <DialogCloseTrigger cursor="pointer" color="neutral.300">
+                      <IconX w={8} h={8} />
                       <VisuallyHidden>Close menu</VisuallyHidden>
                     </DialogCloseTrigger>
                   </Flex>
@@ -95,10 +95,10 @@ export function NavbarDrawer() {
                           }}
                         >
                           <Link py={1} href={path} onClick={close}>
-                            <styled.div fontFamily="mono" color="brand.accent">
+                            <styled.div fontFamily="mono" color="purple.400">
                               {(++index).toString().padStart(2, '0')}.
                             </styled.div>
-                            <styled.div fontSize="lg" color="brand.slate.lighter">
+                            <styled.div fontSize="lg" color="neutral.200">
                               {label}
                             </styled.div>
                           </Link>

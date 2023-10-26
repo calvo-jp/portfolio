@@ -14,22 +14,6 @@ export default defineConfig({
             value: 'var(--font-mono)',
           },
         },
-        colors: {
-          brand: {
-            white: { value: '#e6f1ff' },
-            accent: { value: '#64ffda' },
-            navy: {
-              DEFAULT: { value: '#0a192f' },
-              light: { value: '#112240' },
-              lighter: { value: '#233554' },
-            },
-            slate: {
-              DEFAULT: { value: '#8892b0' },
-              light: { value: '#a8b2d1' },
-              lighter: { value: '#ccd6f6' },
-            },
-          },
-        },
         zIndex: {
           hide: { value: -1 },
           auto: { value: 'auto' },

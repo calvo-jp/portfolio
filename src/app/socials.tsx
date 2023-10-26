@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, TwitterIcon } from '@/components/icons';
+import { IconGithub, IconLinkedin, IconTwitter } from '@/components/icons';
 import {
   Tooltip,
   TooltipArrow,
@@ -44,8 +44,7 @@ export function Socials() {
                     transitionProperty="colors"
                     transitionDuration="slow"
                     color={{
-                      base: 'brand.slate.light',
-                      _hover: 'brand.accent',
+                      _hover: 'purple.400',
                     }}
                   >
                     {getIcon(name)}
@@ -68,7 +67,7 @@ export function Socials() {
           ))}
 
           <styled.li pt={2}>
-            <styled.div h="15vh" w="1px" bg="brand.slate" roundedTop="full" />
+            <styled.div h="15vh" w="1px" bg="neutral.800" roundedTop="full" />
           </styled.li>
         </styled.ul>
       </styled.nav>
@@ -79,11 +78,11 @@ export function Socials() {
 function getIcon(name: 'github' | 'linkedin' | 'twitter' | (string & {})) {
   switch (name.toLowerCase()) {
     case 'github':
-      return <GithubIcon w={5} h={5} />;
+      return <IconGithub w={5} h={5} />;
     case 'twitter':
-      return <TwitterIcon w={5} h={5} />;
+      return <IconTwitter w={5} h={5} />;
     case 'linkedin':
-      return <LinkedinIcon w={5} h={5} />;
+      return <IconLinkedin w={5} h={5} />;
     default:
       throw new Error(`Unknown social: '${name}'`);
   }

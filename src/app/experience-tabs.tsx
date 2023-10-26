@@ -28,8 +28,8 @@ export function ExperienceTabs() {
             textAlign="left"
             color="inherit"
             _selected={{
-              bg: 'brand.navy.light',
-              color: 'brand.accent',
+              bg: 'neutral.800',
+              color: 'purple.400',
             }}
             transitionProperty="all"
             transitionDuration="slow"
@@ -38,7 +38,7 @@ export function ExperienceTabs() {
           </TabTrigger>
         ))}
 
-        <TabIndicator w={0.5} bg="brand.accent" h="5" />
+        <TabIndicator w={0.5} bg="purple.400" h="5" />
       </TabList>
 
       {AUTHOR.workHistory.map((o) => (

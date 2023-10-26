@@ -1,4 +1,4 @@
-import { ExternalLinkIcon, GitBranchIcon } from '@/components/icons';
+import { IconExternalLink, IconGitBranch } from '@/components/icons';
 import { Image } from '@/components/image';
 import {
   Tooltip,
@@ -72,12 +72,7 @@ function Item(props: IFeaturedProject) {
       </styled.div>
 
       <styled.div flexGrow={1}>
-        <styled.div
-          fontFamily="mono"
-          fontSize="sm"
-          color="brand.accent"
-          lineHeight="none"
-        >
+        <styled.div fontFamily="mono" fontSize="sm" color="purple.400" lineHeight="none">
           Featured Project
         </styled.div>
 
@@ -86,7 +81,7 @@ function Item(props: IFeaturedProject) {
           fontSize="2xl"
           fontWeight="bold"
           lineHeight="none"
-          color="brand.slate.lighter"
+          color="neutral.200"
         >
           {title}
         </styled.h3>
@@ -103,12 +98,12 @@ function Item(props: IFeaturedProject) {
         <styled.p
           mt={5}
           rounded="sm"
-          color="brand.slate.light"
+          color="neutral.300"
           hyphens="auto"
           lg={{
             px: 5,
             py: 4,
-            bg: 'brand.navy.light',
+            bg: 'neutral.800',
           }}
         >
           {description}
@@ -136,13 +131,13 @@ function Item(props: IFeaturedProject) {
                   target="_blank"
                   rel="noreferrer noopener"
                   color={{
-                    base: 'brand.slate.light',
-                    _hover: 'brand.accent',
+                    base: 'neutral.300',
+                    _hover: 'purple.400',
                   }}
                   transitionProperty="colors"
                   transitionDuration="slow"
                 >
-                  <ExternalLinkIcon w={6} h={6} />
+                  <IconExternalLink w={6} h={6} />
                   <VisuallyHidden>Go to website</VisuallyHidden>
                 </styled.a>
               </TooltipTrigger>
@@ -167,13 +162,13 @@ function Item(props: IFeaturedProject) {
                 target="_blank"
                 rel="noreferrer noopener"
                 color={{
-                  base: 'brand.slate.light',
-                  _hover: 'brand.accent',
+                  base: 'neutral.300',
+                  _hover: 'purple.400',
                 }}
                 transitionProperty="colors"
                 transitionDuration="slow"
               >
-                <GitBranchIcon w={6} h={6} />
+                <IconGitBranch w={6} h={6} />
                 <VisuallyHidden>Go to repository</VisuallyHidden>
               </styled.a>
             </TooltipTrigger>
