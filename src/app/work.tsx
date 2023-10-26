@@ -72,7 +72,7 @@ function Item(props: IFeaturedProject) {
       </styled.div>
 
       <styled.div flexGrow={1}>
-        <styled.div fontFamily="mono" fontSize="sm" color="purple.400" lineHeight="none">
+        <styled.div fontFamily="mono" fontSize="sm" color="violet.400" lineHeight="none">
           Featured Project
         </styled.div>
 
@@ -132,7 +132,7 @@ function Item(props: IFeaturedProject) {
                   rel="noreferrer noopener"
                   color={{
                     base: 'neutral.300',
-                    _hover: 'purple.400',
+                    _hover: 'violet.400',
                   }}
                   transitionProperty="colors"
                   transitionDuration="slow"
@@ -163,7 +163,7 @@ function Item(props: IFeaturedProject) {
                 rel="noreferrer noopener"
                 color={{
                   base: 'neutral.300',
-                  _hover: 'purple.400',
+                  _hover: 'violet.400',
                 }}
                 transitionProperty="colors"
                 transitionDuration="slow"

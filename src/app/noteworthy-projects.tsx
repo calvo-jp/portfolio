@@ -34,7 +34,7 @@ export function NoteworthyProjects() {
           w="fit"
           mx="auto"
           mt={2}
-          color="purple.400"
+          color="violet.400"
           fontFamily="mono"
           fontSize="sm"
           display="block"
@@ -69,7 +69,7 @@ function Item(props: INonFeaturedProject) {
   return (
     <Flex bg="neutral.800" p={8} rounded="sm" flexDir="column" minH="token(spacing.80)">
       <Flex>
-        <IconFolder w={9} h={9} color="purple.400" />
+        <IconFolder w={9} h={9} color="violet.400" />
         <Spacer />
         <HStack gap={4}>
           {website && (
@@ -82,7 +82,7 @@ function Item(props: INonFeaturedProject) {
                   transitionProperty="colors"
                   transitionDuration="slow"
                   _hover={{
-                    color: 'purple.400',
+                    color: 'violet.400',
                   }}
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
@@ -112,7 +112,7 @@ function Item(props: INonFeaturedProject) {
                 transitionProperty="colors"
                 transitionDuration="slow"
                 _hover={{
-                  color: 'purple.400',
+                  color: 'violet.400',
                 }}
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>

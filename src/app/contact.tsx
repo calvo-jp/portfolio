@@ -5,7 +5,7 @@ import { styled } from '@/styled-system/jsx';
 export function Contact() {
   return (
     <styled.section id="contact" py={32} textAlign="center">
-      <styled.p color="purple.400" fontFamily="mono">
+      <styled.p color="violet.400" fontFamily="mono">
         04. What&rsquo;s next?
       </styled.p>
       <styled.h2

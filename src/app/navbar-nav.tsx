@@ -17,7 +17,7 @@ export function NavbarNav() {
         {NAVBAR_LINKS.map(({ path, label }, index) => (
           <styled.li key={path}>
             <Link href={path} display="flex" alignItems="center" gap={1}>
-              <styled.span fontFamily="mono" color="purple.400" fontSize="xs">
+              <styled.span fontFamily="mono" color="violet.400" fontSize="xs">
                 {(++index).toString().padStart(2, '0')}.
               </styled.span>
               <styled.span
@@ -26,7 +26,7 @@ export function NavbarNav() {
                 transitionDuration="slow"
                 color={{
                   base: 'neutral.200',
-                  _hover: 'purple.400',
+                  _hover: 'violet.400',
                 }}
               >
                 {label}

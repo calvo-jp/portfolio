@@ -4,8 +4,8 @@ import { ark } from '@ark-ui/react';
 
 const recipe = cva({
   base: {
-    color: 'purple.400',
-    border: '1px solid token(colors.purple.400)',
+    color: 'violet.400',
+    border: '1px solid token(colors.violet.400)',
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',

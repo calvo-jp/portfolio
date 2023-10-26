@@ -29,7 +29,7 @@ export function ExperienceTabs() {
             color="inherit"
             _selected={{
               bg: 'neutral.800',
-              color: 'purple.400',
+              color: 'violet.400',
             }}
             transitionProperty="all"
             transitionDuration="slow"
@@ -38,7 +38,7 @@ export function ExperienceTabs() {
           </TabTrigger>
         ))}
 
-        <TabIndicator w={0.5} bg="purple.400" h="5" />
+        <TabIndicator w={0.5} bg="violet.400" h="5" />
       </TabList>
 
       {AUTHOR.workHistory.map((o) => (

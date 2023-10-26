@@ -44,7 +44,7 @@ export function Socials() {
                     transitionProperty="colors"
                     transitionDuration="slow"
                     color={{
-                      _hover: 'purple.400',
+                      _hover: 'violet.400',
                     }}
                   >
                     {getIcon(name)}

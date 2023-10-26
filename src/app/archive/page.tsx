@@ -32,7 +32,7 @@ export default function Archive() {
       >
         Archive
       </styled.h1>
-      <styled.p fontFamily="mono" color="purple.400">
+      <styled.p fontFamily="mono" color="violet.400">
         A big list of things I&rsquo;ve worked on
       </styled.p>
 
@@ -57,7 +57,7 @@ export default function Archive() {
               fontFamily="mono"
               fontSize="sm"
               lineHeight="loose"
-              color="purple.400"
+              color="violet.400"
             >
               {year}
             </styled.div>
@@ -106,7 +106,7 @@ function Item(props: INonFeaturedProject) {
                 transitionProperty="colors"
                 transitionDuration="slow"
                 _hover={{
-                  color: 'purple.400',
+                  color: 'violet.400',
                 }}
               >
                 <IconExternalLink w={5} h={5} />
@@ -136,7 +136,7 @@ function Item(props: INonFeaturedProject) {
               transitionProperty="colors"
               transitionDuration="slow"
               _hover={{
-                color: 'purple.400',
+                color: 'violet.400',
               }}
             >
               <IconGitBranch w={5} h={5} />
