@@ -14,7 +14,7 @@ import { Portal } from '@ark-ui/react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: `${AUTHOR.name} | Archive`,
+  title: 'Archive',
 };
 
 export default function Archive() {

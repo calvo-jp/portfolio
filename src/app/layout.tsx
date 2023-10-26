@@ -16,7 +16,10 @@ const title = AUTHOR.name;
 const description = `${AUTHOR.name} is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.`;
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    default: title,
+    template: `${title} - %s`,
+  },
   description,
   metadataBase: new URL('https://calvo-jp.vercel.app'),
   openGraph: {
