@@ -160,6 +160,7 @@ function Item(props: INonFeaturedProject) {
   );
 }
 
+/* group by year */
 function getItems() {
   const f = [...AUTHOR.projects].filter((p) => !p.featured) as INonFeaturedProject[];
   const r: Record<string, INonFeaturedProject[]> = {};
