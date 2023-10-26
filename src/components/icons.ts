@@ -15,7 +15,7 @@ import {
   XIcon,
 } from 'lucide-react';
 
-function i(icon: LucideIcon) {
+function styledIcon(icon: LucideIcon) {
   return styled(
     icon,
     {
@@ -26,21 +26,24 @@ function i(icon: LucideIcon) {
     },
     {
       defaultProps: {
-        strokeWidth: '1.25px',
+        strokeWidth: 1.66667,
+      },
+      shouldForwardProp(key) {
+        return key === 'strokeWidth';
       },
     },
   );
 }
 
-export const IconGithub = i(GithubIcon);
-export const IconLinkedin = i(LinkedinIcon);
-export const IconTwitter = i(TwitterIcon);
-export const IconAsterisk = i(AsteriskIcon);
-export const IconTerminal = i(TerminalIcon);
-export const IconChevronLeft = i(ChevronLeftIcon);
-export const IconChevronRight = i(ChevronRightIcon);
-export const IconExternalLink = i(ExternalLinkIcon);
-export const IconGitBranch = i(GitBranchIcon);
-export const IconFolder = i(FolderIcon);
-export const IconMenu = i(MenuIcon);
-export const IconX = i(XIcon);
+export const IconGithub = styledIcon(GithubIcon);
+export const IconLinkedin = styledIcon(LinkedinIcon);
+export const IconTwitter = styledIcon(TwitterIcon);
+export const IconAsterisk = styledIcon(AsteriskIcon);
+export const IconTerminal = styledIcon(TerminalIcon);
+export const IconChevronLeft = styledIcon(ChevronLeftIcon);
+export const IconChevronRight = styledIcon(ChevronRightIcon);
+export const IconExternalLink = styledIcon(ExternalLinkIcon);
+export const IconGitBranch = styledIcon(GitBranchIcon);
+export const IconFolder = styledIcon(FolderIcon);
+export const IconMenu = styledIcon(MenuIcon);
+export const IconX = styledIcon(XIcon);
