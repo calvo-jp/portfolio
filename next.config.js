@@ -11,11 +11,16 @@ const config = {
       },
     ],
   },
-  experimental: {
-    serverMinification: true,
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+  experimental: {
+    serverMinification: true,
   },
 };
 

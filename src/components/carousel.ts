@@ -1,3 +1,5 @@
+'use client';
+
 import { styled } from '@/styled-system/jsx';
 import * as carousel from '@ark-ui/react/carousel';
 

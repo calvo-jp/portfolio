@@ -64,6 +64,7 @@ export default defineConfig({
   },
   clean: true,
   outdir: 'styled-system',
+  logLevel: 'silent',
   separator: '-',
   gitignore: true,
   jsxFramework: 'react',
