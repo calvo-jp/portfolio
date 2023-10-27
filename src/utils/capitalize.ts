@@ -1,10 +1,12 @@
-export function capitalize(subject: string, delimiter = ' ') {
-  subject = subject.trim();
-
-  if (subject.length <= 1) return subject.toUpperCase();
-
+export function capitalize(subject: string) {
   return subject
-    .split(delimiter)
-    .map((word) => word.charAt(0).toUpperCase() + word.substring(1).toLowerCase())
-    .join(delimiter);
+    .trim()
+    .toLowerCase()
+    .split(/\s/)
+    .map((word) => {
+      return word.length === 1
+        ? word.toUpperCase()
+        : word.charAt(0).toUpperCase() + word.substring(1);
+    })
+    .join(' ');
 }
