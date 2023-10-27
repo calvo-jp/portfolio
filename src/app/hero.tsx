@@ -58,7 +58,10 @@ export function Hero() {
       </styled.p>
 
       <Button
-        mt={14}
+        mt={{
+          base: 8,
+          lg: 14,
+        }}
         lgDown={{
           w: 'full',
           justifyContent: 'center',

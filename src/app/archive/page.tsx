@@ -21,7 +21,12 @@ export default function Archive() {
   const items = getItems();
 
   return (
-    <styled.div py={24}>
+    <styled.div
+      py={{
+        base: 20,
+        lg: 24,
+      }}
+    >
       <styled.h1
         fontSize={{
           base: '5xl',

@@ -4,7 +4,14 @@ import { styled } from '@/styled-system/jsx';
 
 export function Contact() {
   return (
-    <styled.section id="contact" py={32} textAlign="center">
+    <styled.section
+      id="contact"
+      py={{
+        base: 16,
+        lg: 32,
+      }}
+      textAlign="center"
+    >
       <styled.p color="violet.400" fontFamily="mono">
         04. What&rsquo;s next?
       </styled.p>

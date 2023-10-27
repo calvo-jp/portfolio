@@ -18,7 +18,13 @@ const projects = [...AUTHOR.projects].filter((o) => o.featured) as IFeaturedProj
 
 export function Work() {
   return (
-    <styled.section id="work" py={32}>
+    <styled.section
+      id="work"
+      py={{
+        base: 16,
+        lg: 32,
+      }}
+    >
       <SectionHeading
         index={3}
         title={<>Some things I&rsquo;ve built</>}
@@ -27,7 +33,12 @@ export function Work() {
         }}
       />
 
-      <styled.div mt={16}>
+      <styled.div
+        mt={{
+          base: 12,
+          lg: 16,
+        }}
+      >
         {projects.map((o) => (
           <Item key={o.title} {...o} />
         ))}

@@ -17,7 +17,13 @@ const items = AUTHOR.projects.filter((o) => !o.featured) as INonFeaturedProject[
 
 export function NoteworthyProjects() {
   return (
-    <styled.section id="noteworthy-projects" py={32}>
+    <styled.section
+      id="noteworthy-projects"
+      py={{
+        base: 16,
+        lg: 32,
+      }}
+    >
       <styled.div textAlign="center">
         <styled.h2
           fontSize={{
@@ -48,7 +54,10 @@ export function NoteworthyProjects() {
       </styled.div>
 
       <Grid
-        mt={16}
+        mt={{
+          base: 12,
+          lg: 16,
+        }}
         gap={4}
         gridTemplateColumns={{
           lg: 'repeat(2,1fr)',

@@ -7,7 +7,13 @@ import { SectionHeading } from './section-heading';
 
 export function About() {
   return (
-    <styled.section id="about" py={32}>
+    <styled.section
+      id="about"
+      py={{
+        base: 16,
+        lg: 32,
+      }}
+    >
       <SectionHeading
         index={1}
         title="About Me"
@@ -17,7 +23,10 @@ export function About() {
       />
 
       <Flex
-        mt={16}
+        mt={{
+          base: 12,
+          lg: 16,
+        }}
         gap={{
           base: 6,
           lg: 24,
