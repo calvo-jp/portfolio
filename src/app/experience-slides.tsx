@@ -39,10 +39,7 @@ export function ExperienceSlides() {
 
   return (
     <Carousel
-      mt={{
-        base: 12,
-        lg: 16,
-      }}
+      mt={14}
       lg={{
         display: 'none',
       }}

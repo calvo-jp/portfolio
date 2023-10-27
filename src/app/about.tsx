@@ -10,7 +10,7 @@ export function About() {
     <styled.section
       id="about"
       py={{
-        base: 16,
+        base: 24,
         lg: 32,
       }}
     >
@@ -24,7 +24,7 @@ export function About() {
 
       <Flex
         mt={{
-          base: 12,
+          base: 14,
           lg: 16,
         }}
         gap={{

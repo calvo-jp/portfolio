@@ -20,7 +20,7 @@ export function NoteworthyProjects() {
     <styled.section
       id="noteworthy-projects"
       py={{
-        base: 16,
+        base: 24,
         lg: 32,
       }}
     >
@@ -44,6 +44,7 @@ export function NoteworthyProjects() {
           fontFamily="mono"
           fontSize="sm"
           display="block"
+          whiteSpace="nowrap"
           textUnderlineOffset="0.35rem"
           _hover={{
             textDecoration: 'underline',
@@ -55,7 +56,7 @@ export function NoteworthyProjects() {
 
       <Grid
         mt={{
-          base: 12,
+          base: 14,
           lg: 16,
         }}
         gap={4}

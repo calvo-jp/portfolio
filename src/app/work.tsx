@@ -21,7 +21,7 @@ export function Work() {
     <styled.section
       id="work"
       py={{
-        base: 16,
+        base: 24,
         lg: 32,
       }}
     >
@@ -35,7 +35,7 @@ export function Work() {
 
       <styled.div
         mt={{
-          base: 12,
+          base: 14,
           lg: 16,
         }}
       >
