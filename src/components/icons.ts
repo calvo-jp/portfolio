@@ -22,8 +22,8 @@ function styledIcon(icon: LucideIcon) {
     icon,
     {
       base: {
-        w: 4,
-        h: 4,
+        w: 5,
+        h: 5,
       },
     },
     {

@@ -78,11 +78,11 @@ export function Socials() {
 function getIcon(name: 'github' | 'linkedin' | 'twitter' | (string & {})) {
   switch (name.toLowerCase()) {
     case 'github':
-      return <IconGithub w={5} h={5} />;
+      return <IconGithub />;
     case 'twitter':
-      return <IconTwitter w={5} h={5} />;
+      return <IconTwitter />;
     case 'linkedin':
-      return <IconLinkedin w={5} h={5} />;
+      return <IconLinkedin />;
     default:
       throw new Error(`Unknown social: '${name}'`);
   }

@@ -96,7 +96,7 @@ function Item(props: INonFeaturedProject) {
                   }}
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
-                  <IconExternalLink w={5} h={5} />
+                  <IconExternalLink />
                 </styled.a>
               </TooltipTrigger>
 
@@ -126,7 +126,7 @@ function Item(props: INonFeaturedProject) {
                 }}
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>
-                <IconGitBranch w={5} h={5} />
+                <IconGitBranch />
               </styled.a>
             </TooltipTrigger>
 
