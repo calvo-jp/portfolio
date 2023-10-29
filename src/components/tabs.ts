@@ -1,10 +1,10 @@
 'use client';
 
 import { styled } from '@/styled-system/jsx';
-import * as tabs from '@ark-ui/react/tabs';
+import { Tabs as parts } from '@ark-ui/react';
 
-export const Tabs = styled(tabs.Tabs);
-export const TabList = styled(tabs.TabList);
-export const TabContent = styled(tabs.TabContent);
-export const TabTrigger = styled(tabs.TabTrigger);
-export const TabIndicator = styled(tabs.TabIndicator);
+export const Tabs = styled(parts.Root);
+export const TabList = styled(parts.List);
+export const TabContent = styled(parts.Content);
+export const TabTrigger = styled(parts.Trigger);
+export const TabIndicator = styled(parts.Indicator);

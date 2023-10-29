@@ -1,5 +1,3 @@
-'use client';
-
 import { styled } from '@/styled-system/jsx';
 import {
   AsteriskIcon,

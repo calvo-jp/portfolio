@@ -1,10 +1,10 @@
 'use client';
 
 import { styled } from '@/styled-system/jsx';
-import * as carousel from '@ark-ui/react/carousel';
+import { Carousel as parts } from '@ark-ui/react';
 
 export const Carousel = styled(
-  carousel.Carousel,
+  parts.Root,
   {},
   {
     defaultProps: {
@@ -13,14 +13,14 @@ export const Carousel = styled(
   },
 );
 
-export const CarouselControl = styled(carousel.CarouselControl);
-export const CarouselIndicator = styled(carousel.CarouselIndicator);
-export const CarouselIndicatorGroup = styled(carousel.CarouselIndicatorGroup);
-export const CarouselItem = styled(carousel.CarouselItem);
-export const CarouselItemGroup = styled(carousel.CarouselItemGroup);
-export const CarouselNextTrigger = styled(carousel.CarouselNextTrigger);
-export const CarouselPrevTrigger = styled(carousel.CarouselPrevTrigger);
-export const CarouselViewport = styled(carousel.CarouselViewport, {
+export const CarouselControl = styled(parts.Control);
+export const CarouselIndicator = styled(parts.Indicator);
+export const CarouselIndicatorGroup = styled(parts.IndicatorGroup);
+export const CarouselItem = styled(parts.Item);
+export const CarouselItemGroup = styled(parts.ItemGroup);
+export const CarouselNextTrigger = styled(parts.NextTrigger);
+export const CarouselPrevTrigger = styled(parts.PrevTrigger);
+export const CarouselViewport = styled(parts.Viewport, {
   base: {
     position: 'relative',
     overflowX: 'hidden',

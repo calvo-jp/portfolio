@@ -1,10 +1,10 @@
 'use client';
 
 import { styled } from '@/styled-system/jsx';
-import * as tooltip from '@ark-ui/react/tooltip';
+import { Tooltip as parts } from '@ark-ui/react';
 
 export const Tooltip = styled(
-  tooltip.Tooltip,
+  parts.Root,
   {},
   {
     defaultProps: {
@@ -14,10 +14,10 @@ export const Tooltip = styled(
   },
 );
 
-export const TooltipTrigger = styled(tooltip.TooltipTrigger);
-export const TooltipPositioner = styled(tooltip.TooltipPositioner);
+export const TooltipTrigger = styled(parts.Trigger);
+export const TooltipPositioner = styled(parts.Positioner);
 export const TooltipContent = styled(
-  tooltip.TooltipContent,
+  parts.Content,
   {
     base: {
       px: 4,
@@ -37,11 +37,11 @@ export const TooltipContent = styled(
   },
 );
 
-export const TooltipArrow = styled(tooltip.TooltipArrow, {
+export const TooltipArrow = styled(parts.Arrow, {
   base: {
     '--arrow-size': 'token(sizes.3)',
     '--arrow-background': 'token(colors.neutral.700)',
   },
 });
 
-export const TooltipArrowTip = styled(tooltip.TooltipArrowTip);
+export const TooltipArrowTip = styled(parts.ArrowTip);
