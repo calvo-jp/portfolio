@@ -97,8 +97,7 @@ function Item(props: INonFeaturedProject) {
                   href={website}
                   target="_blank"
                   rel="noreferrer noopener"
-                  transitionProperty="colors"
-                  transitionDuration="slow"
+                  transition="colors token(durations.slow)"
                   _hover={{
                     color: 'violet.400',
                   }}
@@ -127,8 +126,7 @@ function Item(props: INonFeaturedProject) {
                 href={repository}
                 target="_blank"
                 rel="noreferrer noopener"
-                transitionProperty="colors"
-                transitionDuration="slow"
+                transition="colors token(durations.slow)"
                 _hover={{
                   color: 'violet.400',
                 }}

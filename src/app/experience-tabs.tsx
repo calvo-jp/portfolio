@@ -27,12 +27,11 @@ export function ExperienceTabs() {
             display="block"
             textAlign="left"
             color="inherit"
+            transition="all token(durations.slow)"
             _selected={{
               bg: 'neutral.800',
               color: 'violet.400',
             }}
-            transitionProperty="all"
-            transitionDuration="slow"
           >
             {company.name}
           </TabTrigger>

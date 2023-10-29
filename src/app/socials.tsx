@@ -41,8 +41,7 @@ export function Socials() {
                     href={url}
                     target="_blank"
                     rel="noreferrer noopener"
-                    transitionProperty="colors"
-                    transitionDuration="slow"
+                    transition="colors token(durations.slow)"
                     color={{
                       _hover: 'violet.400',
                     }}

@@ -22,8 +22,7 @@ export function NavbarNav() {
               </styled.span>
               <styled.span
                 fontSize="sm"
-                transitionProperty="colors"
-                transitionDuration="slow"
+                transition="colors token(durations.slow)"
                 color={{
                   base: 'neutral.200',
                   _hover: 'violet.400',

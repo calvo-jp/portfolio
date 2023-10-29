@@ -145,8 +145,7 @@ function Item(props: IFeaturedProject) {
                     base: 'neutral.300',
                     _hover: 'violet.400',
                   }}
-                  transitionProperty="colors"
-                  transitionDuration="slow"
+                  transition="colors token(durations.slow)"
                 >
                   <IconExternalLink w={6} h={6} />
                   <VisuallyHidden>Go to website</VisuallyHidden>
@@ -176,8 +175,7 @@ function Item(props: IFeaturedProject) {
                   base: 'neutral.300',
                   _hover: 'violet.400',
                 }}
-                transitionProperty="colors"
-                transitionDuration="slow"
+                transition="colors token(durations.slow)"
               >
                 <IconGitBranch w={6} h={6} />
                 <VisuallyHidden>Go to repository</VisuallyHidden>

@@ -24,8 +24,7 @@ export function EmailAd() {
             fontSize="xs"
             writingMode="vertical-rl"
             letterSpacing="widest"
-            transitionProperty="colors"
-            transitionDuration="slow"
+            transition="colors token(durations.slow)"
             color={{
               _hover: 'violet.400',
             }}

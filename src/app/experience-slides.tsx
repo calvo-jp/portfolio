@@ -67,8 +67,7 @@ export function ExperienceSlides() {
             cursor="pointer"
             rounded="full"
             border="1px solid token(colors.neutral.300)"
-            transitionProperty="all"
-            transitionDuration="slow"
+            transition="all token(durations.slow)"
             _current={{
               bg: 'neutral.200',
               borderColor: 'neutral.200',

@@ -12,9 +12,7 @@ const recipe = cva({
     justifyContent: 'center',
     rounded: 'sm',
     fontFamily: 'mono',
-    transitionProperty: 'transform',
-    transitionDuration: 'slow',
-
+    transition: 'transform token(durations.slow)',
     _active: {
       transform: 'scale(0.95)',
     },
