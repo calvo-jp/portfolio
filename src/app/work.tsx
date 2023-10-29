@@ -72,7 +72,7 @@ function Item(props: IFeaturedProject) {
         },
       }}
     >
-      <styled.div
+      <Box
         w="1/2"
         flexShrink={0}
         lgDown={{
@@ -80,12 +80,12 @@ function Item(props: IFeaturedProject) {
         }}
       >
         <Image src={image} alt="" width={450} height={450} w="full" h="auto" />
-      </styled.div>
+      </Box>
 
-      <styled.div flexGrow={1}>
-        <styled.div fontFamily="mono" fontSize="sm" color="violet.400" lineHeight="none">
+      <Box flexGrow={1}>
+        <Box fontFamily="mono" fontSize="sm" color="violet.400" lineHeight="none">
           Featured Project
-        </styled.div>
+        </Box>
 
         <styled.h3
           mt={1}
@@ -97,14 +97,14 @@ function Item(props: IFeaturedProject) {
           {title}
         </styled.h3>
 
-        <styled.div
+        <Box
           mt={4}
           lg={{
             display: 'none',
           }}
         >
           <Image src={image} alt="" width={450} height={450} w="full" h="auto" />
-        </styled.div>
+        </Box>
 
         <styled.p
           mt={5}
@@ -194,7 +194,7 @@ function Item(props: IFeaturedProject) {
             </Portal>
           </Tooltip>
         </HStack>
-      </styled.div>
+      </Box>
     </Flex>
   );
 }

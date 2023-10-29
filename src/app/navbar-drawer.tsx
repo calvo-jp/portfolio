@@ -12,7 +12,7 @@ import {
 import { IconMenu, IconX } from '@/components/icons';
 import { Link } from '@/components/link';
 import { AUTHOR } from '@/config/author';
-import { Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Box, Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal, Presence } from '@ark-ui/react';
 import { NAVBAR_LINKS } from './navbar-nav';
 
@@ -95,12 +95,12 @@ export function NavbarDrawer() {
                           }}
                         >
                           <Link py={1} href={path} onClick={close}>
-                            <styled.div fontFamily="mono" color="violet.400">
+                            <Box fontFamily="mono" color="violet.400">
                               {(++index).toString().padStart(2, '0')}.
-                            </styled.div>
-                            <styled.div fontSize="lg" color="neutral.200">
+                            </Box>
+                            <Box fontSize="lg" color="neutral.200">
                               {label}
-                            </styled.div>
+                            </Box>
                           </Link>
                         </styled.li>
                       ))}
