@@ -1,5 +1,5 @@
 import { IconAsterisk } from '@/components/icons';
-import { styled } from '@/styled-system/jsx';
+import { Box, styled } from '@/styled-system/jsx';
 import { IWorkHistory } from '@/types';
 import { format, isSameYear } from 'date-fns';
 
@@ -17,13 +17,13 @@ export function ExperienceItem(props: IWorkHistory) {
     : null;
 
   return (
-    <styled.div display="flex" flexDir="column">
-      <styled.div fontSize="xl" fontWeight="bold" letterSpacing="wide">
+    <Box display="flex" flexDir="column">
+      <Box fontSize="xl" fontWeight="bold" letterSpacing="wide">
         <styled.span color="neutral.200">{position}</styled.span>{' '}
         <styled.span color="violet.400">@ {company.name}</styled.span>
-      </styled.div>
+      </Box>
 
-      <styled.div
+      <Box
         fontFamily="mono"
         fontSize="sm"
         display="flex"
@@ -43,7 +43,7 @@ export function ExperienceItem(props: IWorkHistory) {
         <styled.span>
           {monthUntil} {yearUntil}
         </styled.span>
-      </styled.div>
+      </Box>
 
       <styled.ul mt={5}>
         {responsibilities.map((responsibility) => (
@@ -57,10 +57,10 @@ export function ExperienceItem(props: IWorkHistory) {
             gap={2.5}
           >
             <IconAsterisk w={3} h={3} my={1.5} color="violet.400" flexShrink={0} />
-            <styled.div>{responsibility}</styled.div>
+            <Box>{responsibility}</Box>
           </styled.li>
         ))}
       </styled.ul>
-    </styled.div>
+    </Box>
   );
 }

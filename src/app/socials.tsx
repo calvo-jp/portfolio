@@ -8,7 +8,7 @@ import {
   TooltipTrigger,
 } from '@/components/tooltip';
 import { AUTHOR } from '@/config/author';
-import { VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { capitalize } from '@/utils/capitalize';
 import { Portal } from '@ark-ui/react';
 
@@ -67,7 +67,7 @@ export function Socials() {
           ))}
 
           <styled.li pt={2}>
-            <styled.div h="15vh" w="1px" bg="neutral.800" roundedTop="full" />
+            <Box h="15vh" w="1px" bg="neutral.800" roundedTop="full" />
           </styled.li>
         </styled.ul>
       </styled.nav>

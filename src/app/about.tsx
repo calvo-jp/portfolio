@@ -2,7 +2,7 @@ import selfie from '@/assets/images/selfie.jpg';
 import { IconAsterisk } from '@/components/icons';
 import { Image } from '@/components/image';
 import { AUTHOR } from '@/config/author';
-import { Flex, styled } from '@/styled-system/jsx';
+import { Box, Flex, styled } from '@/styled-system/jsx';
 import { SectionHeading } from './section-heading';
 
 export function About() {
@@ -36,13 +36,13 @@ export function About() {
           lg: 'row',
         }}
       >
-        <styled.div
+        <Box
           flexShrink={0}
           lg={{
             w: '1/2',
           }}
         >
-          <styled.div
+          <Box
             css={{
               fontSize: 'lg',
 
@@ -67,25 +67,25 @@ export function About() {
             }}
           >
             {AUTHOR.about}
-          </styled.div>
+          </Box>
 
-          <styled.div mt={5} fontSize="lg">
+          <Box mt={5} fontSize="lg">
             Here are a few technologies I&rsquo;ve been working with&nbsp;recently:
-          </styled.div>
+          </Box>
 
           <Skills />
-        </styled.div>
+        </Box>
 
-        <styled.div flexGrow={1}>
-          <styled.div
+        <Box flexGrow={1}>
+          <Box
             p={4}
             pos="relative"
             border="2px solid token(colors.violet.400)"
             rounded="md"
           >
             <Image src={selfie} alt="" rounded="sm" placeholder="blur" />
-          </styled.div>
-        </styled.div>
+          </Box>
+        </Box>
       </Flex>
     </styled.section>
   );

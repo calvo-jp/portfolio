@@ -9,7 +9,15 @@ import {
   TooltipTrigger,
 } from '@/components/tooltip';
 import { AUTHOR } from '@/config/author';
-import { Flex, Grid, HStack, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import {
+  Box,
+  Flex,
+  Grid,
+  HStack,
+  Spacer,
+  VisuallyHidden,
+  styled,
+} from '@/styled-system/jsx';
 import { INonFeaturedProject } from '@/types';
 import { Portal } from '@ark-ui/react';
 
@@ -24,7 +32,7 @@ export function NoteworthyProjects() {
         lg: 32,
       }}
     >
-      <styled.div textAlign="center">
+      <Box textAlign="center">
         <styled.h2
           fontSize={{
             base: '2xl',
@@ -52,7 +60,7 @@ export function NoteworthyProjects() {
         >
           view the archive
         </Link>
-      </styled.div>
+      </Box>
 
       <Grid
         mt={{

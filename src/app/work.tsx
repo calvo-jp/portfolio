@@ -9,7 +9,7 @@ import {
   TooltipTrigger,
 } from '@/components/tooltip';
 import { AUTHOR } from '@/config/author';
-import { Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { IFeaturedProject } from '@/types';
 import { Portal } from '@ark-ui/react';
 import { SectionHeading } from './section-heading';
@@ -33,7 +33,7 @@ export function Work() {
         }}
       />
 
-      <styled.div
+      <Box
         mt={{
           base: 14,
           lg: 16,
@@ -42,7 +42,7 @@ export function Work() {
         {projects.map((o) => (
           <Item key={o.title} {...o} />
         ))}
-      </styled.div>
+      </Box>
     </styled.section>
   );
 }

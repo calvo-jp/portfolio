@@ -1,11 +1,11 @@
 import { Button } from '@/components/button';
 import { IconChevronLeft } from '@/components/icons';
 import { Link } from '@/components/link';
-import { styled } from '@/styled-system/jsx';
+import { Box, styled } from '@/styled-system/jsx';
 
 export default function NotFound() {
   return (
-    <styled.div px={8} pt={40} pb={32} textAlign="center">
+    <Box px={8} pt={40} pb={32} textAlign="center">
       <styled.h1
         fontFamily="mono"
         fontSize="9xl"
@@ -33,6 +33,6 @@ export default function NotFound() {
           <styled.span>Go Home</styled.span>
         </Link>
       </Button>
-    </styled.div>
+    </Box>
   );
 }

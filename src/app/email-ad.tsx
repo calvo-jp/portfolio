@@ -1,11 +1,11 @@
 import { AUTHOR } from '@/config/author';
-import { styled } from '@/styled-system/jsx';
+import { Box, styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
 
 export function EmailAd() {
   return (
     <Portal>
-      <styled.div
+      <Box
         id="email-ad"
         w="12.5vh"
         pos="fixed"
@@ -17,7 +17,7 @@ export function EmailAd() {
           display: 'none',
         }}
       >
-        <styled.div w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
+        <Box w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
           <styled.a
             href={`mailto:${AUTHOR.contact.email}`}
             fontFamily="mono"
@@ -32,9 +32,9 @@ export function EmailAd() {
           >
             {AUTHOR.contact.email}
           </styled.a>
-          <styled.div h="15vh" w="1px" bg="neutral.800" roundedTop="full" />
-        </styled.div>
-      </styled.div>
+          <Box h="15vh" w="1px" bg="neutral.800" roundedTop="full" />
+        </Box>
+      </Box>
     </Portal>
   );
 }

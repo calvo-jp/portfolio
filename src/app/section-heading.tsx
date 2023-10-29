@@ -1,4 +1,4 @@
-import { styled } from '@/styled-system/jsx';
+import { Box, styled } from '@/styled-system/jsx';
 import { Assign, HTMLStyledProps } from '@/styled-system/types';
 import { ReactNode } from 'react';
 
@@ -33,7 +33,7 @@ export function SectionHeading(props: SectionHeadingProps) {
       >
         {title}
       </styled.span>
-      <styled.div ml={3} flexGrow={1} h="1px" bg="neutral.800" />
+      <Box ml={3} flexGrow={1} h="1px" bg="neutral.800" />
     </styled.h2>
   );
 }

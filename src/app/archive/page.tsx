@@ -8,7 +8,7 @@ import {
   TooltipTrigger,
 } from '@/components/tooltip';
 import { AUTHOR } from '@/config/author';
-import { Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { INonFeaturedProject } from '@/types';
 import { Portal } from '@ark-ui/react';
 import { Metadata } from 'next';
@@ -21,7 +21,7 @@ export default function Archive() {
   const items = getItems();
 
   return (
-    <styled.div
+    <Box
       py={{
         base: 20,
         lg: 24,
@@ -41,7 +41,7 @@ export default function Archive() {
         A big list of things I&rsquo;ve worked on
       </styled.p>
 
-      <styled.div mt={16}>
+      <Box mt={16}>
         {items.map(([year, projects]) => (
           <Flex
             key={year}
@@ -58,23 +58,18 @@ export default function Archive() {
               lg: 'row',
             }}
           >
-            <styled.div
-              fontFamily="mono"
-              fontSize="sm"
-              lineHeight="loose"
-              color="violet.400"
-            >
+            <Box fontFamily="mono" fontSize="sm" lineHeight="loose" color="violet.400">
               {year}
-            </styled.div>
-            <styled.div>
+            </Box>
+            <Box>
               {projects.map((o) => (
                 <Item key={o.title} {...o} />
               ))}
-            </styled.div>
+            </Box>
           </Flex>
         ))}
-      </styled.div>
-    </styled.div>
+      </Box>
+    </Box>
   );
 }
 
@@ -82,13 +77,13 @@ function Item(props: INonFeaturedProject) {
   const { title, description, tags, website, repository } = props;
 
   return (
-    <styled.div
+    <Box
       mt={{
         base: 8,
         _first: 0,
       }}
     >
-      <styled.div>
+      <Box>
         <styled.h2 fontSize="xl" fontWeight="bold" color="neutral.200">
           {title}
         </styled.h2>
@@ -98,7 +93,7 @@ function Item(props: INonFeaturedProject) {
             <styled.li key={tag}>{tag}</styled.li>
           ))}
         </styled.ul>
-      </styled.div>
+      </Box>
 
       <HStack mt={5} gap={4}>
         {website && (
@@ -161,7 +156,7 @@ function Item(props: INonFeaturedProject) {
           </Portal>
         </Tooltip>
       </HStack>
-    </styled.div>
+    </Box>
   );
 }
 
