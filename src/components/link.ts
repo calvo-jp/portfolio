@@ -1,6 +1,12 @@
-'use client';
-
 import { styled } from '@/styled-system/jsx';
-import link from 'next/link';
+import NextLink from 'next/link';
 
-export const Link = styled(link);
+export const Link = styled(
+  NextLink,
+  {},
+  {
+    shouldForwardProp(key) {
+      return ['href', 'replace', 'scroll', 'prefetch'].includes(key);
+    },
+  },
+);

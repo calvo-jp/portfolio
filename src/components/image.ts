@@ -1,14 +1,31 @@
 'use client';
 
 import { styled } from '@/styled-system/jsx';
-import image from 'next/image';
+import NextImage from 'next/image';
 
 export const Image = styled(
-  image,
+  NextImage,
   {},
   {
     shouldForwardProp(key) {
-      return ['width', 'height'].includes(key);
+      return [
+        'src',
+        'alt',
+        'height',
+        'width',
+        'loader',
+        'fill',
+        'sizes',
+        'quality',
+        'priority',
+        'placeholder',
+        'style',
+        'onLoadingComplete',
+        'onLoad',
+        'onError',
+        'loading',
+        'blurDataURL',
+      ].includes(key);
     },
   },
 );
