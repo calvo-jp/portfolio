@@ -5,6 +5,8 @@ export type TName = Alias<string>;
 export type TEmail = Alias<string>;
 export type TMarkdown = Alias<string>;
 export type TExternalLink = Alias<string>;
+export type TTag = Alias<string>;
+export type TSkill = Alias<string>;
 
 export interface ICompany {
   name: TName;
@@ -33,33 +35,6 @@ export interface ISocials {
   linkedin: TExternalLink;
 }
 
-export type TProgrammingLanguage =
-  | 'HTML'
-  | 'CSS'
-  | 'TypeScript'
-  | 'JavaScript'
-  | 'Node.js'
-  | 'Python'
-  | 'PHP';
-
-export type TFramework =
-  | 'React'
-  | 'React Native'
-  | 'Next.js'
-  | 'Solid.js'
-  | 'SolidStart'
-  | 'Svelte'
-  | 'SvelteKit'
-  | 'Chakra UI'
-  | 'Tailwind'
-  | 'Panda'
-  | 'Ark UI'
-  | 'Prisma'
-  | 'Ionic'
-  | 'Capacitor';
-
-export type TTag = TProgrammingLanguage | TFramework | (string & {});
-
 export interface IProject {
   title: string;
   image?: TExternalLink;
@@ -71,8 +46,6 @@ export interface IProject {
   featured?: boolean;
 }
 
-export type TSkill = TProgrammingLanguage | TFramework | (string & {});
-
 export interface IAuthor {
   name: string;
   about: TMarkdown;
@@ -83,19 +56,4 @@ export interface IAuthor {
   socials: ISocials;
   workHistory: IWorkHistory[];
   projects: IProject[];
-}
-
-export enum Month {
-  Jan,
-  Feb,
-  Mar,
-  Apr,
-  May,
-  Jun,
-  Jul,
-  Aug,
-  Sep,
-  Oct,
-  Nov,
-  Dec,
 }
