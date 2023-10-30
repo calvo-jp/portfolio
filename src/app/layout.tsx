@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: 'website',
       title,
       description,
-      images: ['/open-graph-banner.jpeg'],
+      images: ['/opengraph-banner.jpeg'],
     },
   };
 }
