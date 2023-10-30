@@ -59,11 +59,11 @@ async function getWorkHistory() {
       website: z.string().url(),
     }),
     dateOfEmployment: z.object({
-      start: z.string().pipe(z.coerce.date()),
-      until: z.string().optional().pipe(z.coerce.date().optional()),
+      start: z.coerce.date(),
+      until: z.coerce.date().optional(),
     }),
     position: z.string(),
-  });
+  }) satisfies z.ZodType<Omit<IWorkHistory, 'responsibilities'>>;
 
   const subdir = join(MARKDOWN_DIR, 'work-history');
   const files = await readdir(subdir);
@@ -87,8 +87,8 @@ async function getProjects() {
     website: z.string().url().optional(),
     featured: z.boolean().optional(),
     tags: z.array(z.string()),
-    createdAt: z.string().pipe(z.coerce.date()),
-  });
+    createdAt: z.coerce.date(),
+  }) satisfies z.ZodType<Omit<IProject, 'description'>>;
 
   const subdir = join(MARKDOWN_DIR, 'projects');
   const files = await readdir(subdir);
