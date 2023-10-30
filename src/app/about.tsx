@@ -2,7 +2,7 @@ import selfie from '@/assets/images/selfie.jpg';
 import { IconAsterisk } from '@/components/icons';
 import { Image } from '@/components/image';
 import { AUTHOR } from '@/config/author';
-import { Box, Flex, styled } from '@/styled-system/jsx';
+import { Box, Flex, Grid, GridItem, styled } from '@/styled-system/jsx';
 import { SectionHeading } from './section-heading';
 
 export function About() {
@@ -93,29 +93,30 @@ export function About() {
 
 function Skills() {
   return (
-    <styled.ul
+    <Grid
       mt={5}
+      columns={{
+        base: 1,
+        lg: 3,
+      }}
       display="grid"
       gap={1}
-      gridTemplateColumns={{
-        lg: 'repeat(3,1fr)',
-      }}
     >
       {AUTHOR.skills.map((skill, i) => (
-        <styled.li
+        <GridItem
           key={skill}
           fontFamily="mono"
           display="flex"
           alignItems="center"
           gap={1}
-          gridColumn={{
+          colSpan={{
             lg: (i + 1) % 2 === 0 ? 2 : 1,
           }}
         >
           <IconAsterisk color="violet.500" w={3} h={3} />
           <styled.span fontSize="sm">{skill}</styled.span>
-        </styled.li>
+        </GridItem>
       ))}
-    </styled.ul>
+    </Grid>
   );
 }

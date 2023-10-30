@@ -13,6 +13,7 @@ import {
   Box,
   Flex,
   Grid,
+  GridItem,
   HStack,
   Spacer,
   VisuallyHidden,
@@ -68,13 +69,16 @@ export function NoteworthyProjects() {
           lg: 16,
         }}
         gap={4}
-        gridTemplateColumns={{
-          lg: 'repeat(2,1fr)',
-          xl: 'repeat(3,1fr)',
+        columns={{
+          base: 1,
+          lg: 2,
+          xl: 3,
         }}
       >
         {items.map((o) => (
-          <Item key={o.title} {...o} />
+          <GridItem key={o.title}>
+            <Item {...o} />
+          </GridItem>
         ))}
       </Grid>
     </styled.section>
