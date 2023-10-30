@@ -4,15 +4,8 @@ import { IAuthor, IProject, IWorkHistory } from '@/types';
 import fs from 'fs/promises';
 import path from 'path';
 import { cache } from 'react';
-import rehypeExternalLinks from 'rehype-external-links';
-import rehypeStringify from 'rehype-stringify';
-import remarkFrontmatter from 'remark-frontmatter';
-import remarkGfm from 'remark-gfm';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
-import { unified } from 'unified';
-import { matter } from 'vfile-matter';
 import { z } from 'zod';
+import { markdownToHtml } from './markdown-to-html';
 
 export const getAuthor = cache(async (): Promise<IAuthor> => {
   const about = await getAbout();
@@ -50,35 +43,17 @@ export const getAuthor = cache(async (): Promise<IAuthor> => {
   };
 });
 
-const processor = unified()
-  .use(remarkParse)
-  .use(remarkFrontmatter, [{ type: 'yaml', marker: '-' }])
-  .use(function plugin() {
-    return function parseFrontmatter(_tree, file) {
-      matter(file, {
-        strip: true,
-      });
-    };
-  })
-  .use(remarkGfm)
-  .use(remarkRehype)
-  .use(rehypeExternalLinks, {
-    target: '_blank',
-    rel: ['noopener', 'noreferrer'],
-  })
-  .use(rehypeStringify);
+const MARKDOWN_DIR = path.join(process.cwd(), 'src/assets/markdown');
 
-const directory = path.join(process.cwd(), 'src/assets/markdown');
+async function getAbout() {
+  const buffer = await fs.readFile(path.join(MARKDOWN_DIR, 'about.md'));
+  const result = await markdownToHtml(buffer.toString());
 
-export async function getAbout() {
-  const markdown = await fs.readFile(path.join(directory, 'about.md'));
-  const vfile = await processor.process(markdown);
-
-  return vfile.toString();
+  return result.html;
 }
 
-export async function getWorkHistory() {
-  const metadataSchema = z.object({
+async function getWorkHistory() {
+  const schema = z.object({
     company: z.object({
       name: z.string(),
       website: z.string().url(),
@@ -90,23 +65,22 @@ export async function getWorkHistory() {
     position: z.string(),
   });
 
-  const subdir = path.join(directory, 'work-history');
+  const subdir = path.join(MARKDOWN_DIR, 'work-history');
   const files = await fs.readdir(subdir);
   const items: IWorkHistory[] = [];
 
   for (const file of files) {
-    const vfile = await processor.process(await fs.readFile(path.join(subdir, file)));
-    const metadata = metadataSchema.parse(vfile.data.matter);
-    const responsibilities = vfile.toString();
+    const buffer = await fs.readFile(path.join(subdir, file));
+    const result = await markdownToHtml(buffer.toString());
 
-    items.push({ ...metadata, responsibilities });
+    items.push({ ...schema.parse(result.meta.matter), responsibilities: result.html });
   }
 
   return items;
 }
 
-export async function getProjects() {
-  const metadataSchema = z.object({
+async function getProjects() {
+  const schema = z.object({
     title: z.string(),
     image: z.string().optional(),
     repository: z.string().url(),
@@ -116,16 +90,15 @@ export async function getProjects() {
     createdAt: z.string().pipe(z.coerce.date()),
   });
 
-  const subdir = path.join(directory, 'projects');
+  const subdir = path.join(MARKDOWN_DIR, 'projects');
   const files = await fs.readdir(subdir);
   const items: IProject[] = [];
 
   for (const file of files) {
-    const vfile = await processor.process(await fs.readFile(path.join(subdir, file)));
-    const metadata = metadataSchema.parse(vfile.data.matter);
-    const description = vfile.toString();
+    const buffer = await fs.readFile(path.join(subdir, file));
+    const result = await markdownToHtml(buffer.toString());
 
-    items.push({ ...metadata, description });
+    items.push({ ...schema.parse(result.meta.matter), description: result.html });
   }
 
   return items;
