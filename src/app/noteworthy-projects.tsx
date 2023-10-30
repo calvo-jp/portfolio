@@ -93,10 +93,11 @@ function Item(props: INonFeaturedProject) {
           {website && (
             <Tooltip>
               <TooltipTrigger asChild>
-                <styled.a
+                <Link
                   href={website}
                   target="_blank"
                   rel="noreferrer noopener"
+                  prefetch={false}
                   transition="colors token(durations.slow)"
                   _hover={{
                     color: 'violet.500',
@@ -104,7 +105,7 @@ function Item(props: INonFeaturedProject) {
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
                   <IconExternalLink />
-                </styled.a>
+                </Link>
               </TooltipTrigger>
 
               <Portal>
@@ -122,10 +123,11 @@ function Item(props: INonFeaturedProject) {
 
           <Tooltip>
             <TooltipTrigger asChild>
-              <styled.a
+              <Link
                 href={repository}
                 target="_blank"
                 rel="noreferrer noopener"
+                prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
                   color: 'violet.500',
@@ -133,7 +135,7 @@ function Item(props: INonFeaturedProject) {
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>
                 <IconGitBranch />
-              </styled.a>
+              </Link>
             </TooltipTrigger>
 
             <Portal>

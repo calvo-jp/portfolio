@@ -36,9 +36,14 @@ export function NavbarNav() {
       </styled.ul>
 
       <Button size="sm" asChild>
-        <styled.a href={AUTHOR.resume} target="_blank" rel="noreferrer noopener">
+        <Link
+          href={AUTHOR.resume}
+          target="_blank"
+          rel="noreferrer noopener"
+          prefetch={false}
+        >
           <VisuallyHidden>Download </VisuallyHidden>Resume
-        </styled.a>
+        </Link>
       </Button>
     </styled.nav>
   );

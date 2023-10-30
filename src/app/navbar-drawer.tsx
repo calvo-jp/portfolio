@@ -107,13 +107,14 @@ export function NavbarDrawer() {
                     </styled.ul>
 
                     <Button w="2/3" mx="auto" mt={12} asChild>
-                      <styled.a
+                      <Link
                         href={AUTHOR.resume}
                         target="_blank"
                         rel="noreferrer noopener"
+                        prefetch={false}
                       >
                         Resume
-                      </styled.a>
+                      </Link>
                     </Button>
                   </styled.nav>
                 </DialogContent>

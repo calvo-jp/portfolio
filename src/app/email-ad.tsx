@@ -1,5 +1,6 @@
+import { Link } from '@/components/link';
 import { AUTHOR } from '@/config/author';
-import { Box, styled } from '@/styled-system/jsx';
+import { Box } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
 
 export function EmailAd() {
@@ -18,8 +19,9 @@ export function EmailAd() {
         }}
       >
         <Box w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
-          <styled.a
+          <Link
             href={`mailto:${AUTHOR.contact.email}`}
+            prefetch={false}
             fontFamily="mono"
             fontSize="xs"
             writingMode="vertical-rl"
@@ -30,7 +32,7 @@ export function EmailAd() {
             }}
           >
             {AUTHOR.contact.email}
-          </styled.a>
+          </Link>
           <Box h="15vh" w="1px" bg="neutral.800" roundedTop="full" />
         </Box>
       </Box>

@@ -1,4 +1,5 @@
 import { IconGithub, IconLinkedin, IconTwitter } from '@/components/icons';
+import { Link } from '@/components/link';
 import { AUTHOR } from '@/config/author';
 import { Center, VisuallyHidden, styled } from '@/styled-system/jsx';
 
@@ -15,15 +16,16 @@ export function Footer() {
           <styled.ul display="flex" alignItems="center" gap={5}>
             {Object.entries(AUTHOR.socials).map(([name, url]) => (
               <styled.li key={name}>
-                <styled.a
+                <Link
                   href={url}
                   target="_blank"
                   rel="noreferrer noopener"
+                  prefetch={false}
                   color="neutral.300"
                 >
                   {getSocialIcon(name)}
                   <VisuallyHidden>{name}</VisuallyHidden>
-                </styled.a>
+                </Link>
               </styled.li>
             ))}
           </styled.ul>

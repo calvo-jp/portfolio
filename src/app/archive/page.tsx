@@ -1,4 +1,5 @@
 import { IconExternalLink, IconGitBranch } from '@/components/icons';
+import { Link } from '@/components/link';
 import {
   Tooltip,
   TooltipArrow,
@@ -99,10 +100,11 @@ function Item(props: INonFeaturedProject) {
         {website && (
           <Tooltip>
             <TooltipTrigger asChild>
-              <styled.a
+              <Link
                 href={website}
                 target="_blank"
                 rel="noreferrer noopener"
+                prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
                   color: 'violet.500',
@@ -110,7 +112,7 @@ function Item(props: INonFeaturedProject) {
               >
                 <IconExternalLink />
                 <VisuallyHidden>Go to website</VisuallyHidden>
-              </styled.a>
+              </Link>
             </TooltipTrigger>
 
             <Portal>
@@ -128,10 +130,11 @@ function Item(props: INonFeaturedProject) {
 
         <Tooltip>
           <TooltipTrigger asChild>
-            <styled.a
+            <Link
               href={repository}
               target="_blank"
               rel="noreferrer noopener"
+              prefetch={false}
               transition="colors token(durations.slow)"
               _hover={{
                 color: 'violet.500',
@@ -139,7 +142,7 @@ function Item(props: INonFeaturedProject) {
             >
               <IconGitBranch />
               <VisuallyHidden>Go to repository</VisuallyHidden>
-            </styled.a>
+            </Link>
           </TooltipTrigger>
 
           <Portal>

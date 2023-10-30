@@ -1,5 +1,6 @@
 import { IconExternalLink, IconGitBranch } from '@/components/icons';
 import { Image } from '@/components/image';
+import { Link } from '@/components/link';
 import {
   Tooltip,
   TooltipArrow,
@@ -137,10 +138,11 @@ function Item(props: IFeaturedProject) {
           {website && (
             <Tooltip>
               <TooltipTrigger asChild>
-                <styled.a
+                <Link
                   href={website}
                   target="_blank"
                   rel="noreferrer noopener"
+                  prefetch={false}
                   color={{
                     base: 'neutral.300',
                     _hover: 'violet.500',
@@ -149,7 +151,7 @@ function Item(props: IFeaturedProject) {
                 >
                   <IconExternalLink w={6} h={6} />
                   <VisuallyHidden>Go to website</VisuallyHidden>
-                </styled.a>
+                </Link>
               </TooltipTrigger>
               <Portal>
                 <TooltipPositioner>
@@ -167,10 +169,11 @@ function Item(props: IFeaturedProject) {
 
           <Tooltip>
             <TooltipTrigger asChild>
-              <styled.a
+              <Link
                 href={repository}
                 target="_blank"
                 rel="noreferrer noopener"
+                prefetch={false}
                 color={{
                   base: 'neutral.300',
                   _hover: 'violet.500',
@@ -179,7 +182,7 @@ function Item(props: IFeaturedProject) {
               >
                 <IconGitBranch w={6} h={6} />
                 <VisuallyHidden>Go to repository</VisuallyHidden>
-              </styled.a>
+              </Link>
             </TooltipTrigger>
             <Portal>
               <TooltipPositioner>

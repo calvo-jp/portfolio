@@ -1,5 +1,6 @@
 import '@/assets/styles/globals.css';
 
+import { Link } from '@/components/link';
 import { AUTHOR } from '@/config/author';
 import { cx } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';
@@ -75,8 +76,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
 
 function SkipNav() {
   return (
-    <styled.a href="#content" className={visuallyHidden()}>
+    <Link href="#content" prefetch={false} className={visuallyHidden()}>
       Skip to Content
-    </styled.a>
+    </Link>
   );
 }

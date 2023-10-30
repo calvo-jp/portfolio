@@ -1,4 +1,5 @@
 import { Button } from '@/components/button';
+import { Link } from '@/components/link';
 import { AUTHOR } from '@/config/author';
 import { styled } from '@/styled-system/jsx';
 
@@ -42,10 +43,11 @@ export function Hero() {
         I&rsquo;m a software engineer specializing in building &#40;and occasionally
         designing&#41; exceptional digital experiences. Currently, I&rsquo;m focused on
         building accessible, human-centered products at{' '}
-        <styled.a
+        <Link
           href={AUTHOR.company.website}
           target="_blank"
           rel="noreferrer noopener"
+          prefetch={false}
           color="violet.500"
           textUnderlineOffset="0.35rem"
           _hover={{
@@ -53,7 +55,7 @@ export function Hero() {
           }}
         >
           {AUTHOR.company.name}
-        </styled.a>
+        </Link>
         .
       </styled.p>
 

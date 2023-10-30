@@ -1,4 +1,5 @@
 import { IconGithub, IconLinkedin, IconTwitter } from '@/components/icons';
+import { Link } from '@/components/link';
 import {
   Tooltip,
   TooltipArrow,
@@ -37,10 +38,11 @@ export function Socials() {
                 }}
               >
                 <TooltipTrigger asChild>
-                  <styled.a
+                  <Link
                     href={url}
                     target="_blank"
                     rel="noreferrer noopener"
+                    prefetch={false}
                     transition="colors token(durations.slow)"
                     color={{
                       _hover: 'violet.500',
@@ -48,7 +50,7 @@ export function Socials() {
                   >
                     {getIcon(name)}
                     <VisuallyHidden>{name}</VisuallyHidden>
-                  </styled.a>
+                  </Link>
                 </TooltipTrigger>
 
                 <Portal>
