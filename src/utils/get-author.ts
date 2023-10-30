@@ -1,8 +1,8 @@
 import 'server-only';
 
 import { IAuthor, IProject, IWorkHistory } from '@/types';
-import fs from 'fs/promises';
-import path from 'path';
+import { readFile, readdir } from 'fs/promises';
+import { join } from 'path';
 import { cache } from 'react';
 import { z } from 'zod';
 import { markdownToHtml } from './markdown-to-html';
@@ -43,10 +43,10 @@ export const getAuthor = cache(async (): Promise<IAuthor> => {
   };
 });
 
-const MARKDOWN_DIR = path.join(process.cwd(), 'src/assets/markdown');
+const MARKDOWN_DIR = join(process.cwd(), 'src/assets/markdown');
 
 async function getAbout() {
-  const buffer = await fs.readFile(path.join(MARKDOWN_DIR, 'about.md'));
+  const buffer = await readFile(join(MARKDOWN_DIR, 'about.md'));
   const result = await markdownToHtml(buffer.toString());
 
   return result.html;
@@ -65,12 +65,12 @@ async function getWorkHistory() {
     position: z.string(),
   });
 
-  const subdir = path.join(MARKDOWN_DIR, 'work-history');
-  const files = await fs.readdir(subdir);
+  const subdir = join(MARKDOWN_DIR, 'work-history');
+  const files = await readdir(subdir);
   const items: IWorkHistory[] = [];
 
   for (const file of files) {
-    const buffer = await fs.readFile(path.join(subdir, file));
+    const buffer = await readFile(join(subdir, file));
     const result = await markdownToHtml(buffer.toString());
 
     items.push({ ...schema.parse(result.meta.matter), responsibilities: result.html });
@@ -90,12 +90,12 @@ async function getProjects() {
     createdAt: z.string().pipe(z.coerce.date()),
   });
 
-  const subdir = path.join(MARKDOWN_DIR, 'projects');
-  const files = await fs.readdir(subdir);
+  const subdir = join(MARKDOWN_DIR, 'projects');
+  const files = await readdir(subdir);
   const items: IProject[] = [];
 
   for (const file of files) {
-    const buffer = await fs.readFile(path.join(subdir, file));
+    const buffer = await readFile(join(subdir, file));
     const result = await markdownToHtml(buffer.toString());
 
     items.push({ ...schema.parse(result.meta.matter), description: result.html });
