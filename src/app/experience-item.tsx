@@ -2,8 +2,12 @@ import { Box, styled } from '@/styled-system/jsx';
 import { IWorkHistory } from '@/types';
 import { format, isSameYear } from 'date-fns';
 
-export function ExperienceItem(props: IWorkHistory) {
-  const { company, dateOfEmployment, position, responsibilities } = props;
+interface ExperienceItemProps {
+  data: IWorkHistory;
+}
+
+export function ExperienceItem(props: ExperienceItemProps) {
+  const { company, dateOfEmployment, position, responsibilities } = props.data;
 
   const monthStart = format(dateOfEmployment.start, 'MMMM');
   const monthUntil = dateOfEmployment.until

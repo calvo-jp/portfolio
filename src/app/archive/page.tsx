@@ -168,9 +168,9 @@ function Item(props: IProject) {
 
 /* group by year */
 async function getItems() {
-  const author = await getAuthor();
+  const l = (await getAuthor()).projects;
 
-  const f = [...author.projects].filter((p) => !p.featured);
+  const f = [...l].filter((p) => !p.featured);
   const r: Record<string, IProject[]> = {};
 
   f.forEach((i) => {

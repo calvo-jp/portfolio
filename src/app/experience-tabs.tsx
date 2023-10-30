@@ -46,7 +46,7 @@ export async function ExperienceTabs({ data }: ExperienceTabsProps) {
 
       {data.map((o) => (
         <TabContent key={o.company.name} value={o.company.name}>
-          <ExperienceItem {...o} />
+          <ExperienceItem data={o} />
         </TabContent>
       ))}
     </Tabs>

@@ -42,15 +42,19 @@ export async function Work() {
         }}
       >
         {projects.map((o) => (
-          <Item key={o.title} {...o} />
+          <Item key={o.title} data={o} />
         ))}
       </Box>
     </styled.section>
   );
 }
 
-function Item(props: IProject) {
-  const { image, title, description, website, repository, tags } = props;
+interface ItemProps {
+  data: IProject;
+}
+
+function Item(props: ItemProps) {
+  const { image, title, description, website, repository, tags } = props.data;
 
   return (
     <Flex

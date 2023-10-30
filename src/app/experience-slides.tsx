@@ -53,7 +53,7 @@ export function ExperienceSlides({ data }: ExperienceSlidesProps) {
         <CarouselItemGroup ref={ref}>
           {data.map((o, index) => (
             <CarouselItem w="full" key={o.company.name} index={index}>
-              <ExperienceItem {...o} />
+              <ExperienceItem data={o} />
             </CarouselItem>
           ))}
         </CarouselItemGroup>

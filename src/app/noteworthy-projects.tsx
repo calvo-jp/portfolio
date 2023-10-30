@@ -78,7 +78,7 @@ export async function NoteworthyProjects() {
       >
         {items.map((o) => (
           <GridItem key={o.title}>
-            <Item {...o} />
+            <Item data={o} />
           </GridItem>
         ))}
       </Grid>
@@ -86,8 +86,12 @@ export async function NoteworthyProjects() {
   );
 }
 
-function Item(props: IProject) {
-  const { title, description, repository, website, tags } = props;
+interface ItemProps {
+  data: IProject;
+}
+
+function Item(props: ItemProps) {
+  const { title, description, repository, website, tags } = props.data;
 
   return (
     <Flex bg="neutral.800" p={8} rounded="sm" flexDir="column" minH="token(spacing.80)">
