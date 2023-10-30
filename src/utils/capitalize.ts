@@ -1,4 +1,6 @@
-export function capitalize(subject: string) {
+import { cache } from 'react';
+
+export const capitalize = cache((subject: string) => {
   return subject
     .trim()
     .toLowerCase()
@@ -9,4 +11,4 @@ export function capitalize(subject: string) {
         : word.charAt(0).toUpperCase() + word.substring(1);
     })
     .join(' ');
-}
+});
