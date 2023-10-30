@@ -24,7 +24,7 @@ const processor = unified()
   .use(remarkGfm)
   .use(remarkRehype)
   .use(rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] })
-  .use(rehypeWidont)
+  .use(rehypeWidont as Plugin)
   .use(rehypeStringify);
 
 export const markdownToHtml = cache(async (markdown: string) => {
