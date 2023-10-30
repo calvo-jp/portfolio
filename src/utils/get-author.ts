@@ -4,6 +4,7 @@ import { IAuthor, IProject, IWorkHistory } from '@/types';
 import fs from 'fs/promises';
 import path from 'path';
 import { cache } from 'react';
+import rehypeExternalLinks from 'rehype-external-links';
 import rehypeStringify from 'rehype-stringify';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkGfm from 'remark-gfm';
@@ -49,7 +50,7 @@ export const getAuthor = cache(async (): Promise<IAuthor> => {
   };
 });
 
-const md = unified()
+const processor = unified()
   .use(remarkParse)
   .use(remarkFrontmatter, [{ type: 'yaml', marker: '-' }])
   .use(function plugin() {
@@ -61,12 +62,19 @@ const md = unified()
   })
   .use(remarkGfm)
   .use(remarkRehype)
+  .use(rehypeExternalLinks, {
+    target: '_blank',
+    rel: ['noopener', 'noreferrer'],
+  })
   .use(rehypeStringify);
 
-const dir = path.join(process.cwd(), 'src/assets/markdown');
+const directory = path.join(process.cwd(), 'src/assets/markdown');
 
 export async function getAbout() {
-  return (await md.process(await fs.readFile(path.join(dir, 'about.md')))).toString();
+  const markdown = await fs.readFile(path.join(directory, 'about.md'));
+  const vfile = await processor.process(markdown);
+
+  return vfile.toString();
 }
 
 export async function getWorkHistory() {
@@ -82,12 +90,12 @@ export async function getWorkHistory() {
     position: z.string(),
   });
 
-  const subdir = path.join(dir, 'work-history');
+  const subdir = path.join(directory, 'work-history');
   const files = await fs.readdir(subdir);
   const items: IWorkHistory[] = [];
 
   for (const file of files) {
-    const vfile = await md.process(await fs.readFile(path.join(subdir, file)));
+    const vfile = await processor.process(await fs.readFile(path.join(subdir, file)));
     const metadata = metadataSchema.parse(vfile.data.matter);
     const responsibilities = vfile.toString();
 
@@ -108,12 +116,12 @@ export async function getProjects() {
     createdAt: z.string().pipe(z.coerce.date()),
   });
 
-  const subdir = path.join(dir, 'projects');
+  const subdir = path.join(directory, 'projects');
   const files = await fs.readdir(subdir);
   const items: IProject[] = [];
 
   for (const file of files) {
-    const vfile = await md.process(await fs.readFile(path.join(subdir, file)));
+    const vfile = await processor.process(await fs.readFile(path.join(subdir, file)));
     const metadata = metadataSchema.parse(vfile.data.matter);
     const description = vfile.toString();
 
