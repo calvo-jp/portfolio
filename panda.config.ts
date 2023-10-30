@@ -8,10 +8,10 @@ export default defineConfig({
       tokens: {
         fonts: {
           sans: {
-            value: 'var(--font-sans)',
+            value: 'var(--font-geist-sans)',
           },
           mono: {
-            value: 'var(--font-mono)',
+            value: 'var(--font-geist-mono)',
           },
         },
         zIndex: {

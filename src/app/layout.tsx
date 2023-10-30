@@ -4,8 +4,8 @@ import { AUTHOR } from '@/config/author';
 import { cx } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';
 import { visuallyHidden } from '@/styled-system/patterns';
+import { GeistMono, GeistSans } from 'geist/font';
 import { Metadata } from 'next';
-import { JetBrains_Mono, Lato } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import { EmailAd } from './email-ad';
 import { Footer } from './footer';
@@ -30,25 +30,11 @@ export const metadata: Metadata = {
   },
 };
 
-const sans = Lato({
-  weight: ['400', '700', '900'],
-  display: 'swap',
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
-
-const mono = JetBrains_Mono({
-  weight: ['400', '700'],
-  display: 'swap',
-  subsets: ['latin'],
-  variable: '--font-mono',
-});
-
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <styled.html
       lang="en"
-      className={cx(sans.variable, mono.variable)}
+      className={cx(GeistMono.variable, GeistSans.variable)}
       scrollBehavior="smooth"
       lgDown={{
         '&::-webkit-scrollbar': {
