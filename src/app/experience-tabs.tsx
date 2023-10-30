@@ -1,12 +1,10 @@
 import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/components/tabs';
-import { IWorkHistory } from '@/types';
+import { getAuthor } from '@/utils/get-author';
 import { ExperienceItem } from './experience-item';
 
-interface ExperienceTabsProps {
-  data: IWorkHistory[];
-}
+export async function ExperienceTabs() {
+  const author = await getAuthor();
 
-export async function ExperienceTabs({ data }: ExperienceTabsProps) {
   return (
     <Tabs
       display={{
@@ -15,11 +13,11 @@ export async function ExperienceTabs({ data }: ExperienceTabsProps) {
       }}
       mt={16}
       gap={12}
-      defaultValue={data.at(0)?.company.name}
+      defaultValue={author.workHistory.at(0)?.company.name}
       orientation="vertical"
     >
       <TabList w="20%" flexShrink={0}>
-        {data.map(({ company }) => (
+        {author.workHistory.map(({ company }) => (
           <TabTrigger
             key={company.name}
             value={company.name}
@@ -44,7 +42,7 @@ export async function ExperienceTabs({ data }: ExperienceTabsProps) {
         <TabIndicator w={0.5} bg="violet.500" h="5" />
       </TabList>
 
-      {data.map((o) => (
+      {author.workHistory.map((o) => (
         <TabContent key={o.company.name} value={o.company.name}>
           <ExperienceItem data={o} />
         </TabContent>

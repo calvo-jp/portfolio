@@ -5,8 +5,6 @@ import { ExperienceTabs } from './experience-tabs';
 import { SectionHeading } from './section-heading';
 
 export async function Experience() {
-  const author = await getAuthor();
-
   return (
     <styled.section
       id="experience"
@@ -23,8 +21,8 @@ export async function Experience() {
         }}
       />
 
-      <ExperienceTabs data={author.workHistory} />
-      <ExperienceSlides data={author.workHistory} />
+      <ExperienceTabs />
+      <ExperienceSlides __author={await getAuthor()} />
     </styled.section>
   );
 }

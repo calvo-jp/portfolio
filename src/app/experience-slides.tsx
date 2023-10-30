@@ -9,7 +9,7 @@ import {
   CarouselViewport,
 } from '@/components/carousel';
 import { VisuallyHidden } from '@/styled-system/jsx';
-import { IWorkHistory } from '@/types';
+import { IAuthor } from '@/types';
 import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { ExperienceItem } from './experience-item';
@@ -19,10 +19,10 @@ import { ExperienceItem } from './experience-item';
  */
 
 interface ExperienceSlidesProps {
-  data: IWorkHistory[];
+  __author: IAuthor;
 }
 
-export function ExperienceSlides({ data }: ExperienceSlidesProps) {
+export function ExperienceSlides(props: ExperienceSlidesProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const { ref } = useSwipeable({
@@ -51,7 +51,7 @@ export function ExperienceSlides({ data }: ExperienceSlidesProps) {
     >
       <CarouselViewport>
         <CarouselItemGroup ref={ref}>
-          {data.map((o, index) => (
+          {props.__author.workHistory.map((o, index) => (
             <CarouselItem w="full" key={o.company.name} index={index}>
               <ExperienceItem data={o} />
             </CarouselItem>
@@ -59,7 +59,7 @@ export function ExperienceSlides({ data }: ExperienceSlidesProps) {
         </CarouselItemGroup>
       </CarouselViewport>
       <CarouselIndicatorGroup mt={10} display="flex" gap={3} justifyContent="center">
-        {data.map((o, index) => (
+        {props.__author.workHistory.map((o, index) => (
           <CarouselIndicator
             key={o.company.name}
             index={index}
