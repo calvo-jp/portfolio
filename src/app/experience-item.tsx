@@ -10,15 +10,10 @@ interface ExperienceItemProps {
 export function ExperienceItem(props: ExperienceItemProps) {
   const { company, dateOfEmployment, position, responsibilities } = props.data;
 
-  const monthStart = format(dateOfEmployment.start, 'MMMM');
-  const monthUntil = dateOfEmployment.until
-    ? format(dateOfEmployment.until, 'MMMM')
-    : 'Present';
-
-  const yearStart = format(dateOfEmployment.start, 'yyyy');
-  const yearUntil = dateOfEmployment.until
-    ? format(dateOfEmployment.until, 'yyyy')
-    : null;
+  const [employedAtStart, employedAtUnitl] = formatEmploymentDate(
+    dateOfEmployment.start,
+    dateOfEmployment.until,
+  );
 
   return (
     <Box display="flex" flexDir="column">
@@ -35,18 +30,9 @@ export function ExperienceItem(props: ExperienceItemProps) {
         gap={2}
         mt={1}
       >
-        <styled.span>
-          {monthStart}{' '}
-          {!dateOfEmployment.until
-            ? yearStart
-            : isSameYear(dateOfEmployment.start, dateOfEmployment.until)
-            ? null
-            : yearStart}
-        </styled.span>
-        <styled.span w={2} h="1px" bg="neutral.300" />
-        <styled.span>
-          {monthUntil} {yearUntil}
-        </styled.span>
+        <styled.span>{employedAtStart}</styled.span>
+        <styled.span w={2.5} h="1px" bg="neutral.700" />
+        <styled.span>{employedAtUnitl}</styled.span>
       </Box>
       <RawHtml
         mt={5}
@@ -67,4 +53,16 @@ export function ExperienceItem(props: ExperienceItemProps) {
       </RawHtml>
     </Box>
   );
+}
+
+function formatEmploymentDate(start: Date, until?: Date) {
+  /* ie. January 2021 - Present */
+  if (!until) return [format(start, 'MMMM yyyy'), 'Present'];
+
+  /* ie. January - December 2021 */
+  if (isSameYear(start, until))
+    return [format(start, 'MMMM'), format(until, 'MMMM yyyy')];
+
+  /* ie. January 2021 - December 2022 */
+  return [format(start, 'MMMM yyyy'), format(until, 'MMMM yyyy')];
 }

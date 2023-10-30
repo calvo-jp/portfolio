@@ -4,8 +4,7 @@ company:
   name: Apple
   website: https://bla.org
 dateOfEmployment:
-  start: '2018-01-01'
-  until: '2017-12-01'
+  start: '2018-02-14'
 ---
 
 - Developed and styled interactive web applications for Apple Music using Ember and SCSS
