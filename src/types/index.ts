@@ -1,5 +1,4 @@
 type Alias<T> = T & { _?: never };
-type Nullable<T> = T | null;
 
 export type TName = Alias<string>;
 export type TEmail = Alias<string>;
