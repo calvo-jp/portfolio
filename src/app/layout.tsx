@@ -4,6 +4,7 @@ import { Link } from '@/components/link';
 import { cx } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';
 import { visuallyHidden } from '@/styled-system/patterns';
+import { getAuthor } from '@/utils/get-author';
 import { GeistMono, GeistSans } from 'geist/font';
 import { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
@@ -12,23 +13,26 @@ import { Footer } from './footer';
 import { Navbar } from './navbar';
 import { Socials } from './socials';
 
-const title = 'Calvo JP';
-const description = `Calvo JP is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.`;
+export async function generateMetadata(): Promise<Metadata> {
+  const author = await getAuthor();
+  const title = author.name;
+  const description = `${author.name} is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.`;
 
-export const metadata: Metadata = {
-  title: {
-    default: title,
-    template: `${title} - %s`,
-  },
-  description,
-  metadataBase: new URL('https://calvo-jp.vercel.app'),
-  openGraph: {
-    type: 'website',
-    title,
+  return {
+    title: {
+      default: title,
+      template: `${title} - %s`,
+    },
     description,
-    images: ['/open-graph-banner.jpeg'],
-  },
-};
+    metadataBase: new URL('https://calvo-jp.vercel.app'),
+    openGraph: {
+      type: 'website',
+      title,
+      description,
+      images: ['/open-graph-banner.jpeg'],
+    },
+  };
+}
 
 export default async function RootLayout({ children }: PropsWithChildren) {
   return (
