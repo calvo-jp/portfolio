@@ -13,10 +13,10 @@ interface RawHtmlBaseProps {
 
 interface RawHtmlProps extends Assign<StyledArkDivProps, RawHtmlBaseProps> {}
 
-export const RawHtml = forwardRef<HTMLDivElement, RawHtmlProps>((props, ref) => {
-  const { children: __html, ...others } = props;
+export const RawHtml = forwardRef<HTMLDivElement, RawHtmlProps>(
+  function RawHtml(props, ref) {
+    const { children: __html, ...others } = props;
 
-  return <StyledArkDiv ref={ref} dangerouslySetInnerHTML={{ __html }} {...others} />;
-});
-
-RawHtml.displayName = 'RawHtml';
+    return <StyledArkDiv ref={ref} dangerouslySetInnerHTML={{ __html }} {...others} />;
+  },
+);
