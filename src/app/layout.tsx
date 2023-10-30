@@ -53,7 +53,10 @@ export default async function RootLayout({ children }: PropsWithChildren) {
       }}
     >
       <styled.body bg="neutral.900" color="neutral.400" minHeight="dvh" fontFamily="sans">
-        <SkipNav />
+        <Link href="#content" prefetch={false} className={visuallyHidden()}>
+          Skip to Content
+        </Link>
+
         <Navbar />
 
         <styled.main
@@ -73,13 +76,5 @@ export default async function RootLayout({ children }: PropsWithChildren) {
         <Footer />
       </styled.body>
     </styled.html>
-  );
-}
-
-function SkipNav() {
-  return (
-    <Link href="#content" prefetch={false} className={visuallyHidden()}>
-      Skip to Content
-    </Link>
   );
 }
