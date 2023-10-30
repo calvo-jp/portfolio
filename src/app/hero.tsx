@@ -5,7 +5,7 @@ import { styled } from '@/styled-system/jsx';
 export function Hero() {
   return (
     <styled.section id="hero" py={20}>
-      <styled.h3 fontFamily="mono" color="violet.400">
+      <styled.h3 fontFamily="mono" color="violet.500">
         Hi, my name is
       </styled.h3>
 
@@ -46,7 +46,7 @@ export function Hero() {
           href={AUTHOR.company.website}
           target="_blank"
           rel="noreferrer noopener"
-          color="violet.400"
+          color="violet.500"
           textUnderlineOffset="0.35rem"
           _hover={{
             textDecoration: 'underline',

@@ -95,7 +95,7 @@ export function NavbarDrawer() {
                           }}
                         >
                           <Link py={1} href={path} onClick={close}>
-                            <Box fontFamily="mono" color="violet.400">
+                            <Box fontFamily="mono" color="violet.500">
                               {(++index).toString().padStart(2, '0')}.
                             </Box>
                             <Box fontSize="lg" color="neutral.200">

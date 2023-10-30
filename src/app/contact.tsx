@@ -12,7 +12,7 @@ export function Contact() {
       }}
       textAlign="center"
     >
-      <styled.p color="violet.400" fontFamily="mono">
+      <styled.p color="violet.500" fontFamily="mono">
         04. What&rsquo;s next?
       </styled.p>
       <styled.h2

@@ -26,7 +26,7 @@ export function EmailAd() {
             letterSpacing="widest"
             transition="colors token(durations.slow)"
             color={{
-              _hover: 'violet.400',
+              _hover: 'violet.500',
             }}
           >
             {AUTHOR.contact.email}

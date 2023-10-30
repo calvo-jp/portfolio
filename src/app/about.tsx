@@ -58,7 +58,7 @@ export function About() {
               },
 
               '& a': {
-                color: 'violet.400',
+                color: 'violet.500',
                 textUnderlineOffset: '0.35rem',
                 _hover: {
                   textDecoration: 'underline',
@@ -80,7 +80,7 @@ export function About() {
           <Box
             p={4}
             pos="relative"
-            border="2px solid token(colors.violet.400)"
+            border="2px solid token(colors.violet.500)"
             rounded="md"
           >
             <Image src={selfie} alt="" rounded="sm" placeholder="blur" />
@@ -112,7 +112,7 @@ function Skills() {
             lg: (i + 1) % 2 === 0 ? 2 : 1,
           }}
         >
-          <IconAsterisk color="violet.400" w={3} h={3} />
+          <IconAsterisk color="violet.500" w={3} h={3} />
           <styled.span fontSize="sm">{skill}</styled.span>
         </styled.li>
       ))}

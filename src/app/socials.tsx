@@ -43,7 +43,7 @@ export function Socials() {
                     rel="noreferrer noopener"
                     transition="colors token(durations.slow)"
                     color={{
-                      _hover: 'violet.400',
+                      _hover: 'violet.500',
                     }}
                   >
                     {getIcon(name)}

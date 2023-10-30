@@ -30,14 +30,14 @@ export function ExperienceTabs() {
             transition="all token(durations.slow)"
             _selected={{
               bg: 'neutral.800',
-              color: 'violet.400',
+              color: 'violet.500',
             }}
           >
             {company.name}
           </TabTrigger>
         ))}
 
-        <TabIndicator w={0.5} bg="violet.400" h="5" />
+        <TabIndicator w={0.5} bg="violet.500" h="5" />
       </TabList>
 
       {AUTHOR.workHistory.map((o) => (

@@ -20,7 +20,7 @@ export function ExperienceItem(props: IWorkHistory) {
     <Box display="flex" flexDir="column">
       <Box fontSize="xl" fontWeight="bold" letterSpacing="wide">
         <styled.span color="neutral.200">{position}</styled.span>{' '}
-        <styled.span color="violet.400">@ {company.name}</styled.span>
+        <styled.span color="violet.500">@ {company.name}</styled.span>
       </Box>
 
       <Box
@@ -56,7 +56,7 @@ export function ExperienceItem(props: IWorkHistory) {
             display="flex"
             gap={2.5}
           >
-            <IconAsterisk w={3} h={3} my={1.5} color="violet.400" flexShrink={0} />
+            <IconAsterisk w={3} h={3} my={1.5} color="violet.500" flexShrink={0} />
             <Box>{responsibility}</Box>
           </styled.li>
         ))}

@@ -24,7 +24,7 @@ export function Navbar() {
         <IconTerminal
           w={8}
           h={8}
-          color="violet.400"
+          color="violet.500"
           lg={{
             w: 6,
             h: 6,
