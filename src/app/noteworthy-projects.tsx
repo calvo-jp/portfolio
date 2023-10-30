@@ -1,5 +1,6 @@
 import { IconExternalLink, IconFolder, IconGitBranch } from '@/components/icons';
 import { Link } from '@/components/link';
+import { RawHtml } from '@/components/raw-html';
 import {
   Tooltip,
   TooltipArrow,
@@ -165,16 +166,9 @@ function Item(props: ItemProps) {
         {title}
       </styled.h3>
 
-      <Box
-        mt={2}
-        fontSize="sm"
-        color="neutral.300"
-        flexGrow={1}
-        hyphens="auto"
-        dangerouslySetInnerHTML={{
-          __html: description,
-        }}
-      />
+      <RawHtml mt={2} fontSize="sm" color="neutral.300" flexGrow={1} hyphens="auto">
+        {description}
+      </RawHtml>
 
       <styled.ul mt={6} display="flex" gap={3} fontFamily="mono" fontSize="xs">
         {tags.map((tag) => (

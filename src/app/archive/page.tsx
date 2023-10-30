@@ -1,5 +1,6 @@
 import { IconExternalLink, IconGitBranch } from '@/components/icons';
 import { Link } from '@/components/link';
+import { RawHtml } from '@/components/raw-html';
 import {
   Tooltip,
   TooltipArrow,
@@ -88,12 +89,7 @@ function Item(props: IProject) {
         <styled.h2 fontSize="xl" fontWeight="bold" color="neutral.200">
           {title}
         </styled.h2>
-        <Box
-          color="neutral.300"
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        />
+        <RawHtml color="neutral.300">{description}</RawHtml>
         <styled.ul mt={3} display="flex" gap={3} fontFamily="mono" fontSize="sm">
           {tags.map((tag) => (
             <styled.li key={tag}>{tag}</styled.li>

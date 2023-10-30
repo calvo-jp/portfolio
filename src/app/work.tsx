@@ -1,6 +1,7 @@
 import { IconExternalLink, IconGitBranch } from '@/components/icons';
 import { Image } from '@/components/image';
 import { Link } from '@/components/link';
+import { RawHtml } from '@/components/raw-html';
 import {
   Tooltip,
   TooltipArrow,
@@ -112,7 +113,7 @@ function Item(props: ItemProps) {
           <Image src={image ?? ''} alt="" width={450} height={450} w="full" h="auto" />
         </Box>
 
-        <Box
+        <RawHtml
           mt={5}
           rounded="sm"
           color="neutral.300"
@@ -122,10 +123,9 @@ function Item(props: ItemProps) {
             py: 4,
             bg: 'neutral.800',
           }}
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        />
+        >
+          {description}
+        </RawHtml>
 
         <styled.ul
           mt={4}

@@ -1,3 +1,4 @@
+import { RawHtml } from '@/components/raw-html';
 import { Box, styled } from '@/styled-system/jsx';
 import { IWorkHistory } from '@/types';
 import { format, isSameYear } from 'date-fns';
@@ -47,12 +48,8 @@ export function ExperienceItem(props: ExperienceItemProps) {
           {monthUntil} {yearUntil}
         </styled.span>
       </Box>
-
-      <Box
+      <RawHtml
         mt={5}
-        dangerouslySetInnerHTML={{
-          __html: responsibilities,
-        }}
         css={{
           '& li': {
             mt: 2,
@@ -65,7 +62,9 @@ export function ExperienceItem(props: ExperienceItemProps) {
             },
           },
         }}
-      />
+      >
+        {responsibilities}
+      </RawHtml>
     </Box>
   );
 }
