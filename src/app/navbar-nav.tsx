@@ -35,7 +35,13 @@ export async function NavbarNav() {
           },
         ].map(({ path, label }, index) => (
           <styled.li key={path}>
-            <Link href={path} display="flex" alignItems="center" gap={1}>
+            <Link
+              href={path}
+              display="flex"
+              alignItems="center"
+              gap={1}
+              className="group"
+            >
               <styled.span fontFamily="mono" color="violet.500" fontSize="xs">
                 {(++index).toString().padStart(2, '0')}.
               </styled.span>
@@ -44,7 +50,7 @@ export async function NavbarNav() {
                 transition="colors token(durations.slow)"
                 color={{
                   base: 'neutral.200',
-                  _hover: 'violet.500',
+                  _groupHover: 'violet.500',
                 }}
               >
                 {label}
