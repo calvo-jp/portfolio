@@ -57,15 +57,7 @@ export default defineConfig({
       },
     },
   },
-  conditions: {
-    extend: {
-      current: '&[data-current]',
-    },
-  },
   clean: true,
   outdir: 'styled-system',
-  logLevel: 'silent',
-  separator: '-',
-  gitignore: true,
   jsxFramework: 'react',
 });

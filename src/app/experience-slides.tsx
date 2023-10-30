@@ -62,15 +62,18 @@ export function ExperienceSlides() {
           <CarouselIndicator
             key={o.company.name}
             index={index}
-            w={3}
-            h={3}
-            cursor="pointer"
-            rounded="full"
-            border="1px solid token(colors.neutral.300)"
-            transition="all token(durations.slow)"
-            _current={{
-              bg: 'neutral.200',
-              borderColor: 'neutral.200',
+            css={{
+              w: 3,
+              h: 3,
+              cursor: 'pointer',
+              border: '1px solid token(colors.neutral.300)',
+              rounded: 'full',
+              transition: 'all token(durations.slow)',
+
+              '&[data-current]': {
+                bg: 'neutral.200',
+                borderColor: 'neutral.200',
+              },
             }}
           >
             <VisuallyHidden>Go to slide {++index}</VisuallyHidden>
