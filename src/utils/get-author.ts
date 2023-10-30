@@ -3,6 +3,7 @@ import 'server-only';
 import { IAuthor, IProject, IWorkHistory } from '@/types';
 import fs from 'fs/promises';
 import path from 'path';
+import { cache } from 'react';
 import rehypeStringify from 'rehype-stringify';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkGfm from 'remark-gfm';
@@ -12,7 +13,7 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import { z } from 'zod';
 
-export const getAuthor = async (): Promise<IAuthor> => {
+export const getAuthor = cache(async (): Promise<IAuthor> => {
   const about = await getAbout();
   const projects = await getProjects();
   const workHistory = await getWorkHistory();
@@ -46,7 +47,7 @@ export const getAuthor = async (): Promise<IAuthor> => {
     projects,
     workHistory,
   };
-};
+});
 
 const md = unified()
   .use(remarkParse)
