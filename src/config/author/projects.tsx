@@ -1,6 +1,6 @@
-import { Month, TProject } from '../../types';
+import { IProject, Month } from '../../types';
 
-export const projects: TProject[] = [
+export const projects: IProject[] = [
   {
     title: 'Halcyon Theme',
     description:

@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { IAuthor, IWorkHistory, TProject } from '@/types';
+import { IAuthor, IProject, IWorkHistory } from '@/types';
 import fs from 'fs/promises';
 import path from 'path';
 import rehypeStringify from 'rehype-stringify';
@@ -91,13 +91,26 @@ export async function getWorkHistory() {
 }
 
 export async function getProjects() {
-  const metadataSchema = z.object({});
+  const metadataSchema = z.object({
+    title: z.string(),
+    image: z.string().optional(),
+    repository: z.string().url(),
+    website: z.string().url().optional(),
+    featured: z.boolean().optional(),
+    tags: z.array(z.string()),
+    createdAt: z.string().pipe(z.coerce.date()),
+  });
 
   const subdir = path.join(dir, 'projects');
   const files = await fs.readdir(subdir);
-  const items: TProject[] = [];
+  const items: IProject[] = [];
 
   for (const file of files) {
+    const vfile = await md.process(await fs.readFile(path.join(subdir, file)));
+    const metadata = metadataSchema.parse(vfile.data.frontmatter);
+    const description = vfile.toString();
+
+    items.push({ ...metadata, description });
   }
 
   return items;

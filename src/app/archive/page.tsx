@@ -9,7 +9,7 @@ import {
   TooltipTrigger,
 } from '@/components/tooltip';
 import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { INonFeaturedProject } from '@/types';
+import { IProject } from '@/types';
 import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 import { Metadata } from 'next';
@@ -74,7 +74,7 @@ export default async function Archive() {
   );
 }
 
-function Item(props: INonFeaturedProject) {
+function Item(props: IProject) {
   const { title, description, tags, website, repository } = props;
 
   return (
@@ -88,7 +88,12 @@ function Item(props: INonFeaturedProject) {
         <styled.h2 fontSize="xl" fontWeight="bold" color="neutral.200">
           {title}
         </styled.h2>
-        <styled.p color="neutral.300">{description}</styled.p>
+        <Box
+          color="neutral.300"
+          dangerouslySetInnerHTML={{
+            __html: description,
+          }}
+        />
         <styled.ul mt={3} display="flex" gap={3} fontFamily="mono" fontSize="sm">
           {tags.map((tag) => (
             <styled.li key={tag}>{tag}</styled.li>
@@ -165,8 +170,8 @@ function Item(props: INonFeaturedProject) {
 async function getItems() {
   const author = await getAuthor();
 
-  const f = [...author.projects].filter((p) => !p.featured) as INonFeaturedProject[];
-  const r: Record<string, INonFeaturedProject[]> = {};
+  const f = [...author.projects].filter((p) => !p.featured);
+  const r: Record<string, IProject[]> = {};
 
   f.forEach((i) => {
     const k = i.createdAt.getFullYear().toString();

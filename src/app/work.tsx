@@ -10,14 +10,14 @@ import {
   TooltipTrigger,
 } from '@/components/tooltip';
 import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { IFeaturedProject } from '@/types';
+import { IProject } from '@/types';
 import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 import { SectionHeading } from './section-heading';
 
 export async function Work() {
   const author = await getAuthor();
-  const projects = [...author.projects].filter((o) => o.featured) as IFeaturedProject[];
+  const projects = [...author.projects].filter((o) => o.featured);
 
   return (
     <styled.section
@@ -49,7 +49,7 @@ export async function Work() {
   );
 }
 
-function Item(props: IFeaturedProject) {
+function Item(props: IProject) {
   const { image, title, description, website, repository, tags } = props;
 
   return (
@@ -81,7 +81,7 @@ function Item(props: IFeaturedProject) {
           display: 'none',
         }}
       >
-        <Image src={image} alt="" width={450} height={450} w="full" h="auto" />
+        <Image src={image ?? ''} alt="" width={450} height={450} w="full" h="auto" />
       </Box>
 
       <Box flexGrow={1}>
@@ -105,10 +105,10 @@ function Item(props: IFeaturedProject) {
             display: 'none',
           }}
         >
-          <Image src={image} alt="" width={450} height={450} w="full" h="auto" />
+          <Image src={image ?? ''} alt="" width={450} height={450} w="full" h="auto" />
         </Box>
 
-        <styled.p
+        <Box
           mt={5}
           rounded="sm"
           color="neutral.300"
@@ -118,9 +118,10 @@ function Item(props: IFeaturedProject) {
             py: 4,
             bg: 'neutral.800',
           }}
-        >
-          {description}
-        </styled.p>
+          dangerouslySetInnerHTML={{
+            __html: description,
+          }}
+        />
 
         <styled.ul
           mt={4}

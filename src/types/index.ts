@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 type Alias<T> = T & { _?: never };
 type Nullable<T> = T | null;
 
@@ -62,28 +60,17 @@ export type TFramework =
 
 export type TTag = TProgrammingLanguage | TFramework | (string & {});
 
-export interface IFeaturedProject {
-  image: TExternalLink;
+export interface IProject {
   title: string;
-  description: ReactNode;
-  repository: TExternalLink;
-  website: TExternalLink;
-  tags: TTag[];
-  createdAt: Date;
-  featured: true;
-}
-
-export interface INonFeaturedProject {
-  title: string;
-  description: ReactNode;
+  image?: TExternalLink;
+  description: TMarkdown;
   repository: TExternalLink;
   website?: TExternalLink;
   tags: TTag[];
   createdAt: Date;
-  featured?: false;
+  featured?: boolean;
 }
 
-export type TProject = IFeaturedProject | INonFeaturedProject;
 export type TSkill = TProgrammingLanguage | TFramework | (string & {});
 
 export interface IAuthor {
@@ -95,7 +82,7 @@ export interface IAuthor {
   company: ICompany;
   socials: ISocials;
   workHistory: IWorkHistory[];
-  projects: TProject[];
+  projects: IProject[];
 }
 
 export enum Month {

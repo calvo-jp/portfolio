@@ -18,13 +18,13 @@ import {
   VisuallyHidden,
   styled,
 } from '@/styled-system/jsx';
-import { INonFeaturedProject } from '@/types';
+import { IProject } from '@/types';
 import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 
 export async function NoteworthyProjects() {
   const author = await getAuthor();
-  const items = author.projects.filter((o) => !o.featured) as INonFeaturedProject[];
+  const items = author.projects.filter((o) => !o.featured);
 
   return (
     <styled.section
@@ -86,7 +86,7 @@ export async function NoteworthyProjects() {
   );
 }
 
-function Item(props: INonFeaturedProject) {
+function Item(props: IProject) {
   const { title, description, repository, website, tags } = props;
 
   return (
@@ -161,9 +161,16 @@ function Item(props: INonFeaturedProject) {
         {title}
       </styled.h3>
 
-      <styled.p mt={2} fontSize="sm" color="neutral.300" flexGrow={1} hyphens="auto">
-        {description}
-      </styled.p>
+      <Box
+        mt={2}
+        fontSize="sm"
+        color="neutral.300"
+        flexGrow={1}
+        hyphens="auto"
+        dangerouslySetInnerHTML={{
+          __html: description,
+        }}
+      />
 
       <styled.ul mt={6} display="flex" gap={3} fontFamily="mono" fontSize="xs">
         {tags.map((tag) => (
