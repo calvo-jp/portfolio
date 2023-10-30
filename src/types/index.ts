@@ -5,6 +5,7 @@ type Nullable<T> = T | null;
 
 export type TName = Alias<string>;
 export type TEmail = Alias<string>;
+export type TMarkdown = Alias<string>;
 export type TExternalLink = Alias<string>;
 
 export interface ICompany {
@@ -18,14 +19,14 @@ export interface IContact {
 
 export interface IEmploymentDate {
   start: Date;
-  until: Nullable<Date>;
+  until?: Date;
 }
 
 export interface IWorkHistory {
   company: ICompany;
   position: string;
   dateOfEmployment: IEmploymentDate;
-  responsibilities: string[];
+  responsibilities: TMarkdown;
 }
 
 export interface ISocials {
@@ -87,7 +88,7 @@ export type TSkill = TProgrammingLanguage | TFramework | (string & {});
 
 export interface IAuthor {
   name: string;
-  about: ReactNode;
+  about: TMarkdown;
   skills: TSkill[];
   resume: TExternalLink;
   contact: IContact;

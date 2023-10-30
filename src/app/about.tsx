@@ -1,11 +1,13 @@
 import selfie from '@/assets/images/selfie.jpg';
 import { IconAsterisk } from '@/components/icons';
 import { Image } from '@/components/image';
-import { AUTHOR } from '@/config/author';
 import { Box, Flex, Grid, GridItem, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 import { SectionHeading } from './section-heading';
 
-export function About() {
+export async function About() {
+  const author = await getAuthor();
+
   return (
     <styled.section
       id="about"
@@ -46,7 +48,7 @@ export function About() {
             css={{
               fontSize: 'lg',
 
-              '& div': {
+              '& p': {
                 mt: {
                   base: 4,
                   lg: 5,
@@ -65,9 +67,10 @@ export function About() {
                 },
               },
             }}
-          >
-            {AUTHOR.about}
-          </Box>
+            dangerouslySetInnerHTML={{
+              __html: author.about,
+            }}
+          />
 
           <Box mt={5} fontSize="lg">
             Here are a few technologies I&rsquo;ve been working with&nbsp;recently:
@@ -91,7 +94,9 @@ export function About() {
   );
 }
 
-function Skills() {
+async function Skills() {
+  const author = await getAuthor();
+
   return (
     <Grid
       mt={5}
@@ -102,7 +107,7 @@ function Skills() {
       display="grid"
       gap={1}
     >
-      {AUTHOR.skills.map((skill, i) => (
+      {author.skills.map((skill, i) => (
         <GridItem
           key={skill}
           fontFamily="mono"

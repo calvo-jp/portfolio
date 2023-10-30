@@ -9,15 +9,16 @@ import {
   TooltipPositioner,
   TooltipTrigger,
 } from '@/components/tooltip';
-import { AUTHOR } from '@/config/author';
 import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { IFeaturedProject } from '@/types';
+import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 import { SectionHeading } from './section-heading';
 
-const projects = [...AUTHOR.projects].filter((o) => o.featured) as IFeaturedProject[];
+export async function Work() {
+  const author = await getAuthor();
+  const projects = [...author.projects].filter((o) => o.featured) as IFeaturedProject[];
 
-export function Work() {
   return (
     <styled.section
       id="work"

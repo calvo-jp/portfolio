@@ -11,12 +11,15 @@ import {
 } from '@/components/dialog';
 import { IconMenu, IconX } from '@/components/icons';
 import { Link } from '@/components/link';
-import { AUTHOR } from '@/config/author';
 import { Box, Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal, Presence } from '@ark-ui/react';
 import { NAVBAR_LINKS } from './navbar-nav';
 
-export function NavbarDrawer() {
+interface NavbarDrawerProps {
+  resumeUrl: string;
+}
+
+export function NavbarDrawer({ resumeUrl }: NavbarDrawerProps) {
   return (
     <Dialog>
       {({ isOpen, close }) => (
@@ -108,7 +111,7 @@ export function NavbarDrawer() {
 
                     <Button w="2/3" mx="auto" mt={12} asChild>
                       <Link
-                        href={AUTHOR.resume}
+                        href={resumeUrl}
                         target="_blank"
                         rel="noreferrer noopener"
                         prefetch={false}

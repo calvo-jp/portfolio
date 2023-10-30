@@ -1,9 +1,11 @@
 import { Button } from '@/components/button';
 import { Link } from '@/components/link';
-import { AUTHOR } from '@/config/author';
 import { styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 
-export function Hero() {
+export async function Hero() {
+  const author = await getAuthor();
+
   return (
     <styled.section id="hero" py={20}>
       <styled.h3 fontFamily="mono" color="violet.500">
@@ -20,7 +22,7 @@ export function Hero() {
         fontWeight="black"
         lineHeight="none"
       >
-        {AUTHOR.name}.
+        {author.name}.
       </styled.h1>
 
       <styled.h2
@@ -44,7 +46,7 @@ export function Hero() {
         designing&#41; exceptional digital experiences. Currently, I&rsquo;m focused on
         building accessible, human-centered products at{' '}
         <Link
-          href={AUTHOR.company.website}
+          href={author.company.website}
           target="_blank"
           rel="noreferrer noopener"
           prefetch={false}
@@ -54,7 +56,7 @@ export function Hero() {
             textDecoration: 'underline',
           }}
         >
-          {AUTHOR.company.name}
+          {author.company.name}
         </Link>
         .
       </styled.p>

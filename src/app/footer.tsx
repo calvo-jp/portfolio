@@ -1,9 +1,11 @@
 import { IconGithub, IconLinkedin, IconTwitter } from '@/components/icons';
 import { Link } from '@/components/link';
-import { AUTHOR } from '@/config/author';
 import { Center, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 
-export function Footer() {
+export async function Footer() {
+  const author = await getAuthor();
+
   return (
     <styled.footer pt={32} pb={8}>
       <Center
@@ -14,7 +16,7 @@ export function Footer() {
       >
         <styled.nav>
           <styled.ul display="flex" alignItems="center" gap={5}>
-            {Object.entries(AUTHOR.socials).map(([name, url]) => (
+            {Object.entries(author.socials).map(([name, url]) => (
               <styled.li key={name}>
                 <Link
                   href={url}
@@ -33,7 +35,7 @@ export function Footer() {
       </Center>
 
       <Center fontFamily="mono" fontSize="sm">
-        &copy; {AUTHOR.name} {new Date().getFullYear()}
+        &copy; {author.name} {new Date().getFullYear()}
       </Center>
     </styled.footer>
   );

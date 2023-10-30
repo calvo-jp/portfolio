@@ -8,9 +8,9 @@ import {
   TooltipPositioner,
   TooltipTrigger,
 } from '@/components/tooltip';
-import { AUTHOR } from '@/config/author';
 import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { INonFeaturedProject } from '@/types';
+import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 import { Metadata } from 'next';
 
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   title: 'Archive',
 };
 
-export default function Archive() {
-  const items = getItems();
+export default async function Archive() {
+  const items = await getItems();
 
   return (
     <Box
@@ -162,8 +162,10 @@ function Item(props: INonFeaturedProject) {
 }
 
 /* group by year */
-function getItems() {
-  const f = [...AUTHOR.projects].filter((p) => !p.featured) as INonFeaturedProject[];
+async function getItems() {
+  const author = await getAuthor();
+
+  const f = [...author.projects].filter((p) => !p.featured) as INonFeaturedProject[];
   const r: Record<string, INonFeaturedProject[]> = {};
 
   f.forEach((i) => {

@@ -8,7 +8,6 @@ import {
   TooltipPositioner,
   TooltipTrigger,
 } from '@/components/tooltip';
-import { AUTHOR } from '@/config/author';
 import {
   Box,
   Flex,
@@ -20,11 +19,13 @@ import {
   styled,
 } from '@/styled-system/jsx';
 import { INonFeaturedProject } from '@/types';
+import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 
-const items = AUTHOR.projects.filter((o) => !o.featured) as INonFeaturedProject[];
+export async function NoteworthyProjects() {
+  const author = await getAuthor();
+  const items = author.projects.filter((o) => !o.featured) as INonFeaturedProject[];
 
-export function NoteworthyProjects() {
   return (
     <styled.section
       id="noteworthy-projects"

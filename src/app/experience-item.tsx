@@ -1,4 +1,3 @@
-import { IconAsterisk } from '@/components/icons';
 import { Box, styled } from '@/styled-system/jsx';
 import { IWorkHistory } from '@/types';
 import { format, isSameYear } from 'date-fns';
@@ -45,22 +44,24 @@ export function ExperienceItem(props: IWorkHistory) {
         </styled.span>
       </Box>
 
-      <styled.ul mt={5}>
-        {responsibilities.map((responsibility) => (
-          <styled.li
-            key={responsibility}
-            mt={2}
-            _first={{
+      <Box
+        mt={5}
+        dangerouslySetInnerHTML={{
+          __html: responsibilities,
+        }}
+        css={{
+          '& li': {
+            mt: 2,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 2.5,
+
+            _first: {
               mt: 0,
-            }}
-            display="flex"
-            gap={2.5}
-          >
-            <IconAsterisk w={3} h={3} my={1.5} color="violet.500" flexShrink={0} />
-            <Box>{responsibility}</Box>
-          </styled.li>
-        ))}
-      </styled.ul>
+            },
+          },
+        }}
+      />
     </Box>
   );
 }

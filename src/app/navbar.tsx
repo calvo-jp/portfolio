@@ -1,10 +1,13 @@
 import { IconTerminal } from '@/components/icons';
 import { Link } from '@/components/link';
 import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 import { NavbarDrawer } from './navbar-drawer';
 import { NavbarNav } from './navbar-nav';
 
-export function Navbar() {
+export async function Navbar() {
+  const author = await getAuthor();
+
   return (
     <styled.header
       p={4}
@@ -32,10 +35,9 @@ export function Navbar() {
         />
         <VisuallyHidden>Home</VisuallyHidden>
       </Link>
-
       <Spacer />
-      <NavbarNav />
-      <NavbarDrawer />
+      <NavbarNav resumeUrl={author.resume} />
+      <NavbarDrawer resumeUrl={author.resume} />
     </styled.header>
   );
 }

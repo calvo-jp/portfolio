@@ -1,9 +1,12 @@
 import { Button } from '@/components/button';
 import { Link } from '@/components/link';
-import { AUTHOR } from '@/config/author';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
 
-export function NavbarNav() {
+interface NavbarNavProps {
+  resumeUrl: string;
+}
+
+export async function NavbarNav({ resumeUrl }: NavbarNavProps) {
   return (
     <styled.nav
       display="flex"
@@ -36,12 +39,7 @@ export function NavbarNav() {
       </styled.ul>
 
       <Button size="sm" asChild>
-        <Link
-          href={AUTHOR.resume}
-          target="_blank"
-          rel="noreferrer noopener"
-          prefetch={false}
-        >
+        <Link href={resumeUrl} target="_blank" rel="noreferrer noopener" prefetch={false}>
           <VisuallyHidden>Download </VisuallyHidden>Resume
         </Link>
       </Button>

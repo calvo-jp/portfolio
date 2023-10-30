@@ -8,12 +8,14 @@ import {
   TooltipPositioner,
   TooltipTrigger,
 } from '@/components/tooltip';
-import { AUTHOR } from '@/config/author';
 import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { capitalize } from '@/utils/capitalize';
+import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 
-export function Socials() {
+export async function Socials() {
+  const author = await getAuthor();
+
   return (
     <Portal>
       <styled.nav
@@ -29,7 +31,7 @@ export function Socials() {
         }}
       >
         <styled.ul w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
-          {Object.entries(AUTHOR.socials).map(([name, url]) => (
+          {Object.entries(author.socials).map(([name, url]) => (
             <styled.li key={name}>
               <Tooltip
                 id={`socials:${name}`}

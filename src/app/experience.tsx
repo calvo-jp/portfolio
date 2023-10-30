@@ -1,9 +1,12 @@
 import { styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 import { ExperienceSlides } from './experience-slides';
 import { ExperienceTabs } from './experience-tabs';
 import { SectionHeading } from './section-heading';
 
-export function Experience() {
+export async function Experience() {
+  const author = await getAuthor();
+
   return (
     <styled.section
       id="experience"
@@ -20,8 +23,8 @@ export function Experience() {
         }}
       />
 
-      <ExperienceTabs />
-      <ExperienceSlides />
+      <ExperienceTabs data={author.workHistory} />
+      <ExperienceSlides data={author.workHistory} />
     </styled.section>
   );
 }

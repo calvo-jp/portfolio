@@ -5,7 +5,7 @@ import { Hero } from './hero';
 import { NoteworthyProjects } from './noteworthy-projects';
 import { Work } from './work';
 
-export default function Index() {
+export default async function Index() {
   return (
     <>
       <Hero />

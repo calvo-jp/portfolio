@@ -1,9 +1,11 @@
 import { Button } from '@/components/button';
 import { Link } from '@/components/link';
-import { AUTHOR } from '@/config/author';
 import { styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 
-export function Contact() {
+export async function Contact() {
+  const author = await getAuthor();
+
   return (
     <styled.section
       id="contact"
@@ -32,7 +34,7 @@ export function Contact() {
         best to get back to you!
       </styled.p>
       <Button w="fit" mx="auto" mt={16} asChild>
-        <Link href={`mailto:${AUTHOR.contact.email}`} prefetch={false}>
+        <Link href={`mailto:${author.contact.email}`} prefetch={false}>
           Say Hello
         </Link>
       </Button>

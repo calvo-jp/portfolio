@@ -1,7 +1,6 @@
 import '@/assets/styles/globals.css';
 
 import { Link } from '@/components/link';
-import { AUTHOR } from '@/config/author';
 import { cx } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';
 import { visuallyHidden } from '@/styled-system/patterns';
@@ -13,8 +12,8 @@ import { Footer } from './footer';
 import { Navbar } from './navbar';
 import { Socials } from './socials';
 
-const title = AUTHOR.name;
-const description = `${AUTHOR.name} is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.`;
+const title = 'Calvo JP';
+const description = `Calvo JP is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.`;
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +30,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default async function RootLayout({ children }: PropsWithChildren) {
   return (
     <styled.html
       lang="en"
@@ -63,7 +62,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
           }}
         >
           {children}
-
           <Socials />
           <EmailAd />
         </styled.main>
