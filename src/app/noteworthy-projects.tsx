@@ -25,7 +25,7 @@ import { Portal } from '@ark-ui/react';
 
 export async function NoteworthyProjects() {
   const author = await getAuthor();
-  const items = author.projects.filter((o) => !o.featured);
+  const items = [...author.projects].filter((o) => !o.featured);
 
   return (
     <styled.section
