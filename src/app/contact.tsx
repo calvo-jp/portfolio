@@ -1,4 +1,5 @@
 import { Button } from '@/components/button';
+import { Link } from '@/components/link';
 import { AUTHOR } from '@/config/author';
 import { styled } from '@/styled-system/jsx';
 
@@ -31,7 +32,9 @@ export function Contact() {
         best to get back to you!
       </styled.p>
       <Button w="fit" mx="auto" mt={16} asChild>
-        <a href={`mailto:${AUTHOR.contact.email}`}>Say Hello</a>
+        <Link href={`mailto:${AUTHOR.contact.email}`} prefetch={false}>
+          Say Hello
+        </Link>
       </Button>
     </styled.section>
   );
