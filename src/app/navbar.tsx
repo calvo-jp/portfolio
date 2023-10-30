@@ -6,8 +6,6 @@ import { NavbarDrawer } from './navbar-drawer';
 import { NavbarNav } from './navbar-nav';
 
 export async function Navbar() {
-  const author = await getAuthor();
-
   return (
     <styled.header
       p={4}
@@ -36,8 +34,8 @@ export async function Navbar() {
         <VisuallyHidden>Home</VisuallyHidden>
       </Link>
       <Spacer />
-      <NavbarNav resumeUrl={author.resume} />
-      <NavbarDrawer resumeUrl={author.resume} />
+      <NavbarNav />
+      <NavbarDrawer __author={await getAuthor()} />
     </styled.header>
   );
 }

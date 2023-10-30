@@ -12,14 +12,14 @@ import {
 import { IconMenu, IconX } from '@/components/icons';
 import { Link } from '@/components/link';
 import { Box, Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { IAuthor } from '@/types';
 import { Portal, Presence } from '@ark-ui/react';
-import { NAVBAR_LINKS } from './navbar-nav';
 
 interface NavbarDrawerProps {
-  resumeUrl: string;
+  __author: IAuthor;
 }
 
-export function NavbarDrawer({ resumeUrl }: NavbarDrawerProps) {
+export function NavbarDrawer(props: NavbarDrawerProps) {
   return (
     <Dialog>
       {({ isOpen, close }) => (
@@ -89,7 +89,24 @@ export function NavbarDrawer({ resumeUrl }: NavbarDrawerProps) {
 
                   <styled.nav py={16}>
                     <styled.ul textAlign="center">
-                      {NAVBAR_LINKS.map(({ label, path }, index) => (
+                      {[
+                        {
+                          path: '/#about',
+                          label: 'About',
+                        },
+                        {
+                          path: '/#experience',
+                          label: 'Experience',
+                        },
+                        {
+                          path: '/#work',
+                          label: 'Work',
+                        },
+                        {
+                          path: '/#contact',
+                          label: 'Contact',
+                        },
+                      ].map(({ label, path }, index) => (
                         <styled.li
                           key={path}
                           mb={{
@@ -111,7 +128,7 @@ export function NavbarDrawer({ resumeUrl }: NavbarDrawerProps) {
 
                     <Button w="2/3" mx="auto" mt={12} asChild>
                       <Link
-                        href={resumeUrl}
+                        href={props.__author.resume}
                         target="_blank"
                         rel="noreferrer noopener"
                         prefetch={false}

@@ -1,12 +1,11 @@
 import { Button } from '@/components/button';
 import { Link } from '@/components/link';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 
-interface NavbarNavProps {
-  resumeUrl: string;
-}
+export async function NavbarNav() {
+  const author = await getAuthor();
 
-export async function NavbarNav({ resumeUrl }: NavbarNavProps) {
   return (
     <styled.nav
       display="flex"
@@ -17,7 +16,24 @@ export async function NavbarNav({ resumeUrl }: NavbarNavProps) {
       }}
     >
       <styled.ul display="flex" alignItems="center" gap={8}>
-        {NAVBAR_LINKS.map(({ path, label }, index) => (
+        {[
+          {
+            path: '/#about',
+            label: 'About',
+          },
+          {
+            path: '/#experience',
+            label: 'Experience',
+          },
+          {
+            path: '/#work',
+            label: 'Work',
+          },
+          {
+            path: '/#contact',
+            label: 'Contact',
+          },
+        ].map(({ path, label }, index) => (
           <styled.li key={path}>
             <Link href={path} display="flex" alignItems="center" gap={1}>
               <styled.span fontFamily="mono" color="violet.500" fontSize="xs">
@@ -39,29 +55,15 @@ export async function NavbarNav({ resumeUrl }: NavbarNavProps) {
       </styled.ul>
 
       <Button size="sm" asChild>
-        <Link href={resumeUrl} target="_blank" rel="noreferrer noopener" prefetch={false}>
+        <Link
+          href={author.resume}
+          target="_blank"
+          rel="noreferrer noopener"
+          prefetch={false}
+        >
           <VisuallyHidden>Download </VisuallyHidden>Resume
         </Link>
       </Button>
     </styled.nav>
   );
 }
-
-export const NAVBAR_LINKS = [
-  {
-    path: '/#about',
-    label: 'About',
-  },
-  {
-    path: '/#experience',
-    label: 'Experience',
-  },
-  {
-    path: '/#work',
-    label: 'Work',
-  },
-  {
-    path: '/#contact',
-    label: 'Contact',
-  },
-];
