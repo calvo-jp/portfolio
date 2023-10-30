@@ -8,7 +8,6 @@ import rehypeStringify from 'rehype-stringify';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkGfm from 'remark-gfm';
 import remarkParse from 'remark-parse';
-// import remarkParseFrontmatter from 'remark-parse-frontmatter';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import { matter } from 'vfile-matter';
@@ -53,8 +52,8 @@ export const getAuthor = cache(async (): Promise<IAuthor> => {
 const md = unified()
   .use(remarkParse)
   .use(remarkFrontmatter, [{ type: 'yaml', marker: '-' }])
-  .use(function () {
-    return function (_tree, file) {
+  .use(function plugin() {
+    return function parseFrontmatter(_tree, file) {
       matter(file, {
         strip: true,
       });
