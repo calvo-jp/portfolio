@@ -62,6 +62,7 @@ export async function Hero() {
       </styled.p>
 
       <Button
+        w="fit"
         mt={{
           base: 8,
           lg: 14,
@@ -70,8 +71,9 @@ export async function Hero() {
           w: 'full',
           justifyContent: 'center',
         }}
+        asChild
       >
-        Check out my course!
+        <Link href="/#work">Checkout my projects</Link>
       </Button>
     </styled.section>
   );
