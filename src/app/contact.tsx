@@ -28,7 +28,7 @@ export async function Contact() {
       >
         Get In Touch
       </styled.h2>
-      <styled.p mt={4} maxW="600px" mx="auto" fontSize="lg">
+      <styled.p mt={4} maxW="37.5rem" mx="auto" fontSize="lg">
         Although I&rsquo;m not currently looking for any new opportunities, my inbox is
         always open. Whether you have a question or just want to say hi, I&rsquo;ll try my
         best to get back to you!
