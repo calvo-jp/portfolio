@@ -17,6 +17,11 @@ const config = {
   experimental: {
     serverMinification: true,
   },
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
 };
 
 module.exports = config;

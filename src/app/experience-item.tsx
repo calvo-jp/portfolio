@@ -7,6 +7,8 @@ interface ExperienceItemProps {
   data: IWorkHistory;
 }
 
+/* TODO: add asterisk before each list */
+
 export function ExperienceItem(props: ExperienceItemProps) {
   const { company, dateOfEmployment, position, responsibilities } = props.data;
 
@@ -39,9 +41,6 @@ export function ExperienceItem(props: ExperienceItemProps) {
         css={{
           '& li': {
             mt: 2,
-            display: 'flex',
-            alignItems: 'center',
-            gap: 2.5,
 
             _first: {
               mt: 0,
