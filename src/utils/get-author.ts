@@ -1,6 +1,7 @@
 import 'server-only';
 
 import { IAuthor, IProject, IWorkHistory } from '@/types';
+import { compareDesc } from 'date-fns';
 import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 import { cache } from 'react';
@@ -76,6 +77,8 @@ async function getWorkHistory() {
     items.push({ ...schema.parse(result.meta.matter), responsibilities: result.html });
   }
 
+  items.sort((i, j) => compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start));
+
   return items;
 }
 
@@ -100,6 +103,8 @@ async function getProjects() {
 
     items.push({ ...schema.parse(result.meta.matter), description: result.html });
   }
+
+  items.sort((i, j) => compareDesc(i.createdAt, j.createdAt));
 
   return items;
 }
