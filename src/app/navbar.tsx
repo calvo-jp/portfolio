@@ -9,7 +9,7 @@ export async function Navbar() {
   return (
     <styled.header
       p={4}
-      bg="#171717db" /* FIXME: use neutral.800/<opacity> once supported */
+      bg="#171717db" /* FIXME: use bg/<opacity> once supported */
       pos="sticky"
       top={0}
       zIndex="sticky"
@@ -25,7 +25,7 @@ export async function Navbar() {
         <IconTerminal
           w={8}
           h={8}
-          color="violet.500"
+          color="accent"
           lg={{
             w: 6,
             h: 6,

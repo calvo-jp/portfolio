@@ -52,7 +52,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
         fontSize: 'xl',
       }}
     >
-      <styled.body bg="neutral.900" color="neutral.400" minHeight="dvh" fontFamily="sans">
+      <styled.body bg="bg" color="fg" minHeight="dvh" fontFamily="sans">
         <Link href="#content" prefetch={false} className={visuallyHidden()}>
           Skip to Content
         </Link>

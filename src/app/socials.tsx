@@ -47,7 +47,7 @@ export async function Socials() {
                     prefetch={false}
                     transition="colors token(durations.slow)"
                     color={{
-                      _hover: 'violet.500',
+                      _hover: 'accent',
                     }}
                   >
                     {getIcon(name)}
@@ -70,7 +70,7 @@ export async function Socials() {
           ))}
 
           <styled.li pt={2}>
-            <Box h="15vh" w="1px" bg="neutral.800" roundedTop="full" />
+            <Box h="15vh" w="1px" bg="bg.light" roundedTop="full" />
           </styled.li>
         </styled.ul>
       </styled.nav>

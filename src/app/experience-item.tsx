@@ -20,8 +20,8 @@ export function ExperienceItem(props: ExperienceItemProps) {
   return (
     <Box display="flex" flexDir="column">
       <Box fontSize="xl" fontWeight="bold" letterSpacing="wide">
-        <styled.span color="neutral.200">{position}</styled.span>{' '}
-        <styled.span color="violet.500">@ {company.name}</styled.span>
+        <styled.span color="fg.lighter">{position}</styled.span>{' '}
+        <styled.span color="accent">@ {company.name}</styled.span>
       </Box>
 
       <Box
@@ -33,7 +33,7 @@ export function ExperienceItem(props: ExperienceItemProps) {
         mt={1}
       >
         <styled.span>{employedAtStart}</styled.span>
-        <styled.span w={2.5} h="1px" bg="neutral.700" />
+        <styled.span w={2.5} h="1px" bg="bg.lighter" />
         <styled.span>{employedAtUnitl}</styled.span>
       </Box>
       <RawHtml mt={5}>{responsibilities}</RawHtml>

@@ -90,7 +90,7 @@ function Item(props: ItemProps) {
       </Box>
 
       <Box flexGrow={1}>
-        <Box fontFamily="mono" fontSize="sm" color="violet.500" lineHeight="none">
+        <Box fontFamily="mono" fontSize="sm" color="accent" lineHeight="none">
           Featured Project
         </Box>
 
@@ -99,7 +99,7 @@ function Item(props: ItemProps) {
           fontSize="2xl"
           fontWeight="bold"
           lineHeight="none"
-          color="neutral.200"
+          color="fg.lighter"
         >
           {title}
         </styled.h3>
@@ -115,12 +115,12 @@ function Item(props: ItemProps) {
 
         <RawHtml
           mt={5}
-          color="neutral.300"
+          color="fg.light"
           rounded="sm"
           lg={{
             px: 5,
             py: 4,
-            bg: 'neutral.800',
+            bg: 'bg.light',
           }}
         >
           {description}
@@ -149,8 +149,8 @@ function Item(props: ItemProps) {
                   rel="noreferrer noopener"
                   prefetch={false}
                   color={{
-                    base: 'neutral.300',
-                    _hover: 'violet.500',
+                    base: 'fg.light',
+                    _hover: 'accent',
                   }}
                   transition="colors token(durations.slow)"
                 >
@@ -180,8 +180,8 @@ function Item(props: ItemProps) {
                 rel="noreferrer noopener"
                 prefetch={false}
                 color={{
-                  base: 'neutral.300',
-                  _hover: 'violet.500',
+                  base: 'fg.light',
+                  _hover: 'accent',
                 }}
                 transition="colors token(durations.slow)"
               >

@@ -55,12 +55,7 @@ export async function About() {
         </Box>
 
         <Box flexGrow={1}>
-          <Box
-            p={4}
-            pos="relative"
-            border="2px solid token(colors.violet.500)"
-            rounded="md"
-          >
+          <Box p={4} pos="relative" border="2px solid token(colors.accent)" rounded="md">
             <Image src={selfie} alt="" rounded="sm" placeholder="blur" />
           </Box>
         </Box>
@@ -93,7 +88,7 @@ async function Skills() {
             lg: (i + 1) % 2 === 0 ? 2 : 1,
           }}
         >
-          <IconAsterisk color="violet.500" w={3} h={3} />
+          <IconAsterisk color="accent" w={3} h={3} />
           <styled.span fontSize="sm">{skill}</styled.span>
         </GridItem>
       ))}

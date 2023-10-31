@@ -42,15 +42,15 @@ export async function NavbarNav() {
               gap={1}
               className="group"
             >
-              <styled.span fontFamily="mono" color="violet.500" fontSize="xs">
+              <styled.span fontFamily="mono" color="accent" fontSize="xs">
                 {(++index).toString().padStart(2, '0')}.
               </styled.span>
               <styled.span
                 fontSize="sm"
                 transition="colors token(durations.slow)"
                 color={{
-                  base: 'neutral.200',
-                  _groupHover: 'violet.500',
+                  base: 'fg.lighter',
+                  _groupHover: 'accent',
                 }}
               >
                 {label}

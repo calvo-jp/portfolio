@@ -26,7 +26,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
         <>
           <DialogTrigger
             cursor="pointer"
-            color="neutral.100"
+            color="fg.lightest"
             lg={{
               display: 'none',
             }}
@@ -38,7 +38,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
           <Portal>
             <Presence present={isOpen}>
               <DialogBackdrop
-                bg="#d4d4d417" /* FIXME: use neutral.800/<opacity> once supported */
+                bg="#d4d4d417" /* FIXME: use bg/<opacity> once supported */
                 pos="fixed"
                 inset={0}
                 backdropFilter="blur(4px)"
@@ -64,7 +64,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                   h="full"
                   w={80}
                   maxW="full"
-                  bg="neutral.900"
+                  bg="bg"
                   shadow="2xl"
                   overflowY="auto"
                   css={{
@@ -81,7 +81,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                 >
                   <Flex>
                     <Spacer />
-                    <DialogCloseTrigger cursor="pointer" color="neutral.300">
+                    <DialogCloseTrigger cursor="pointer" color="fg.light">
                       <IconX w={8} h={8} />
                       <VisuallyHidden>Close menu</VisuallyHidden>
                     </DialogCloseTrigger>
@@ -115,10 +115,10 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                           }}
                         >
                           <Link py={1} href={path} onClick={close}>
-                            <Box fontFamily="mono" color="violet.500">
+                            <Box fontFamily="mono" color="accent">
                               {(++index).toString().padStart(2, '0')}.
                             </Box>
-                            <Box fontSize="lg" color="neutral.200">
+                            <Box fontSize="lg" color="fg.lighter">
                               {label}
                             </Box>
                           </Link>

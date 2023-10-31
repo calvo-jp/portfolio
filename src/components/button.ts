@@ -4,8 +4,8 @@ import { ark } from '@ark-ui/react';
 
 const recipe = cva({
   base: {
-    color: 'violet.500',
-    border: '1px solid token(colors.violet.500)',
+    color: 'accent',
+    border: '1px solid token(colors.accent)',
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
@@ -18,7 +18,7 @@ const recipe = cva({
     },
 
     _focusVisible: {
-      outline: '2px solid token(colors.neutral.300)',
+      outline: '2px solid token(colors.fg.light)',
       outlineOffset: 0.5,
     },
   },

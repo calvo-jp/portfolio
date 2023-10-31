@@ -55,6 +55,38 @@ export default defineConfig({
           to: { opacity: 0 },
         },
       },
+      semanticTokens: {
+        colors: {
+          fg: {
+            DEFAULT: {
+              value: '{colors.neutral.400}',
+            },
+            light: {
+              value: '{colors.neutral.300}',
+            },
+            lighter: {
+              value: '{colors.neutral.200}',
+            },
+            lightest: {
+              value: '{colors.neutral.100}',
+            },
+          },
+          bg: {
+            DEFAULT: {
+              value: '{colors.neutral.900}',
+            },
+            light: {
+              value: '{colors.neutral.800}',
+            },
+            lighter: {
+              value: '{colors.neutral.700}',
+            },
+          },
+          accent: {
+            value: '{colors.violet.500}',
+          },
+        },
+      },
     },
   },
   clean: true,

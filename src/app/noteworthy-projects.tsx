@@ -42,7 +42,7 @@ export async function NoteworthyProjects() {
             lg: '3xl',
           }}
           fontWeight="black"
-          color="neutral.200"
+          color="fg.lighter"
         >
           Other Noteworthy Projects
         </styled.h2>
@@ -51,7 +51,7 @@ export async function NoteworthyProjects() {
           w="fit"
           mx="auto"
           mt={2}
-          color="violet.500"
+          color="accent"
           fontFamily="mono"
           fontSize="sm"
           display="block"
@@ -95,9 +95,9 @@ function Item(props: ItemProps) {
   const { title, description, repository, website, tags } = props.data;
 
   return (
-    <Flex bg="neutral.800" p={8} rounded="sm" flexDir="column" minH="token(spacing.80)">
+    <Flex bg="bg.light" p={8} rounded="sm" flexDir="column" minH="token(spacing.80)">
       <Flex>
-        <IconFolder w={9} h={9} color="violet.500" />
+        <IconFolder w={9} h={9} color="accent" />
         <Spacer />
         <HStack gap={4}>
           {website && (
@@ -110,7 +110,7 @@ function Item(props: ItemProps) {
                   prefetch={false}
                   transition="colors token(durations.slow)"
                   _hover={{
-                    color: 'violet.500',
+                    color: 'accent',
                   }}
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
@@ -140,7 +140,7 @@ function Item(props: ItemProps) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: 'violet.500',
+                  color: 'accent',
                 }}
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>
@@ -162,11 +162,11 @@ function Item(props: ItemProps) {
         </HStack>
       </Flex>
 
-      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="neutral.200">
+      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="fg.lighter">
         {title}
       </styled.h3>
 
-      <RawHtml mt={2} fontSize="sm" color="neutral.300" flexGrow={1}>
+      <RawHtml mt={2} fontSize="sm" color="fg.light" flexGrow={1}>
         {description}
       </RawHtml>
 

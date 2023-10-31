@@ -18,12 +18,12 @@ export function SectionHeading(props: SectionHeadingProps) {
 
   return (
     <styled.h2 display="flex" alignItems="center" {...others}>
-      <styled.span color="violet.500" fontSize="lg" fontFamily="mono" lineHeight="none">
+      <styled.span color="accent" fontSize="lg" fontFamily="mono" lineHeight="none">
         {index.toString().padStart(2, '0')}.
       </styled.span>
       <styled.span
         ml={2}
-        color="neutral.200"
+        color="fg.lighter"
         fontSize={{
           base: '2xl',
           lg: '3xl',
@@ -33,7 +33,7 @@ export function SectionHeading(props: SectionHeadingProps) {
       >
         {title}
       </styled.span>
-      <Box ml={3} flexGrow={1} h="1px" bg="neutral.800" />
+      <Box ml={3} flexGrow={1} h="1px" bg="bg.light" />
     </styled.h2>
   );
 }

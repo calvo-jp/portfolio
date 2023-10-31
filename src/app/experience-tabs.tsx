@@ -31,15 +31,15 @@ export async function ExperienceTabs() {
             color="inherit"
             transition="all token(durations.slow)"
             _selected={{
-              bg: 'neutral.800',
-              color: 'violet.500',
+              bg: 'bg.light',
+              color: 'accent',
             }}
           >
             {company.name}
           </TabTrigger>
         ))}
 
-        <TabIndicator w={0.5} bg="violet.500" h="5" />
+        <TabIndicator w={0.5} bg="accent" h="5" />
       </TabList>
 
       {author.workHistory.map((o) => (

@@ -46,13 +46,13 @@ export function ExperienceSlides(props: ExperienceSlidesProps) {
               w: 3,
               h: 3,
               cursor: 'pointer',
-              border: '1px solid token(colors.neutral.300)',
+              border: '1px solid token(colors.fg.light)',
               rounded: 'full',
               transition: 'all token(durations.slow)',
 
               '&[data-current]': {
-                bg: 'neutral.200',
-                borderColor: 'neutral.200',
+                bg: 'fg.lighter',
+                borderColor: 'fg.lighter',
               },
             }}
           >

@@ -8,7 +8,7 @@ export async function Hero() {
 
   return (
     <styled.section id="hero" py={20}>
-      <styled.h3 fontFamily="mono" color="violet.500">
+      <styled.h3 fontFamily="mono" color="accent">
         Hi, my name is
       </styled.h3>
 
@@ -30,7 +30,7 @@ export async function Hero() {
           base: 3,
           lg: 4,
         }}
-        color="neutral.300"
+        color="fg.light"
         fontSize={{
           base: '4xl',
           lg: '7xl',
@@ -50,7 +50,7 @@ export async function Hero() {
           target="_blank"
           rel="noreferrer noopener"
           prefetch={false}
-          color="violet.500"
+          color="accent"
           textUnderlineOffset="0.35rem"
           _hover={{
             textDecoration: 'underline',

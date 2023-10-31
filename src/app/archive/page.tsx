@@ -35,11 +35,11 @@ export default async function Archive() {
           lg: '7xl',
         }}
         fontWeight="bold"
-        color="neutral.200"
+        color="fg.lighter"
       >
         Archive
       </styled.h1>
-      <styled.p fontFamily="mono" color="violet.500">
+      <styled.p fontFamily="mono" color="accent">
         A big list of things I&rsquo;ve worked on
       </styled.p>
 
@@ -60,7 +60,7 @@ export default async function Archive() {
               lg: 'row',
             }}
           >
-            <Box fontFamily="mono" fontSize="sm" lineHeight="loose" color="violet.500">
+            <Box fontFamily="mono" fontSize="sm" lineHeight="loose" color="accent">
               {year}
             </Box>
             <Box>
@@ -86,10 +86,10 @@ function Item(props: IProject) {
       }}
     >
       <Box>
-        <styled.h2 fontSize="xl" fontWeight="bold" color="neutral.200">
+        <styled.h2 fontSize="xl" fontWeight="bold" color="fg.lighter">
           {title}
         </styled.h2>
-        <RawHtml color="neutral.300">{description}</RawHtml>
+        <RawHtml color="fg.light">{description}</RawHtml>
         <styled.ul mt={3} display="flex" gap={3} fontFamily="mono" fontSize="sm">
           {tags.map((tag) => (
             <styled.li key={tag}>{tag}</styled.li>
@@ -108,7 +108,7 @@ function Item(props: IProject) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: 'violet.500',
+                  color: 'accent',
                 }}
               >
                 <IconExternalLink />
@@ -138,7 +138,7 @@ function Item(props: IProject) {
               prefetch={false}
               transition="colors token(durations.slow)"
               _hover={{
-                color: 'violet.500',
+                color: 'accent',
               }}
             >
               <IconGitBranch />

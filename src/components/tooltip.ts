@@ -22,8 +22,8 @@ export const TooltipContent = styled(
     base: {
       px: 4,
       py: 2,
-      bg: 'neutral.700',
-      color: 'neutral.100',
+      bg: 'bg.lighter',
+      color: 'fg.lightest',
       zIndex: 'tooltip',
       rounded: 'md',
       fontSize: 'sm',
@@ -40,7 +40,7 @@ export const TooltipContent = styled(
 export const TooltipArrow = styled(parts.Arrow, {
   base: {
     '--arrow-size': 'token(sizes.3)',
-    '--arrow-background': 'token(colors.neutral.700)',
+    '--arrow-background': 'token(colors.bg.lighter)',
   },
 });
 

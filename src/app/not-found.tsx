@@ -11,11 +11,11 @@ export default function NotFound() {
         fontSize="9xl"
         fontWeight="bold"
         lineHeight="none"
-        color="violet.500"
+        color="accent"
       >
         404
       </styled.h1>
-      <styled.h2 fontSize="3xl" lineHeight="none" color="neutral.300">
+      <styled.h2 fontSize="3xl" lineHeight="none" color="fg.light">
         Page Not Found
       </styled.h2>
       <Button asChild>
