@@ -10,47 +10,26 @@ import {
 } from '@/components/carousel';
 import { VisuallyHidden } from '@/styled-system/jsx';
 import { IAuthor } from '@/types';
-import { useState } from 'react';
-import { useSwipeable } from 'react-swipeable';
 import { ExperienceItem } from './experience-item';
-
-/*
- * FIXME: drop "react-swipeable" once ark-ui carousel supports swipe
- */
 
 interface ExperienceSlidesProps {
   __author: IAuthor;
 }
 
+/*
+ * FIXME: add "swipeable" once ark-ui carousel supports it
+ */
+
 export function ExperienceSlides(props: ExperienceSlidesProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const { ref } = useSwipeable({
-    onSwipedRight() {
-      if (currentIndex <= 0) return;
-
-      setCurrentIndex((v) => v - 1);
-    },
-    onSwipedLeft() {
-      if (currentIndex + 1 >= length) return;
-
-      setCurrentIndex((v) => v + 1);
-    },
-  });
-
   return (
     <Carousel
       mt={14}
       lg={{
         display: 'none',
       }}
-      index={currentIndex}
-      onIndexChange={(details) => {
-        setCurrentIndex(details.index);
-      }}
     >
       <CarouselViewport>
-        <CarouselItemGroup ref={ref}>
+        <CarouselItemGroup>
           {props.__author.workHistory.map((o, index) => (
             <CarouselItem w="full" key={o.company.name} index={index}>
               <ExperienceItem data={o} />
