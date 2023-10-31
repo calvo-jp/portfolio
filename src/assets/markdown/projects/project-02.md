@@ -6,7 +6,7 @@ tags:
   - Algolia
   - WordPress
   - PHP
-createdAt: 2022-01-01
+createdAt: 2021-11-01
 ---
 
 Building a custom multisite compatible WordPress plugin to build global search with Algolia

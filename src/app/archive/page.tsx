@@ -164,12 +164,10 @@ function Item(props: IProject) {
 
 /* group by year */
 async function getItems() {
-  const l = (await getAuthor()).projects;
-
-  const f = [...l].filter((p) => !p.featured);
+  const l = [...(await getAuthor()).projects];
   const r: Record<string, IProject[]> = {};
 
-  f.forEach((i) => {
+  l.forEach((i) => {
     const k = i.createdAt.getFullYear().toString();
 
     if (r[k]) {

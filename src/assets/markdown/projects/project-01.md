@@ -10,7 +10,7 @@ tags:
   - iTerm2
   - Hyper
 featured: true
-createdAt: 1992-10-12
+createdAt: 2022-01-01
 ---
 
 A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
