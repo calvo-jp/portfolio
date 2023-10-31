@@ -15,7 +15,7 @@ export async function Contact() {
       }}
       textAlign="center"
     >
-      <styled.p color="accent" fontFamily="mono">
+      <styled.p color="fg.accent" fontFamily="mono">
         04. What&rsquo;s next?
       </styled.p>
       <styled.h2

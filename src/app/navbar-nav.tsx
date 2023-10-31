@@ -42,7 +42,7 @@ export async function NavbarNav() {
               gap={1}
               className="group"
             >
-              <styled.span fontFamily="mono" color="accent" fontSize="xs">
+              <styled.span fontFamily="mono" color="fg.accent" fontSize="xs">
                 {(++index).toString().padStart(2, '0')}.
               </styled.span>
               <styled.span
@@ -50,7 +50,7 @@ export async function NavbarNav() {
                 transition="colors token(durations.slow)"
                 color={{
                   base: 'fg.lighter',
-                  _groupHover: 'accent',
+                  _groupHover: 'fg.accent',
                 }}
               >
                 {label}

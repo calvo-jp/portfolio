@@ -18,7 +18,7 @@ export function SectionHeading(props: SectionHeadingProps) {
 
   return (
     <styled.h2 display="flex" alignItems="center" {...others}>
-      <styled.span color="accent" fontSize="lg" fontFamily="mono" lineHeight="none">
+      <styled.span color="fg.accent" fontSize="lg" fontFamily="mono" lineHeight="none">
         {index.toString().padStart(2, '0')}.
       </styled.span>
       <styled.span

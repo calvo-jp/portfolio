@@ -47,7 +47,7 @@ export async function Socials() {
                     prefetch={false}
                     transition="colors token(durations.slow)"
                     color={{
-                      _hover: 'accent',
+                      _hover: 'fg.accent',
                     }}
                   >
                     {getIcon(name)}

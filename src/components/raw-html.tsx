@@ -24,7 +24,7 @@ export const RawHtml = forwardRef<HTMLDivElement, RawHtmlProps>(
           hyphens: 'auto',
 
           '& a': {
-            color: 'accent',
+            color: 'fg.accent',
             textUnderlineOffset: '0.35rem',
             _hover: {
               textDecoration: 'underline',

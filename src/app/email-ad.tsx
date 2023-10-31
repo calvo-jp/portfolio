@@ -30,7 +30,7 @@ export async function EmailAd() {
             letterSpacing="widest"
             transition="colors token(durations.slow)"
             color={{
-              _hover: 'accent',
+              _hover: 'fg.accent',
             }}
           >
             {author.contact.email}

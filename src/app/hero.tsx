@@ -8,7 +8,7 @@ export async function Hero() {
 
   return (
     <styled.section id="hero" py={20}>
-      <styled.h3 fontFamily="mono" color="accent">
+      <styled.h3 fontFamily="mono" color="fg.accent">
         Hi, my name is
       </styled.h3>
 
@@ -50,7 +50,7 @@ export async function Hero() {
           target="_blank"
           rel="noreferrer noopener"
           prefetch={false}
-          color="accent"
+          color="fg.accent"
           textUnderlineOffset="0.35rem"
           _hover={{
             textDecoration: 'underline',

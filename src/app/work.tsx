@@ -90,7 +90,7 @@ function Item(props: ItemProps) {
       </Box>
 
       <Box flexGrow={1}>
-        <Box fontFamily="mono" fontSize="sm" color="accent" lineHeight="none">
+        <Box fontFamily="mono" fontSize="sm" color="fg.accent" lineHeight="none">
           Featured Project
         </Box>
 
@@ -150,7 +150,7 @@ function Item(props: ItemProps) {
                   prefetch={false}
                   color={{
                     base: 'fg.light',
-                    _hover: 'accent',
+                    _hover: 'fg.accent',
                   }}
                   transition="colors token(durations.slow)"
                 >
@@ -181,7 +181,7 @@ function Item(props: ItemProps) {
                 prefetch={false}
                 color={{
                   base: 'fg.light',
-                  _hover: 'accent',
+                  _hover: 'fg.accent',
                 }}
                 transition="colors token(durations.slow)"
               >

@@ -51,7 +51,7 @@ export async function NoteworthyProjects() {
           w="fit"
           mx="auto"
           mt={2}
-          color="accent"
+          color="fg.accent"
           fontFamily="mono"
           fontSize="sm"
           display="block"
@@ -97,7 +97,7 @@ function Item(props: ItemProps) {
   return (
     <Flex bg="bg.light" p={8} rounded="sm" flexDir="column" minH="token(spacing.80)">
       <Flex>
-        <IconFolder w={9} h={9} color="accent" />
+        <IconFolder w={9} h={9} color="fg.accent" />
         <Spacer />
         <HStack gap={4}>
           {website && (
@@ -110,7 +110,7 @@ function Item(props: ItemProps) {
                   prefetch={false}
                   transition="colors token(durations.slow)"
                   _hover={{
-                    color: 'accent',
+                    color: 'fg.accent',
                   }}
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
@@ -140,7 +140,7 @@ function Item(props: ItemProps) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: 'accent',
+                  color: 'fg.accent',
                 }}
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>

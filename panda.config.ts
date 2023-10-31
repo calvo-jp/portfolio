@@ -78,6 +78,9 @@ export default defineConfig({
             lightest: {
               value: '{colors.neutral.100}',
             },
+            accent: {
+              value: '{colors.violet.500}',
+            },
           },
           bg: {
             DEFAULT: {
@@ -89,9 +92,6 @@ export default defineConfig({
             lighter: {
               value: '{colors.neutral.700}',
             },
-          },
-          accent: {
-            value: '{colors.violet.500}',
           },
         },
       },

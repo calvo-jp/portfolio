@@ -11,7 +11,7 @@ export default function NotFound() {
         fontSize="9xl"
         fontWeight="bold"
         lineHeight="none"
-        color="accent"
+        color="fg.accent"
       >
         404
       </styled.h1>

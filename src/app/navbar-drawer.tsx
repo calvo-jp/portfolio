@@ -115,7 +115,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                           }}
                         >
                           <Link py={1} href={path} onClick={close}>
-                            <Box fontFamily="mono" color="accent">
+                            <Box fontFamily="mono" color="fg.accent">
                               {(++index).toString().padStart(2, '0')}.
                             </Box>
                             <Box fontSize="lg" color="fg.lighter">

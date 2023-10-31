@@ -25,7 +25,7 @@ export async function Navbar() {
         <IconTerminal
           w={8}
           h={8}
-          color="accent"
+          color="fg.accent"
           lg={{
             w: 6,
             h: 6,

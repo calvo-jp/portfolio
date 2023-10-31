@@ -32,14 +32,14 @@ export async function ExperienceTabs() {
             transition="all token(durations.slow)"
             _selected={{
               bg: 'bg.light',
-              color: 'accent',
+              color: 'fg.accent',
             }}
           >
             {company.name}
           </TabTrigger>
         ))}
 
-        <TabIndicator w={0.5} bg="accent" h="5" />
+        <TabIndicator w={0.5} bg="fg.accent" h="5" />
       </TabList>
 
       {author.workHistory.map((o) => (

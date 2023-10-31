@@ -39,7 +39,7 @@ export default async function Archive() {
       >
         Archive
       </styled.h1>
-      <styled.p fontFamily="mono" color="accent">
+      <styled.p fontFamily="mono" color="fg.accent">
         A big list of things I&rsquo;ve worked on
       </styled.p>
 
@@ -60,7 +60,7 @@ export default async function Archive() {
               lg: 'row',
             }}
           >
-            <Box fontFamily="mono" fontSize="sm" lineHeight="loose" color="accent">
+            <Box fontFamily="mono" fontSize="sm" lineHeight="loose" color="fg.accent">
               {year}
             </Box>
             <Box>
@@ -108,7 +108,7 @@ function Item(props: IProject) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: 'accent',
+                  color: 'fg.accent',
                 }}
               >
                 <IconExternalLink />
@@ -138,7 +138,7 @@ function Item(props: IProject) {
               prefetch={false}
               transition="colors token(durations.slow)"
               _hover={{
-                color: 'accent',
+                color: 'fg.accent',
               }}
             >
               <IconGitBranch />
