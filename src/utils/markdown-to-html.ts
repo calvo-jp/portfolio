@@ -1,7 +1,6 @@
 import { cache } from 'react';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeStringify from 'rehype-stringify';
-import rehypeWidont from 'rehype-widont';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkGfm from 'remark-gfm';
 import remarkParse from 'remark-parse';
@@ -24,7 +23,6 @@ const processor = unified()
   .use(remarkGfm)
   .use(remarkRehype)
   .use(rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] })
-  .use(rehypeWidont as Plugin)
   .use(rehypeStringify);
 
 export const markdownToHtml = cache(async (markdown: string) => {
