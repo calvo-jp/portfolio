@@ -166,7 +166,7 @@ function Item(props: ItemProps) {
         {title}
       </styled.h3>
 
-      <RawHtml mt={2} fontSize="sm" color="neutral.300" flexGrow={1} hyphens="auto">
+      <RawHtml mt={2} fontSize="sm" color="neutral.300" flexGrow={1}>
         {description}
       </RawHtml>
 

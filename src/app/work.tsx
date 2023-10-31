@@ -115,9 +115,8 @@ function Item(props: ItemProps) {
 
         <RawHtml
           mt={5}
-          rounded="sm"
           color="neutral.300"
-          hyphens="auto"
+          rounded="sm"
           lg={{
             px: 5,
             py: 4,

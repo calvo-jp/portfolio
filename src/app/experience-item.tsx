@@ -36,20 +36,7 @@ export function ExperienceItem(props: ExperienceItemProps) {
         <styled.span w={2.5} h="1px" bg="neutral.700" />
         <styled.span>{employedAtUnitl}</styled.span>
       </Box>
-      <RawHtml
-        mt={5}
-        css={{
-          '& li': {
-            mt: 2,
-
-            _first: {
-              mt: 0,
-            },
-          },
-        }}
-      >
-        {responsibilities}
-      </RawHtml>
+      <RawHtml mt={5}>{responsibilities}</RawHtml>
     </Box>
   );
 }

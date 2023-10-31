@@ -15,8 +15,46 @@ interface RawHtmlProps extends Assign<StyledArkDivProps, RawHtmlBaseProps> {}
 
 export const RawHtml = forwardRef<HTMLDivElement, RawHtmlProps>(
   function RawHtml(props, ref) {
-    const { children: __html, ...others } = props;
+    const { children: __html, css, ...others } = props;
 
-    return <StyledArkDiv ref={ref} dangerouslySetInnerHTML={{ __html }} {...others} />;
+    return (
+      <StyledArkDiv
+        ref={ref}
+        css={{
+          hyphens: 'auto',
+
+          '& a': {
+            color: 'violet.500',
+            textUnderlineOffset: '0.35rem',
+            _hover: {
+              textDecoration: 'underline',
+            },
+          },
+
+          '& li': {
+            mt: 2,
+
+            _first: {
+              mt: 0,
+            },
+          },
+
+          '& p': {
+            mt: {
+              base: 4,
+              lg: 5,
+            },
+
+            _first: {
+              mt: 0,
+            },
+          },
+
+          ...css,
+        }}
+        dangerouslySetInnerHTML={{ __html }}
+        {...others}
+      />
+    );
   },
 );

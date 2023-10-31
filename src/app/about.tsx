@@ -45,32 +45,7 @@ export async function About() {
             w: '1/2',
           }}
         >
-          <RawHtml
-            css={{
-              fontSize: 'lg',
-
-              '& p': {
-                mt: {
-                  base: 4,
-                  lg: 5,
-                },
-                hyphens: 'auto',
-                _first: {
-                  mt: 0,
-                },
-              },
-
-              '& a': {
-                color: 'violet.500',
-                textUnderlineOffset: '0.35rem',
-                _hover: {
-                  textDecoration: 'underline',
-                },
-              },
-            }}
-          >
-            {author.about}
-          </RawHtml>
+          <RawHtml fontSize="lg">{author.about}</RawHtml>
 
           <Box mt={5} fontSize="lg">
             Here are a few technologies I&rsquo;ve been working with&nbsp;recently:
