@@ -4,7 +4,12 @@ import { styled } from '@/styled-system/jsx';
 import { Dialog as parts } from '@ark-ui/react';
 
 export const Dialog = styled(parts.Root);
-export const DialogTrigger = styled(parts.Trigger);
+export const DialogTrigger = styled(parts.Trigger, {
+  base: {
+    cursor: 'pointer',
+  },
+});
+
 export const DialogBackdrop = styled(parts.Backdrop, {
   base: {
     zIndex: 'overlay',
@@ -29,4 +34,8 @@ export const DialogContent = styled(
 
 export const DialogTitle = styled(parts.Title);
 export const DialogDescription = styled(parts.Description);
-export const DialogCloseTrigger = styled(parts.CloseTrigger);
+export const DialogCloseTrigger = styled(parts.CloseTrigger, {
+  base: {
+    cursor: 'pointer',
+  },
+});

@@ -25,7 +25,6 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
       {({ isOpen, close }) => (
         <>
           <DialogTrigger
-            cursor="pointer"
             color="fg.lightest"
             lg={{
               display: 'none',
@@ -66,7 +65,6 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                   maxW="full"
                   bg="bg.light"
                   pos="relative"
-                  shadow="2xl"
                   overflowY="auto"
                   css={{
                     '&::-webkit-scrollbar': {
@@ -80,36 +78,14 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                     animation: 'slide-out-right token(durations.slow)',
                   }}
                 >
-                  <DialogCloseTrigger
-                    pos="absolute"
-                    right={4}
-                    cursor="pointer"
-                    color="fg.light"
-                  >
+                  <DialogCloseTrigger pos="absolute" right={4} color="fg.light">
                     <IconX w={8} h={8} />
                     <VisuallyHidden>Close menu</VisuallyHidden>
                   </DialogCloseTrigger>
 
                   <styled.nav py={16}>
                     <styled.ul textAlign="center">
-                      {[
-                        {
-                          path: '/#about',
-                          label: 'About',
-                        },
-                        {
-                          path: '/#experience',
-                          label: 'Experience',
-                        },
-                        {
-                          path: '/#work',
-                          label: 'Work',
-                        },
-                        {
-                          path: '/#contact',
-                          label: 'Contact',
-                        },
-                      ].map(({ label, path }, index) => (
+                      {items.map(({ label, path }, index) => (
                         <styled.li
                           key={path}
                           mb={{
@@ -149,3 +125,22 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
     </Dialog>
   );
 }
+
+const items = [
+  {
+    path: '/#about',
+    label: 'About',
+  },
+  {
+    path: '/#experience',
+    label: 'Experience',
+  },
+  {
+    path: '/#work',
+    label: 'Work',
+  },
+  {
+    path: '/#contact',
+    label: 'Contact',
+  },
+];
