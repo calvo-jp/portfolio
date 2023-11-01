@@ -24,8 +24,6 @@ export async function ExperienceTabs() {
             w="full"
             px={6}
             py={2}
-            type="button"
-            cursor="pointer"
             display="block"
             textAlign="left"
             color="inherit"
