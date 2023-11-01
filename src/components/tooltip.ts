@@ -14,7 +14,12 @@ export const Tooltip = styled(
   },
 );
 
-export const TooltipTrigger = styled(parts.Trigger);
+export const TooltipTrigger = styled(parts.Trigger, {
+  base: {
+    cursor: 'pointer',
+  },
+});
+
 export const TooltipPositioner = styled(parts.Positioner);
 export const TooltipContent = styled(
   parts.Content,
