@@ -21,7 +21,6 @@ export const TooltipTrigger = styled(parts.Trigger, {
 });
 
 export const TooltipPositioner = styled(parts.Positioner);
-
 export const TooltipContent = styled(
   parts.Content,
   {
