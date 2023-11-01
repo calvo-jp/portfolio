@@ -19,11 +19,14 @@ export interface IWorkHistory {
   responsibilities: string;
 }
 
-export interface ISocials {
-  github: string;
-  twitter: string;
-  linkedin: string;
-}
+export type TSocial =
+  | 'github'
+  | 'tikTok'
+  | 'twitter'
+  | 'linkedin'
+  | 'facebook'
+  | 'instagram'
+  | (string & {});
 
 export interface IProject {
   title: string;
@@ -43,7 +46,7 @@ export interface IAuthor {
   resume: string;
   contact: IContact;
   company: ICompany;
-  socials: ISocials;
+  socials: Partial<Record<TSocial, string>>;
   workHistory: IWorkHistory[];
   projects: IProject[];
 }

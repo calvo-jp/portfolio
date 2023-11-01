@@ -9,6 +9,7 @@ import {
   TooltipTrigger,
 } from '@/components/tooltip';
 import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { TSocial } from '@/types';
 import { capitalize } from '@/utils/capitalize';
 import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
@@ -78,15 +79,21 @@ export async function Socials() {
   );
 }
 
-function getIcon(name: 'github' | 'linkedin' | 'twitter' | (string & {})) {
-  switch (name.toLowerCase()) {
-    case 'github':
+function getIcon(social: TSocial) {
+  switch (social) {
+    case 'githubs':
       return <IconGithub />;
     case 'twitter':
       return <IconTwitter />;
     case 'linkedin':
       return <IconLinkedin />;
-    default:
-      throw new Error(`Unknown social: '${name}'`);
+    default: {
+      const error = new Error();
+
+      error.name = 'ImageNotSetError';
+      error.message = "No image set for '%n'. Using fallback icon".replace('%n', social);
+
+      throw error;
+    }
   }
 }
