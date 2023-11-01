@@ -16,10 +16,6 @@ interface ExperienceSlidesProps {
   __author: IAuthor;
 }
 
-/*
- * FIXME: add "swipeable" once ark-ui carousel supports it
- */
-
 export function ExperienceSlides(props: ExperienceSlidesProps) {
   return (
     <Carousel

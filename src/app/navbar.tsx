@@ -9,7 +9,7 @@ export async function Navbar() {
   return (
     <styled.header
       p={4}
-      bg="#171717db" /* FIXME: use bg/<opacity> once supported */
+      bg="#171717db" /* FIXME: use "bg/50" once supported */
       pos="sticky"
       top={0}
       zIndex="sticky"

@@ -38,7 +38,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
           <Portal>
             <Presence present={isOpen}>
               <DialogBackdrop
-                bg="#d4d4d417" /* FIXME: use bg/<opacity> once supported */
+                bg="#d4d4d417" /* FIXME: use "bg/50" once supported */
                 pos="fixed"
                 inset={0}
                 backdropFilter="blur(4px)"
