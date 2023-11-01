@@ -1,4 +1,3 @@
-import { cache } from 'react';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeStringify from 'rehype-stringify';
 import remarkFrontmatter from 'remark-frontmatter';
@@ -25,7 +24,7 @@ const processor = unified()
   .use(rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] })
   .use(rehypeStringify);
 
-export const markdownToHtml = cache(async (markdown: string) => {
+export async function markdownToHtml(markdown: string) {
   const vfile = await processor.process(markdown);
   const html = vfile.toString();
   const meta = vfile.data;
@@ -34,4 +33,4 @@ export const markdownToHtml = cache(async (markdown: string) => {
     html,
     meta,
   };
-});
+}

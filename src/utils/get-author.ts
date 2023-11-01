@@ -8,7 +8,7 @@ import { cache } from 'react';
 import { z } from 'zod';
 import { markdownToHtml } from './markdown-to-html';
 
-export const getAuthor = cache(async (): Promise<IAuthor> => {
+export const getAuthor = cache(async function getAuthor(): Promise<IAuthor> {
   const about = await getAbout();
   const projects = await getProjects();
   const workHistory = await getWorkHistory();
