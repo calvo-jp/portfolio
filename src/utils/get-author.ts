@@ -8,7 +8,7 @@ import { cache } from 'react';
 import { z } from 'zod';
 import { markdownToHtml } from './markdown-to-html';
 
-export const getAuthor = cache(async function getAuthor(): Promise<IAuthor> {
+export const getAuthor = cache(async function getAuthor() {
   const about = await getAbout();
   const projects = await getProjects();
   const workHistory = await getWorkHistory();
@@ -41,7 +41,7 @@ export const getAuthor = cache(async function getAuthor(): Promise<IAuthor> {
     about,
     projects,
     workHistory,
-  };
+  } satisfies IAuthor;
 });
 
 const MARKDOWN_DIR = join(process.cwd(), 'src/assets/markdown');
