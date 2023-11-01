@@ -1,5 +1,3 @@
-'use client';
-
 import {
   Carousel,
   CarouselIndicator,
@@ -9,14 +7,12 @@ import {
   CarouselViewport,
 } from '@/components/carousel';
 import { VisuallyHidden } from '@/styled-system/jsx';
-import { IAuthor } from '@/types';
+import { getAuthor } from '@/utils/get-author';
 import { ExperienceItem } from './experience-item';
 
-interface ExperienceSlidesProps {
-  __author: IAuthor;
-}
+export async function ExperienceSlides() {
+  const author = await getAuthor();
 
-export function ExperienceSlides(props: ExperienceSlidesProps) {
   return (
     <Carousel
       mt={14}
@@ -26,7 +22,7 @@ export function ExperienceSlides(props: ExperienceSlidesProps) {
     >
       <CarouselViewport>
         <CarouselItemGroup>
-          {props.__author.workHistory.map((o, index) => (
+          {author.workHistory.map((o, index) => (
             <CarouselItem w="full" key={o.company.name} index={index}>
               <ExperienceItem data={o} />
             </CarouselItem>
@@ -34,7 +30,7 @@ export function ExperienceSlides(props: ExperienceSlidesProps) {
         </CarouselItemGroup>
       </CarouselViewport>
       <CarouselIndicatorGroup mt={10} display="flex" gap={3} justifyContent="center">
-        {props.__author.workHistory.map((o, index) => (
+        {author.workHistory.map((o, index) => (
           <CarouselIndicator
             key={o.company.name}
             index={index}

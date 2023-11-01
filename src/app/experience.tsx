@@ -1,5 +1,4 @@
 import { styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
 import { ExperienceSlides } from './experience-slides';
 import { ExperienceTabs } from './experience-tabs';
 import { SectionHeading } from './section-heading';
@@ -22,7 +21,7 @@ export async function Experience() {
       />
 
       <ExperienceTabs />
-      <ExperienceSlides __author={await getAuthor()} />
+      <ExperienceSlides />
     </styled.section>
   );
 }

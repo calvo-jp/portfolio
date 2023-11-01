@@ -7,8 +7,6 @@ interface ExperienceItemProps {
   data: IWorkHistory;
 }
 
-/* TODO: add asterisk before each list */
-
 export function ExperienceItem(props: ExperienceItemProps) {
   const { company, dateOfEmployment, position, responsibilities } = props.data;
 
