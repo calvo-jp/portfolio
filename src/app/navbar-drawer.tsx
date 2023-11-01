@@ -11,7 +11,7 @@ import {
 } from '@/components/dialog';
 import { IconMenu, IconX } from '@/components/icons';
 import { Link } from '@/components/link';
-import { Box, Flex, Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { IAuthor } from '@/types';
 import { Portal, Presence } from '@ark-ui/react';
 
@@ -38,7 +38,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
           <Portal>
             <Presence present={isOpen}>
               <DialogBackdrop
-                bg="#d4d4d417" /* FIXME: use "bg/50" once supported */
+                bg="#171717db" /* FIXME: use "bg/50" once supported */
                 pos="fixed"
                 inset={0}
                 backdropFilter="blur(4px)"
@@ -64,7 +64,8 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                   h="full"
                   w={80}
                   maxW="full"
-                  bg="bg"
+                  bg="bg.light"
+                  pos="relative"
                   shadow="2xl"
                   overflowY="auto"
                   css={{
@@ -79,13 +80,15 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                     animation: 'slide-out-right token(durations.slow)',
                   }}
                 >
-                  <Flex>
-                    <Spacer />
-                    <DialogCloseTrigger cursor="pointer" color="fg.light">
-                      <IconX w={8} h={8} />
-                      <VisuallyHidden>Close menu</VisuallyHidden>
-                    </DialogCloseTrigger>
-                  </Flex>
+                  <DialogCloseTrigger
+                    pos="absolute"
+                    right={4}
+                    cursor="pointer"
+                    color="fg.light"
+                  >
+                    <IconX w={8} h={8} />
+                    <VisuallyHidden>Close menu</VisuallyHidden>
+                  </DialogCloseTrigger>
 
                   <styled.nav py={16}>
                     <styled.ul textAlign="center">
