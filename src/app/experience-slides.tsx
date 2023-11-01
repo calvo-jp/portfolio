@@ -37,7 +37,6 @@ export async function ExperienceSlides() {
             css={{
               w: 3,
               h: 3,
-              cursor: 'pointer',
               border: '1px solid token(colors.fg.light)',
               rounded: 'full',
               transition: 'all token(durations.slow)',
