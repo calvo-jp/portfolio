@@ -81,7 +81,7 @@ export async function Socials() {
 
 function getIcon(social: TSocial) {
   switch (social) {
-    case 'githubs':
+    case 'github':
       return <IconGithub />;
     case 'twitter':
       return <IconTwitter />;
