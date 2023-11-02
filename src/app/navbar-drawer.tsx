@@ -11,7 +11,7 @@ import {
 } from '@/components/dialog';
 import { IconMenu, IconX } from '@/components/icons';
 import { Link } from '@/components/link';
-import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { IAuthor } from '@/types';
 import { Portal, Presence } from '@ark-ui/react';
 
@@ -59,7 +59,10 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
             >
               <Presence present={isOpen}>
                 <DialogContent
-                  p={4}
+                  p={{
+                    base: 4,
+                    md: 6,
+                  }}
                   h="full"
                   w={80}
                   maxW="full"
@@ -78,12 +81,14 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                     animation: 'slide-out-right token(durations.slow)',
                   }}
                 >
-                  <DialogCloseTrigger pos="absolute" right={4} color="fg.light">
-                    <IconX w={8} h={8} />
-                    <VisuallyHidden>Close menu</VisuallyHidden>
-                  </DialogCloseTrigger>
+                  <Flex justifyContent="flex-end">
+                    <DialogCloseTrigger color="fg.light">
+                      <IconX w={8} h={8} />
+                      <VisuallyHidden>Close menu</VisuallyHidden>
+                    </DialogCloseTrigger>
+                  </Flex>
 
-                  <styled.nav py={16}>
+                  <styled.nav pt={10} pb={16}>
                     <styled.ul textAlign="center">
                       {items.map(({ label, path }, index) => (
                         <styled.li

@@ -61,7 +61,11 @@ export default async function RootLayout({ children }: PropsWithChildren) {
 
         <styled.main
           id="content"
-          px={4}
+          px={{
+            base: 4,
+            md: 6,
+            lg: 4,
+          }}
           lg={{
             w: '75vw',
             mx: 'auto',

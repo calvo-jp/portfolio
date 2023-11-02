@@ -8,7 +8,10 @@ import { NavbarNav } from './navbar-nav';
 export async function Navbar() {
   return (
     <styled.header
-      p={4}
+      p={{
+        base: 4,
+        md: 6,
+      }}
       bg="#171717db" /* FIXME: use "bg/50" once supported */
       pos="sticky"
       top={0}
@@ -18,7 +21,6 @@ export async function Navbar() {
       alignItems="center"
       lg={{
         px: 12,
-        py: 6,
       }}
     >
       <Link href="/">
