@@ -28,7 +28,7 @@ export const TooltipContent = styled(
       px: 4,
       py: 2,
       bg: 'bg.lighter',
-      color: 'fg.lightest',
+      color: 'fg.strongest',
       zIndex: 'tooltip',
       rounded: 'md',
       fontSize: 'sm',

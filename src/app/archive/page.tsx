@@ -35,7 +35,7 @@ export default async function Archive() {
           lg: '7xl',
         }}
         fontWeight="bold"
-        color="fg.lighter"
+        color="fg.stronger"
       >
         Archive
       </styled.h1>
@@ -86,10 +86,10 @@ function Item(props: IProject) {
       }}
     >
       <Box>
-        <styled.h2 fontSize="xl" fontWeight="bold" color="fg.lighter">
+        <styled.h2 fontSize="xl" fontWeight="bold" color="fg.stronger">
           {title}
         </styled.h2>
-        <RawHtml color="fg.light">{description}</RawHtml>
+        <RawHtml color="fg.strong">{description}</RawHtml>
         <styled.ul mt={3} display="flex" gap={3} fontFamily="mono" fontSize="sm">
           {tags.map((tag) => (
             <styled.li key={tag}>{tag}</styled.li>

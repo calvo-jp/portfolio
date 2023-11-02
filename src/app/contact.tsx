@@ -19,7 +19,7 @@ export async function Contact() {
         04. What&rsquo;s next?
       </styled.p>
       <styled.h2
-        color="fg.lighter"
+        color="fg.stronger"
         fontSize={{
           base: '4xl',
           lg: '6xl',

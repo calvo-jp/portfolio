@@ -14,7 +14,7 @@ export async function Hero() {
 
       <styled.h1
         mt={5}
-        color="white"
+        color="fg.high"
         fontSize={{
           base: '5xl',
           lg: '7xl',
@@ -30,7 +30,7 @@ export async function Hero() {
           base: 3,
           lg: 4,
         }}
-        color="fg.light"
+        color="fg.strong"
         fontSize={{
           base: '4xl',
           lg: '7xl',

@@ -12,7 +12,7 @@ export async function Navbar() {
         base: 4,
         md: 6,
       }}
-      bg="#171717db" /* FIXME: use "bg/50" once supported */
+      bg="bg.alpha"
       pos="sticky"
       top={0}
       zIndex="sticky"

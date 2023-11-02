@@ -49,7 +49,7 @@ export async function NavbarNav() {
                 fontSize="sm"
                 transition="colors token(durations.slow)"
                 color={{
-                  base: 'fg.lighter',
+                  base: 'fg.stronger',
                   _groupHover: 'fg.accent',
                 }}
               >

@@ -25,7 +25,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
       {({ isOpen, close }) => (
         <>
           <DialogTrigger
-            color="fg.lightest"
+            color="fg.strongest"
             lg={{
               display: 'none',
             }}
@@ -37,7 +37,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
           <Portal>
             <Presence present={isOpen}>
               <DialogBackdrop
-                bg="#171717db" /* FIXME: use "bg/50" once supported */
+                bg="fg.alpha"
                 pos="fixed"
                 inset={0}
                 backdropFilter="blur(4px)"
@@ -82,7 +82,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                   }}
                 >
                   <Flex justifyContent="flex-end">
-                    <DialogCloseTrigger color="fg.light">
+                    <DialogCloseTrigger color="fg.strong">
                       <IconX w={8} h={8} />
                       <VisuallyHidden>Close menu</VisuallyHidden>
                     </DialogCloseTrigger>
@@ -102,7 +102,7 @@ export function NavbarDrawer(props: NavbarDrawerProps) {
                             <Box fontFamily="mono" color="fg.accent">
                               {(++index).toString().padStart(2, '0')}.
                             </Box>
-                            <Box fontSize="lg" color="fg.lighter">
+                            <Box fontSize="lg" color="fg.stronger">
                               {label}
                             </Box>
                           </Link>

@@ -42,7 +42,7 @@ export async function NoteworthyProjects() {
             lg: '3xl',
           }}
           fontWeight="black"
-          color="fg.lighter"
+          color="fg.stronger"
         >
           Other Noteworthy Projects
         </styled.h2>
@@ -162,11 +162,11 @@ function Item(props: ItemProps) {
         </HStack>
       </Flex>
 
-      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="fg.lighter">
+      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="fg.stronger">
         {title}
       </styled.h3>
 
-      <RawHtml mt={2} fontSize="sm" color="fg.light" flexGrow={1}>
+      <RawHtml mt={2} fontSize="sm" color="fg.strong" flexGrow={1}>
         {description}
       </RawHtml>
 

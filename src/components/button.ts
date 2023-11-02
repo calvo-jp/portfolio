@@ -18,7 +18,7 @@ const recipe = cva({
     },
 
     _focusVisible: {
-      outline: '2px solid token(colors.fg.light)',
+      outline: '2px solid token(colors.fg.strong)',
       outlineOffset: 0.5,
     },
   },

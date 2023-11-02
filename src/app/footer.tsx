@@ -23,7 +23,7 @@ export async function Footer() {
                   target="_blank"
                   rel="noreferrer noopener"
                   prefetch={false}
-                  color="fg.light"
+                  color="fg.strong"
                 >
                   {getSocialIcon(name)}
                   <VisuallyHidden>{name}</VisuallyHidden>

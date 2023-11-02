@@ -18,7 +18,7 @@ export function ExperienceItem(props: ExperienceItemProps) {
   return (
     <Box display="flex" flexDir="column">
       <Box fontSize="xl" fontWeight="bold" letterSpacing="wide">
-        <styled.span color="fg.lighter">{position}</styled.span>{' '}
+        <styled.span color="fg.stronger">{position}</styled.span>{' '}
         <styled.span color="fg.accent">@ {company.name}</styled.span>
       </Box>
 

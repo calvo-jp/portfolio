@@ -37,13 +37,13 @@ export async function ExperienceSlides() {
             css={{
               w: 3,
               h: 3,
-              border: '1px solid token(colors.fg.light)',
+              border: '1px solid token(colors.fg.strong)',
               rounded: 'full',
               transition: 'all token(durations.slow)',
 
               '&[data-current]': {
-                bg: 'fg.lighter',
-                borderColor: 'fg.lighter',
+                bg: 'fg.stronger',
+                borderColor: 'fg.stronger',
               },
             }}
           >

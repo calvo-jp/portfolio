@@ -99,7 +99,7 @@ function Item(props: ItemProps) {
           fontSize="2xl"
           fontWeight="bold"
           lineHeight="none"
-          color="fg.lighter"
+          color="fg.stronger"
         >
           {title}
         </styled.h3>
@@ -115,7 +115,7 @@ function Item(props: ItemProps) {
 
         <RawHtml
           mt={5}
-          color="fg.light"
+          color="fg.strong"
           rounded="sm"
           lg={{
             px: 5,
@@ -149,7 +149,7 @@ function Item(props: ItemProps) {
                   rel="noreferrer noopener"
                   prefetch={false}
                   color={{
-                    base: 'fg.light',
+                    base: 'fg.strong',
                     _hover: 'fg.accent',
                   }}
                   transition="colors token(durations.slow)"
@@ -180,7 +180,7 @@ function Item(props: ItemProps) {
                 rel="noreferrer noopener"
                 prefetch={false}
                 color={{
-                  base: 'fg.light',
+                  base: 'fg.strong',
                   _hover: 'fg.accent',
                 }}
                 transition="colors token(durations.slow)"

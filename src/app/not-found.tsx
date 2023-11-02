@@ -15,7 +15,7 @@ export default function NotFound() {
       >
         404
       </styled.h1>
-      <styled.h2 fontSize="3xl" lineHeight="none" color="fg.light">
+      <styled.h2 fontSize="3xl" lineHeight="none" color="fg.strong">
         Page Not Found
       </styled.h2>
       <Button asChild>

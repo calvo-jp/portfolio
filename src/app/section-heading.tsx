@@ -23,7 +23,7 @@ export function SectionHeading(props: SectionHeadingProps) {
       </styled.span>
       <styled.span
         ml={2}
-        color="fg.lighter"
+        color="fg.stronger"
         fontSize={{
           base: '2xl',
           lg: '3xl',
