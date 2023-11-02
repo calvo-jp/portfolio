@@ -69,37 +69,37 @@ export default defineConfig({
             DEFAULT: {
               value: {
                 base: '{colors.neutral.600}',
-                _dark: '{colors.neutral.400}',
+                _osDark: '{colors.neutral.400}',
               },
             },
             strong: {
               value: {
                 base: '{colors.neutral.700}',
-                _dark: '{colors.neutral.300}',
+                _osDark: '{colors.neutral.300}',
               },
             },
             stronger: {
               value: {
                 base: '{colors.neutral.800}',
-                _dark: '{colors.neutral.200}',
+                _osDark: '{colors.neutral.200}',
               },
             },
             strongest: {
               value: {
                 base: '{colors.neutral.900}',
-                _dark: '{colors.neutral.100}',
+                _osDark: '{colors.neutral.100}',
               },
             },
             accent: {
               value: {
                 base: '{colors.violet.700}',
-                _dark: '{colors.violet.500}',
+                _osDark: '{colors.violet.500}',
               },
             },
             high: {
               value: {
                 base: '{colors.black}',
-                _dark: '{colors.white}',
+                _osDark: '{colors.white}',
               },
             },
           },
@@ -107,25 +107,25 @@ export default defineConfig({
             DEFAULT: {
               value: {
                 base: '{colors.neutral.100}',
-                _dark: '{colors.neutral.900}',
+                _osDark: '{colors.neutral.900}',
               },
             },
             alpha: {
               value: {
                 base: '#f5f5f5db' /* FIXME: use "<color>/<opacity>" once supported */,
-                _dark: '#171717db' /* FIXME: use "<color>/<opacity>" once supported */,
+                _osDark: '#171717db' /* FIXME: use "<color>/<opacity>" once supported */,
               },
             },
             light: {
               value: {
                 base: '{colors.neutral.200}',
-                _dark: '{colors.neutral.800}',
+                _osDark: '{colors.neutral.800}',
               },
             },
             lighter: {
               value: {
                 base: '{colors.neutral.300}',
-                _dark: '{colors.neutral.700}',
+                _osDark: '{colors.neutral.700}',
               },
             },
           },
