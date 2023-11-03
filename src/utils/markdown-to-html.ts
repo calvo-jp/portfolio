@@ -8,7 +8,7 @@ import { Plugin, unified } from 'unified';
 import { matter } from 'vfile-matter';
 
 const frontmatterParserPlugin: Plugin = () => {
-  return function parseFrontmatter(_tree, file) {
+  return function parseFrontmatter(_, file) {
     matter(file, {
       strip: true,
     });
