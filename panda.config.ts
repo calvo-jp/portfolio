@@ -151,7 +151,10 @@ export default defineConfig({
       },
     },
   },
-  clean: true,
+  hash: {
+    cssVar: false,
+    className: true,
+  },
   outdir: 'styled-system',
   jsxFramework: 'react',
 });
