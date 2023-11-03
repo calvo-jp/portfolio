@@ -17,7 +17,7 @@ const frontmatterParserPlugin: Plugin = () => {
 
 const processor = unified()
   .use(remarkParse)
-  .use(remarkFrontmatter, [{ type: 'yaml', marker: '-' }])
+  .use(remarkFrontmatter)
   .use(frontmatterParserPlugin)
   .use(remarkGfm)
   .use(remarkRehype)
