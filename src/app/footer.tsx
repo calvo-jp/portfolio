@@ -55,7 +55,7 @@ function getSocialIcon(name: TSocial) {
       const error = new Error();
 
       error.name = 'SocialIconNotSet';
-      error.message = `No icon set for '${name}'`;
+      error.message = `No icon has been set for '${name}'`;
       Error.captureStackTrace?.(error);
 
       throw error;
