@@ -1,7 +1,9 @@
 import { IconGithub, IconLinkedin, IconTwitter } from '@/components/icons';
 import { Link } from '@/components/link';
 import { Center, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { TSocial } from '@/types';
 import { getAuthor } from '@/utils/get-author';
+import { mapObject } from '@/utils/map-object';
 
 export async function Footer() {
   const author = await getAuthor();
@@ -16,7 +18,7 @@ export async function Footer() {
       >
         <styled.nav>
           <styled.ul display="flex" alignItems="center" gap={5}>
-            {Object.entries(author.socials).map(([name, url]) => (
+            {mapObject(author.socials, (url, name) => (
               <styled.li key={name}>
                 <Link
                   href={url}
@@ -41,15 +43,22 @@ export async function Footer() {
   );
 }
 
-function getSocialIcon(name: 'github' | 'linkedin' | 'twitter' | (string & {})) {
-  switch (name.toLowerCase()) {
+function getSocialIcon(name: TSocial) {
+  switch (name) {
     case 'github':
       return <IconGithub />;
     case 'twitter':
       return <IconTwitter />;
     case 'linkedin':
       return <IconLinkedin />;
-    default:
-      throw new Error(`Unknown social: '${name}'`);
+    default: {
+      const error = new Error();
+
+      error.name = 'SocialIconNotSet';
+      error.message = `No icon set for '${name}'`;
+      Error.captureStackTrace?.(error);
+
+      throw error;
+    }
   }
 }
