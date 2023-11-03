@@ -1,7 +1,6 @@
 import { IconTerminal } from '@/components/icons';
 import { Link } from '@/components/link';
 import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
 import { NavbarDrawer } from './navbar-drawer';
 import { NavbarNav } from './navbar-nav';
 
@@ -37,7 +36,7 @@ export async function Navbar() {
       </Link>
       <Spacer />
       <NavbarNav />
-      <NavbarDrawer __author={await getAuthor()} />
+      <NavbarDrawer />
     </styled.header>
   );
 }
