@@ -12,6 +12,7 @@ import { Link } from '@/components/link';
 import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
+import { NAVBAR_NAV_ITEMS } from './navbar-nav';
 
 export async function NavbarDrawer() {
   const author = await getAuthor();
@@ -81,21 +82,21 @@ export async function NavbarDrawer() {
 
             <styled.nav pt={10} pb={16}>
               <styled.ul textAlign="center">
-                {items.map(({ label, path }, index) => (
+                {NAVBAR_NAV_ITEMS.map((item, index) => (
                   <styled.li
-                    key={path}
+                    key={item.path}
                     mb={{
                       base: 6,
                       _last: 0,
                     }}
                   >
                     <DialogCloseTrigger asChild>
-                      <Link py={1} href={path}>
+                      <Link py={1} href={item.path}>
                         <Box fontFamily="mono" color="fg.accent">
                           {(++index).toString().padStart(2, '0')}.
                         </Box>
                         <Box fontSize="lg" color="fg.stronger">
-                          {label}
+                          {item.label}
                         </Box>
                       </Link>
                     </DialogCloseTrigger>
@@ -120,22 +121,3 @@ export async function NavbarDrawer() {
     </Dialog>
   );
 }
-
-const items = [
-  {
-    path: '/#about',
-    label: 'About',
-  },
-  {
-    path: '/#experience',
-    label: 'Experience',
-  },
-  {
-    path: '/#work',
-    label: 'Work',
-  },
-  {
-    path: '/#contact',
-    label: 'Contact',
-  },
-];

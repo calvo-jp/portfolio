@@ -16,27 +16,10 @@ export async function NavbarNav() {
       }}
     >
       <styled.ul display="flex" alignItems="center" gap={8}>
-        {[
-          {
-            path: '/#about',
-            label: 'About',
-          },
-          {
-            path: '/#experience',
-            label: 'Experience',
-          },
-          {
-            path: '/#work',
-            label: 'Work',
-          },
-          {
-            path: '/#contact',
-            label: 'Contact',
-          },
-        ].map(({ path, label }, index) => (
-          <styled.li key={path}>
+        {NAVBAR_NAV_ITEMS.map((item, index) => (
+          <styled.li key={item.path}>
             <Link
-              href={path}
+              href={item.path}
               display="flex"
               alignItems="center"
               gap={1}
@@ -53,7 +36,7 @@ export async function NavbarNav() {
                   _groupHover: 'fg.accent',
                 }}
               >
-                {label}
+                {item.label}
               </styled.span>
             </Link>
           </styled.li>
@@ -73,3 +56,22 @@ export async function NavbarNav() {
     </styled.nav>
   );
 }
+
+export const NAVBAR_NAV_ITEMS = [
+  {
+    path: '/#about',
+    label: 'About',
+  },
+  {
+    path: '/#experience',
+    label: 'Experience',
+  },
+  {
+    path: '/#work',
+    label: 'Work',
+  },
+  {
+    path: '/#contact',
+    label: 'Contact',
+  },
+];
