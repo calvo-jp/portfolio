@@ -15,6 +15,23 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 const themes = Object.values(Theme);
+const items = [
+  {
+    icon: IconSun,
+    label: 'Light theme',
+    value: Theme.Light,
+  },
+  {
+    icon: IconMoon,
+    label: 'Dark theme',
+    value: Theme.Dark,
+  },
+  {
+    icon: IconLaptop2,
+    label: 'System theme',
+    value: Theme.System,
+  },
+];
 
 export function ThemeSwitch() {
   const mounted = useMounted();
@@ -64,24 +81,6 @@ export function ThemeSwitch() {
     </SegmentGroup>
   );
 }
-
-const items = [
-  {
-    icon: IconSun,
-    label: 'Light theme',
-    value: Theme.Light,
-  },
-  {
-    icon: IconMoon,
-    label: 'Dark theme',
-    value: Theme.Dark,
-  },
-  {
-    icon: IconLaptop2,
-    label: 'System theme',
-    value: Theme.System,
-  },
-];
 
 function useMounted() {
   const [mounted, setMounted] = useState(false);
