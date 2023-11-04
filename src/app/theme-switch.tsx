@@ -63,8 +63,6 @@ export function ThemeSwitch() {
         bg={{
           _dark: '#ffffff0d' /* FIXME: use 'white/10' once supported */,
           _light: '#0000000d' /* FIXME: use 'black/10' once supported */,
-          _osDark: '#ffffff0d' /* FIXME: use 'white/10' once supported */,
-          _osLight: '#0000000d' /* FIXME: use 'black/10' once supported */,
         }}
         rounded="full"
       />
