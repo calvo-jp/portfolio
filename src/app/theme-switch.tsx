@@ -36,8 +36,8 @@ export function ThemeSwitch() {
             }}
           >
             <SVGIcon
-              w={8}
-              h={8}
+              w={7}
+              h={7}
               lg={{
                 w: 5,
                 h: 5,
@@ -82,13 +82,11 @@ export function ThemeSwitch() {
         >
           <SegmentGroupItemText>
             <SVGIcon
-              w={{
-                base: 8,
-                lg: 5,
-              }}
-              h={{
-                base: 8,
-                lg: 5,
+              w={7}
+              h={7}
+              lg={{
+                w: 5,
+                h: 5,
               }}
               transition="color token(durations.slow)"
               _groupHover={{
