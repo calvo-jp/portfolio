@@ -21,10 +21,28 @@ export function ThemeSwitch() {
 
   if (!mounted) {
     return (
-      <Flex gap={0.5}>
+      <Flex
+        gap={{
+          base: 1,
+          lg: 0.5,
+        }}
+      >
         {options.map(({ label, icon: SVGIcon }) => (
-          <Box key={label} p={1.5} cursor="pointer">
-            <SVGIcon />
+          <Box
+            key={label}
+            p={{
+              base: 2,
+              lg: 1.5,
+            }}
+          >
+            <SVGIcon
+              w={8}
+              h={8}
+              lg={{
+                w: 5,
+                h: 5,
+              }}
+            />
           </Box>
         ))}
       </Flex>
@@ -34,7 +52,10 @@ export function ThemeSwitch() {
   return (
     <SegmentGroup
       display="flex"
-      gap={0.5}
+      gap={{
+        base: 1,
+        lg: 0.5,
+      }}
       value={parseTheme(theme)}
       onValueChange={(details) => setTheme(parseTheme(details.value))}
     >
@@ -52,12 +73,23 @@ export function ThemeSwitch() {
         <SegmentGroupItem
           key={value}
           value={value}
-          p={1.5}
+          p={{
+            base: 2,
+            lg: 1.5,
+          }}
           cursor="pointer"
           className="group"
         >
           <SegmentGroupItemText>
             <SVGIcon
+              w={{
+                base: 8,
+                lg: 5,
+              }}
+              h={{
+                base: 8,
+                lg: 5,
+              }}
               transition="color token(durations.slow)"
               _groupHover={{
                 color: 'fg.stronger',
