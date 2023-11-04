@@ -10,7 +10,7 @@ export function Providers(props: PropsWithChildren) {
       attribute="class"
       storageKey="theme"
       defaultTheme={Theme.System}
-      themes={[Theme.Dark, Theme.Light, Theme.System]}
+      themes={Object.values(Theme)}
       value={{
         dark: Theme.Dark,
         light: Theme.Light,
