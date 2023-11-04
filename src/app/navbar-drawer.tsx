@@ -9,10 +9,11 @@ import {
 } from '@/components/dialog';
 import { IconMenu, IconX } from '@/components/icons';
 import { Link } from '@/components/link';
-import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Box, Center, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 import { NAVBAR_NAV_ITEMS } from './navbar-nav';
+import { ThemeSwitch } from './theme-switch';
 
 export async function NavbarDrawer() {
   const author = await getAuthor();
@@ -114,6 +115,10 @@ export async function NavbarDrawer() {
                   Resume
                 </Link>
               </Button>
+
+              <Center mt={12}>
+                <ThemeSwitch />
+              </Center>
             </styled.nav>
           </DialogContent>
         </DialogPositioner>
