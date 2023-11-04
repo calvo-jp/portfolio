@@ -50,3 +50,9 @@ export interface IAuthor {
   workHistory: IWorkHistory[];
   projects: IProject[];
 }
+
+export enum Theme {
+  Dark = 'dark',
+  Light = 'light',
+  System = 'system',
+}

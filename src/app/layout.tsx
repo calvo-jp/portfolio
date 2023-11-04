@@ -11,6 +11,7 @@ import { PropsWithChildren } from 'react';
 import { EmailAd } from './email-ad';
 import { Footer } from './footer';
 import { Navbar } from './navbar';
+import { Providers } from './providers';
 import { Socials } from './socials';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -51,33 +52,36 @@ export default async function RootLayout({ children }: PropsWithChildren) {
       mdOnly={{
         fontSize: 'xl',
       }}
+      suppressHydrationWarning
     >
       <styled.body bg="bg" color="fg" minHeight="dvh" fontFamily="sans">
-        <Link href="#content" prefetch={false} className={visuallyHidden()}>
-          Skip to Content
-        </Link>
+        <Providers>
+          <Link href="#content" prefetch={false} className={visuallyHidden()}>
+            Skip to Content
+          </Link>
 
-        <Navbar />
+          <Navbar />
 
-        <styled.main
-          id="content"
-          px={{
-            base: 4,
-            md: 6,
-            lg: 4,
-          }}
-          lg={{
-            w: '75vw',
-            mx: 'auto',
-            maxW: 'breakpoint-lg',
-          }}
-        >
-          {children}
-          <Socials />
-          <EmailAd />
-        </styled.main>
+          <styled.main
+            id="content"
+            px={{
+              base: 4,
+              md: 6,
+              lg: 4,
+            }}
+            lg={{
+              w: '75vw',
+              mx: 'auto',
+              maxW: 'breakpoint-lg',
+            }}
+          >
+            {children}
+            <Socials />
+            <EmailAd />
+          </styled.main>
 
-        <Footer />
+          <Footer />
+        </Providers>
       </styled.body>
     </styled.html>
   );

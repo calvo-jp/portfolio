@@ -16,6 +16,7 @@
     "html-react-parser": "5.0.6",
     "lucide-react": "0.292.0",
     "next": "14.0.1",
+    "next-themes": "0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rehype-external-links": "3.0.0",

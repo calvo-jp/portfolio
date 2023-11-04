@@ -7,9 +7,12 @@ import {
   FolderIcon,
   GitBranchIcon,
   GithubIcon,
+  Laptop2Icon,
   LinkedinIcon,
   LucideIcon,
   MenuIcon,
+  MoonIcon,
+  SunIcon,
   TerminalIcon,
   TwitterIcon,
   XIcon,
@@ -47,3 +50,6 @@ export const IconGitBranch = styledIcon(GitBranchIcon);
 export const IconFolder = styledIcon(FolderIcon);
 export const IconMenu = styledIcon(MenuIcon);
 export const IconX = styledIcon(XIcon);
+export const IconSun = styledIcon(SunIcon);
+export const IconMoon = styledIcon(MoonIcon);
+export const IconLaptop2 = styledIcon(Laptop2Icon);

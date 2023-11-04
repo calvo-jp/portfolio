@@ -68,64 +68,84 @@ export default defineConfig({
           fg: {
             DEFAULT: {
               value: {
-                base: '{colors.neutral.600}',
+                _dark: '{colors.neutral.400}',
+                _light: '{colors.neutral.600}',
                 _osDark: '{colors.neutral.400}',
+                _osLight: '{colors.neutral.600}',
               },
             },
             strong: {
               value: {
-                base: '{colors.neutral.700}',
+                _dark: '{colors.neutral.300}',
+                _light: '{colors.neutral.700}',
                 _osDark: '{colors.neutral.300}',
+                _osLight: '{colors.neutral.700}',
               },
             },
             stronger: {
               value: {
-                base: '{colors.neutral.800}',
+                _dark: '{colors.neutral.200}',
+                _light: '{colors.neutral.800}',
                 _osDark: '{colors.neutral.200}',
+                _osLight: '{colors.neutral.800}',
               },
             },
             strongest: {
               value: {
-                base: '{colors.neutral.900}',
+                _dark: '{colors.neutral.100}',
+                _light: '{colors.neutral.900}',
                 _osDark: '{colors.neutral.100}',
+                _osLight: '{colors.neutral.900}',
               },
             },
             accent: {
               value: {
-                base: '{colors.violet.700}',
+                _dark: '{colors.violet.500}',
+                _light: '{colors.violet.700}',
                 _osDark: '{colors.violet.500}',
+                _osLight: '{colors.violet.700}',
               },
             },
             high: {
               value: {
-                base: '{colors.black}',
+                _dark: '{colors.white}',
+                _light: '{colors.black}',
                 _osDark: '{colors.white}',
+                _osLight: '{colors.black}',
               },
             },
           },
           bg: {
             DEFAULT: {
               value: {
-                base: '{colors.neutral.100}',
+                _dark: '{colors.neutral.900}',
+                _light: '{colors.neutral.100}',
                 _osDark: '{colors.neutral.900}',
+                _osLight: '{colors.neutral.100}',
               },
             },
             alpha: {
               value: {
-                base: '#f5f5f5db' /* FIXME: use "<color>/<opacity>" once supported */,
+                _dark: '#171717db' /* FIXME: use "<color>/<opacity>" once supported */,
+                _light: '#f5f5f5db' /* FIXME: use "<color>/<opacity>" once supported */,
                 _osDark: '#171717db' /* FIXME: use "<color>/<opacity>" once supported */,
+                _osLight: '#f5f5f5db' /* FIXME: use "<color>/<opacity>" once supported */,
               },
             },
             light: {
               value: {
-                base: '{colors.neutral.200}',
+                _dark: '{colors.neutral.800}',
+                _light: '{colors.neutral.200}',
                 _osDark: '{colors.neutral.800}',
+                _osLight: '{colors.neutral.200}',
               },
             },
             lighter: {
               value: {
-                base: '{colors.neutral.300}',
+                _dark: '{colors.neutral.700}',
+                _light: '{colors.neutral.300}',
                 _osDark: '{colors.neutral.700}',
+                _osLight: '{colors.neutral.300}',
               },
             },
           },
