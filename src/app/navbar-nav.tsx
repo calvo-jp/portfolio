@@ -11,7 +11,6 @@ export async function NavbarNav() {
     <styled.nav
       display="flex"
       alignItems="center"
-      gap={8}
       lgDown={{
         display: 'none',
       }}
@@ -44,7 +43,7 @@ export async function NavbarNav() {
         ))}
       </styled.ul>
 
-      <Button size="sm" asChild>
+      <Button ml={8} mr={5} size="sm" asChild>
         <Link
           href={author.resume}
           target="_blank"
