@@ -7,7 +7,7 @@ import { PropsWithChildren } from 'react';
 export function Providers(props: PropsWithChildren) {
   return (
     <ThemeProvider
-      attribute="data-theme"
+      attribute="class"
       storageKey="theme"
       defaultTheme={Theme.System}
       themes={Object.values(Theme)}

@@ -3,10 +3,6 @@ import { defineConfig } from '@pandacss/dev';
 export default defineConfig({
   preflight: true,
   include: ['./src/**/*.{ts,tsx}'],
-  conditions: {
-    dark: '[data-theme=dark] &',
-    light: '[data-theme=light] &',
-  },
   theme: {
     extend: {
       tokens: {
