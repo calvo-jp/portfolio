@@ -8,7 +8,7 @@ import {
   SegmentGroupItemControl,
   SegmentGroupItemText,
 } from '@/components/segment-group';
-import { Circle, HStack, VisuallyHidden } from '@/styled-system/jsx';
+import { Box, Flex, VisuallyHidden } from '@/styled-system/jsx';
 import { Theme } from '@/types';
 import { parseEnum } from '@/utils/parse-enum';
 import { useTheme } from 'next-themes';
@@ -23,11 +23,13 @@ export function ThemeSwitch() {
 
   if (!mounted) {
     return (
-      <HStack py={1} gap={2}>
-        <Circle w={6} h={6} bg="bg.light" animation="pulse" />
-        <Circle w={6} h={6} bg="bg.light" animation="pulse" />
-        <Circle w={6} h={6} bg="bg.light" animation="pulse" />
-      </HStack>
+      <Flex gap={0.5}>
+        {items.map(({ label, icon: SVGIcon }) => (
+          <Box key={label} p={1.5} cursor="pointer">
+            <SVGIcon />
+          </Box>
+        ))}
+      </Flex>
     );
   }
 
@@ -50,11 +52,11 @@ export function ThemeSwitch() {
         rounded="full"
       />
 
-      {items.map((item) => (
-        <SegmentGroupItem key={item.value} value={item.value} p={1.5} cursor="pointer">
+      {items.map(({ label, value, icon: SVGIcon }) => (
+        <SegmentGroupItem key={value} value={value} p={1.5} cursor="pointer">
           <SegmentGroupItemText>
-            <item.icon />
-            <VisuallyHidden>{item.label}</VisuallyHidden>
+            <SVGIcon />
+            <VisuallyHidden>{label}</VisuallyHidden>
           </SegmentGroupItemText>
           <SegmentGroupItemControl />
         </SegmentGroupItem>
