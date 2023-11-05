@@ -8,14 +8,14 @@ import {cache} from 'react';
 import {z} from 'zod';
 import {markdownToHtml} from './markdown-to-html';
 
-export const getAuthor = cache(async function getAuthor(): Promise<IAuthor> {
+export const getAuthor = cache(async function getAuthor() {
 	const author = Object.assign({}, await getPrimaryInfo(), {
 		about: await getAbout(),
 		projects: await getProjects(),
 		workHistory: await getWorkHistory(),
 	});
 
-	return author;
+	return author satisfies IAuthor;
 });
 
 const MARKDOWN_DIR = join(process.cwd(), 'src/assets/markdown');
