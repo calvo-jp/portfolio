@@ -59,9 +59,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
           <Link href="#content" prefetch={false} className={visuallyHidden()}>
             Skip to Content
           </Link>
-
           <Navbar />
-
           <styled.main
             id="content"
             px={{
@@ -79,7 +77,6 @@ export default async function RootLayout({ children }: PropsWithChildren) {
             <Socials />
             <EmailAd />
           </styled.main>
-
           <Footer />
         </Providers>
       </styled.body>
