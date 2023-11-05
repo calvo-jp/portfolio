@@ -8,43 +8,38 @@ import {cache} from 'react';
 import {z} from 'zod';
 import {markdownToHtml} from './markdown-to-html';
 
-export const getAuthor = cache(async function getAuthor() {
-	const about = await getAbout();
-	const projects = await getProjects();
-	const workHistory = await getWorkHistory();
+export const getAuthor = cache(async function getAuthor(): Promise<IAuthor> {
+	const author = Object.assign({}, await getPrimaryInfo(), {
+		about: await getAbout(),
+		projects: await getProjects(),
+		workHistory: await getWorkHistory(),
+	});
 
-	return {
-		name: 'JP Calvo',
-		resume:
-			'https://docs.google.com/document/d/1F1Sy9XboZLo-fMCPfpGa35uqNyuvVeI6niXkhpYOp_c/edit?usp=share_link',
-		contact: {
-			email: 'calvojp92@gmail.com',
-		},
-		socials: {
-			github: 'https://github.com/calvo-jp',
-			twitter: 'https://twitter.com/calvojp92',
-			linkedin: 'https://www.linkedin.com/in/calvojp92',
-		},
-		skills: [
-			//
-			'HTML',
-			'CSS',
-			'JavaScript',
-			'TypeScript',
-			'React',
-			'Next.js',
-		],
-		company: {
-			name: 'ScaleForge',
-			website: 'https://scaleforge.tech',
-		},
-		about,
-		projects,
-		workHistory,
-	} satisfies IAuthor;
+	return author;
 });
 
 const MARKDOWN_DIR = join(process.cwd(), 'src/assets/markdown');
+
+async function getPrimaryInfo() {
+	const schema = z.object({
+		name: z.string(),
+		resume: z.string().url(),
+		contact: z.object({
+			email: z.string().email(),
+		}),
+		socials: z.record(z.string(), z.string().url()),
+		skills: z.array(z.string()),
+		company: z.object({
+			name: z.string(),
+			website: z.string().url(),
+		}),
+	});
+
+	const buffer = await readFile(join(MARKDOWN_DIR, 'primary-info.md'));
+	const result = await markdownToHtml(buffer.toString());
+
+	return schema.parse(result.meta.matter);
+}
 
 async function getAbout() {
 	const buffer = await readFile(join(MARKDOWN_DIR, 'about.md'));
