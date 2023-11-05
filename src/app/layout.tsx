@@ -1,18 +1,18 @@
 import '@/assets/styles/globals.css';
 
-import { Link } from '@/components/link';
-import { cx } from '@/styled-system/css';
-import { styled } from '@/styled-system/jsx';
-import { visuallyHidden } from '@/styled-system/patterns';
-import { getAuthor } from '@/utils/get-author';
-import { GeistMono, GeistSans } from 'geist/font';
-import { Metadata } from 'next';
-import { PropsWithChildren } from 'react';
-import { EmailAd } from './email-ad';
-import { Footer } from './footer';
-import { Navbar } from './navbar';
-import { Providers } from './providers';
-import { Socials } from './socials';
+import {Link} from '@/components/link';
+import {cx} from '@/styled-system/css';
+import {styled} from '@/styled-system/jsx';
+import {visuallyHidden} from '@/styled-system/patterns';
+import {getAuthor} from '@/utils/get-author';
+import {GeistMono, GeistSans} from 'geist/font';
+import {Metadata} from 'next';
+import {PropsWithChildren} from 'react';
+import {EmailAd} from './email-ad';
+import {Footer} from './footer';
+import {Navbar} from './navbar';
+import {Providers} from './providers';
+import {Socials} from './socials';
 
 export async function generateMetadata(): Promise<Metadata> {
 	const author = await getAuthor();
@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
 	};
 }
 
-export default async function RootLayout({ children }: PropsWithChildren) {
+export default async function RootLayout({children}: PropsWithChildren) {
 	return (
 		<styled.html
 			lang="en"

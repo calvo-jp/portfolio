@@ -1,7 +1,7 @@
 'use client';
 
-import { styled } from '@/styled-system/jsx';
-import { Dialog as parts } from '@ark-ui/react';
+import {styled} from '@/styled-system/jsx';
+import {Dialog as parts} from '@ark-ui/react';
 
 export const Dialog = styled(parts.Root);
 export const DialogTrigger = styled(parts.Trigger, {

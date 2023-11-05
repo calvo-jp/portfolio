@@ -1,7 +1,7 @@
 'use client';
 
-import { styled } from '@/styled-system/jsx';
-import { Carousel as parts } from '@ark-ui/react';
+import {styled} from '@/styled-system/jsx';
+import {Carousel as parts} from '@ark-ui/react';
 
 export const Carousel = styled(
 	parts.Root,

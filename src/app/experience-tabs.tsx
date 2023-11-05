@@ -1,6 +1,6 @@
-import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/components/tabs';
-import { getAuthor } from '@/utils/get-author';
-import { ExperienceItem } from './experience-item';
+import {TabContent, TabIndicator, TabList, TabTrigger, Tabs} from '@/components/tabs';
+import {getAuthor} from '@/utils/get-author';
+import {ExperienceItem} from './experience-item';
 
 export async function ExperienceTabs() {
 	const author = await getAuthor();
@@ -28,7 +28,7 @@ export async function ExperienceTabs() {
 					display: 'flex',
 				}}
 			>
-				{author.workHistory.map(({ company }) => (
+				{author.workHistory.map(({company}) => (
 					<TabTrigger
 						key={company.name}
 						value={company.name}

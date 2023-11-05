@@ -4,8 +4,8 @@ import remarkFrontmatter from 'remark-frontmatter';
 import remarkGfm from 'remark-gfm';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
-import { Plugin, unified } from 'unified';
-import { matter } from 'vfile-matter';
+import {Plugin, unified} from 'unified';
+import {matter} from 'vfile-matter';
 
 const frontmatterParserPlugin: Plugin = () => {
 	return function parseFrontmatter(_, file) {
@@ -21,7 +21,7 @@ const processor = unified()
 	.use(frontmatterParserPlugin)
 	.use(remarkGfm)
 	.use(remarkRehype)
-	.use(rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] })
+	.use(rehypeExternalLinks, {target: '_blank', rel: ['noopener', 'noreferrer']})
 	.use(rehypeStringify);
 
 export async function markdownToHtml(markdown: string) {

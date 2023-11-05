@@ -1,7 +1,7 @@
-import { Link } from '@/components/link';
-import { Box } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
-import { Portal } from '@ark-ui/react';
+import {Link} from '@/components/link';
+import {Box} from '@/styled-system/jsx';
+import {getAuthor} from '@/utils/get-author';
+import {Portal} from '@ark-ui/react';
 
 export async function EmailAd() {
 	const author = await getAuthor();

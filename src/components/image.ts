@@ -1,6 +1,6 @@
 'use client';
 
-import { styled } from '@/styled-system/jsx';
+import {styled} from '@/styled-system/jsx';
 import NextImage from 'next/image';
 
 export const Image = styled(

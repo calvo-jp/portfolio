@@ -1,7 +1,7 @@
 'use client';
 
-import { styled } from '@/styled-system/jsx';
-import { SegmentGroup as parts } from '@ark-ui/react';
+import {styled} from '@/styled-system/jsx';
+import {SegmentGroup as parts} from '@ark-ui/react';
 
 export const SegmentGroup = styled(parts.Root);
 export const SegmentGroupItem = styled(parts.Item);

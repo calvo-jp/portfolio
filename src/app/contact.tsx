@@ -1,7 +1,7 @@
-import { Button } from '@/components/button';
-import { Link } from '@/components/link';
-import { styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
+import {Button} from '@/components/button';
+import {Link} from '@/components/link';
+import {styled} from '@/styled-system/jsx';
+import {getAuthor} from '@/utils/get-author';
 
 export async function Contact() {
 	const author = await getAuthor();

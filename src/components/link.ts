@@ -1,4 +1,4 @@
-import { styled } from '@/styled-system/jsx';
+import {styled} from '@/styled-system/jsx';
 import NextLink from 'next/link';
 
 export const Link = styled(

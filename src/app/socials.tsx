@@ -1,5 +1,5 @@
-import { IconGithub, IconLinkedin, IconTwitter } from '@/components/icons';
-import { Link } from '@/components/link';
+import {IconGithub, IconLinkedin, IconTwitter} from '@/components/icons';
+import {Link} from '@/components/link';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -8,11 +8,11 @@ import {
 	TooltipPositioner,
 	TooltipTrigger,
 } from '@/components/tooltip';
-import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { TSocial } from '@/types';
-import { capitalize } from '@/utils/capitalize';
-import { getAuthor } from '@/utils/get-author';
-import { Portal } from '@ark-ui/react';
+import {Box, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {TSocial} from '@/types';
+import {capitalize} from '@/utils/capitalize';
+import {getAuthor} from '@/utils/get-author';
+import {Portal} from '@ark-ui/react';
 
 export async function Socials() {
 	const author = await getAuthor();

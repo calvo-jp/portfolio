@@ -6,9 +6,9 @@ import {
 	CarouselItemGroup,
 	CarouselViewport,
 } from '@/components/carousel';
-import { VisuallyHidden } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
-import { ExperienceItem } from './experience-item';
+import {VisuallyHidden} from '@/styled-system/jsx';
+import {getAuthor} from '@/utils/get-author';
+import {ExperienceItem} from './experience-item';
 
 export async function ExperienceSlides() {
 	const author = await getAuthor();

@@ -1,10 +1,10 @@
 import selfie from '@/assets/images/selfie.jpg';
-import { IconAsterisk } from '@/components/icons';
-import { Image } from '@/components/image';
-import { RawHtml } from '@/components/raw-html';
-import { Box, Flex, Grid, GridItem, styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
-import { SectionHeading } from './section-heading';
+import {IconAsterisk} from '@/components/icons';
+import {Image} from '@/components/image';
+import {RawHtml} from '@/components/raw-html';
+import {Box, Flex, Grid, GridItem, styled} from '@/styled-system/jsx';
+import {getAuthor} from '@/utils/get-author';
+import {SectionHeading} from './section-heading';
 
 export async function About() {
 	const author = await getAuthor();

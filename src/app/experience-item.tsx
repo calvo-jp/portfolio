@@ -1,14 +1,14 @@
-import { RawHtml } from '@/components/raw-html';
-import { Box, styled } from '@/styled-system/jsx';
-import { IWorkHistory } from '@/types';
-import { format, isSameYear } from 'date-fns';
+import {RawHtml} from '@/components/raw-html';
+import {Box, styled} from '@/styled-system/jsx';
+import {IWorkHistory} from '@/types';
+import {format, isSameYear} from 'date-fns';
 
 interface ExperienceItemProps {
 	data: IWorkHistory;
 }
 
 export function ExperienceItem(props: ExperienceItemProps) {
-	const { company, dateOfEmployment, position, responsibilities } = props.data;
+	const {company, dateOfEmployment, position, responsibilities} = props.data;
 
 	const [employedAtStart, employedAtUnitl] = formatEmploymentDate(
 		dateOfEmployment.start,

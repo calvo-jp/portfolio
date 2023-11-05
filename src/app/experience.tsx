@@ -1,7 +1,7 @@
-import { styled } from '@/styled-system/jsx';
-import { ExperienceSlides } from './experience-slides';
-import { ExperienceTabs } from './experience-tabs';
-import { SectionHeading } from './section-heading';
+import {styled} from '@/styled-system/jsx';
+import {ExperienceSlides} from './experience-slides';
+import {ExperienceTabs} from './experience-tabs';
+import {SectionHeading} from './section-heading';
 
 export async function Experience() {
 	return (

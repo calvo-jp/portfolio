@@ -1,7 +1,7 @@
 'use client';
 
-import { styled } from '@/styled-system/jsx';
-import { Tooltip as parts } from '@ark-ui/react';
+import {styled} from '@/styled-system/jsx';
+import {Tooltip as parts} from '@ark-ui/react';
 
 export const Tooltip = styled(
 	parts.Root,

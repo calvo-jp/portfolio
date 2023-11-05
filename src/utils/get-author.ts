@@ -1,12 +1,12 @@
 import 'server-only';
 
-import { IAuthor, IProject, IWorkHistory } from '@/types';
-import { compareDesc } from 'date-fns';
-import { readFile, readdir } from 'fs/promises';
-import { join } from 'path';
-import { cache } from 'react';
-import { z } from 'zod';
-import { markdownToHtml } from './markdown-to-html';
+import {IAuthor, IProject, IWorkHistory} from '@/types';
+import {compareDesc} from 'date-fns';
+import {readFile, readdir} from 'fs/promises';
+import {join} from 'path';
+import {cache} from 'react';
+import {z} from 'zod';
+import {markdownToHtml} from './markdown-to-html';
 
 export const getAuthor = cache(async function getAuthor() {
 	const about = await getAbout();
@@ -74,7 +74,7 @@ async function getWorkHistory() {
 		const buffer = await readFile(join(subdir, file));
 		const result = await markdownToHtml(buffer.toString());
 
-		items.push({ ...schema.parse(result.meta.matter), responsibilities: result.html });
+		items.push({...schema.parse(result.meta.matter), responsibilities: result.html});
 	}
 
 	items.sort((i, j) => compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start));
@@ -101,7 +101,7 @@ async function getProjects() {
 		const buffer = await readFile(join(subdir, file));
 		const result = await markdownToHtml(buffer.toString());
 
-		items.push({ ...schema.parse(result.meta.matter), description: result.html });
+		items.push({...schema.parse(result.meta.matter), description: result.html});
 	}
 
 	items.sort((i, j) => compareDesc(i.createdAt, j.createdAt));

@@ -1,9 +1,9 @@
-import { cva, cx } from '@/styled-system/css';
-import { styled } from '@/styled-system/jsx';
-import { Assign, HTMLStyledProps } from '@/styled-system/types';
-import { HTMLArkProps, ark } from '@ark-ui/react';
+import {cva, cx} from '@/styled-system/css';
+import {styled} from '@/styled-system/jsx';
+import {Assign, HTMLStyledProps} from '@/styled-system/types';
+import {HTMLArkProps, ark} from '@ark-ui/react';
 import parse from 'html-react-parser';
-import { forwardRef } from 'react';
+import {forwardRef} from 'react';
 
 interface StyledArkDivProps extends Assign<HTMLArkProps<'div'>, HTMLStyledProps<'div'>> {}
 const StyledArkDiv = styled(ark.div);
@@ -16,7 +16,7 @@ interface RawHtmlProps extends Assign<StyledArkDivProps, RawHtmlBaseProps> {}
 
 export const RawHtml = forwardRef<HTMLDivElement, RawHtmlProps>(
 	function RawHtml(props, ref) {
-		const { children, className, ...others } = props;
+		const {children, className, ...others} = props;
 
 		return (
 			<StyledArkDiv ref={ref} className={cx(rawHtmlRecipe(), className)} {...others}>

@@ -1,9 +1,9 @@
-import { IconGithub, IconLinkedin, IconTwitter } from '@/components/icons';
-import { Link } from '@/components/link';
-import { Center, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { TSocial } from '@/types';
-import { getAuthor } from '@/utils/get-author';
-import { mapObject } from '@/utils/map-object';
+import {IconGithub, IconLinkedin, IconTwitter} from '@/components/icons';
+import {Link} from '@/components/link';
+import {Center, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {TSocial} from '@/types';
+import {getAuthor} from '@/utils/get-author';
+import {mapObject} from '@/utils/map-object';
 
 export async function Footer() {
 	const author = await getAuthor();

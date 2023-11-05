@@ -1,7 +1,7 @@
-import { IconExternalLink, IconGitBranch } from '@/components/icons';
-import { Image } from '@/components/image';
-import { Link } from '@/components/link';
-import { RawHtml } from '@/components/raw-html';
+import {IconExternalLink, IconGitBranch} from '@/components/icons';
+import {Image} from '@/components/image';
+import {Link} from '@/components/link';
+import {RawHtml} from '@/components/raw-html';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -10,11 +10,11 @@ import {
 	TooltipPositioner,
 	TooltipTrigger,
 } from '@/components/tooltip';
-import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { IProject } from '@/types';
-import { getAuthor } from '@/utils/get-author';
-import { Portal } from '@ark-ui/react';
-import { SectionHeading } from './section-heading';
+import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {IProject} from '@/types';
+import {getAuthor} from '@/utils/get-author';
+import {Portal} from '@ark-ui/react';
+import {SectionHeading} from './section-heading';
 
 export async function Work() {
 	const author = await getAuthor();
@@ -55,7 +55,7 @@ interface ItemProps {
 }
 
 function Item(props: ItemProps) {
-	const { image, title, description, website, repository, tags } = props.data;
+	const {image, title, description, website, repository, tags} = props.data;
 
 	return (
 		<Flex

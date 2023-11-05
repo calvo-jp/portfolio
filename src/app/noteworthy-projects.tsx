@@ -1,6 +1,6 @@
-import { IconExternalLink, IconFolder, IconGitBranch } from '@/components/icons';
-import { Link } from '@/components/link';
-import { RawHtml } from '@/components/raw-html';
+import {IconExternalLink, IconFolder, IconGitBranch} from '@/components/icons';
+import {Link} from '@/components/link';
+import {RawHtml} from '@/components/raw-html';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -19,9 +19,9 @@ import {
 	VisuallyHidden,
 	styled,
 } from '@/styled-system/jsx';
-import { IProject } from '@/types';
-import { getAuthor } from '@/utils/get-author';
-import { Portal } from '@ark-ui/react';
+import {IProject} from '@/types';
+import {getAuthor} from '@/utils/get-author';
+import {Portal} from '@ark-ui/react';
 
 export async function NoteworthyProjects() {
 	const author = await getAuthor();
@@ -92,7 +92,7 @@ interface ItemProps {
 }
 
 function Item(props: ItemProps) {
-	const { title, description, repository, website, tags } = props.data;
+	const {title, description, repository, website, tags} = props.data;
 
 	return (
 		<Flex bg="bg.light" p={8} rounded="sm" flexDir="column" minH="token(spacing.80)">

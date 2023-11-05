@@ -1,6 +1,6 @@
 'use client';
 
-import { IconLaptop2, IconMoon, IconSun } from '@/components/icons';
+import {IconLaptop2, IconMoon, IconSun} from '@/components/icons';
 import {
 	SegmentGroup,
 	SegmentGroupIndicator,
@@ -8,16 +8,16 @@ import {
 	SegmentGroupItemControl,
 	SegmentGroupItemText,
 } from '@/components/segment-group';
-import { Box, Flex, VisuallyHidden } from '@/styled-system/jsx';
-import { Theme } from '@/types';
-import { parseEnum } from '@/utils/parse-enum';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import {Box, Flex, VisuallyHidden} from '@/styled-system/jsx';
+import {Theme} from '@/types';
+import {parseEnum} from '@/utils/parse-enum';
+import {useTheme} from 'next-themes';
+import {useEffect, useState} from 'react';
 
 export function ThemeSwitch() {
 	const mounted = useMounted();
 
-	const { theme, setTheme } = useTheme();
+	const {theme, setTheme} = useTheme();
 
 	if (!mounted) {
 		return (
@@ -27,7 +27,7 @@ export function ThemeSwitch() {
 					lg: 0.5,
 				}}
 			>
-				{options.map(({ label, icon: SVGIcon }) => (
+				{options.map(({label, icon: SVGIcon}) => (
 					<Box
 						key={label}
 						p={{
@@ -67,7 +67,7 @@ export function ThemeSwitch() {
 				rounded="full"
 			/>
 
-			{options.map(({ label, value, icon: SVGIcon }) => (
+			{options.map(({label, value, icon: SVGIcon}) => (
 				<SegmentGroupItem
 					key={value}
 					value={value}

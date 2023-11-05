@@ -1,6 +1,6 @@
-import { IconExternalLink, IconGitBranch } from '@/components/icons';
-import { Link } from '@/components/link';
-import { RawHtml } from '@/components/raw-html';
+import {IconExternalLink, IconGitBranch} from '@/components/icons';
+import {Link} from '@/components/link';
+import {RawHtml} from '@/components/raw-html';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -9,11 +9,11 @@ import {
 	TooltipPositioner,
 	TooltipTrigger,
 } from '@/components/tooltip';
-import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { IProject } from '@/types';
-import { getAuthor } from '@/utils/get-author';
-import { Portal } from '@ark-ui/react';
-import { Metadata } from 'next';
+import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {IProject} from '@/types';
+import {getAuthor} from '@/utils/get-author';
+import {Portal} from '@ark-ui/react';
+import {Metadata} from 'next';
 
 export const metadata: Metadata = {
 	title: 'Archive',
@@ -76,7 +76,7 @@ export default async function Archive() {
 }
 
 function Item(props: IProject) {
-	const { title, description, tags, website, repository } = props;
+	const {title, description, tags, website, repository} = props;
 
 	return (
 		<Box

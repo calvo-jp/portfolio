@@ -1,6 +1,6 @@
-import { Button } from '@/components/button';
-import { Link } from '@/components/link';
-import { Box, styled } from '@/styled-system/jsx';
+import {Button} from '@/components/button';
+import {Link} from '@/components/link';
+import {Box, styled} from '@/styled-system/jsx';
 
 export default function NotFound() {
 	return (
