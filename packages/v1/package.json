@@ -1,5 +1,5 @@
 {
-	"name": "portfolio-v1",
+	"name": "@calvojp/version-1",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
