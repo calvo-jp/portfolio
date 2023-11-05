@@ -21,24 +21,24 @@ export const getAuthor = cache(async function getAuthor(): Promise<IAuthor> {
 const MARKDOWN_DIR = join(process.cwd(), 'src/assets/markdown');
 
 async function getPrimaryInfo() {
-	const schema = z.object({
-		name: z.string(),
-		resume: z.string().url(),
-		contact: z.object({
-			email: z.string().email(),
-		}),
-		socials: z.record(z.string(), z.string().url()),
-		skills: z.array(z.string()),
-		company: z.object({
-			name: z.string(),
-			website: z.string().url(),
-		}),
-	});
-
 	const buffer = await readFile(join(MARKDOWN_DIR, 'primary-info.md'));
 	const result = await markdownToHtml(buffer.toString());
 
-	return schema.parse(result.meta.matter);
+	return z
+		.object({
+			name: z.string(),
+			resume: z.string().url(),
+			contact: z.object({
+				email: z.string().email(),
+			}),
+			socials: z.record(z.string(), z.string().url()),
+			skills: z.array(z.string()),
+			company: z.object({
+				name: z.string(),
+				website: z.string().url(),
+			}),
+		})
+		.parse(result.meta.matter);
 }
 
 async function getAbout() {
