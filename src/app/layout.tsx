@@ -15,71 +15,71 @@ import { Providers } from './providers';
 import { Socials } from './socials';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const author = await getAuthor();
-  const title = author.name;
-  const description = `${author.name} is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.`;
+	const author = await getAuthor();
+	const title = author.name;
+	const description = `${author.name} is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.`;
 
-  return {
-    title: {
-      default: title,
-      template: `${title} - %s`,
-    },
-    description,
-    metadataBase: new URL('https://calvo-jp.vercel.app'),
-    openGraph: {
-      type: 'website',
-      title,
-      description,
-      images: ['/opengraph-banner.jpeg'],
-    },
-  };
+	return {
+		title: {
+			default: title,
+			template: `${title} - %s`,
+		},
+		description,
+		metadataBase: new URL('https://calvo-jp.vercel.app'),
+		openGraph: {
+			type: 'website',
+			title,
+			description,
+			images: ['/opengraph-banner.jpeg'],
+		},
+	};
 }
 
 export default async function RootLayout({ children }: PropsWithChildren) {
-  return (
-    <styled.html
-      lang="en"
-      className={cx(GeistMono.variable, GeistSans.variable)}
-      scrollBehavior="smooth"
-      lgDown={{
-        '&::-webkit-scrollbar': {
-          display: 'none',
-        },
-      }}
-      smOnly={{
-        fontSize: 'lg',
-      }}
-      mdOnly={{
-        fontSize: 'xl',
-      }}
-      suppressHydrationWarning
-    >
-      <styled.body bg="bg" color="fg" minHeight="dvh" fontFamily="sans">
-        <Providers>
-          <Link href="#content" prefetch={false} className={visuallyHidden()}>
-            Skip to Content
-          </Link>
-          <Navbar />
-          <styled.main
-            id="content"
-            px={{
-              base: 4,
-              md: 6,
-              lg: 4,
-            }}
-            lg={{
-              w: '75vw',
-              mx: 'auto',
-              maxW: 'breakpoint-lg',
-            }}
-          >
-            {children}
-            <Socials />
-            <EmailAd />
-          </styled.main>
-          <Footer />
-        </Providers>
-      </styled.body>
-    </styled.html>
-  );
+	return (
+		<styled.html
+			lang="en"
+			className={cx(GeistMono.variable, GeistSans.variable)}
+			scrollBehavior="smooth"
+			lgDown={{
+				'&::-webkit-scrollbar': {
+					display: 'none',
+				},
+			}}
+			smOnly={{
+				fontSize: 'lg',
+			}}
+			mdOnly={{
+				fontSize: 'xl',
+			}}
+			suppressHydrationWarning
+		>
+			<styled.body bg="bg" color="fg" minHeight="dvh" fontFamily="sans">
+				<Providers>
+					<Link href="#content" prefetch={false} className={visuallyHidden()}>
+						Skip to Content
+					</Link>
+					<Navbar />
+					<styled.main
+						id="content"
+						px={{
+							base: 4,
+							md: 6,
+							lg: 4,
+						}}
+						lg={{
+							w: '75vw',
+							mx: 'auto',
+							maxW: 'breakpoint-lg',
+						}}
+					>
+						{children}
+						<Socials />
+						<EmailAd />
+					</styled.main>
+					<Footer />
+				</Providers>
+			</styled.body>
+		</styled.html>
+	);
 }
