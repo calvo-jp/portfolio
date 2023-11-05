@@ -1,7 +1,4 @@
 import {defineConfig} from '@pandacss/dev';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 export default defineConfig({
 	preflight: true,
@@ -154,7 +151,7 @@ export default defineConfig({
 			},
 		},
 	},
-	hash: process.env.NODE_ENV === 'production',
+	hash: true,
 	clean: true,
 	outdir: 'styled-system',
 	jsxFramework: 'react',
