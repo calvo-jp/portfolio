@@ -4,6 +4,7 @@ import {
 	boolean,
 	email,
 	enum_,
+	fallback,
 	intersect,
 	object,
 	optional,
@@ -69,7 +70,7 @@ export enum Theme {
 	System = 'system',
 }
 
-export const ThemeSchema = optional(enum_(Theme), Theme.System);
+export const ThemeSchema = fallback(enum_(Theme), Theme.System);
 
 export type TCompany = Output<typeof CompanySchema>;
 export type TContact = Output<typeof ContactSchema>;
