@@ -1,9 +1,7 @@
 import '@/assets/styles/globals.css';
 
-import {Link} from '@/components/link';
 import {cx} from '@/styled-system/css';
 import {styled} from '@/styled-system/jsx';
-import {visuallyHidden} from '@/styled-system/patterns';
 import {getAuthor} from '@/utils/get-author';
 import {GeistMono, GeistSans} from 'geist/font';
 import {Metadata} from 'next';
@@ -57,9 +55,6 @@ export default async function RootLayout({children}: PropsWithChildren) {
 		>
 			<styled.body bg="bg" color="fg" minHeight="dvh" fontFamily="sans">
 				<Providers>
-					<Link href="#content" prefetch={false} className={visuallyHidden()}>
-						Skip to Content
-					</Link>
 					<Navbar />
 					<styled.main
 						id="content"
