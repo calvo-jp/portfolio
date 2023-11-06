@@ -41,6 +41,7 @@ export default async function RootLayout({children}: PropsWithChildren) {
 			lang="en"
 			className={cx(GeistMono.variable, GeistSans.variable)}
 			scrollBehavior="smooth"
+			scrollbarGutter="stable"
 			lgDown={{
 				'&::-webkit-scrollbar': {
 					display: 'none',
