@@ -11,8 +11,8 @@ import {
 	TooltipTrigger,
 } from '@/components/tooltip';
 import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {IProject} from '@/types';
 import {getAuthor} from '@/utils/get-author';
+import {TProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
 import {SectionHeading} from './section-heading';
 
@@ -51,7 +51,7 @@ export async function Work() {
 }
 
 interface ItemProps {
-	data: IProject;
+	data: TProject;
 }
 
 function Item(props: ItemProps) {
