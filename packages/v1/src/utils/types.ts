@@ -70,7 +70,7 @@ export enum Theme {
 	System = 'system',
 }
 
-export const ThemeSchema = fallback(enum_(Theme), Theme.System);
+export const ThemeSchema = fallback(enum_(Theme), Theme.Dark);
 
 export type TCompany = Output<typeof CompanySchema>;
 export type TContact = Output<typeof ContactSchema>;

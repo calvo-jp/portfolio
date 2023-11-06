@@ -68,37 +68,37 @@ export default defineConfig({
 					fg: {
 						DEFAULT: {
 							value: {
-								_dark: '{colors.neutral.400}',
+								base: '{colors.neutral.400}',
 								_light: '{colors.neutral.600}',
 							},
 						},
 						strong: {
 							value: {
-								_dark: '{colors.neutral.300}',
+								base: '{colors.neutral.300}',
 								_light: '{colors.neutral.700}',
 							},
 						},
 						stronger: {
 							value: {
-								_dark: '{colors.neutral.200}',
+								base: '{colors.neutral.200}',
 								_light: '{colors.neutral.800}',
 							},
 						},
 						strongest: {
 							value: {
-								_dark: '{colors.neutral.100}',
+								base: '{colors.neutral.100}',
 								_light: '{colors.neutral.900}',
 							},
 						},
 						accent: {
 							value: {
-								_dark: '{colors.violet.500}',
+								base: '{colors.violet.500}',
 								_light: '{colors.violet.700}',
 							},
 						},
 						high: {
 							value: {
-								_dark: '{colors.white}',
+								base: '{colors.white}',
 								_light: '{colors.black}',
 							},
 						},
@@ -106,25 +106,25 @@ export default defineConfig({
 					bg: {
 						DEFAULT: {
 							value: {
-								_dark: '{colors.neutral.900}',
+								base: '{colors.neutral.900}',
 								_light: '{colors.neutral.100}',
 							},
 						},
 						alpha: {
 							value: {
-								_dark: '#171717db' /* FIXME: use "<color>/<opacity>" once supported */,
+								base: '#171717db' /* FIXME: use "<color>/<opacity>" once supported */,
 								_light: '#f5f5f5db' /* FIXME: use "<color>/<opacity>" once supported */,
 							},
 						},
 						light: {
 							value: {
-								_dark: '{colors.neutral.800}',
+								base: '{colors.neutral.800}',
 								_light: '{colors.neutral.200}',
 							},
 						},
 						lighter: {
 							value: {
-								_dark: '{colors.neutral.700}',
+								base: '{colors.neutral.700}',
 								_light: '{colors.neutral.300}',
 							},
 						},
