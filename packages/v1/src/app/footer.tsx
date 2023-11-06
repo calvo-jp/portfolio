@@ -1,7 +1,6 @@
 import {Link} from '@/components/link';
 import {Center, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
-import {mapObject} from '@/utils/map-object';
 import {getSocialIcon} from './socials';
 
 export async function Footer() {
@@ -17,7 +16,7 @@ export async function Footer() {
 			>
 				<styled.nav>
 					<styled.ul display="flex" alignItems="center" gap={5}>
-						{mapObject(author.socials, (url, name) => (
+						{Object.entries(author.socials).map(([name, url]) => (
 							<styled.li key={name}>
 								<Link
 									href={url}
