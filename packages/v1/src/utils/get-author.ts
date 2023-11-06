@@ -4,6 +4,7 @@ import {compareDesc} from 'date-fns';
 import {readFile, readdir} from 'fs/promises';
 import {join} from 'path';
 import {cache} from 'react';
+import {parse} from 'valibot';
 import {markdownToHtml} from './markdown-to-html';
 import {
 	PrimaryInfoSchema,
@@ -34,7 +35,7 @@ async function getPrimaryInfo() {
 	const buffer = await readFile(join(MARKDOWN_DIR, 'primary-info.md'));
 	const result = await markdownToHtml(buffer.toString());
 
-	return PrimaryInfoSchema.parse(result.meta.matter);
+	return parse(PrimaryInfoSchema, result.meta.matter);
 }
 
 async function getAbout() {
@@ -53,7 +54,7 @@ async function getWorkHistory() {
 		const buffer = await readFile(join(subdir, file));
 		const result = await markdownToHtml(buffer.toString());
 
-		const history = WorkHistorySchema.parse({
+		const history = parse(WorkHistorySchema, {
 			...result.meta.matter,
 			responsibilities: result.html,
 		});
@@ -75,7 +76,7 @@ async function getProjects() {
 		const buffer = await readFile(join(subdir, file));
 		const result = await markdownToHtml(buffer.toString());
 
-		const project = ProjectSchema.parse({
+		const project = parse(ProjectSchema, {
 			...result.meta.matter,
 			description: result.html,
 		});

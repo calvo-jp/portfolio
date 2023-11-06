@@ -9,9 +9,10 @@ import {
 	SegmentGroupItemText,
 } from '@/components/segment-group';
 import {Box, Flex, VisuallyHidden} from '@/styled-system/jsx';
-import {TTheme, ThemeSchema} from '@/utils/types';
+import {Theme, ThemeSchema} from '@/utils/types';
 import {useTheme} from 'next-themes';
 import {useEffect, useState} from 'react';
+import {parse} from 'valibot';
 
 export function ThemeSwitch() {
 	const mounted = useMounted();
@@ -55,9 +56,9 @@ export function ThemeSwitch() {
 				base: 1,
 				lg: 0.5,
 			}}
-			value={ThemeSchema.parse(theme)}
+			value={parse(ThemeSchema, theme)}
 			onValueChange={(details) => {
-				setTheme(ThemeSchema.parse(details.value));
+				setTheme(parse(ThemeSchema, details.value));
 			}}
 		>
 			<SegmentGroupIndicator
@@ -108,17 +109,17 @@ const options = [
 	{
 		icon: IconSun,
 		label: 'Light theme',
-		value: 'light' satisfies TTheme,
+		value: Theme.Light,
 	},
 	{
 		icon: IconMoon,
 		label: 'Dark theme',
-		value: 'dark' satisfies TTheme,
+		value: Theme.Dark,
 	},
 	{
 		icon: IconLaptop2,
 		label: 'System theme',
-		value: 'system' satisfies TTheme,
+		value: Theme.System,
 	},
 ];
 

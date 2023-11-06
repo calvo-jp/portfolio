@@ -5,8 +5,8 @@ import remarkGfm from 'remark-gfm';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import {Plugin, unified} from 'unified';
+import {any, optional, parse, record} from 'valibot';
 import {matter} from 'vfile-matter';
-import {z} from 'zod';
 
 const frontmatterParserPlugin: Plugin = () => {
 	return function parseFrontmatter(_, file) {
@@ -25,12 +25,12 @@ const processor = unified()
 	.use(rehypeExternalLinks, {target: '_blank', rel: ['noopener', 'noreferrer']})
 	.use(rehypeStringify);
 
-const MetadataSchema = z.record(z.string(), z.any()).optional().default({});
+const MetadataSchema = optional(record(any()), {});
 
 export async function markdownToHtml(markdown: string) {
 	const vfile = await processor.process(markdown);
 	const html = vfile.toString();
-	const meta = MetadataSchema.parse(vfile.data);
+	const meta = parse(MetadataSchema, vfile.data);
 
 	return {
 		html,

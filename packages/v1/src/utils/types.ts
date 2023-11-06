@@ -1,67 +1,80 @@
-import {z} from 'zod';
+import {
+	Output,
+	array,
+	boolean,
+	email,
+	enum_,
+	intersect,
+	object,
+	optional,
+	record,
+	string,
+	transform,
+	url,
+} from 'valibot';
 
-export const CompanySchema = z.object({
-	name: z.string(),
-	website: z.string().url(),
+export const CompanySchema = object({
+	name: string(),
+	website: string([url()]),
 });
 
-export const ContactSchema = z.object({
-	email: z.string().email(),
+export const ContactSchema = object({
+	email: string([email()]),
 });
 
-export const EmploymentDateSchema = z.object({
-	start: z.coerce.date(),
-	until: z.coerce.date().optional(),
+export const EmploymentDateSchema = object({
+	start: transform(string(), (value) => new Date(value)),
+	until: optional(transform(string(), (value) => new Date(value))),
 });
 
-export const ProjectSchema = z.object({
-	title: z.string(),
-	image: z.string().url().optional(),
-	description: z.string(),
-	repository: z.string().url(),
-	website: z.string().url().optional(),
-	tags: z.array(z.string()),
-	createdAt: z.coerce.date(),
-	featured: z.boolean().optional().default(false),
+export const ProjectSchema = object({
+	title: string(),
+	image: optional(string([url()])),
+	description: string(),
+	repository: string([url()]),
+	website: optional(string([url()])),
+	tags: array(string()),
+	createdAt: transform(string(), (value) => new Date(value)),
+	featured: optional(boolean()),
 });
 
-export const WorkHistorySchema = z.object({
+export const WorkHistorySchema = object({
 	company: CompanySchema,
-	position: z.string(),
+	position: string(),
 	dateOfEmployment: EmploymentDateSchema,
-	responsibilities: z.string(),
+	responsibilities: string(),
 });
 
-export const PrimaryInfoSchema = z.object({
-	name: z.string(),
-	skills: z.array(z.string()),
-	resume: z.string().url(),
-	socials: z.record(z.string().toLowerCase().trim(), z.string().url()),
+export const PrimaryInfoSchema = object({
+	name: string(),
+	skills: array(string()),
+	resume: string([url()]),
+	socials: record(string([url()])),
 	contact: ContactSchema,
 	company: CompanySchema,
 });
 
-export const AuthorSchema = PrimaryInfoSchema.extend({
-	about: z.string(),
-	projects: z.array(ProjectSchema),
-	workHistory: z.array(WorkHistorySchema),
-});
+export const AuthorSchema = intersect([
+	PrimaryInfoSchema,
+	object({
+		about: string(),
+		projects: array(ProjectSchema),
+		workHistory: array(WorkHistorySchema),
+	}),
+]);
 
-export const ThemeSchema = z
-	.enum([
-		//
-		'dark',
-		'light',
-		'system',
-	])
-	.optional()
-	.default('system');
+export enum Theme {
+	Dark = 'dark',
+	Light = 'light',
+	System = 'system',
+}
 
-export type TCompany = z.infer<typeof CompanySchema>;
-export type TContact = z.infer<typeof ContactSchema>;
-export type TProject = z.infer<typeof ProjectSchema>;
-export type TEmploymentDate = z.infer<typeof EmploymentDateSchema>;
-export type TWorkHistory = z.infer<typeof WorkHistorySchema>;
-export type TPrimaryInfo = z.infer<typeof PrimaryInfoSchema>;
-export type TAuthor = z.infer<typeof AuthorSchema>;
-export type TTheme = z.infer<typeof ThemeSchema>;
+export const ThemeSchema = optional(enum_(Theme), Theme.System);
+
+export type TCompany = Output<typeof CompanySchema>;
+export type TContact = Output<typeof ContactSchema>;
+export type TProject = Output<typeof ProjectSchema>;
+export type TEmploymentDate = Output<typeof EmploymentDateSchema>;
+export type TWorkHistory = Output<typeof WorkHistorySchema>;
+export type TPrimaryInfo = Output<typeof PrimaryInfoSchema>;
+export type TAuthor = Output<typeof AuthorSchema>;
