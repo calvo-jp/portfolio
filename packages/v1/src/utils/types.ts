@@ -48,7 +48,12 @@ export const AuthorSchema = PrimaryInfoSchema.extend({
 });
 
 export const ThemeSchema = z
-	.enum(['light', 'dark', 'system'])
+	.enum([
+		//
+		'dark',
+		'light',
+		'system',
+	])
 	.optional()
 	.default('system');
 
