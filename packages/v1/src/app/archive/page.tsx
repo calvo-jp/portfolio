@@ -10,8 +10,8 @@ import {
 	TooltipTrigger,
 } from '@/components/tooltip';
 import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {IProject} from '@/types';
 import {getAuthor} from '@/utils/get-author';
+import {TProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
 import {Metadata} from 'next';
 
@@ -75,7 +75,7 @@ export default async function Archive() {
 	);
 }
 
-function Item(props: IProject) {
+function Item(props: TProject) {
 	const {title, description, tags, website, repository} = props;
 
 	return (
@@ -167,7 +167,7 @@ async function getItems() {
 	const l = (await getAuthor()).projects;
 
 	const f = [...l].filter((p) => !p.featured);
-	const r: Record<string, IProject[]> = {};
+	const r: Record<string, TProject[]> = {};
 
 	f.forEach((i) => {
 		const k = i.createdAt.getFullYear().toString();

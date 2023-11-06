@@ -1,10 +1,10 @@
 import {RawHtml} from '@/components/raw-html';
 import {Box, styled} from '@/styled-system/jsx';
-import {IWorkHistory} from '@/types';
+import {TWorkHistory} from '@/utils/types';
 import {format, isSameYear} from 'date-fns';
 
 interface ExperienceItemProps {
-	data: IWorkHistory;
+	data: TWorkHistory;
 }
 
 export function ExperienceItem(props: ExperienceItemProps) {

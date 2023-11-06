@@ -1,9 +1,8 @@
-import {IconGithub, IconLinkedin, IconTwitter} from '@/components/icons';
 import {Link} from '@/components/link';
 import {Center, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {TSocial} from '@/types';
 import {getAuthor} from '@/utils/get-author';
 import {mapObject} from '@/utils/map-object';
+import {getSocialIcon} from './socials';
 
 export async function Footer() {
 	const author = await getAuthor();
@@ -41,24 +40,4 @@ export async function Footer() {
 			</Center>
 		</styled.footer>
 	);
-}
-
-function getSocialIcon(name: TSocial) {
-	switch (name) {
-		case 'github':
-			return <IconGithub />;
-		case 'twitter':
-			return <IconTwitter />;
-		case 'linkedin':
-			return <IconLinkedin />;
-		default: {
-			const error = new Error();
-
-			error.name = 'SocialIconNotSet';
-			error.message = `No icon set for '${name}'`;
-			Error.captureStackTrace?.(error);
-
-			throw error;
-		}
-	}
 }

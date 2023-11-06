@@ -9,7 +9,6 @@ import {
 	TooltipTrigger,
 } from '@/components/tooltip';
 import {Box, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {TSocial} from '@/types';
 import {capitalize} from '@/utils/capitalize';
 import {getAuthor} from '@/utils/get-author';
 import {Portal} from '@ark-ui/react';
@@ -51,7 +50,7 @@ export async function Socials() {
 											_hover: 'fg.accent',
 										}}
 									>
-										{getIcon(name)}
+										{getSocialIcon(name)}
 										<VisuallyHidden>{name}</VisuallyHidden>
 									</Link>
 								</TooltipTrigger>
@@ -79,8 +78,8 @@ export async function Socials() {
 	);
 }
 
-function getIcon(social: TSocial) {
-	switch (social) {
+export function getSocialIcon(name: string) {
+	switch (name) {
 		case 'github':
 			return <IconGithub />;
 		case 'twitter':
@@ -90,8 +89,9 @@ function getIcon(social: TSocial) {
 		default: {
 			const error = new Error();
 
-			error.name = 'ImageNotSetError';
-			error.message = "No image set for '%n'. Using fallback icon".replace('%n', social);
+			error.name = 'SocialIconNotSet';
+			error.message = `No icon set for '${name}'`;
+			Error.captureStackTrace?.(error);
 
 			throw error;
 		}

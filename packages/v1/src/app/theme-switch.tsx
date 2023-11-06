@@ -9,8 +9,7 @@ import {
 	SegmentGroupItemText,
 } from '@/components/segment-group';
 import {Box, Flex, VisuallyHidden} from '@/styled-system/jsx';
-import {Theme} from '@/types';
-import {parseEnum} from '@/utils/parse-enum';
+import {TTheme, ThemeSchema} from '@/utils/types';
 import {useTheme} from 'next-themes';
 import {useEffect, useState} from 'react';
 
@@ -56,8 +55,10 @@ export function ThemeSwitch() {
 				base: 1,
 				lg: 0.5,
 			}}
-			value={parseTheme(theme)}
-			onValueChange={(details) => setTheme(parseTheme(details.value))}
+			value={ThemeSchema.parse(theme)}
+			onValueChange={(details) => {
+				setTheme(ThemeSchema.parse(details.value));
+			}}
 		>
 			<SegmentGroupIndicator
 				bg={{
@@ -107,23 +108,19 @@ const options = [
 	{
 		icon: IconSun,
 		label: 'Light theme',
-		value: Theme.Light,
+		value: 'light' satisfies TTheme,
 	},
 	{
 		icon: IconMoon,
 		label: 'Dark theme',
-		value: Theme.Dark,
+		value: 'dark' satisfies TTheme,
 	},
 	{
 		icon: IconLaptop2,
 		label: 'System theme',
-		value: Theme.System,
+		value: 'system' satisfies TTheme,
 	},
 ];
-
-function parseTheme(subject: unknown) {
-	return parseEnum(Object.values(Theme), subject) ?? Theme.System;
-}
 
 function useMounted() {
 	const [mounted, setMounted] = useState(false);

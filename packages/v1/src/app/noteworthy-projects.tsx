@@ -19,8 +19,8 @@ import {
 	VisuallyHidden,
 	styled,
 } from '@/styled-system/jsx';
-import {IProject} from '@/types';
 import {getAuthor} from '@/utils/get-author';
+import {TProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
 
 export async function NoteworthyProjects() {
@@ -88,7 +88,7 @@ export async function NoteworthyProjects() {
 }
 
 interface ItemProps {
-	data: IProject;
+	data: TProject;
 }
 
 function Item(props: ItemProps) {
