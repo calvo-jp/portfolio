@@ -3,6 +3,7 @@ import '@/assets/styles/globals.css';
 import {cx} from '@/styled-system/css';
 import {styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
+import {Analytics} from '@vercel/analytics/react';
 import {GeistMono, GeistSans} from 'geist/font';
 import {Metadata} from 'next';
 import {PropsWithChildren} from 'react';
@@ -75,6 +76,7 @@ export default async function RootLayout({children}: PropsWithChildren) {
 					</styled.main>
 					<Footer />
 				</Providers>
+				<Analytics />
 			</styled.body>
 		</styled.html>
 	);
