@@ -30,9 +30,10 @@ function styledIcon(icon: LucideIcon) {
 		{
 			defaultProps: {
 				strokeWidth: 1.66667,
+				absoluteStrokeWidth: true,
 			},
 			shouldForwardProp(key) {
-				return key === 'strokeWidth';
+				return ['size', 'strokeWidth', 'absoluteStrokeWidth'].includes(key);
 			},
 		},
 	);
