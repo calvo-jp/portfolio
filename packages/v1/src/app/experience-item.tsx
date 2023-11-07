@@ -39,7 +39,7 @@ export function ExperienceItem(props: ExperienceItemProps) {
 	);
 }
 
-function formatEmploymentDate(start: Date, until?: Date) {
+function formatEmploymentDate(start: Date, until?: Date): [string, string] {
 	/* ie. January 2021 - Present */
 	if (!until) return [format(start, 'MMMM yyyy'), 'Present'];
 
