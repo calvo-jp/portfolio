@@ -11,7 +11,7 @@ import {
 } from '@/components/tooltip';
 import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
-import {TProject} from '@/utils/types';
+import {TNonFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
 import {Metadata} from 'next';
 
@@ -75,7 +75,7 @@ export default async function Archive() {
 	);
 }
 
-function Item(props: TProject) {
+function Item(props: TNonFeaturedProject) {
 	const {title, description, tags, website, repository} = props;
 
 	return (
@@ -164,18 +164,19 @@ function Item(props: TProject) {
 
 /* group by year */
 async function getItems() {
-	const l = (await getAuthor()).projects;
+	const {projects} = await getAuthor();
 
-	const f = [...l].filter((p) => !p.featured);
-	const r: Record<string, TProject[]> = {};
+	const r: Record<string, TNonFeaturedProject[]> = {};
 
-	f.forEach((i) => {
-		const k = i.createdAt.getFullYear().toString();
+	projects.forEach((i) => {
+		if (!i.featured) {
+			const k = i.createdAt.getFullYear().toString();
 
-		if (r[k]) {
-			r[k].push(i);
-		} else {
-			r[k] = [i];
+			if (r[k]) {
+				r[k].push(i);
+			} else {
+				r[k] = [i];
+			}
 		}
 	});
 

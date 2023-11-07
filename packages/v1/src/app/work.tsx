@@ -12,13 +12,12 @@ import {
 } from '@/components/tooltip';
 import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
-import {TProject} from '@/utils/types';
+import {TFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
 import {SectionHeading} from './section-heading';
 
 export async function Work() {
-	const author = await getAuthor();
-	const projects = [...author.projects].filter((o) => o.featured);
+	const {projects} = await getAuthor();
 
 	return (
 		<styled.section
@@ -42,16 +41,14 @@ export async function Work() {
 					lg: 16,
 				}}
 			>
-				{projects.map((o) => (
-					<Item key={o.title} data={o} />
-				))}
+				{projects.map((o) => (!o.featured ? null : <Item key={o.title} data={o} />))}
 			</Box>
 		</styled.section>
 	);
 }
 
 interface ItemProps {
-	data: TProject;
+	data: TFeaturedProject;
 }
 
 function Item(props: ItemProps) {
@@ -86,7 +83,7 @@ function Item(props: ItemProps) {
 					display: 'none',
 				}}
 			>
-				<Image src={image ?? ''} alt="" width={450} height={450} w="full" h="auto" />
+				<Image src={image} alt="" width={450} height={450} w="full" h="auto" />
 			</Box>
 
 			<Box flexGrow={1}>

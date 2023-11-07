@@ -20,12 +20,11 @@ import {
 	styled,
 } from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
-import {TProject} from '@/utils/types';
+import {TNonFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
 
 export async function NoteworthyProjects() {
-	const author = await getAuthor();
-	const items = [...author.projects].filter((o) => !o.featured);
+	const {projects} = await getAuthor();
 
 	return (
 		<styled.section
@@ -77,18 +76,20 @@ export async function NoteworthyProjects() {
 					xl: 3,
 				}}
 			>
-				{items.map((o) => (
-					<GridItem key={o.title}>
-						<Item data={o} />
-					</GridItem>
-				))}
+				{projects.map((o) =>
+					o.featured ? null : (
+						<GridItem key={o.title}>
+							<Item data={o} />
+						</GridItem>
+					),
+				)}
 			</Grid>
 		</styled.section>
 	);
 }
 
 interface ItemProps {
-	data: TProject;
+	data: TNonFeaturedProject;
 }
 
 function Item(props: ItemProps) {

@@ -1,16 +1,17 @@
 import {
 	Output,
 	array,
-	boolean,
 	email,
 	enum_,
 	fallback,
 	intersect,
+	literal,
 	object,
 	optional,
 	record,
 	string,
 	transform,
+	union,
 	url,
 } from 'valibot';
 
@@ -28,7 +29,18 @@ export const EmploymentDateSchema = object({
 	until: optional(transform(string(), (value) => new Date(value))),
 });
 
-export const ProjectSchema = object({
+export const FeaturedProjectSchema = object({
+	title: string(),
+	image: string([url()]),
+	description: string(),
+	repository: string([url()]),
+	website: optional(string([url()])),
+	tags: array(string()),
+	createdAt: transform(string(), (value) => new Date(value)),
+	featured: literal(true),
+});
+
+export const NonFeaturedProjectSchema = object({
 	title: string(),
 	image: optional(string([url()])),
 	description: string(),
@@ -36,8 +48,10 @@ export const ProjectSchema = object({
 	website: optional(string([url()])),
 	tags: array(string()),
 	createdAt: transform(string(), (value) => new Date(value)),
-	featured: optional(boolean()),
+	featured: optional(literal(false)),
 });
+
+export const ProjectSchema = union([FeaturedProjectSchema, NonFeaturedProjectSchema]);
 
 export const WorkHistorySchema = object({
 	company: CompanySchema,
@@ -75,6 +89,8 @@ export const ThemeSchema = fallback(enum_(Theme), Theme.Dark);
 export type TCompany = Output<typeof CompanySchema>;
 export type TContact = Output<typeof ContactSchema>;
 export type TProject = Output<typeof ProjectSchema>;
+export type TFeaturedProject = Output<typeof FeaturedProjectSchema>;
+export type TNonFeaturedProject = Output<typeof NonFeaturedProjectSchema>;
 export type TEmploymentDate = Output<typeof EmploymentDateSchema>;
 export type TWorkHistory = Output<typeof WorkHistorySchema>;
 export type TPrimaryInfo = Output<typeof PrimaryInfoSchema>;
