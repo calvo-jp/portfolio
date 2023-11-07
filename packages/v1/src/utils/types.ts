@@ -29,6 +29,13 @@ export const EmploymentDateSchema = object({
 	until: optional(transform(string(), (value) => new Date(value))),
 });
 
+export const WorkHistorySchema = object({
+	company: CompanySchema,
+	position: string(),
+	dateOfEmployment: EmploymentDateSchema,
+	responsibilities: string(),
+});
+
 const BaseProjectSchema = object({
 	title: string(),
 	description: string(),
@@ -55,13 +62,6 @@ export const NonFeaturedProjectSchema = intersect([
 ]);
 
 export const ProjectSchema = union([FeaturedProjectSchema, NonFeaturedProjectSchema]);
-
-export const WorkHistorySchema = object({
-	company: CompanySchema,
-	position: string(),
-	dateOfEmployment: EmploymentDateSchema,
-	responsibilities: string(),
-});
 
 export const PrimaryInfoSchema = object({
 	name: string(),
