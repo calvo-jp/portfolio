@@ -29,27 +29,30 @@ export const EmploymentDateSchema = object({
 	until: optional(transform(string(), (value) => new Date(value))),
 });
 
-export const FeaturedProjectSchema = object({
+const BaseProjectSchema = object({
 	title: string(),
-	image: string([url()]),
 	description: string(),
 	repository: string([url()]),
 	website: optional(string([url()])),
 	tags: array(string()),
 	createdAt: transform(string(), (value) => new Date(value)),
-	featured: literal(true),
 });
 
-export const NonFeaturedProjectSchema = object({
-	title: string(),
-	image: optional(string([url()])),
-	description: string(),
-	repository: string([url()]),
-	website: optional(string([url()])),
-	tags: array(string()),
-	createdAt: transform(string(), (value) => new Date(value)),
-	featured: optional(literal(false)),
-});
+export const FeaturedProjectSchema = intersect([
+	BaseProjectSchema,
+	object({
+		image: string([url()]),
+		featured: literal(true),
+	}),
+]);
+
+export const NonFeaturedProjectSchema = intersect([
+	BaseProjectSchema,
+	object({
+		image: optional(string([url()])),
+		featured: optional(literal(false)),
+	}),
+]);
 
 export const ProjectSchema = union([FeaturedProjectSchema, NonFeaturedProjectSchema]);
 
