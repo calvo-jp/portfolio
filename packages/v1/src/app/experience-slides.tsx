@@ -11,7 +11,7 @@ import {getAuthor} from '@/utils/get-author';
 import {ExperienceItem} from './experience-item';
 
 export async function ExperienceSlides() {
-	const author = await getAuthor();
+	const {workHistory} = await getAuthor();
 
 	return (
 		<Carousel
@@ -22,7 +22,7 @@ export async function ExperienceSlides() {
 		>
 			<CarouselViewport>
 				<CarouselItemGroup>
-					{author.workHistory.map((o, index) => (
+					{workHistory.map((o, index) => (
 						<CarouselItem w="full" key={o.company.name} index={index}>
 							<ExperienceItem data={o} />
 						</CarouselItem>
@@ -30,7 +30,7 @@ export async function ExperienceSlides() {
 				</CarouselItemGroup>
 			</CarouselViewport>
 			<CarouselIndicatorGroup mt={10} display="flex" gap={3} justifyContent="center">
-				{author.workHistory.map((o, index) => (
+				{workHistory.map((o, index) => (
 					<CarouselIndicator
 						key={o.company.name}
 						index={index}

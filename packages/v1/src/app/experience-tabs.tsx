@@ -3,7 +3,7 @@ import {getAuthor} from '@/utils/get-author';
 import {ExperienceItem} from './experience-item';
 
 export async function ExperienceTabs() {
-	const author = await getAuthor();
+	const {workHistory} = await getAuthor();
 
 	return (
 		<Tabs
@@ -17,7 +17,7 @@ export async function ExperienceTabs() {
 			}}
 			mt={16}
 			gap={12}
-			defaultValue={author.workHistory.at(0)?.company.name}
+			defaultValue={workHistory.at(0)?.company.name}
 			orientation="vertical"
 		>
 			<TabList
@@ -28,7 +28,7 @@ export async function ExperienceTabs() {
 					display: 'flex',
 				}}
 			>
-				{author.workHistory.map(({company}) => (
+				{workHistory.map(({company}) => (
 					<TabTrigger
 						key={company.name}
 						value={company.name}
@@ -61,7 +61,7 @@ export async function ExperienceTabs() {
 				/>
 			</TabList>
 
-			{author.workHistory.map((o) => (
+			{workHistory.map((o) => (
 				<TabContent key={o.company.name} value={o.company.name}>
 					<ExperienceItem data={o} />
 				</TabContent>

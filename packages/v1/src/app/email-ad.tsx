@@ -4,7 +4,7 @@ import {getAuthor} from '@/utils/get-author';
 import {Portal} from '@ark-ui/react';
 
 export async function EmailAd() {
-	const author = await getAuthor();
+	const {contact} = await getAuthor();
 
 	return (
 		<Portal>
@@ -22,7 +22,7 @@ export async function EmailAd() {
 			>
 				<Box w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
 					<Link
-						href={`mailto:${author.contact.email}`}
+						href={`mailto:${contact.email}`}
 						prefetch={false}
 						fontFamily="mono"
 						fontSize="xs"
@@ -33,7 +33,7 @@ export async function EmailAd() {
 							_hover: 'fg.accent',
 						}}
 					>
-						{author.contact.email}
+						{contact.email}
 					</Link>
 					<Box h="15vh" w="1px" bg="bg.light" roundedTop="full" />
 				</Box>

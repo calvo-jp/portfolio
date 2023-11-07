@@ -7,7 +7,7 @@ import {getAuthor} from '@/utils/get-author';
 import {SectionHeading} from './section-heading';
 
 export async function About() {
-	const author = await getAuthor();
+	const {about} = await getAuthor();
 
 	return (
 		<styled.section
@@ -45,7 +45,7 @@ export async function About() {
 						w: '1/2',
 					}}
 				>
-					<RawHtml fontSize="lg">{author.about}</RawHtml>
+					<RawHtml fontSize="lg">{about}</RawHtml>
 
 					<Box mt={5} fontSize="lg">
 						Here are a few technologies I&rsquo;ve been working with&nbsp;recently:
@@ -70,7 +70,7 @@ export async function About() {
 }
 
 async function Skills() {
-	const author = await getAuthor();
+	const {skills} = await getAuthor();
 
 	return (
 		<Grid
@@ -82,7 +82,7 @@ async function Skills() {
 			display="grid"
 			gap={1}
 		>
-			{author.skills.map((skill, i) => (
+			{skills.map((skill, i) => (
 				<GridItem
 					key={skill}
 					fontFamily="mono"
