@@ -9,9 +9,9 @@ import {
 	TooltipTrigger,
 } from '@/components/tooltip';
 import {Box, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {capitalize} from '@/utils/capitalize';
 import {getAuthor} from '@/utils/get-author';
 import {Portal} from '@ark-ui/react';
-import {capitalize} from '@calvojp/utils';
 
 export async function Socials() {
 	const {socials} = await getAuthor();
