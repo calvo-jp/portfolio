@@ -1,3 +1,5 @@
+/* build: 1x */
+
 import {About} from './about';
 import {Contact} from './contact';
 import {Experience} from './experience';
