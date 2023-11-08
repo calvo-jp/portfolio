@@ -107,7 +107,7 @@ function Item(props: ItemProps) {
 						display: 'none',
 					}}
 				>
-					<Image src={image ?? ''} alt="" width={450} height={450} w="full" h="auto" />
+					<Image src={image} alt="" width={450} height={450} w="full" h="auto" />
 				</Box>
 
 				<RawHtml
