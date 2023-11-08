@@ -17,7 +17,7 @@ export async function Hero() {
 				color="fg.high"
 				fontSize={{
 					base: '5xl',
-					lg: '8xl',
+					lg: '7xl',
 				}}
 				fontWeight="extrabold"
 				lineHeight="none"
@@ -26,10 +26,7 @@ export async function Hero() {
 			</styled.h1>
 
 			<styled.h2
-				mt={{
-					base: 3,
-					lg: 4,
-				}}
+				mt={2}
 				color="fg.strong"
 				fontSize={{
 					base: '4xl',
@@ -38,21 +35,12 @@ export async function Hero() {
 				fontWeight="extrabold"
 				lineHeight="none"
 			>
-				I bring websites to&nbsp;life!
+				I bring websites to&nbsp;life.
 			</styled.h2>
 
-			<styled.p
-				mt={{
-					base: 4,
-					lg: 5,
-				}}
-				fontSize="lg"
-				lineHeight="normal"
-				maxW="40rem"
-			>
-				I'm a software engineer with a passion for crafting exceptional digital
-				experiences. My expertise lies in creating user-centric solutions that prioritize
-				accessibility and innovative design
+			<styled.p mt={4} fontSize="lg" lineHeight="normal" maxW="36rem">
+				I'm a software engineer dedicated to user-centric solutions that balance
+				exceptional experiences with long-term maintainability
 			</styled.p>
 
 			<Button
