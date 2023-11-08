@@ -14,7 +14,7 @@ import {Providers} from './providers';
 import {Socials} from './socials';
 
 const sans = Source_Sans_3({
-	weight: ['400', '500', '600', '700', '900'],
+	weight: ['400', '500', '600', '700', '800'],
 	preload: true,
 	display: 'swap',
 	subsets: ['latin'],

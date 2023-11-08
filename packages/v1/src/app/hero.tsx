@@ -19,7 +19,7 @@ export async function Hero() {
 					base: '5xl',
 					lg: '8xl',
 				}}
-				fontWeight="black"
+				fontWeight="extrabold"
 				lineHeight="none"
 			>
 				{author.name}.
@@ -59,7 +59,7 @@ export async function Hero() {
 				w="fit"
 				mt={{
 					base: 8,
-					lg: 14,
+					lg: 12,
 				}}
 				lgDown={{
 					w: 'full',
