@@ -1,11 +1,9 @@
-import 'server-only';
-
+import {markdownToHtml} from '@calvojp/utils';
 import {compareDesc} from 'date-fns';
 import {readFile, readdir} from 'fs/promises';
 import {join} from 'path';
 import {cache} from 'react';
 import {parse} from 'valibot';
-import {markdownToHtml} from './markdown-to-html';
 import {
 	PrimaryInfoSchema,
 	ProjectSchema,
