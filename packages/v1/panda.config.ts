@@ -154,5 +154,6 @@ export default defineConfig({
 	hash: true,
 	clean: true,
 	outdir: 'styled-system',
+	logLevel: 'silent',
 	jsxFramework: 'react',
 });
