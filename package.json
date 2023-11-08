@@ -4,7 +4,7 @@
 	"packageManager": "pnpm@8.10.2",
 	"scripts": {
 		"debug:v1": "pnpm --filter @calvojp/version-1 dev",
-		"build:v1": "pnpm --filter @calvojp/version-1 build",
+		"build:v1": "pnpm --filter @calvojp/utils build && pnpm --filter @calvojp/version-1 build",
 		"serve:v1": "pnpm --filter @calvojp/version-1 start"
 	},
 	"devDependencies": {
