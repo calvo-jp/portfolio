@@ -11,7 +11,7 @@ import {
 import {Box, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {Portal} from '@ark-ui/react';
-import {capitalize} from 'utils';
+import {capitalize} from '@calvojp/utils';
 
 export async function Socials() {
 	const {socials} = await getAuthor();
