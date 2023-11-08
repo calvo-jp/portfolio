@@ -69,8 +69,8 @@ export const NAVBAR_NAV_ITEMS = [
 		label: 'Experience',
 	},
 	{
-		path: '/#work',
-		label: 'Work',
+		path: '/#projects',
+		label: 'Projects',
 	},
 	{
 		path: '/#contact',

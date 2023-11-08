@@ -16,12 +16,12 @@ import {TFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
 import {SectionHeading} from './section-heading';
 
-export async function Work() {
+export async function Projects() {
 	const {projects} = await getAuthor();
 
 	return (
 		<styled.section
-			id="work"
+			id="projects"
 			py={{
 				base: 24,
 				lg: 32,

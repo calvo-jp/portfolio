@@ -3,7 +3,7 @@ import {Contact} from './contact';
 import {Experience} from './experience';
 import {Hero} from './hero';
 import {NoteworthyProjects} from './noteworthy-projects';
-import {Work} from './work';
+import {Projects} from './projects';
 
 export default async function Index() {
 	return (
@@ -11,7 +11,7 @@ export default async function Index() {
 			<Hero />
 			<About />
 			<Experience />
-			<Work />
+			<Projects />
 			<NoteworthyProjects />
 			<Contact />
 		</>
