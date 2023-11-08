@@ -1,6 +1,6 @@
-import {IconExternalLink, IconGitBranch} from '@/components/icons';
-import {Link} from '@/components/link';
-import {RawHtml} from '@/components/raw-html';
+import { IconExternalLink, IconGitBranch } from '@/components/icons';
+import { Link } from '@/components/link';
+import { RawHtml } from '@/components/raw-html';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -9,11 +9,11 @@ import {
 	TooltipPositioner,
 	TooltipTrigger,
 } from '@/components/tooltip';
-import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {getAuthor} from '@/utils/get-author';
-import {TNonFeaturedProject} from '@/utils/types';
-import {Portal} from '@ark-ui/react';
-import {Metadata} from 'next';
+import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { TNonFeaturedProject } from '@/utils/types';
+import { Portal } from '@ark-ui/react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
 	title: 'Archive',
@@ -40,7 +40,7 @@ export default async function Archive() {
 				Archive
 			</styled.h1>
 			<styled.p fontFamily="mono" color="fg.accent">
-				A big list of things I&rsquo;ve worked on
+				A big list of things I&rsquo;ve worked&nbsp;on
 			</styled.p>
 
 			<Box mt={16}>
