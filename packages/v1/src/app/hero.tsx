@@ -9,7 +9,7 @@ export async function Hero() {
 	return (
 		<styled.section id="hero" py={20}>
 			<styled.h3 fontFamily="mono" color="fg.accent">
-				Hi, my name is
+				Hi, I&rsquo;m
 			</styled.h3>
 
 			<styled.h1
@@ -17,7 +17,7 @@ export async function Hero() {
 				color="fg.high"
 				fontSize={{
 					base: '5xl',
-					lg: '7xl',
+					lg: '8xl',
 				}}
 				fontWeight="black"
 				lineHeight="none"
@@ -35,30 +35,24 @@ export async function Hero() {
 					base: '4xl',
 					lg: '7xl',
 				}}
-				fontWeight="black"
+				fontWeight="extrabold"
 				lineHeight="none"
 			>
-				I build things for the&nbsp;web.
+				I bring websites to&nbsp;life!
 			</styled.h2>
 
-			<styled.p mt={4} fontSize="lg" lineHeight="normal" maxW="34rem">
-				I&rsquo;m a software engineer specializing in building &#40;and occasionally
-				designing&#41; exceptional digital experiences. Currently, I&rsquo;m focused on
-				building accessible, human-centered products at{' '}
-				<Link
-					href={author.company.website}
-					target="_blank"
-					rel="noreferrer noopener"
-					prefetch={false}
-					color="fg.accent"
-					textUnderlineOffset="0.35rem"
-					_hover={{
-						textDecoration: 'underline',
-					}}
-				>
-					{author.company.name}
-				</Link>
-				.
+			<styled.p
+				mt={{
+					base: 4,
+					lg: 5,
+				}}
+				fontSize="lg"
+				lineHeight="normal"
+				maxW="40rem"
+			>
+				I'm a software engineer with a passion for crafting exceptional digital
+				experiences. My expertise lies in creating user-centric solutions that prioritize
+				accessibility and innovative design
 			</styled.p>
 
 			<Button

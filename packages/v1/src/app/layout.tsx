@@ -4,14 +4,30 @@ import {cx} from '@/styled-system/css';
 import {styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {Analytics} from '@vercel/analytics/react';
-import {GeistMono, GeistSans} from 'geist/font';
 import {Metadata} from 'next';
+import {JetBrains_Mono, Source_Sans_3} from 'next/font/google';
 import {PropsWithChildren} from 'react';
 import {EmailAd} from './email-ad';
 import {Footer} from './footer';
 import {Navbar} from './navbar';
 import {Providers} from './providers';
 import {Socials} from './socials';
+
+const sans = Source_Sans_3({
+	weight: ['400', '500', '600', '700', '900'],
+	preload: true,
+	display: 'swap',
+	subsets: ['latin'],
+	variable: '--font-sans',
+});
+
+const mono = JetBrains_Mono({
+	weight: '400',
+	display: 'swap',
+	preload: true,
+	subsets: ['latin'],
+	variable: '--font-mono',
+});
 
 export async function generateMetadata(): Promise<Metadata> {
 	const author = await getAuthor();
@@ -38,7 +54,7 @@ export default async function RootLayout({children}: PropsWithChildren) {
 	return (
 		<styled.html
 			lang="en"
-			className={cx(GeistMono.variable, GeistSans.variable)}
+			className={cx(sans.variable, mono.variable)}
 			scrollBehavior="smooth"
 			scrollbarGutter="stable"
 			lgDown={{
