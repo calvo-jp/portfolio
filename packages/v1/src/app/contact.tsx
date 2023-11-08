@@ -28,10 +28,10 @@ export async function Contact() {
 			>
 				Get In Touch
 			</styled.h2>
-			<styled.p mt={4} maxW="37.5rem" mx="auto" fontSize="lg">
-				Although I&rsquo;m not currently looking for any new opportunities, my inbox is
-				always open. Whether you have a question or just want to say hi, I&rsquo;ll try my
-				best to get back to you!
+			<styled.p mt={4} maxW="36rem" mx="auto" fontSize="lg">
+				While I&rsquo;m not actively seeking new opportunities at the moment, I'm always
+				available in my inbox. Whether you have a query or simply want to drop a greeting,
+				I'll make an effort to respond to&nbsp;you!
 			</styled.p>
 			<Button w="fit" mx="auto" mt={16} asChild>
 				<Link href={`mailto:${contact.email}`} prefetch={false}>
