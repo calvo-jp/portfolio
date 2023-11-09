@@ -29,9 +29,9 @@ export async function Contact() {
 				Get In Touch
 			</styled.h2>
 			<styled.p mt={4} maxW="36rem" mx="auto" fontSize="lg">
-				While I&rsquo;m not actively seeking new opportunities at the moment, I'm always
-				available in my inbox. Whether you have a query or simply want to drop a greeting,
-				I'll make an effort to respond to&nbsp;you!
+				While I&rsquo;m not actively seeking new opportunities at the moment, I&rsquo;m
+				always available in my inbox. Whether you have a query or simply want to drop a
+				greeting, I&rsquo;ll make an effort to respond to&nbsp;you!
 			</styled.p>
 			<Button w="fit" mx="auto" mt={16} asChild>
 				<Link href={`mailto:${contact.email}`} prefetch={false}>
