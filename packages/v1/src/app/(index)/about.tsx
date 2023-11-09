@@ -59,9 +59,15 @@ export async function About() {
 						p={4}
 						pos="relative"
 						border="2px solid token(colors.fg.accent)"
-						rounded="md"
+						rounded="xl"
 					>
-						<Image src={selfie} alt="" rounded="sm" placeholder="blur" />
+						<Image
+							src={selfie}
+							alt=""
+							rounded="lg"
+							placeholder="blur"
+							draggable={false}
+						/>
 					</Box>
 				</Box>
 			</Flex>
