@@ -8,7 +8,7 @@ export function Providers(props: PropsWithChildren) {
 	return (
 		<ThemeProvider
 			attribute="class"
-			storageKey="calvojp/theme"
+			storageKey="calvojp.theme"
 			defaultTheme={Theme.Dark}
 			themes={Object.values(Theme)}
 			value={{
