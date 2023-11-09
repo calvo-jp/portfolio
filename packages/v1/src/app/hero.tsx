@@ -38,7 +38,7 @@ export async function Hero() {
 				I bring websites to&nbsp;life.
 			</styled.h2>
 
-			<styled.p mt={4} fontSize="lg" lineHeight="normal" maxW="36rem">
+			<styled.p mt={4} fontSize="lg" lineHeight="normal" maxW="40rem">
 				I&rsquo;m a software engineer dedicated to user-centric solutions that balance
 				exceptional experiences with long-term maintainability
 			</styled.p>
