@@ -2,8 +2,14 @@ import {cva, cx} from '@/styled-system/css';
 import {styled} from '@/styled-system/jsx';
 import {Assign, HTMLStyledProps} from '@/styled-system/types';
 import {HTMLArkProps, ark} from '@ark-ui/react';
-import parse from 'html-react-parser';
+import {
+	DOMNode,
+	attributesToProps,
+	domToReact,
+	default as parseHtml,
+} from 'html-react-parser';
 import {forwardRef} from 'react';
+import {IconAsterisk} from './icons';
 
 interface StyledArkDivProps extends Assign<HTMLArkProps<'div'>, HTMLStyledProps<'div'>> {}
 const StyledArkDiv = styled(ark.div);
@@ -20,7 +26,18 @@ export const RawHtml = forwardRef<HTMLDivElement, RawHtmlProps>(
 
 		return (
 			<StyledArkDiv ref={ref} className={cx(rawHtmlRecipe(), className)} {...others}>
-				{parse(children)}
+				{parseHtml(children, {
+					replace(node) {
+						if (node.type === 'tag' && node.name === 'li') {
+							return (
+								<styled.li display="flex" gap={1} {...attributesToProps(node.attribs)}>
+									<IconAsterisk w={3} h={3} mt={1} color="fg.accent" flexShrink={0} />
+									<styled.span>{domToReact(node.children as DOMNode[])}</styled.span>
+								</styled.li>
+							);
+						}
+					},
+				})}
 			</StyledArkDiv>
 		);
 	},
@@ -40,6 +57,7 @@ const rawHtmlRecipe = cva({
 
 		'& li': {
 			mt: 2,
+			lineHeight: 'tight',
 
 			_first: {
 				mt: 0,
