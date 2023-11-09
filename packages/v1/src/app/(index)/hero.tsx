@@ -55,7 +55,7 @@ export async function Hero() {
 				}}
 				asChild
 			>
-				<Link href="/#work">Checkout my work</Link>
+				<Link href="/#projects">Checkout my work</Link>
 			</Button>
 		</styled.section>
 	);
