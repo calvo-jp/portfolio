@@ -7,53 +7,23 @@ export default defineConfig({
 		extend: {
 			tokens: {
 				fonts: {
-					sans: {
-						value: 'var(--font-geist-sans)',
-					},
-					mono: {
-						value: 'var(--font-geist-mono)',
-					},
+					sans: {value: 'var(--font-geist-sans)'},
+					mono: {value: 'var(--font-geist-mono)'},
 				},
 				zIndex: {
-					hide: {
-						value: -1,
-					},
-					auto: {
-						value: 'auto',
-					},
-					base: {
-						value: 0,
-					},
-					docked: {
-						value: 10,
-					},
-					dropdown: {
-						value: 1000,
-					},
-					sticky: {
-						value: 1100,
-					},
-					banner: {
-						value: 1200,
-					},
-					overlay: {
-						value: 1300,
-					},
-					modal: {
-						value: 1400,
-					},
-					popover: {
-						value: 1500,
-					},
-					skipLink: {
-						value: 1600,
-					},
-					toast: {
-						value: 1700,
-					},
-					tooltip: {
-						value: 1800,
-					},
+					hide: {value: -1},
+					auto: {value: 'auto'},
+					base: {value: 0},
+					docked: {value: 10},
+					dropdown: {value: 1000},
+					sticky: {value: 1100},
+					banner: {value: 1200},
+					overlay: {value: 1300},
+					modal: {value: 1400},
+					popover: {value: 1500},
+					skipLink: {value: 1600},
+					toast: {value: 1700},
+					tooltip: {value: 1800},
 				},
 				spacing: {
 					'1/4': {value: '25%'},
@@ -67,66 +37,37 @@ export default defineConfig({
 				colors: {
 					fg: {
 						DEFAULT: {
-							value: {
-								base: '{colors.neutral.400}',
-								_light: '{colors.neutral.600}',
-							},
+							value: {base: '{colors.neutral.400}', _light: '{colors.neutral.600}'},
 						},
 						strong: {
-							value: {
-								base: '{colors.neutral.300}',
-								_light: '{colors.neutral.700}',
-							},
+							value: {base: '{colors.neutral.300}', _light: '{colors.neutral.700}'},
 						},
 						stronger: {
-							value: {
-								base: '{colors.neutral.200}',
-								_light: '{colors.neutral.800}',
-							},
+							value: {base: '{colors.neutral.200}', _light: '{colors.neutral.800}'},
 						},
 						strongest: {
-							value: {
-								base: '{colors.neutral.100}',
-								_light: '{colors.neutral.900}',
-							},
+							value: {base: '{colors.neutral.100}', _light: '{colors.neutral.900}'},
 						},
 						accent: {
-							value: {
-								base: '{colors.violet.500}',
-								_light: '{colors.violet.700}',
-							},
+							value: {base: '{colors.violet.500}', _light: '{colors.violet.700}'},
 						},
 						high: {
-							value: {
-								base: '{colors.white}',
-								_light: '{colors.black}',
-							},
+							value: {base: '{colors.white}', _light: '{colors.black}'},
 						},
 					},
 					bg: {
 						DEFAULT: {
-							value: {
-								base: '{colors.neutral.900}',
-								_light: '{colors.neutral.100}',
-							},
+							value: {base: '{colors.neutral.900}', _light: '{colors.neutral.100}'},
 						},
+						/* FIXME: use "<color>/<opacity>" once supported */
 						alpha: {
-							value: {
-								base: '#171717db' /* FIXME: use "<color>/<opacity>" once supported */,
-								_light: '#f5f5f5db' /* FIXME: use "<color>/<opacity>" once supported */,
-							},
+							value: {base: '#171717db', _light: '#f5f5f5db'},
 						},
 						light: {
-							value: {
-								base: '{colors.neutral.800}',
-								_light: '{colors.neutral.200}',
-							},
+							value: {base: '{colors.neutral.800}', _light: '{colors.neutral.200}'},
 						},
 						lighter: {
-							value: {
-								base: '{colors.neutral.700}',
-								_light: '{colors.neutral.300}',
-							},
+							value: {base: '{colors.neutral.700}', _light: '{colors.neutral.300}'},
 						},
 					},
 				},
