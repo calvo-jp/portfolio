@@ -17,7 +17,7 @@ import {Socials} from './socials';
 export async function generateMetadata(): Promise<Metadata> {
 	const author = await getAuthor();
 	const title = author.name;
-	const description = `${author.name} is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.`;
+	const description = `${author.name} a software engineer dedicated to user-centric solutions that balance exceptional experiences with long-term maintainability`;
 
 	return {
 		title: {
