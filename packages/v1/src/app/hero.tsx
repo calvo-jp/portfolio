@@ -19,7 +19,7 @@ export async function Hero() {
 					base: '5xl',
 					lg: '7xl',
 				}}
-				fontWeight="extrabold"
+				fontWeight="black"
 				lineHeight="none"
 			>
 				{author.name}.
@@ -39,7 +39,7 @@ export async function Hero() {
 			</styled.h2>
 
 			<styled.p mt={4} fontSize="lg" lineHeight="normal" maxW="36rem">
-				I'm a software engineer dedicated to user-centric solutions that balance
+				I&rsquo;m a software engineer dedicated to user-centric solutions that balance
 				exceptional experiences with long-term maintainability
 			</styled.p>
 
