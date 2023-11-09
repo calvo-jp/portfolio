@@ -96,7 +96,7 @@ function Item(props: ItemProps) {
 	const {title, description, repository, website, tags} = props.data;
 
 	return (
-		<Flex bg="bg.light" p={8} rounded="sm" flexDir="column" minH="token(spacing.80)">
+		<Flex bg="bg.light" p={8} rounded="md" flexDir="column" minH="token(spacing.80)">
 			<Flex>
 				<IconFolder w={9} h={9} color="fg.accent" />
 				<Spacer />

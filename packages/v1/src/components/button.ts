@@ -10,7 +10,7 @@ const recipe = cva({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		rounded: 'sm',
+
 		fontFamily: 'mono',
 		transition: 'transform token(durations.slow)',
 		_active: {
@@ -27,11 +27,13 @@ const recipe = cva({
 			sm: {
 				h: 8,
 				px: 4,
+				rounded: 'md',
 				fontSize: 'xs',
 			},
 			lg: {
 				h: 14,
 				px: 8,
+				rounded: 'lg',
 				fontSize: 'sm',
 			},
 		},
