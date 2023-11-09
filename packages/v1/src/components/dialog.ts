@@ -17,20 +17,11 @@ export const DialogBackdrop = styled(parts.Backdrop, {
 });
 
 export const DialogPositioner = styled(parts.Positioner);
-export const DialogContent = styled(
-	parts.Content,
-	{
-		base: {
-			zIndex: 'modal',
-		},
+export const DialogContent = styled(parts.Content, {
+	base: {
+		zIndex: 'modal',
 	},
-	{
-		defaultProps: {
-			lazyMount: true,
-			unmountOnExit: false,
-		},
-	},
-);
+});
 
 export const DialogTitle = styled(parts.Title);
 export const DialogDescription = styled(parts.Description);
