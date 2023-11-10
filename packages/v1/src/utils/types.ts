@@ -70,12 +70,12 @@ export const PrimaryInfoSchema = object({
 	socials: record(string([url()])),
 	contact: ContactSchema,
 	company: CompanySchema,
+	about: string(),
 });
 
 export const AuthorSchema = intersect([
 	PrimaryInfoSchema,
 	object({
-		about: string(),
 		projects: array(ProjectSchema),
 		workHistory: array(WorkHistorySchema),
 	}),

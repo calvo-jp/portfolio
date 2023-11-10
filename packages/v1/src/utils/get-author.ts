@@ -14,14 +14,12 @@ import {
 } from './types';
 
 export const getAuthor = cache(async function getAuthor() {
-	const about = await getAbout();
 	const projects = await getProjects();
 	const workHistory = await getWorkHistory();
 	const primaryInfo = await getPrimaryInfo();
 
 	return {
 		...primaryInfo,
-		about,
 		projects,
 		workHistory,
 	} satisfies TAuthor;
@@ -30,17 +28,13 @@ export const getAuthor = cache(async function getAuthor() {
 const MARKDOWN_DIR = join(process.cwd(), 'src/assets/markdown');
 
 async function getPrimaryInfo() {
-	const buffer = await readFile(join(MARKDOWN_DIR, 'primary-info.md'));
-	const result = await markdownToHtml(buffer.toString());
-
-	return parse(PrimaryInfoSchema, result.meta.matter);
-}
-
-async function getAbout() {
 	const buffer = await readFile(join(MARKDOWN_DIR, 'about.md'));
 	const result = await markdownToHtml(buffer.toString());
 
-	return result.html;
+	return parse(PrimaryInfoSchema, {
+		...result.meta.matter,
+		about: result.html,
+	});
 }
 
 async function getWorkHistory() {
