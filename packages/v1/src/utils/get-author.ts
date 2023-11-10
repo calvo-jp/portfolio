@@ -55,7 +55,6 @@ async function getWorkHistory() {
 	}
 
 	items.sort((i, j) => compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start));
-
 	return items;
 }
 
@@ -77,6 +76,5 @@ async function getProjects() {
 	}
 
 	items.sort((i, j) => compareDesc(i.createdAt, j.createdAt));
-
 	return items;
 }
