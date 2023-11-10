@@ -9,16 +9,7 @@ import {
 	TooltipPositioner,
 	TooltipTrigger,
 } from '@/components/tooltip';
-import {
-	Box,
-	Flex,
-	Grid,
-	GridItem,
-	HStack,
-	Spacer,
-	VisuallyHidden,
-	styled,
-} from '@/styled-system/jsx';
+import {Box, Flex, HStack, Spacer, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {TNonFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
@@ -64,26 +55,20 @@ export async function NoteworthyProjects() {
 				</Link>
 			</Box>
 
-			<Grid
+			<Box
 				mt={{
 					base: 14,
 					lg: 16,
 				}}
+				display="grid"
 				gap={4}
-				columns={{
-					base: 1,
-					lg: 2,
-					xl: 3,
+				gridTemplateColumns={{
+					lg: 'repeat(2,1fr)',
+					xl: 'repeat(3,1fr)',
 				}}
 			>
-				{projects.map((o) =>
-					o.featured ? null : (
-						<GridItem key={o.title}>
-							<Item data={o} />
-						</GridItem>
-					),
-				)}
-			</Grid>
+				{projects.map((o) => (o.featured ? null : <Item key={o.title} data={o} />))}
+			</Box>
 		</styled.section>
 	);
 }
