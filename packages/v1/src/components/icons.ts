@@ -1,5 +1,6 @@
 import {styled} from '@/styled-system/jsx';
 import {
+	AmpersandsIcon,
 	AsteriskIcon,
 	ChevronLeftIcon,
 	ChevronRightIcon,
@@ -54,3 +55,4 @@ export const IconX = styledIcon(XIcon);
 export const IconSun = styledIcon(SunIcon);
 export const IconMoon = styledIcon(MoonIcon);
 export const IconLaptop2 = styledIcon(Laptop2Icon);
+export const IconAmpersands = styledIcon(AmpersandsIcon);

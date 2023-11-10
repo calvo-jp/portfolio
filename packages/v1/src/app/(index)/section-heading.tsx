@@ -1,3 +1,4 @@
+import {IconAmpersands} from '@/components/icons';
 import {Box, styled} from '@/styled-system/jsx';
 import {Assign, HTMLStyledProps} from '@/styled-system/types';
 import {ReactNode} from 'react';
@@ -21,6 +22,7 @@ export function SectionHeading(props: SectionHeadingProps) {
 			<styled.span color="fg.accent" fontSize="lg" fontFamily="mono" lineHeight="none">
 				{index.toString().padStart(2, '0')}.
 			</styled.span>
+
 			<styled.span
 				ml={2}
 				color="fg.stronger"
@@ -33,7 +35,10 @@ export function SectionHeading(props: SectionHeadingProps) {
 			>
 				{title}
 			</styled.span>
-			<Box ml={3} flexGrow={1} h="1px" bg="bg.light" />
+
+			<Box mx={3} flexGrow={1} h="1px" bg="bg.light" />
+
+			<IconAmpersands color="bg.lightest" />
 		</styled.h2>
 	);
 }

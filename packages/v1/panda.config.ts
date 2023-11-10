@@ -69,6 +69,9 @@ export default defineConfig({
 						lighter: {
 							value: {base: '{colors.neutral.700}', _light: '{colors.neutral.300}'},
 						},
+						lightest: {
+							value: {base: '{colors.neutral.600}', _light: '{colors.neutral.400}'},
+						},
 					},
 				},
 			},
