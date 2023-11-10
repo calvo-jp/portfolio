@@ -7,7 +7,15 @@ export async function Hero() {
 	const author = await getAuthor();
 
 	return (
-		<styled.section id="hero" py={20}>
+		<styled.section
+			id="hero"
+			pt={24}
+			pb={10}
+			lg={{
+				pt: 32,
+				pb: 20,
+			}}
+		>
 			<styled.h3 fontFamily="mono" color="fg.accent">
 				Hi, I&rsquo;m
 			</styled.h3>
