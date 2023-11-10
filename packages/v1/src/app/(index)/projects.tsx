@@ -14,6 +14,7 @@ import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {TFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
+import {Fragment} from 'react';
 import {SectionHeading} from './section-heading';
 
 export async function Projects() {
@@ -29,7 +30,7 @@ export async function Projects() {
 		>
 			<SectionHeading
 				index={3}
-				title={<>Some things I&rsquo;ve built</>}
+				title={<Fragment>Some things I&rsquo;ve built</Fragment>}
 				lg={{
 					w: '1/2',
 				}}
