@@ -7,6 +7,7 @@ import {NavbarNav} from './navbar-nav';
 export async function Navbar() {
 	return (
 		<styled.header
+			id="navbar"
 			p={{
 				base: 4,
 				md: 6,

@@ -7,7 +7,7 @@ export async function Footer() {
 	const author = await getAuthor();
 
 	return (
-		<styled.footer pt={32} pb={8}>
+		<styled.footer id="footer" pt={32} pb={8}>
 			<Center
 				mb={4}
 				lg={{
