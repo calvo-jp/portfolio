@@ -43,7 +43,7 @@ export default async function RootLayout({children}: PropsWithChildren) {
 			scrollBehavior="smooth"
 			scrollbarGutter="stable"
 			lgDown={{
-				'&::-webkit-scrollbar': {
+				_scrollbar: {
 					display: 'none',
 				},
 			}}
