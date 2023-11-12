@@ -38,7 +38,13 @@ export function SectionHeading(props: SectionHeadingProps) {
 
 			<Box mx={3} flexGrow={1} h="1px" bg="bg.light" />
 
-			<IconAmpersands color="bg.lightest" />
+			<IconAmpersands
+				color="bg.lightest"
+				display={{
+					base: 'none',
+					lg: 'block',
+				}}
+			/>
 		</styled.h2>
 	);
 }
