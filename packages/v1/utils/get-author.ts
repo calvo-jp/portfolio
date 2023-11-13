@@ -21,7 +21,7 @@ export const getAuthor = cache(async function getAuthor() {
 	return {...primaryInfo, projects, workHistory} satisfies TAuthor;
 });
 
-const MARKDOWN_DIR = join(process.cwd(), 'src/assets/markdown');
+const MARKDOWN_DIR = join(process.cwd(), 'assets/markdown');
 
 async function getPrimaryInfo() {
 	const buffer = await readFile(join(MARKDOWN_DIR, 'about.md'));
