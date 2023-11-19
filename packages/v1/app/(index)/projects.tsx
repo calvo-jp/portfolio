@@ -79,12 +79,21 @@ function Item(props: ItemProps) {
 		>
 			<Box
 				w="1/2"
+				border="1px solid token(colors.bg.light)"
 				flexShrink={0}
 				lgDown={{
 					display: 'none',
 				}}
 			>
-				<Image src={image} alt="" width={450} height={450} w="full" h="auto" />
+				<Image
+					src={image}
+					alt=""
+					width={450}
+					height={450}
+					w="full"
+					h="auto"
+					draggable={false}
+				/>
 			</Box>
 
 			<Box flexGrow={1}>
@@ -104,6 +113,7 @@ function Item(props: ItemProps) {
 
 				<Box
 					mt={4}
+					border="1px solid token(colors.fg)"
 					lg={{
 						display: 'none',
 					}}
