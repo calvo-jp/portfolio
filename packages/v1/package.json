@@ -16,7 +16,7 @@
 		"geist": "1.1.0",
 		"html-react-parser": "5.0.6",
 		"lucide-react": "0.292.0",
-		"next": "14.0.2",
+		"next": "14.0.3",
 		"next-themes": "0.2.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
@@ -34,11 +34,11 @@
 	},
 	"devDependencies": {
 		"@pandacss/dev": "0.18.3",
-		"@types/node": "20.9.0",
+		"@types/node": "20.9.2",
 		"@types/react": "18.2.37",
 		"@types/react-dom": "18.2.15",
-		"eslint": "8.53.0",
-		"eslint-config-next": "14.0.2",
+		"eslint": "8.54.0",
+		"eslint-config-next": "14.0.3",
 		"typescript": "5.2.2"
 	}
 }
