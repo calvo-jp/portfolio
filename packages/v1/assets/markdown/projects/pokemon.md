@@ -8,7 +8,7 @@ tags:
   - Panda
   - Ark UI
 featured: true
-createdAt: 2021-11-01
+createdAt: 2023-11-15
 ---
 
 Dive into our Pokémon hub! Explore the entire Pokédex with details on each Pokémon—stats, types, evolutions, and more. Your go-to resource for all things Pokémon!
