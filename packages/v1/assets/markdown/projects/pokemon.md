@@ -2,7 +2,7 @@
 title: Pokemon app
 repository: https://github.com/calvo-jp/pokemon
 website: https://calvojp-pokemon.vercel.app
-image: https://calvo-jp.vercel.app/pokemon.jpeg
+image: https://calvojp-pokemon.vercel.app/banner.jpeg
 tags:
   - Next.js
   - Panda
