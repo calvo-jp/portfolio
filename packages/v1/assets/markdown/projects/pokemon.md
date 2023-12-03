@@ -4,9 +4,10 @@ repository: https://github.com/calvo-jp/pokemon
 website: https://calvojp-pokemon.vercel.app
 image: https://calvojp-pokemon.vercel.app/banner.jpeg
 tags:
-  - Next.js
+  - NextJs
   - Panda
   - Ark UI
+  - GraphQL
 featured: true
 createdAt: 2023-11-15
 ---
