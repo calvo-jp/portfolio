@@ -48,7 +48,7 @@ const BaseProjectSchema = object({
 export const FeaturedProjectSchema = intersect([
 	BaseProjectSchema,
 	object({
-		image: string([url()]),
+		image: string(),
 		featured: literal(true),
 	}),
 ]);
@@ -56,7 +56,7 @@ export const FeaturedProjectSchema = intersect([
 export const NonFeaturedProjectSchema = intersect([
 	BaseProjectSchema,
 	object({
-		image: optional(string([url()])),
+		image: optional(string()),
 		featured: optional(literal(false)),
 	}),
 ]);
