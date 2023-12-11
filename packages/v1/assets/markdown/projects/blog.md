@@ -1,13 +1,11 @@
 ---
-title: Blog
-repository: https://github.com/calvo-jp/blog,
-website: https://calvojp-blog.vercel.app
+title: Todo
+repository: https://github.com/calvo-jp/todo
+website: https://calvojp-todo.vercel.app
 tags:
-  - NextJs
-  - Ark UI
-  - Tailwind
-  - Hygraph CMS
-createdAt: 2023-12-10
+  - SolidJS
+  - Park UI
+createdAt: 2023-12-15
 ---
 
-My simple blogsite
+Just another Todo app

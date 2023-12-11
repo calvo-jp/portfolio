@@ -4,7 +4,7 @@ repository: https://github.com/calvo-jp/pokemon
 website: https://calvojp-pokemon.vercel.app
 image: /pokemon.png
 tags:
-  - NextJs
+  - NextJS
   - Panda
   - Ark UI
   - GraphQL

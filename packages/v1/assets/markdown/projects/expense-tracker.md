@@ -4,7 +4,7 @@ repository: https://github.com/calvo-jp/expense-tracker,
 website: https://calvojp-expense-tracker.vercel.app
 image: /expense-tracker.png
 tags:
-  - NextJs
+  - NextJS
   - Panda
   - Park UI
   - Prisma
