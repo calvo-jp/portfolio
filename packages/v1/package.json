@@ -29,13 +29,13 @@
 		"remark-stringify": "11.0.0",
 		"sharp": "0.33.0",
 		"unified": "11.0.4",
-		"valibot": "0.23.0",
+		"valibot": "0.24.0",
 		"vfile-matter": "5.0.0"
 	},
 	"devDependencies": {
 		"@pandacss/dev": "0.19.0",
 		"@types/node": "20.10.4",
-		"@types/react": "18.2.42",
+		"@types/react": "18.2.43",
 		"@types/react-dom": "18.2.17",
 		"eslint": "8.55.0",
 		"eslint-config-next": "14.0.4",
