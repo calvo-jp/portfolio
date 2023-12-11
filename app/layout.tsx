@@ -22,11 +22,18 @@ export async function generateMetadata(): Promise<Metadata> {
 
 	return {
 		title: {
-			default: title,
+			default: description,
 			template: `${title} - %s`,
 		},
 		description,
 		metadataBase: new URL('https://calvo-jp.vercel.app'),
+		keywords: [
+			'Porfolio',
+			'Dark Mode',
+			'Philippines',
+			'Web Developer',
+			'John Paul Calvo',
+		],
 		openGraph: {
 			type: 'website',
 			title,
