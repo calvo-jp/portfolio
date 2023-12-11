@@ -4,6 +4,7 @@ import {cx} from '@/styled-system/css';
 import {styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {Analytics} from '@vercel/analytics/react';
+import {SpeedInsights} from '@vercel/speed-insights/next';
 import {GeistMono} from 'geist/font/mono';
 import {GeistSans} from 'geist/font/sans';
 import {Metadata} from 'next';
@@ -78,6 +79,7 @@ export default async function RootLayout({children}: PropsWithChildren) {
 					<Footer />
 				</Providers>
 				<Analytics />
+				<SpeedInsights />
 			</styled.body>
 		</styled.html>
 	);
