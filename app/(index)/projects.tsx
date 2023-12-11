@@ -1,7 +1,7 @@
-import {IconExternalLink, IconGitBranch} from '@/components/icons';
-import {Image} from '@/components/image';
-import {Link} from '@/components/link';
-import {RawHtml} from '@/components/raw-html';
+import { IconExternalLink, IconGitBranch } from '@/components/icons';
+import { Image } from '@/components/image';
+import { Link } from '@/components/link';
+import { RawHtml } from '@/components/raw-html';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -10,12 +10,12 @@ import {
 	TooltipPositioner,
 	TooltipTrigger,
 } from '@/components/tooltip';
-import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {getAuthor} from '@/utils/get-author';
-import {TFeaturedProject} from '@/utils/types';
-import {Portal} from '@ark-ui/react';
-import {Fragment} from 'react';
-import {SectionHeading} from './section-heading';
+import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { TFeaturedProject } from '@/utils/types';
+import { Portal } from '@ark-ui/react';
+import { Fragment } from 'react';
+import { SectionHeading } from './section-heading';
 
 export async function Projects() {
 	const {projects} = await getAuthor();
@@ -113,7 +113,7 @@ function Item(props: ItemProps) {
 
 				<Box
 					mt={4}
-					border="1px solid token(colors.fg)"
+					border="1px solid token(colors.bg.light)"
 					lg={{
 						display: 'none',
 					}}
