@@ -7,6 +7,7 @@ const recipe = cva({
 		color: 'fg.accent',
 		border: '1px solid token(colors.fg.accent)',
 		cursor: 'pointer',
+		rounded: 'sm',
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
@@ -27,13 +28,11 @@ const recipe = cva({
 			sm: {
 				h: 8,
 				px: 4,
-				rounded: 'md',
 				fontSize: 'xs',
 			},
 			lg: {
 				h: 14,
 				px: 8,
-				rounded: 'lg',
 				fontSize: 'sm',
 			},
 		},
