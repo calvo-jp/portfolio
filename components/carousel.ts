@@ -10,7 +10,7 @@ export const Carousel = styled(
 		defaultProps: {
 			loop: true,
 		},
-	},
+	}
 );
 
 export const CarouselControl = styled(parts.Control);

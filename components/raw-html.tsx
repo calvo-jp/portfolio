@@ -11,7 +11,8 @@ import {
 import {forwardRef} from 'react';
 import {IconAsterisk} from './icons';
 
-interface StyledArkDivProps extends Assign<HTMLArkProps<'div'>, HTMLStyledProps<'div'>> {}
+interface StyledArkDivProps
+	extends Assign<HTMLArkProps<'div'>, HTMLStyledProps<'div'>> {}
 const StyledArkDiv = styled(ark.div);
 
 interface RawHtmlBaseProps {
@@ -25,14 +26,30 @@ export const RawHtml = forwardRef<HTMLDivElement, RawHtmlProps>(
 		const {children, className, ...others} = props;
 
 		return (
-			<StyledArkDiv ref={ref} className={cx(rawHtmlRecipe(), className)} {...others}>
+			<StyledArkDiv
+				ref={ref}
+				className={cx(rawHtmlRecipe(), className)}
+				{...others}
+			>
 				{parseHtml(children, {
 					replace(node) {
 						if (node.type === 'tag' && node.name === 'li') {
 							return (
-								<styled.li display="flex" gap={1} {...attributesToProps(node.attribs)}>
-									<IconAsterisk w={3} h={3} mt={1} color="fg.accent" flexShrink={0} />
-									<styled.span>{domToReact(node.children as DOMNode[])}</styled.span>
+								<styled.li
+									display="flex"
+									gap={1}
+									{...attributesToProps(node.attribs)}
+								>
+									<IconAsterisk
+										w={3}
+										h={3}
+										mt={1}
+										color="fg.accent"
+										flexShrink={0}
+									/>
+									<styled.span>
+										{domToReact(node.children as DOMNode[])}
+									</styled.span>
 								</styled.li>
 							);
 						}
@@ -40,7 +57,7 @@ export const RawHtml = forwardRef<HTMLDivElement, RawHtmlProps>(
 				})}
 			</StyledArkDiv>
 		);
-	},
+	}
 );
 
 const rawHtmlRecipe = cva({

@@ -55,8 +55,8 @@ export async function Hero() {
 				lineHeight="normal"
 				maxW="40rem"
 			>
-				I&rsquo;m a software engineer dedicated to user-centric solutions that balance
-				exceptional experiences with long-term maintainability
+				I&rsquo;m a software engineer dedicated to user-centric solutions that
+				balance exceptional experiences with long-term maintainability
 			</styled.p>
 
 			<Button

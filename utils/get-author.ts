@@ -50,7 +50,9 @@ async function getWorkHistory() {
 		items.push(history);
 	}
 
-	items.sort((i, j) => compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start));
+	items.sort((i, j) =>
+		compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start)
+	);
 	return items;
 }
 

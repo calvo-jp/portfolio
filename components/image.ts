@@ -27,5 +27,5 @@ export const Image = styled(
 				'blurDataURL',
 			].includes(key);
 		},
-	},
+	}
 );

@@ -61,7 +61,10 @@ export const NonFeaturedProjectSchema = intersect([
 	}),
 ]);
 
-export const ProjectSchema = union([FeaturedProjectSchema, NonFeaturedProjectSchema]);
+export const ProjectSchema = union([
+	FeaturedProjectSchema,
+	NonFeaturedProjectSchema,
+]);
 
 export const PrimaryInfoSchema = object({
 	name: string(),

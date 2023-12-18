@@ -8,5 +8,5 @@ export const Link = styled(
 		shouldForwardProp(key) {
 			return ['href', 'replace', 'scroll', 'prefetch'].includes(key);
 		},
-	},
+	}
 );

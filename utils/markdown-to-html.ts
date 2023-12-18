@@ -36,4 +36,6 @@ export async function markdownToHtml(markdown: string) {
 	};
 }
 
-const MetadataSchema = fallback(object({matter: record(unknown())}), {matter: {}});
+const MetadataSchema = fallback(object({matter: record(unknown())}), {
+	matter: {},
+});

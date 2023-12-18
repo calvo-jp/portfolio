@@ -12,7 +12,7 @@ export function ExperienceItem(props: ExperienceItemProps) {
 
 	const [employedAtStart, employedAtUnitl] = formatEmploymentDate(
 		dateOfEmployment.start,
-		dateOfEmployment.until,
+		dateOfEmployment.until
 	);
 
 	return (

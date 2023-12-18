@@ -9,7 +9,14 @@ import {
 	TooltipPositioner,
 	TooltipTrigger,
 } from '@/components/tooltip';
-import {Box, Flex, HStack, Spacer, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {
+	Box,
+	Flex,
+	HStack,
+	Spacer,
+	VisuallyHidden,
+	styled,
+} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {TNonFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
@@ -67,7 +74,9 @@ export async function NoteworthyProjects() {
 					xl: 'repeat(3,1fr)',
 				}}
 			>
-				{projects.map((o) => (o.featured ? null : <Item key={o.title} data={o} />))}
+				{projects.map((o) =>
+					o.featured ? null : <Item key={o.title} data={o} />
+				)}
 			</Box>
 		</styled.section>
 	);
@@ -81,7 +90,13 @@ function Item(props: ItemProps) {
 	const {title, description, repository, website, tags} = props.data;
 
 	return (
-		<Flex bg="bg.light" p={8} rounded="md" flexDir="column" minH="token(spacing.80)">
+		<Flex
+			bg="bg.light"
+			p={8}
+			rounded="md"
+			flexDir="column"
+			minH="token(spacing.80)"
+		>
 			<Flex>
 				<IconFolder w={9} h={9} color="fg.accent" />
 				<Spacer />

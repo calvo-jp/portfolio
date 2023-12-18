@@ -12,14 +12,20 @@ interface BaseProps {
 	children?: never;
 }
 
-interface SectionHeadingProps extends Assign<HTMLStyledProps<'h2'>, BaseProps> {}
+interface SectionHeadingProps
+	extends Assign<HTMLStyledProps<'h2'>, BaseProps> {}
 
 export function SectionHeading(props: SectionHeadingProps) {
 	const {index, title, ...others} = props;
 
 	return (
 		<styled.h2 display="flex" alignItems="center" {...others}>
-			<styled.span color="fg.accent" fontSize="lg" fontFamily="mono" lineHeight="none">
+			<styled.span
+				color="fg.accent"
+				fontSize="lg"
+				fontFamily="mono"
+				lineHeight="none"
+			>
 				{index.toString().padStart(2, '0')}.
 			</styled.span>
 

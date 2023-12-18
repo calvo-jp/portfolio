@@ -36,7 +36,7 @@ function styledIcon(icon: LucideIcon) {
 			shouldForwardProp(key) {
 				return ['size', 'strokeWidth', 'absoluteStrokeWidth'].includes(key);
 			},
-		},
+		}
 	);
 }
 

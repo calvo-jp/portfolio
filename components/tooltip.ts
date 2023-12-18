@@ -11,7 +11,7 @@ export const Tooltip = styled(
 			openDelay: 150,
 			closeDelay: 100,
 		},
-	},
+	}
 );
 
 export const TooltipTrigger = styled(parts.Trigger, {

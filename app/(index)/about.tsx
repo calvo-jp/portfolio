@@ -48,7 +48,8 @@ export async function About() {
 					<RawHtml fontSize="lg">{about}</RawHtml>
 
 					<Box mt={5} fontSize="lg">
-						Here are a few technologies I&rsquo;ve been working with&nbsp;recently:
+						Here are a few technologies I&rsquo;ve been working
+						with&nbsp;recently:
 					</Box>
 
 					<Skills />

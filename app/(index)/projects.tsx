@@ -42,7 +42,9 @@ export async function Projects() {
 					lg: 16,
 				}}
 			>
-				{projects.map((o) => (!o.featured ? null : <Item key={o.title} data={o} />))}
+				{projects.map((o) =>
+					!o.featured ? null : <Item key={o.title} data={o} />
+				)}
 			</Box>
 		</styled.section>
 	);
@@ -98,7 +100,12 @@ function Item(props: ItemProps) {
 			</Box>
 
 			<Box flexGrow={1}>
-				<Box fontFamily="mono" fontSize="sm" color="fg.accent" lineHeight="none">
+				<Box
+					fontFamily="mono"
+					fontSize="sm"
+					color="fg.accent"
+					lineHeight="none"
+				>
 					Featured Project
 				</Box>
 
@@ -119,7 +126,15 @@ function Item(props: ItemProps) {
 						display: 'none',
 					}}
 				>
-					<Image src={image} alt="" width={450} height={450} w="full" h="auto" priority />
+					<Image
+						src={image}
+						alt=""
+						width={450}
+						height={450}
+						w="full"
+						h="auto"
+						priority
+					/>
 				</Box>
 
 				<RawHtml

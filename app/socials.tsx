@@ -30,7 +30,13 @@ export async function Socials() {
 					display: 'none',
 				}}
 			>
-				<styled.ul w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
+				<styled.ul
+					w={5}
+					display="flex"
+					flexDir="column"
+					alignItems="center"
+					gap={6}
+				>
 					{Object.entries(socials).map(([name, url]) => (
 						<styled.li key={name}>
 							<Tooltip

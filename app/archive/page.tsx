@@ -60,7 +60,12 @@ export default async function Archive() {
 							lg: 'row',
 						}}
 					>
-						<Box fontFamily="mono" fontSize="sm" lineHeight="loose" color="fg.accent">
+						<Box
+							fontFamily="mono"
+							fontSize="sm"
+							lineHeight="loose"
+							color="fg.accent"
+						>
 							{year}
 						</Box>
 						<Box>
@@ -90,7 +95,13 @@ function Item(props: TNonFeaturedProject) {
 					{title}
 				</styled.h2>
 				<RawHtml color="fg.strong">{description}</RawHtml>
-				<styled.ul mt={3} display="flex" gap={3} fontFamily="mono" fontSize="sm">
+				<styled.ul
+					mt={3}
+					display="flex"
+					gap={3}
+					fontFamily="mono"
+					fontSize="sm"
+				>
 					{tags.map((tag) => (
 						<styled.li key={tag}>{tag}</styled.li>
 					))}

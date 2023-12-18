@@ -1,7 +1,7 @@
 import {styled} from '@/styled-system/jsx';
 import {Fragment} from 'react';
-import {ExperienceSlides} from './experience-slides';
 import {ExperienceTabs} from './experience-tabs';
+import {ExperienceTree} from './experience-tree';
 import {SectionHeading} from './section-heading';
 
 export async function Experience() {
@@ -22,7 +22,7 @@ export async function Experience() {
 			/>
 
 			<ExperienceTabs />
-			<ExperienceSlides />
+			<ExperienceTree />
 		</styled.section>
 	);
 }

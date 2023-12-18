@@ -37,19 +37,34 @@ export default defineConfig({
 				colors: {
 					fg: {
 						DEFAULT: {
-							value: {base: '{colors.neutral.400}', _light: '{colors.neutral.600}'},
+							value: {
+								base: '{colors.neutral.400}',
+								_light: '{colors.neutral.600}',
+							},
 						},
 						strong: {
-							value: {base: '{colors.neutral.300}', _light: '{colors.neutral.700}'},
+							value: {
+								base: '{colors.neutral.300}',
+								_light: '{colors.neutral.700}',
+							},
 						},
 						stronger: {
-							value: {base: '{colors.neutral.200}', _light: '{colors.neutral.800}'},
+							value: {
+								base: '{colors.neutral.200}',
+								_light: '{colors.neutral.800}',
+							},
 						},
 						strongest: {
-							value: {base: '{colors.neutral.100}', _light: '{colors.neutral.900}'},
+							value: {
+								base: '{colors.neutral.100}',
+								_light: '{colors.neutral.900}',
+							},
 						},
 						accent: {
-							value: {base: '{colors.violet.500}', _light: '{colors.violet.700}'},
+							value: {
+								base: '{colors.violet.500}',
+								_light: '{colors.violet.700}',
+							},
 						},
 						high: {
 							value: {base: '{colors.white}', _light: '{colors.black}'},
@@ -57,20 +72,32 @@ export default defineConfig({
 					},
 					bg: {
 						DEFAULT: {
-							value: {base: '{colors.neutral.900}', _light: '{colors.neutral.100}'},
+							value: {
+								base: '{colors.neutral.900}',
+								_light: '{colors.neutral.100}',
+							},
 						},
 						/* FIXME: use "<color>/<opacity>" once supported */
 						alpha: {
 							value: {base: '#171717db', _light: '#f5f5f5db'},
 						},
 						light: {
-							value: {base: '{colors.neutral.800}', _light: '{colors.neutral.200}'},
+							value: {
+								base: '{colors.neutral.800}',
+								_light: '{colors.neutral.200}',
+							},
 						},
 						lighter: {
-							value: {base: '{colors.neutral.700}', _light: '{colors.neutral.300}'},
+							value: {
+								base: '{colors.neutral.700}',
+								_light: '{colors.neutral.300}',
+							},
 						},
 						lightest: {
-							value: {base: '{colors.neutral.600}', _light: '{colors.neutral.400}'},
+							value: {
+								base: '{colors.neutral.600}',
+								_light: '{colors.neutral.400}',
+							},
 						},
 					},
 				},
