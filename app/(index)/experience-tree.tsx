@@ -16,7 +16,7 @@ export async function ExperienceTree() {
 			flexDir="column"
 			gap={6}
 		>
-			{[...workHistory, ...workHistory].map((item, index) => (
+			{workHistory.map((item, index) => (
 				<Flex key={item.company.name} flexDir="column" gap={6}>
 					<Separator bottomOnly={index === 0}>
 						{format(item.dateOfEmployment.start, 'MMM yyyy')}
