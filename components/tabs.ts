@@ -1,15 +1,15 @@
 'use client';
 
 import {styled} from '@/styled-system/jsx';
-import {Tabs as parts} from '@ark-ui/react';
+import {Tabs as ArkTabs} from '@ark-ui/react';
 
-export const Tabs = styled(parts.Root);
-export const TabList = styled(parts.List);
-export const TabContent = styled(parts.Content);
-export const TabTrigger = styled(parts.Trigger, {
+export const Tabs = styled(ArkTabs.Root);
+export const TabList = styled(ArkTabs.List);
+export const TabContent = styled(ArkTabs.Content);
+export const TabTrigger = styled(ArkTabs.Trigger, {
 	base: {
 		cursor: 'pointer',
 	},
 });
 
-export const TabIndicator = styled(parts.Indicator);
+export const TabIndicator = styled(ArkTabs.Indicator);

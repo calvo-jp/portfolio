@@ -2,7 +2,6 @@ import {Button} from '@/components/button';
 import {Link} from '@/components/link';
 import {VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
-import {ThemeSwitch} from './theme-switch';
 
 export async function NavbarNav() {
 	const author = await getAuthor();
@@ -53,8 +52,6 @@ export async function NavbarNav() {
 					<VisuallyHidden>Download </VisuallyHidden>Resume
 				</Link>
 			</Button>
-
-			<ThemeSwitch />
 		</styled.nav>
 	);
 }

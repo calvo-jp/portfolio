@@ -1,7 +1,7 @@
 import {compareDesc} from 'date-fns';
 import {readFile, readdir} from 'fs/promises';
+import {unstable_cache as cache} from 'next/cache';
 import {join} from 'path';
-import {cache} from 'react';
 import {parse} from 'valibot';
 import {markdownToHtml} from './markdown-to-html';
 import {
@@ -13,13 +13,16 @@ import {
 	WorkHistorySchema,
 } from './types';
 
-export const getAuthor = cache(async function getAuthor() {
-	const projects = await getProjects();
-	const workHistory = await getWorkHistory();
-	const primaryInfo = await getPrimaryInfo();
+export const getAuthor = cache(
+	async function getAuthor(): Promise<TAuthor> {
+		const projects = await getProjects();
+		const workHistory = await getWorkHistory();
+		const primaryInfo = await getPrimaryInfo();
 
-	return {...primaryInfo, projects, workHistory} satisfies TAuthor;
-});
+		return {...primaryInfo, projects, workHistory} satisfies TAuthor;
+	},
+	['author']
+);
 
 const MARKDOWN_DIR = join(process.cwd(), 'assets/markdown');
 

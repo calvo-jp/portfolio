@@ -1,12 +1,11 @@
-import {IconAmpersands} from '@/components/icons';
+import {Icon} from '@/components/icon';
 import {Box, styled} from '@/styled-system/jsx';
 import {Assign, HTMLStyledProps} from '@/styled-system/types';
+import {AmpersandsIcon} from 'lucide-react';
 import {ReactNode} from 'react';
 
 interface BaseProps {
-	/**
-	 * non-zero based index
-	 */
+	/** non-zero based index */
 	index: number;
 	title: ReactNode;
 	children?: never;
@@ -44,13 +43,16 @@ export function SectionHeading(props: SectionHeadingProps) {
 
 			<Box mx={3} flexGrow={1} h="1px" bg="bg.light" />
 
-			<IconAmpersands
+			<Icon
 				color="bg.lightest"
 				display={{
 					base: 'none',
 					lg: 'block',
 				}}
-			/>
+				asChild
+			>
+				<AmpersandsIcon />
+			</Icon>
 		</styled.h2>
 	);
 }

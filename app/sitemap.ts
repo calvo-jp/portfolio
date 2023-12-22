@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			url: 'https://calvo-jp.vercel.app/archive',
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
-			priority: 0.8,
+			priority: 0.5,
 		},
 	];
 }

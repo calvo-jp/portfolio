@@ -1,4 +1,4 @@
-import {IconExternalLink, IconGitBranch} from '@/components/icons';
+import {Icon} from '@/components/icon';
 import {Image} from '@/components/image';
 import {Link} from '@/components/link';
 import {RawHtml} from '@/components/raw-html';
@@ -14,6 +14,7 @@ import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {TFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
+import {ExternalLinkIcon, GitBranchIcon} from 'lucide-react';
 import {Fragment} from 'react';
 import {SectionHeading} from './section-heading';
 
@@ -140,7 +141,6 @@ function Item(props: ItemProps) {
 				<RawHtml
 					mt={5}
 					color="fg.strong"
-					rounded="sm"
 					lg={{
 						px: 5,
 						py: 4,
@@ -178,7 +178,9 @@ function Item(props: ItemProps) {
 									}}
 									transition="colors token(durations.slow)"
 								>
-									<IconExternalLink w={6} h={6} />
+									<Icon w={6} h={6} asChild>
+										<ExternalLinkIcon />
+									</Icon>
 									<VisuallyHidden>Go to website</VisuallyHidden>
 								</Link>
 							</TooltipTrigger>
@@ -209,7 +211,9 @@ function Item(props: ItemProps) {
 								}}
 								transition="colors token(durations.slow)"
 							>
-								<IconGitBranch w={6} h={6} />
+								<Icon w={6} h={6} asChild>
+									<GitBranchIcon />
+								</Icon>
 								<VisuallyHidden>Go to repository</VisuallyHidden>
 							</Link>
 						</TooltipTrigger>

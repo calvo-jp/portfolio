@@ -1,9 +1,8 @@
 import {
 	Output,
 	array,
+	boolean,
 	email,
-	enum_,
-	fallback,
 	intersect,
 	literal,
 	object,
@@ -58,6 +57,7 @@ export const NonFeaturedProjectSchema = intersect([
 	object({
 		image: optional(string()),
 		featured: optional(literal(false)),
+		noteworthy: optional(boolean(), false),
 	}),
 ]);
 
@@ -83,14 +83,6 @@ export const AuthorSchema = intersect([
 		workHistory: array(WorkHistorySchema),
 	}),
 ]);
-
-export enum Theme {
-	Dark = 'dark',
-	Light = 'light',
-	System = 'system',
-}
-
-export const ThemeSchema = fallback(enum_(Theme), Theme.Dark);
 
 export type TCompany = Output<typeof CompanySchema>;
 export type TContact = Output<typeof ContactSchema>;

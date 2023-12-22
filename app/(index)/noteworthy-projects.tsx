@@ -1,4 +1,4 @@
-import {IconExternalLink, IconFolder, IconGitBranch} from '@/components/icons';
+import {Icon} from '@/components/icon';
 import {Link} from '@/components/link';
 import {RawHtml} from '@/components/raw-html';
 import {
@@ -20,6 +20,7 @@ import {
 import {getAuthor} from '@/utils/get-author';
 import {TNonFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
+import {ExternalLinkIcon, FolderIcon, GitBranchIcon} from 'lucide-react';
 
 export async function NoteworthyProjects() {
 	const {projects} = await getAuthor();
@@ -74,9 +75,15 @@ export async function NoteworthyProjects() {
 					xl: 'repeat(3,1fr)',
 				}}
 			>
-				{projects.map((o) =>
-					o.featured ? null : <Item key={o.title} data={o} />
-				)}
+				{projects.map((o) => {
+					if (o.featured) {
+						return null;
+					} else if (!o.noteworthy) {
+						return null;
+					} else {
+						return <Item key={o.title} data={o} />;
+					}
+				})}
 			</Box>
 		</styled.section>
 	);
@@ -90,15 +97,11 @@ function Item(props: ItemProps) {
 	const {title, description, repository, website, tags} = props.data;
 
 	return (
-		<Flex
-			bg="bg.light"
-			p={8}
-			rounded="md"
-			flexDir="column"
-			minH="token(spacing.80)"
-		>
+		<Flex bg="bg.light" p={8} flexDir="column" minH="token(spacing.80)">
 			<Flex>
-				<IconFolder w={9} h={9} color="fg.accent" />
+				<Icon w={9} h={9} color="fg.accent" asChild>
+					<FolderIcon />
+				</Icon>
 				<Spacer />
 				<HStack gap={4}>
 					{website && (
@@ -115,7 +118,9 @@ function Item(props: ItemProps) {
 									}}
 								>
 									<VisuallyHidden>Go to website</VisuallyHidden>
-									<IconExternalLink />
+									<Icon asChild>
+										<ExternalLinkIcon />
+									</Icon>
 								</Link>
 							</TooltipTrigger>
 
@@ -145,7 +150,9 @@ function Item(props: ItemProps) {
 								}}
 							>
 								<VisuallyHidden>Go to repository</VisuallyHidden>
-								<IconGitBranch />
+								<Icon asChild>
+									<GitBranchIcon />
+								</Icon>
 							</Link>
 						</TooltipTrigger>
 

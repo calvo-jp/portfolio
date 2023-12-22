@@ -7,7 +7,7 @@ interface ExperienceItemProps {
 	data: TWorkHistory;
 }
 
-export function ExperienceItem(props: ExperienceItemProps) {
+export async function ExperienceItem(props: ExperienceItemProps) {
 	const {company, dateOfEmployment, position, responsibilities} = props.data;
 
 	const [employedAtStart, employedAtUnitl] = formatEmploymentDate(

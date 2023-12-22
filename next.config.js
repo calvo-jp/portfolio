@@ -1,7 +1,7 @@
 // @ts-check
 
 /** @type {import('next').NextConfig} */
-const config = {
+module.exports = {
 	images: {
 		remotePatterns: [
 			{
@@ -10,12 +10,4 @@ const config = {
 			},
 		],
 	},
-	compiler: {
-		removeConsole: process.env.NODE_ENV === 'production',
-	},
-	experimental: {
-		serverMinification: true,
-	},
 };
-
-module.exports = config;

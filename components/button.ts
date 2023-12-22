@@ -7,7 +7,6 @@ const recipe = cva({
 		color: 'fg.accent',
 		border: '1px solid token(colors.fg.accent)',
 		cursor: 'pointer',
-		rounded: 'sm',
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',

@@ -7,13 +7,13 @@ import {
 	DialogPositioner,
 	DialogTrigger,
 } from '@/components/dialog';
-import {IconMenu, IconX} from '@/components/icons';
+import {Icon} from '@/components/icon';
 import {Link} from '@/components/link';
-import {Box, Center, Flex, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {Box, Flex, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {Portal} from '@ark-ui/react';
+import {MenuIcon, XIcon} from 'lucide-react';
 import {NAVBAR_NAV_ITEMS} from './navbar-nav';
-import {ThemeSwitch} from './theme-switch';
 
 export async function NavbarDrawer() {
 	const author = await getAuthor();
@@ -26,7 +26,9 @@ export async function NavbarDrawer() {
 					display: 'none',
 				}}
 			>
-				<IconMenu w={8} h={8} />
+				<Icon w={8} h={8} asChild>
+					<MenuIcon />
+				</Icon>
 				<VisuallyHidden>Toggle menu</VisuallyHidden>
 			</DialogTrigger>
 
@@ -76,7 +78,9 @@ export async function NavbarDrawer() {
 					>
 						<Flex justifyContent="flex-end">
 							<DialogCloseTrigger color="fg.strong">
-								<IconX w={8} h={8} />
+								<Icon w={8} h={8} asChild>
+									<XIcon />
+								</Icon>
 								<VisuallyHidden>Close menu</VisuallyHidden>
 							</DialogCloseTrigger>
 						</Flex>
@@ -115,10 +119,6 @@ export async function NavbarDrawer() {
 									Resume
 								</Link>
 							</Button>
-
-							<Center mt={12}>
-								<ThemeSwitch />
-							</Center>
 						</styled.nav>
 					</DialogContent>
 				</DialogPositioner>

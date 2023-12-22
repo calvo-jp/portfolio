@@ -1,13 +1,14 @@
 import selfie from '@/assets/images/selfie.jpg';
-import {IconAsterisk} from '@/components/icons';
+import {Icon} from '@/components/icon';
 import {Image} from '@/components/image';
 import {RawHtml} from '@/components/raw-html';
-import {Box, Flex, Grid, GridItem, styled} from '@/styled-system/jsx';
+import {Box, Flex, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
+import {AsteriskIcon} from 'lucide-react';
 import {SectionHeading} from './section-heading';
 
 export async function About() {
-	const {about} = await getAuthor();
+	const {about, skills} = await getAuthor();
 
 	return (
 		<styled.section
@@ -52,58 +53,33 @@ export async function About() {
 						with&nbsp;recently:
 					</Box>
 
-					<Skills />
+					<styled.ul mt={5}>
+						{skills.map((skill) => (
+							<styled.li
+								key={skill}
+								fontFamily="mono"
+								display="flex"
+								alignItems="center"
+								gap={1}
+							>
+								<Icon color="fg.accent" w={3} h={3} asChild>
+									<AsteriskIcon />
+								</Icon>
+								<styled.span fontSize="sm">{skill}</styled.span>
+							</styled.li>
+						))}
+					</styled.ul>
 				</Box>
 
-				<Box flexGrow={1}>
-					<Box
-						p={4}
-						pos="relative"
-						border="2px solid token(colors.fg.accent)"
-						rounded="xl"
-					>
-						<Image
-							src={selfie}
-							alt=""
-							rounded="lg"
-							placeholder="blur"
-							draggable={false}
-						/>
-					</Box>
+				<Box
+					p={4}
+					pos="relative"
+					border="2px solid token(colors.fg.accent)"
+					flexGrow={1}
+				>
+					<Image src={selfie} alt="" placeholder="blur" draggable={false} />
 				</Box>
 			</Flex>
 		</styled.section>
-	);
-}
-
-async function Skills() {
-	const {skills} = await getAuthor();
-
-	return (
-		<Grid
-			mt={5}
-			columns={{
-				base: 1,
-				lg: 3,
-			}}
-			display="grid"
-			gap={1}
-		>
-			{skills.map((skill, i) => (
-				<GridItem
-					key={skill}
-					fontFamily="mono"
-					display="flex"
-					alignItems="center"
-					gap={1}
-					colSpan={{
-						lg: (i + 1) % 2 === 0 ? 2 : 1,
-					}}
-				>
-					<IconAsterisk color="fg.accent" w={3} h={3} />
-					<styled.span fontSize="sm">{skill}</styled.span>
-				</GridItem>
-			))}
-		</Grid>
 	);
 }

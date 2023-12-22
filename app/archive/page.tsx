@@ -1,4 +1,4 @@
-import {IconExternalLink, IconGitBranch} from '@/components/icons';
+import {Icon} from '@/components/icon';
 import {Link} from '@/components/link';
 import {RawHtml} from '@/components/raw-html';
 import {
@@ -13,6 +13,8 @@ import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {TNonFeaturedProject} from '@/utils/types';
 import {Portal} from '@ark-ui/react';
+import {format} from 'date-fns';
+import {ExternalLinkIcon, GitBranchIcon} from 'lucide-react';
 import {Metadata} from 'next';
 
 export const metadata: Metadata = {
@@ -40,7 +42,7 @@ export default async function Archive() {
 				Archive
 			</styled.h1>
 			<styled.p fontFamily="mono" color="fg.accent">
-				A big list of things I&rsquo;ve worked&nbsp;on
+				A list of things I&rsquo;ve worked&nbsp;on
 			</styled.p>
 
 			<Box mt={16}>
@@ -122,7 +124,9 @@ function Item(props: TNonFeaturedProject) {
 									color: 'fg.accent',
 								}}
 							>
-								<IconExternalLink />
+								<Icon asChild>
+									<ExternalLinkIcon />
+								</Icon>
 								<VisuallyHidden>Go to website</VisuallyHidden>
 							</Link>
 						</TooltipTrigger>
@@ -152,7 +156,9 @@ function Item(props: TNonFeaturedProject) {
 								color: 'fg.accent',
 							}}
 						>
-							<IconGitBranch />
+							<Icon asChild>
+								<GitBranchIcon />
+							</Icon>
 							<VisuallyHidden>Go to repository</VisuallyHidden>
 						</Link>
 					</TooltipTrigger>
@@ -180,8 +186,8 @@ async function getItems() {
 	const r: Record<string, TNonFeaturedProject[]> = {};
 
 	projects.forEach((i) => {
-		if (!i.featured) {
-			const k = i.createdAt.getFullYear().toString();
+		if (!i.featured && !i.noteworthy) {
+			const k = format(i.createdAt, 'yyyy');
 
 			if (r[k]) {
 				r[k].push(i);

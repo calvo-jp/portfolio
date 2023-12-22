@@ -1,4 +1,4 @@
-import {IconGithub, IconLinkedin, IconTwitter} from '@/components/icons';
+import {Icon} from '@/components/icon';
 import {Link} from '@/components/link';
 import {
 	Tooltip,
@@ -12,6 +12,7 @@ import {Box, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {capitalize} from '@/utils/capitalize';
 import {getAuthor} from '@/utils/get-author';
 import {Portal} from '@ark-ui/react';
+import {GithubIcon, LinkedinIcon, TwitterIcon} from 'lucide-react';
 
 export async function Socials() {
 	const {socials} = await getAuthor();
@@ -56,7 +57,7 @@ export async function Socials() {
 											_hover: 'fg.accent',
 										}}
 									>
-										{getSocialIcon(name)}
+										<Icon asChild>{getSocialIcon(name)}</Icon>
 										<VisuallyHidden>{name}</VisuallyHidden>
 									</Link>
 								</TooltipTrigger>
@@ -76,7 +77,7 @@ export async function Socials() {
 					))}
 
 					<styled.li pt={2}>
-						<Box h="15vh" w="1px" bg="bg.light" roundedTop="full" />
+						<Box h="15vh" w="1px" bg="bg.light" />
 					</styled.li>
 				</styled.ul>
 			</styled.nav>
@@ -87,11 +88,11 @@ export async function Socials() {
 export function getSocialIcon(name: string) {
 	switch (name) {
 		case 'github':
-			return <IconGithub />;
+			return <GithubIcon />;
 		case 'twitter':
-			return <IconTwitter />;
+			return <TwitterIcon />;
 		case 'linkedin':
-			return <IconLinkedin />;
+			return <LinkedinIcon />;
 		default: {
 			const error = new Error();
 

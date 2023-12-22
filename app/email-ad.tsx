@@ -35,7 +35,7 @@ export async function EmailAd() {
 					>
 						{contact.email}
 					</Link>
-					<Box h="15vh" w="1px" bg="bg.light" roundedTop="full" />
+					<Box h="15vh" w="1px" bg="bg.light" />
 				</Box>
 			</Box>
 		</Portal>

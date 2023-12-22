@@ -43,18 +43,10 @@ export async function Hero() {
 				fontWeight="extrabold"
 				lineHeight="none"
 			>
-				I bring websites to&nbsp;life.
+				I build things for the&nbsp;web.
 			</styled.h2>
 
-			<styled.p
-				mt={{
-					base: 5,
-					lg: 8,
-				}}
-				fontSize="lg"
-				lineHeight="normal"
-				maxW="40rem"
-			>
+			<styled.p mt={5} fontSize="lg" lineHeight="normal" maxW="40rem">
 				I&rsquo;m a software engineer dedicated to user-centric solutions that
 				balance exceptional experiences with long-term maintainability
 			</styled.p>

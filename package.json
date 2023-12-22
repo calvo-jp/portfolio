@@ -11,14 +11,10 @@
 	},
 	"dependencies": {
 		"@ark-ui/react": "1.2.1",
-		"@vercel/analytics": "1.1.1",
-		"@vercel/speed-insights": "1.0.2",
-		"date-fns": "2.30.0",
+		"date-fns": "3.0.5",
 		"geist": "1.2.0",
-		"html-react-parser": "5.0.7",
-		"lucide-react": "0.295.0",
+		"lucide-react": "0.299.0",
 		"next": "14.0.4",
-		"next-themes": "0.2.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"rehype-external-links": "3.0.0",
@@ -28,17 +24,17 @@
 		"remark-parse": "11.0.0",
 		"remark-rehype": "11.0.0",
 		"remark-stringify": "11.0.0",
-		"sharp": "0.33.0",
+		"sharp": "0.33.1",
 		"unified": "11.0.4",
 		"valibot": "0.24.1",
 		"vfile-matter": "5.0.0"
 	},
 	"devDependencies": {
 		"@pandacss/dev": "0.19.0",
-		"@types/node": "20.10.4",
+		"@types/node": "20.10.5",
 		"@types/react": "18.2.45",
-		"@types/react-dom": "18.2.17",
-		"eslint": "8.55.0",
+		"@types/react-dom": "18.2.18",
+		"eslint": "8.56.0",
 		"eslint-config-next": "14.0.4",
 		"typescript": "5.3.3"
 	}
