@@ -1,8 +1,9 @@
 import selfie from '@/assets/images/selfie.jpg';
 import {Icon} from '@/components/icon';
 import {Image} from '@/components/image';
+import {Link} from '@/components/link';
 import {RawHtml} from '@/components/raw-html';
-import {Box, Flex, styled} from '@/styled-system/jsx';
+import {Box, Flex, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {AsteriskIcon} from 'lucide-react';
 import {SectionHeading} from './section-heading';
@@ -71,7 +72,11 @@ export async function About() {
 					</styled.ul>
 				</Box>
 
-				<Box
+				<Link
+					href={selfie.src}
+					target="_blank"
+					rel="noreferrer noopener"
+					prefetch={false}
 					p={4}
 					pos="relative"
 					border="2px solid token(colors.fg.accent)"
@@ -84,7 +89,8 @@ export async function About() {
 						draggable={false}
 						priority
 					/>
-				</Box>
+					<VisuallyHidden>Selfie</VisuallyHidden>
+				</Link>
 			</Flex>
 		</styled.section>
 	);
