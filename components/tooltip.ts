@@ -10,6 +10,7 @@ export const Tooltip = styled(
 		defaultProps: {
 			openDelay: 150,
 			closeDelay: 100,
+			lazyMount: true,
 		},
 	}
 );

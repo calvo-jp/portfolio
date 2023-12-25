@@ -14,14 +14,17 @@ import {
 } from './types';
 
 export const getAuthor = cache(
-	async function getAuthor(): Promise<TAuthor> {
+	async (): Promise<TAuthor> => {
 		const projects = await getProjects();
 		const workHistory = await getWorkHistory();
 		const primaryInfo = await getPrimaryInfo();
 
-		return {...primaryInfo, projects, workHistory} satisfies TAuthor;
+		return {...primaryInfo, projects, workHistory};
 	},
-	['author']
+	['author'],
+	{
+		tags: ['author'],
+	}
 );
 
 const MARKDOWN_DIR = join(process.cwd(), 'assets/markdown');

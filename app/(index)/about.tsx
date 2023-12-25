@@ -77,7 +77,13 @@ export async function About() {
 					border="2px solid token(colors.fg.accent)"
 					flexGrow={1}
 				>
-					<Image src={selfie} alt="" placeholder="blur" draggable={false} />
+					<Image
+						src={selfie}
+						alt=""
+						placeholder="blur"
+						draggable={false}
+						priority
+					/>
 				</Box>
 			</Flex>
 		</styled.section>

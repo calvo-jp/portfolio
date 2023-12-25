@@ -35,7 +35,7 @@ export const WorkHistorySchema = object({
 	responsibilities: string(),
 });
 
-const BaseProjectSchema = object({
+export const BaseProjectSchema = object({
 	title: string(),
 	description: string(),
 	repository: string([url()]),

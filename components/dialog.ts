@@ -3,7 +3,16 @@
 import {styled} from '@/styled-system/jsx';
 import {Dialog as ArkDialog} from '@ark-ui/react';
 
-export const Dialog = styled(ArkDialog.Root);
+export const Dialog = styled(
+	ArkDialog.Root,
+	{},
+	{
+		defaultProps: {
+			lazyMount: true,
+		},
+	}
+);
+
 export const DialogTrigger = styled(ArkDialog.Trigger, {
 	base: {
 		cursor: 'pointer',
