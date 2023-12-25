@@ -19,7 +19,9 @@ export async function ExperienceTree() {
 			{workHistory.map((item, index) => (
 				<Flex key={item.company.name} flexDir="column" gap={6}>
 					<Separator bottomOnly={index === 0}>
-						{format(item.dateOfEmployment.start, 'MMM yyyy')}
+						{item.dateOfEmployment.until
+							? format(item.dateOfEmployment.until, 'MMM yyyy')
+							: 'Present'}
 					</Separator>
 					<ExperienceItem data={item} />
 				</Flex>
