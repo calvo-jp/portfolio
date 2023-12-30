@@ -44,6 +44,7 @@ export default async function RootLayout({children}: PropsWithChildren) {
 		<styled.html
 			lang="en"
 			className={cx(GeistSans.variable, GeistMono.variable)}
+			colorScheme="dark"
 			scrollBehavior="smooth"
 			scrollbarGutter="stable"
 			lgDown={{
@@ -57,8 +58,6 @@ export default async function RootLayout({children}: PropsWithChildren) {
 			mdOnly={{
 				fontSize: 'xl',
 			}}
-			suppressHydrationWarning
-			colorScheme="dark"
 		>
 			<styled.body bg="bg" color="fg" minHeight="dvh" fontFamily="sans">
 				<Navbar />
