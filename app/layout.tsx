@@ -58,6 +58,7 @@ export default async function RootLayout({children}: PropsWithChildren) {
 				fontSize: 'xl',
 			}}
 			suppressHydrationWarning
+			colorScheme="dark"
 		>
 			<styled.body bg="bg" color="fg" minHeight="dvh" fontFamily="sans">
 				<Navbar />

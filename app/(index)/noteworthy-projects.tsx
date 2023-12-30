@@ -98,7 +98,7 @@ function Item(props: ItemProps) {
 
 	return (
 		<Flex bg="bg.light" p={8} flexDir="column" minH="token(spacing.80)">
-			<Flex>
+			<Flex alignItems="start">
 				<Icon w={9} h={9} color="fg.accent" asChild>
 					<FolderIcon />
 				</Icon>
