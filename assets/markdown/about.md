@@ -1,6 +1,6 @@
 ---
 name: JP Calvo
-resume: https://docs.google.com/document/d/1F1Sy9XboZLo-fMCPfpGa35uqNyuvVeI6niXkhpYOp_c/edit?usp=share_link
+resume: https://calvojp-resume.vercel.app
 contact:
   email: calvojp92@gmail.com
 socials:
