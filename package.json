@@ -11,9 +11,9 @@
 	},
 	"dependencies": {
 		"@ark-ui/react": "1.2.1",
-		"date-fns": "3.1.0",
+		"date-fns": "3.2.0",
 		"geist": "1.2.0",
-		"lucide-react": "0.307.0",
+		"lucide-react": "0.308.0",
 		"next": "14.0.4",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
@@ -30,8 +30,8 @@
 		"vfile-matter": "5.0.0"
 	},
 	"devDependencies": {
-		"@pandacss/dev": "0.26.0",
-		"@types/node": "20.10.7",
+		"@pandacss/dev": "0.26.1",
+		"@types/node": "20.10.8",
 		"@types/react": "18.2.47",
 		"@types/react-dom": "18.2.18",
 		"eslint": "8.56.0",
