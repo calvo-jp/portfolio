@@ -4,6 +4,7 @@ repository: https://github.com/calvo-jp/todo
 tags:
   - SvelteKit
   - Tailwind
+  - Prisma
 createdAt: 2023-12-20
 ---
 
