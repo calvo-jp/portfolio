@@ -1,10 +1,11 @@
 ---
 position: Frontend Engineer
 company:
-  name: ScaleForge
-  website: https://scaleforge.tech
+  name: High Output Ventures
+  website: https://hov.co/
 dateOfEmployment:
-  start: 2023-04-01
+  start: 2022-03-01
+  until: 2023-04-01
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna&nbsp;aliqua.
