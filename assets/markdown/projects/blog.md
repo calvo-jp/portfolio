@@ -1,6 +1,5 @@
 ---
 title: Blog
-website: https://calvojp-blog.vercel.app
 repository: https://github.com/calvo-jp/blog
 noteworthy: true
 tags:
