@@ -2,7 +2,7 @@ import {compareDesc} from 'date-fns';
 import {readFile, readdir} from 'fs/promises';
 import {unstable_cache as cache} from 'next/cache';
 import {join} from 'path';
-import {parse} from 'valibot';
+import * as v from 'valibot';
 import {markdownToHtml} from './markdown-to-html';
 import {
 	PrimaryInfoSchema,
@@ -33,7 +33,7 @@ async function getPrimaryInfo() {
 	const buffer = await readFile(join(MARKDOWN_DIR, 'about.md'));
 	const result = await markdownToHtml(buffer.toString());
 
-	return parse(PrimaryInfoSchema, {
+	return v.parse(PrimaryInfoSchema, {
 		...result.meta.matter,
 		about: result.html,
 	});
@@ -48,7 +48,7 @@ async function getWorkHistory() {
 		const buffer = await readFile(join(subdir, file));
 		const result = await markdownToHtml(buffer.toString());
 
-		const history = parse(WorkHistorySchema, {
+		const history = v.parse(WorkHistorySchema, {
 			...result.meta.matter,
 			responsibilities: result.html,
 		});
@@ -71,7 +71,7 @@ async function getProjects() {
 		const buffer = await readFile(join(subdir, file));
 		const result = await markdownToHtml(buffer.toString());
 
-		const project = parse(ProjectSchema, {
+		const project = v.parse(ProjectSchema, {
 			...result.meta.matter,
 			description: result.html,
 		});

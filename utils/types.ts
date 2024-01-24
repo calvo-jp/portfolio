@@ -1,95 +1,81 @@
-import {
-	Output,
-	array,
-	boolean,
-	email,
-	intersect,
-	literal,
-	object,
-	optional,
-	record,
-	string,
-	transform,
-	union,
-	url,
-} from 'valibot';
+import * as v from 'valibot';
 
-export const CompanySchema = object({
-	name: string(),
-	website: string([url()]),
+export const CompanySchema = v.object({
+	name: v.string(),
+	website: v.string([v.url()]),
 });
 
-export const ContactSchema = object({
-	email: string([email()]),
+export const ContactSchema = v.object({
+	email: v.string([v.email()]),
 });
 
-export const EmploymentDateSchema = object({
-	start: transform(string(), (value) => new Date(value)),
-	until: optional(transform(string(), (value) => new Date(value))),
+export const EmploymentDateSchema = v.object({
+	start: v.transform(v.string(), (value) => new Date(value)),
+	until: v.optional(v.transform(v.string(), (value) => new Date(value))),
 });
 
-export const WorkHistorySchema = object({
+export const WorkHistorySchema = v.object({
 	company: CompanySchema,
-	position: string(),
+	position: v.string(),
 	dateOfEmployment: EmploymentDateSchema,
-	responsibilities: string(),
+	responsibilities: v.string(),
 });
 
-export const BaseProjectSchema = object({
-	title: string(),
-	description: string(),
-	repository: string([url()]),
-	website: optional(string([url()])),
-	tags: array(string()),
-	createdAt: transform(string(), (value) => new Date(value)),
+export const BaseProjectSchema = v.object({
+	title: v.string(),
+	description: v.string(),
+	repository: v.string([v.url()]),
+	website: v.optional(v.string([v.url()])),
+	tags: v.array(v.string()),
+	createdAt: v.transform(v.string(), (value) => new Date(value)),
 });
 
-export const FeaturedProjectSchema = intersect([
+export const FeaturedProjectSchema = v.intersect([
 	BaseProjectSchema,
-	object({
-		image: string(),
-		featured: literal(true),
+	v.object({
+		image: v.string(),
+		featured: v.literal(true),
 	}),
 ]);
 
-export const NonFeaturedProjectSchema = intersect([
+export const NonFeaturedProjectSchema = v.intersect([
 	BaseProjectSchema,
-	object({
-		image: optional(string()),
-		featured: optional(literal(false)),
-		noteworthy: optional(boolean(), false),
+	v.object({
+		image: v.optional(v.string()),
+		featured: v.optional(v.literal(false)),
+		noteworthy: v.optional(v.boolean(), false),
 	}),
 ]);
 
-export const ProjectSchema = union([
+export const ProjectSchema = v.union([
 	FeaturedProjectSchema,
 	NonFeaturedProjectSchema,
 ]);
 
-export const PrimaryInfoSchema = object({
-	name: string(),
-	skills: array(string()),
-	resume: string([url()]),
-	socials: record(string([url()])),
+export const PrimaryInfoSchema = v.object({
+	name: v.string(),
+	skills: v.array(v.string()),
+	resume: v.string([v.url()]),
+	socials: v.record(v.string([v.url()])),
 	contact: ContactSchema,
 	company: CompanySchema,
-	about: string(),
+	about: v.string(),
 });
 
-export const AuthorSchema = intersect([
+export const AuthorSchema = v.intersect([
 	PrimaryInfoSchema,
-	object({
-		projects: array(ProjectSchema),
-		workHistory: array(WorkHistorySchema),
+	v.object({
+		projects: v.array(ProjectSchema),
+		workHistory: v.array(WorkHistorySchema),
 	}),
 ]);
 
-export type TCompany = Output<typeof CompanySchema>;
-export type TContact = Output<typeof ContactSchema>;
-export type TProject = Output<typeof ProjectSchema>;
-export type TFeaturedProject = Output<typeof FeaturedProjectSchema>;
-export type TNonFeaturedProject = Output<typeof NonFeaturedProjectSchema>;
-export type TEmploymentDate = Output<typeof EmploymentDateSchema>;
-export type TWorkHistory = Output<typeof WorkHistorySchema>;
-export type TPrimaryInfo = Output<typeof PrimaryInfoSchema>;
-export type TAuthor = Output<typeof AuthorSchema>;
+export type TCompany = v.Output<typeof CompanySchema>;
+export type TContact = v.Output<typeof ContactSchema>;
+export type TProject = v.Output<typeof ProjectSchema>;
+export type TFeaturedProject = v.Output<typeof FeaturedProjectSchema>;
+export type TNonFeaturedProject = v.Output<typeof NonFeaturedProjectSchema>;
+export type TEmploymentDate = v.Output<typeof EmploymentDateSchema>;
+export type TWorkHistory = v.Output<typeof WorkHistorySchema>;
+export type TPrimaryInfo = v.Output<typeof PrimaryInfoSchema>;
+export type TAuthor = v.Output<typeof AuthorSchema>;

@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import {Plugin, unified} from 'unified';
-import {fallback, object, parse, record, unknown} from 'valibot';
+import * as v from 'valibot';
 import {matter} from 'vfile-matter';
 
 const frontmatterParserPlugin: Plugin = () => {
@@ -25,12 +25,14 @@ const processor = unified()
 	.use(rehypeExternalLinks, {target: '_blank', rel: ['noopener', 'noreferrer']})
 	.use(rehypeStringify);
 
-const metaSchema = fallback(object({matter: record(unknown())}), {matter: {}});
+const metaSchema = v.fallback(v.object({matter: v.record(v.unknown())}), {
+	matter: {},
+});
 
 export async function markdownToHtml(markdown: string) {
 	const file = await processor.process(markdown);
 	const html = file.toString();
-	const meta = parse(metaSchema, file.data);
+	const meta = v.parse(metaSchema, file.data);
 
 	return {
 		html,
