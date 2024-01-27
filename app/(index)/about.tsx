@@ -40,6 +40,7 @@ export async function About() {
 					base: 'column',
 					lg: 'row',
 				}}
+				alignItems="start"
 			>
 				<Box
 					flexShrink={0}
