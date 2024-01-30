@@ -96,5 +96,4 @@ export default defineConfig({
 	outdir: 'styled-system',
 	logLevel: 'silent',
 	jsxFramework: 'react',
-	lightningcss: true,
 });
