@@ -34,7 +34,7 @@ export async function NavbarDrawer() {
 
 			<Portal>
 				<DialogBackdrop
-					bg="fg.alpha"
+					bg="bg/80"
 					pos="fixed"
 					inset={0}
 					backdropFilter="blur(4px)"

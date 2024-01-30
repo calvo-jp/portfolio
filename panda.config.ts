@@ -59,10 +59,6 @@ export default defineConfig({
 						DEFAULT: {
 							value: {base: '{colors.neutral.900}'},
 						},
-						/* FIXME: use "<color>/<opacity>" once supported */
-						alpha: {
-							value: {base: '#171717db'},
-						},
 						light: {
 							value: {base: '{colors.neutral.800}'},
 						},

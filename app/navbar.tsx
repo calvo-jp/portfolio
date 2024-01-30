@@ -13,7 +13,7 @@ export async function Navbar() {
 				base: 4,
 				md: 6,
 			}}
-			bg="bg.alpha"
+			bg="bg/75"
 			pos="sticky"
 			top={0}
 			zIndex="sticky"
