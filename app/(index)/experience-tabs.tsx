@@ -57,12 +57,8 @@ export async function ExperienceTabs() {
 				<TabIndicator
 					bg="fg.accent"
 					_vertical={{
-						h: 5,
+						h: 'var(--height)',
 						w: 0.5,
-					}}
-					_horizontal={{
-						h: 0.5,
-						bottom: 0,
 					}}
 				/>
 			</TabList>
