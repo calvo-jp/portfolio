@@ -96,6 +96,7 @@ function Item(props: ItemProps) {
 					w="full"
 					h="auto"
 					priority
+					sizes="100vw"
 					draggable={false}
 				/>
 			</Box>

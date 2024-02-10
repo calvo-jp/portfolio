@@ -89,6 +89,7 @@ export async function About() {
 						placeholder="blur"
 						draggable={false}
 						priority
+						sizes="100vw"
 					/>
 					<VisuallyHidden>Selfie</VisuallyHidden>
 				</Link>
