@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ark-ui/react':
-    specifier: 2.0.1
-    version: 2.0.1(@internationalized/date@3.5.1)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 2.0.2
+    version: 2.0.2(@internationalized/date@3.5.1)(react-dom@18.2.0)(react@18.2.0)
   date-fns:
     specifier: 3.3.1
     version: 3.3.1
@@ -15,8 +15,8 @@ dependencies:
     specifier: 1.2.2
     version: 1.2.2(next@14.1.0)
   lucide-react:
-    specifier: 0.323.0
-    version: 0.323.0(react@18.2.0)
+    specifier: 0.325.0
+    version: 0.325.0(react@18.2.0)
   next:
     specifier: 14.1.0
     version: 14.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -130,8 +130,8 @@ packages:
       - '@internationalized/date'
     dev: false
 
-  /@ark-ui/react@2.0.1(@internationalized/date@3.5.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-TZqkhlAnIFGERb40mhtxW35mawH01cdCRPoVrtrpi9xR6Q8nJEKFdX66L4yPwMW2UPZXEzeNMDOtWGYhusk//g==}
+  /@ark-ui/react@2.0.2(@internationalized/date@3.5.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-eR8s5GTUlHE2t8b6r5Qc3Np8Da3nGb964rddGRvAj8nHbgGApyZK0JQFj4HA3RD1ar10IO8fnKhm++T3otaqcw==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
@@ -3665,8 +3665,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-react@0.323.0(react@18.2.0):
-    resolution: {integrity: sha512-rTXZFILl2Y4d1SG9p1Mdcf17AcPvPvpc/egFIzUrp7IUy60MUQo3Oi1mu8LGYXUVwuRZYsSMt3csHRW5mAovJg==}
+  /lucide-react@0.325.0(react@18.2.0):
+    resolution: {integrity: sha512-/H6IPtPMQUwXjHTFylCYBq/j8J3AJKG5Uil3mcm1E58wKkCfoKVzJH7toZU3U20wJrL7dP51dNX3yLgAPod+qQ==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
