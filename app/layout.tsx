@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			template: `${title} - %s`,
 		},
 		description,
-		metadataBase: new URL('https://calvo-jp.vercel.app'),
+		metadataBase: new URL('https://calvojp.vercel.app'),
 		keywords: [
 			'Porfolio',
 			'Dark Mode',
