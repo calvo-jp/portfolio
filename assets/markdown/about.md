@@ -13,7 +13,9 @@ skills:
   - JavaScript
   - TypeScript
   - React
+  - Svelte
   - Next.js
+  - SvelteKit
 company:
   name: ScaleForge
   website: https://scaleforge.tech
