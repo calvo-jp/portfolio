@@ -2,7 +2,7 @@ import selfie from '@/assets/images/selfie.jpg';
 import {Icon} from '@/components/icon';
 import {Image} from '@/components/image';
 import {Link} from '@/components/link';
-import {RawHtml} from '@/components/raw-html';
+import {Prose} from '@/components/prose';
 import {Box, Flex, VisuallyHidden, styled} from '@/styled-system/jsx';
 import {getAuthor} from '@/utils/get-author';
 import {AsteriskIcon} from 'lucide-react';
@@ -48,7 +48,7 @@ export async function About() {
 						w: '1/2',
 					}}
 				>
-					<RawHtml fontSize="lg">{about}</RawHtml>
+					<Prose fontSize="lg">{about}</Prose>
 
 					<Box mt={5} fontSize="lg">
 						Here are a few technologies I&rsquo;ve been working

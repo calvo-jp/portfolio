@@ -1,6 +1,6 @@
 import {Icon} from '@/components/icon';
 import {Link} from '@/components/link';
-import {RawHtml} from '@/components/raw-html';
+import {Prose} from '@/components/prose';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -96,7 +96,7 @@ function Item(props: TNonFeaturedProject) {
 				<styled.h2 fontSize="xl" fontWeight="bold" color="fg.stronger">
 					{title}
 				</styled.h2>
-				<RawHtml color="fg.strong">{description}</RawHtml>
+				<Prose color="fg.strong">{description}</Prose>
 				<styled.ul
 					mt={3}
 					display="flex"

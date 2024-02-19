@@ -1,4 +1,4 @@
-import {RawHtml} from '@/components/raw-html';
+import {Prose} from '@/components/prose';
 import {Box, styled} from '@/styled-system/jsx';
 import {TWorkHistory} from '@/utils/types';
 import {format, isSameYear} from 'date-fns';
@@ -34,7 +34,7 @@ export async function ExperienceItem(props: ExperienceItemProps) {
 				<styled.span w={2.5} h="1px" bg="bg.lighter" />
 				<styled.span>{employedAtUnitl}</styled.span>
 			</Box>
-			<RawHtml mt={5}>{responsibilities}</RawHtml>
+			<Prose mt={5}>{responsibilities}</Prose>
 		</Box>
 	);
 }

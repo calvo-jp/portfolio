@@ -1,6 +1,6 @@
 import {Icon} from '@/components/icon';
 import {Link} from '@/components/link';
-import {RawHtml} from '@/components/raw-html';
+import {Prose} from '@/components/prose';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -174,9 +174,9 @@ function Item(props: ItemProps) {
 				{title}
 			</styled.h3>
 
-			<RawHtml mt={2} fontSize="sm" color="fg.strong" flexGrow={1}>
+			<Prose mt={2} fontSize="sm" color="fg.strong" flexGrow={1}>
 				{description}
-			</RawHtml>
+			</Prose>
 
 			<styled.ul mt={6} display="flex" gap={3} fontFamily="mono" fontSize="xs">
 				{tags.map((tag) => (

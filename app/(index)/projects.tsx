@@ -1,7 +1,7 @@
 import {Icon} from '@/components/icon';
 import {Image} from '@/components/image';
 import {Link} from '@/components/link';
-import {RawHtml} from '@/components/raw-html';
+import {Prose} from '@/components/prose';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -140,7 +140,7 @@ function Item(props: ItemProps) {
 					/>
 				</Box>
 
-				<RawHtml
+				<Prose
 					mt={5}
 					color="fg.strong"
 					lg={{
@@ -150,7 +150,7 @@ function Item(props: ItemProps) {
 					}}
 				>
 					{description}
-				</RawHtml>
+				</Prose>
 
 				<styled.ul
 					mt={4}
