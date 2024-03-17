@@ -11,4 +11,4 @@ featured: true
 createdAt: 2024-02-25
 ---
 
-Icons library for react and svelte
+Icons library for React, Solid and Svelte
