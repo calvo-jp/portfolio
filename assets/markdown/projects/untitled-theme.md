@@ -7,6 +7,7 @@ tags:
   - npm
   - React
   - Svelte
+  - Solid
 featured: true
 createdAt: 2024-02-25
 ---
