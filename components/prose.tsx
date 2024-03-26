@@ -1,57 +1,57 @@
-'use client';
+"use client";
 
-import {css, cx} from '@/styled-system/css';
-import {styled} from '@/styled-system/jsx';
-import {Assign, HTMLStyledProps} from '@/styled-system/types';
-import {HTMLArkProps, ark} from '@ark-ui/react';
-import {forwardRef} from 'react';
+import { css, cx } from "@/styled-system/css";
+import { styled } from "@/styled-system/jsx";
+import { Assign, HTMLStyledProps } from "@/styled-system/types";
+import { HTMLArkProps, ark } from "@ark-ui/react";
+import { forwardRef } from "react";
 
 const StyledArkDiv = styled(ark.div);
 
 interface ProseProps
-	extends Assign<HTMLArkProps<'div'>, HTMLStyledProps<'div'>> {}
+  extends Assign<HTMLArkProps<"div">, HTMLStyledProps<"div">> {}
 
 export const Prose = forwardRef<HTMLDivElement, ProseProps>(function RawHtml(
-	{children, className, ...props},
-	ref
+  { children, className, ...props },
+  ref,
 ) {
-	if (typeof children === 'string') {
-		return (
-			<StyledArkDiv
-				ref={ref}
-				className={cx(prose, className)}
-				dangerouslySetInnerHTML={{__html: children}}
-				{...props}
-			/>
-		);
-	}
+  if (typeof children === "string") {
+    return (
+      <StyledArkDiv
+        ref={ref}
+        className={cx(prose, className)}
+        dangerouslySetInnerHTML={{ __html: children }}
+        {...props}
+      />
+    );
+  }
 
-	return (
-		<StyledArkDiv ref={ref} className={cx(prose, className)} {...props}>
-			{children}
-		</StyledArkDiv>
-	);
+  return (
+    <StyledArkDiv ref={ref} className={cx(prose, className)} {...props}>
+      {children}
+    </StyledArkDiv>
+  );
 });
 
-Prose.displayName = 'Prose';
+Prose.displayName = "Prose";
 
 /* 📝 TODO: better styling */
 const prose = css({
-	hyphens: 'auto',
+  hyphens: "auto",
 
-	'& a': {
-		color: 'fg.accent',
-		textUnderlineOffset: '0.35rem',
-		_hover: {
-			textDecoration: 'underline',
-		},
-	},
+  "& a": {
+    color: "fg.accent",
+    textUnderlineOffset: "0.35rem",
+    _hover: {
+      textDecoration: "underline",
+    },
+  },
 
-	'& p': {
-		mt: 4,
+  "& p": {
+    mt: 4,
 
-		_first: {
-			mt: 0,
-		},
-	},
+    _first: {
+      mt: 0,
+    },
+  },
 });
