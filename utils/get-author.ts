@@ -1,9 +1,8 @@
-import { compareDesc } from "date-fns";
-import { readFile, readdir } from "fs/promises";
-import { unstable_cache as cache } from "next/cache";
-import { join } from "path";
-import * as v from "valibot";
-import { markdownToHtml } from "./markdown-to-html";
+import { compareDesc } from 'date-fns';
+import { readFile, readdir } from 'fs/promises';
+import { unstable_cache as cache } from 'next/cache';
+import { join } from 'path';
+import { markdownToHtml } from './markdown-to-html';
 import {
   PrimaryInfoSchema,
   ProjectSchema,
@@ -11,7 +10,7 @@ import {
   TProject,
   TWorkHistory,
   WorkHistorySchema,
-} from "./types";
+} from './types';
 
 export const getAuthor = cache(
   async (): Promise<TAuthor> => {
@@ -21,26 +20,26 @@ export const getAuthor = cache(
 
     return { ...primaryInfo, projects, workHistory };
   },
-  ["author"],
+  ['author'],
   {
-    tags: ["author"],
-  },
+    tags: ['author'],
+  }
 );
 
-const MARKDOWN_DIR = join(process.cwd(), "assets/markdown");
+const MARKDOWN_DIR = join(process.cwd(), 'assets/markdown');
 
 async function getPrimaryInfo() {
-  const buffer = await readFile(join(MARKDOWN_DIR, "about.md"));
+  const buffer = await readFile(join(MARKDOWN_DIR, 'about.md'));
   const result = await markdownToHtml(buffer.toString());
 
-  return v.parse(PrimaryInfoSchema, {
+  return PrimaryInfoSchema.parse({
     ...result.meta.matter,
     about: result.html,
   });
 }
 
 async function getWorkHistory() {
-  const subdir = join(MARKDOWN_DIR, "work-history");
+  const subdir = join(MARKDOWN_DIR, 'work-history');
   const files = await readdir(subdir);
   const items: TWorkHistory[] = [];
 
@@ -48,7 +47,7 @@ async function getWorkHistory() {
     const buffer = await readFile(join(subdir, file));
     const result = await markdownToHtml(buffer.toString());
 
-    const history = v.parse(WorkHistorySchema, {
+    const history = WorkHistorySchema.parse({
       ...result.meta.matter,
       responsibilities: result.html,
     });
@@ -57,13 +56,13 @@ async function getWorkHistory() {
   }
 
   items.sort((i, j) =>
-    compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start),
+    compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start)
   );
   return items;
 }
 
 async function getProjects() {
-  const subdir = join(MARKDOWN_DIR, "projects");
+  const subdir = join(MARKDOWN_DIR, 'projects');
   const files = await readdir(subdir);
   const items: TProject[] = [];
 
@@ -71,7 +70,7 @@ async function getProjects() {
     const buffer = await readFile(join(subdir, file));
     const result = await markdownToHtml(buffer.toString());
 
-    const project = v.parse(ProjectSchema, {
+    const project = ProjectSchema.parse({
       ...result.meta.matter,
       description: result.html,
     });

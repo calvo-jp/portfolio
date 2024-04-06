@@ -1,81 +1,72 @@
-import * as v from "valibot";
+import z from 'zod';
 
-export const CompanySchema = v.object({
-  name: v.string(),
-  website: v.string([v.url()]),
+export const CompanySchema = z.object({
+  name: z.string(),
+  website: z.string().url(),
 });
 
-export const ContactSchema = v.object({
-  email: v.string([v.email()]),
+export const ContactSchema = z.object({
+  email: z.string().email(),
 });
 
-export const EmploymentDateSchema = v.object({
-  start: v.transform(v.string(), (value) => new Date(value)),
-  until: v.optional(v.transform(v.string(), (value) => new Date(value))),
+export const EmploymentDateSchema = z.object({
+  start: z.string().pipe(z.coerce.date()),
+  until: z.optional(z.string().pipe(z.coerce.date())),
 });
 
-export const WorkHistorySchema = v.object({
+export const WorkHistorySchema = z.object({
   company: CompanySchema,
-  position: v.string(),
+  position: z.string(),
   dateOfEmployment: EmploymentDateSchema,
-  responsibilities: v.string(),
+  responsibilities: z.string(),
 });
 
-export const BaseProjectSchema = v.object({
-  title: v.string(),
-  description: v.string(),
-  repository: v.string([v.url()]),
-  website: v.optional(v.string([v.url()])),
-  tags: v.array(v.string()),
-  createdAt: v.transform(v.string(), (value) => new Date(value)),
+export const BaseProjectSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  repository: z.string().url(),
+  website: z.string().url().optional(),
+  tags: z.array(z.string()),
+  createdAt: z.string().pipe(z.coerce.date()),
 });
 
-export const FeaturedProjectSchema = v.intersect([
-  BaseProjectSchema,
-  v.object({
-    image: v.string(),
-    featured: v.literal(true),
-  }),
-]);
+export const FeaturedProjectSchema = BaseProjectSchema.extend({
+  image: z.string(),
+  featured: z.literal(true),
+});
 
-export const NonFeaturedProjectSchema = v.intersect([
-  BaseProjectSchema,
-  v.object({
-    image: v.optional(v.string()),
-    featured: v.optional(v.literal(false)),
-    noteworthy: v.optional(v.boolean(), false),
-  }),
-]);
+export const NonFeaturedProjectSchema = BaseProjectSchema.extend({
+  image: z.optional(z.string()),
+  featured: z.optional(z.literal(false)),
+  noteworthy: z.boolean().optional().default(false),
+});
 
-export const ProjectSchema = v.union([
+export const ProjectSchema = z.union([
   FeaturedProjectSchema,
   NonFeaturedProjectSchema,
 ]);
 
-export const PrimaryInfoSchema = v.object({
-  name: v.string(),
-  skills: v.array(v.string()),
-  resume: v.string([v.url()]),
-  socials: v.record(v.string([v.url()])),
+export const PrimaryInfoSchema = z.object({
+  name: z.string(),
+  skills: z.array(z.string()),
+  resume: z.string().url(),
+  socials: z.record(z.string().url()),
   contact: ContactSchema,
   company: CompanySchema,
-  about: v.string(),
+  about: z.string(),
 });
 
-export const AuthorSchema = v.intersect([
-  PrimaryInfoSchema,
-  v.object({
-    projects: v.array(ProjectSchema),
-    workHistory: v.array(WorkHistorySchema),
-  }),
-]);
+export const AuthorSchema = PrimaryInfoSchema.extend({
+  projects: z.array(ProjectSchema),
+  workHistory: z.array(WorkHistorySchema),
+});
 
-export type TCompany = v.Output<typeof CompanySchema>;
-export type TContact = v.Output<typeof ContactSchema>;
-export type TProject = v.Output<typeof ProjectSchema>;
-export type TFeaturedProject = v.Output<typeof FeaturedProjectSchema>;
-export type TNonFeaturedProject = v.Output<typeof NonFeaturedProjectSchema>;
-export type TEmploymentDate = v.Output<typeof EmploymentDateSchema>;
-export type TWorkHistory = v.Output<typeof WorkHistorySchema>;
-export type TPrimaryInfo = v.Output<typeof PrimaryInfoSchema>;
-export type TAuthor = v.Output<typeof AuthorSchema>;
+export type TCompany = z.infer<typeof CompanySchema>;
+export type TContact = z.infer<typeof ContactSchema>;
+export type TProject = z.infer<typeof ProjectSchema>;
+export type TFeaturedProject = z.infer<typeof FeaturedProjectSchema>;
+export type TNonFeaturedProject = z.infer<typeof NonFeaturedProjectSchema>;
+export type TEmploymentDate = z.infer<typeof EmploymentDateSchema>;
+export type TWorkHistory = z.infer<typeof WorkHistorySchema>;
+export type TPrimaryInfo = z.infer<typeof PrimaryInfoSchema>;
+export type TAuthor = z.infer<typeof AuthorSchema>;
