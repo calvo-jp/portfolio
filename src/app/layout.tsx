@@ -1,4 +1,5 @@
-import "@/assets/styles/globals.css";
+import "./globals.css";
+
 import { cx } from "@/styled-system/css";
 import { styled } from "@/styled-system/jsx";
 import { getAuthor } from "@/utils/get-author";
