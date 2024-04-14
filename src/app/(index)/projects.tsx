@@ -146,7 +146,7 @@ function Item(props: ItemProps) {
           lg={{
             px: 5,
             py: 4,
-            bg: 'bg.light',
+            bg: 'neutral.800',
           }}
         >
           {description}
