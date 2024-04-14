@@ -88,23 +88,11 @@ export async function Socials() {
 export function getSocialIcon(name: string) {
   switch (name) {
     case 'github':
-      return (
-        <Icon asChild>
-          <GithubIcon />
-        </Icon>
-      );
+      return <GithubIcon />;
     case 'twitter':
-      return (
-        <Icon asChild>
-          <TwitterIcon />
-        </Icon>
-      );
+      return <TwitterIcon />;
     case 'linkedin':
-      return (
-        <Icon asChild>
-          <LinkedinIcon />
-        </Icon>
-      );
+      return <LinkedinIcon />;
     default: {
       const error = new Error();
 
