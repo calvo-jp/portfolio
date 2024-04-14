@@ -114,7 +114,7 @@ function Item(props: ItemProps) {
                   prefetch={false}
                   transition="colors token(durations.slow)"
                   _hover={{
-                    color: 'fg.accent',
+                    color: 'violet.500',
                   }}
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
@@ -146,7 +146,7 @@ function Item(props: ItemProps) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: 'fg.accent',
+                  color: 'violet.500',
                 }}
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>

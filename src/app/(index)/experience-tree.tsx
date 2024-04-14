@@ -41,7 +41,7 @@ function Separator({
           <Box
             w={3}
             h={3}
-            border="1px solid token(colors.bg.light)"
+            border="1px solid token(colors.neutral.800)"
             rounded="full"
             flexShrink={0}
           />
@@ -52,7 +52,7 @@ function Separator({
       <Box
         py={2}
         px={4}
-        border="1px solid token(colors.bg.light)"
+        border="1px solid token(colors.neutral.800)"
         fontSize="sm"
       >
         {children}
@@ -62,7 +62,7 @@ function Separator({
       <Box
         w={3}
         h={3}
-        border="1px solid token(colors.bg.light)"
+        border="1px solid token(colors.neutral.800)"
         rounded="full"
         flexShrink={0}
       />

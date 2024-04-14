@@ -121,7 +121,7 @@ function Item(props: TNonFeaturedProject) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: 'fg.accent',
+                  color: 'violet.500',
                 }}
               >
                 <Icon asChild>
@@ -153,7 +153,7 @@ function Item(props: TNonFeaturedProject) {
               prefetch={false}
               transition="colors token(durations.slow)"
               _hover={{
-                color: 'fg.accent',
+                color: 'violet.500',
               }}
             >
               <Icon asChild>

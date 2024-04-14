@@ -32,7 +32,7 @@ export async function NavbarNav() {
                 transition="colors token(durations.slow)"
                 color={{
                   base: 'neutral.200',
-                  _groupHover: 'fg.accent',
+                  _groupHover: 'violet.500',
                 }}
               >
                 {item.label}

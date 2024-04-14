@@ -176,7 +176,7 @@ function Item(props: ItemProps) {
                   prefetch={false}
                   color={{
                     base: 'neutral.300',
-                    _hover: 'fg.accent',
+                    _hover: 'violet.500',
                   }}
                   transition="colors token(durations.slow)"
                 >
@@ -209,7 +209,7 @@ function Item(props: ItemProps) {
                 prefetch={false}
                 color={{
                   base: 'neutral.300',
-                  _hover: 'fg.accent',
+                  _hover: 'violet.500',
                 }}
                 transition="colors token(durations.slow)"
               >

@@ -46,7 +46,7 @@ export async function ExperienceTabs() {
             color="inherit"
             transition="all token(durations.slow)"
             _selected={{
-              bg: 'bg.light',
+              bg: 'neutral.800',
               color: 'violet.500',
             }}
           >

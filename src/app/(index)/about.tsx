@@ -80,7 +80,7 @@ export async function About() {
           prefetch={false}
           p={4}
           pos="relative"
-          border="2px solid token(colors.fg.accent)"
+          border="2px solid token(colors.violet.500)"
           flexGrow={1}
         >
           <Image
