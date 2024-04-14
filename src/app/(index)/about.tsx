@@ -5,7 +5,7 @@ import { Link } from '@/components/link';
 import { Prose } from '@/components/prose';
 import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { getAuthor } from '@/utils/get-author';
-import { AsteriskIcon } from 'lucide-react';
+import { Asterisk02Icon } from '@untitled-theme/icons-react';
 import { SectionHeading } from './section-heading';
 
 export async function About() {
@@ -65,7 +65,7 @@ export async function About() {
                 gap={1}
               >
                 <Icon color="violet.500" w={3} h={3} asChild>
-                  <AsteriskIcon />
+                  <Asterisk02Icon strokeWidth="1.66667" />
                 </Icon>
                 <styled.span fontSize="sm">{skill}</styled.span>
               </styled.li>

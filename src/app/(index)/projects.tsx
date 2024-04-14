@@ -14,7 +14,10 @@ import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { getAuthor } from '@/utils/get-author';
 import { TFeaturedProject } from '@/utils/types';
 import { Portal } from '@ark-ui/react';
-import { ExternalLinkIcon, GitBranchIcon } from 'lucide-react';
+import {
+  GitBranch02Icon,
+  LinkExternal02Icon,
+} from '@untitled-theme/icons-react';
 import { Fragment } from 'react';
 import { SectionHeading } from './section-heading';
 
@@ -181,7 +184,7 @@ function Item(props: ItemProps) {
                   transition="colors token(durations.slow)"
                 >
                   <Icon w={6} h={6} asChild>
-                    <ExternalLinkIcon />
+                    <LinkExternal02Icon strokeWidth="1.66667" />
                   </Icon>
                   <VisuallyHidden>Go to website</VisuallyHidden>
                 </Link>
@@ -214,7 +217,7 @@ function Item(props: ItemProps) {
                 transition="colors token(durations.slow)"
               >
                 <Icon w={6} h={6} asChild>
-                  <GitBranchIcon />
+                  <GitBranch02Icon strokeWidth="1.66667" />
                 </Icon>
                 <VisuallyHidden>Go to repository</VisuallyHidden>
               </Link>

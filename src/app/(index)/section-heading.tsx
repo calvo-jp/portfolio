@@ -1,7 +1,7 @@
 import { Icon } from '@/components/icon';
-import { Box, styled } from '@/styled-system/jsx';
+import { Box, Flex, styled } from '@/styled-system/jsx';
 import { Assign, HTMLStyledProps } from '@/styled-system/types';
-import { AmpersandsIcon } from 'lucide-react';
+import { Asterisk02Icon } from '@untitled-theme/icons-react';
 import { ReactNode } from 'react';
 
 interface BaseProps {
@@ -43,16 +43,32 @@ export function SectionHeading(props: SectionHeadingProps) {
 
       <Box mx={3} flexGrow={1} h="1px" bg="neutral.800" />
 
-      <Icon
-        color="neutral.600"
-        display={{
-          base: 'none',
-          lg: 'block',
-        }}
-        asChild
-      >
-        <AmpersandsIcon />
-      </Icon>
+      <Flex>
+        <Icon
+          w={4}
+          h={4}
+          color="neutral.600"
+          display={{
+            base: 'none',
+            lg: 'block',
+          }}
+          asChild
+        >
+          <Asterisk02Icon strokeWidth="1.66667" />
+        </Icon>
+        <Icon
+          w={4}
+          h={4}
+          color="neutral.600"
+          display={{
+            base: 'none',
+            lg: 'block',
+          }}
+          asChild
+        >
+          <Asterisk02Icon strokeWidth="1.66667" />
+        </Icon>
+      </Flex>
     </styled.h2>
   );
 }

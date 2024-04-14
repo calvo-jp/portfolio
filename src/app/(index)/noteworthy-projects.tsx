@@ -20,7 +20,11 @@ import {
 import { getAuthor } from '@/utils/get-author';
 import { TNonFeaturedProject } from '@/utils/types';
 import { Portal } from '@ark-ui/react';
-import { ExternalLinkIcon, FolderIcon, GitBranchIcon } from 'lucide-react';
+import {
+  FolderIcon,
+  GitBranch02Icon,
+  LinkExternal02Icon,
+} from '@untitled-theme/icons-react';
 
 export async function NoteworthyProjects() {
   const { projects } = await getAuthor();
@@ -100,7 +104,7 @@ function Item(props: ItemProps) {
     <Flex bg="neutral.800" p={8} flexDir="column" minH="token(spacing.80)">
       <Flex alignItems="start">
         <Icon w={9} h={9} color="violet.500" asChild>
-          <FolderIcon />
+          <FolderIcon strokeWidth="1.66667" />
         </Icon>
         <Spacer />
         <HStack gap={4}>
@@ -119,7 +123,7 @@ function Item(props: ItemProps) {
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
                   <Icon asChild>
-                    <ExternalLinkIcon />
+                    <LinkExternal02Icon strokeWidth="1.66667" />
                   </Icon>
                 </Link>
               </TooltipTrigger>
@@ -151,7 +155,7 @@ function Item(props: ItemProps) {
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>
                 <Icon asChild>
-                  <GitBranchIcon />
+                  <GitBranch02Icon strokeWidth="1.66667" />
                 </Icon>
               </Link>
             </TooltipTrigger>

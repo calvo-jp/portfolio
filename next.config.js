@@ -1,4 +1,9 @@
 // @ts-check
 
 /** @type {import('next').NextConfig} */
-module.exports = {};
+module.exports = {
+  experimental: {
+    serverMinification: true,
+    optimizePackageImports: ['@untitled-theme/icons-react'],
+  },
+};

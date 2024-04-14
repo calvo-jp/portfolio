@@ -1,7 +1,7 @@
 import { Icon } from '@/components/icon';
 import { Link } from '@/components/link';
 import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { TerminalIcon } from 'lucide-react';
+import { TerminalIcon } from '@untitled-theme/icons-react';
 import { NavbarDrawer } from './navbar-drawer';
 import { NavbarNav } from './navbar-nav';
 
@@ -35,7 +35,7 @@ export async function Navbar() {
           }}
           asChild
         >
-          <TerminalIcon />
+          <TerminalIcon strokeWidth="1.66667" />
         </Icon>
         <VisuallyHidden>Home</VisuallyHidden>
       </Link>

@@ -12,7 +12,7 @@ import { Link } from '@/components/link';
 import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
-import { MenuIcon, XIcon } from 'lucide-react';
+import { Menu05Icon, XIcon } from '@untitled-theme/icons-react';
 import { NAVBAR_NAV_ITEMS } from './navbar-nav';
 
 export async function NavbarDrawer() {
@@ -27,7 +27,7 @@ export async function NavbarDrawer() {
         }}
       >
         <Icon w={8} h={8} asChild>
-          <MenuIcon />
+          <Menu05Icon strokeWidth="1.66667" />
         </Icon>
         <VisuallyHidden>Toggle menu</VisuallyHidden>
       </DialogTrigger>
@@ -79,7 +79,7 @@ export async function NavbarDrawer() {
             <Flex justifyContent="flex-end">
               <DialogCloseTrigger color="neutral.300">
                 <Icon w={8} h={8} asChild>
-                  <XIcon />
+                  <XIcon strokeWidth="1.66667" />
                 </Icon>
                 <VisuallyHidden>Close menu</VisuallyHidden>
               </DialogCloseTrigger>

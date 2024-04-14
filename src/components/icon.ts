@@ -12,9 +12,6 @@ export const Icon = styled(
     },
   },
   {
-    defaultProps: {
-      strokeWidth: 1.66667,
-    },
     shouldForwardProp(prop) {
       return ['strokeWidth'].includes(prop);
     },

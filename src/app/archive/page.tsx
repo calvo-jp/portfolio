@@ -13,8 +13,11 @@ import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { getAuthor } from '@/utils/get-author';
 import { TNonFeaturedProject } from '@/utils/types';
 import { Portal } from '@ark-ui/react';
+import {
+  GitBranch02Icon,
+  LinkExternal02Icon,
+} from '@untitled-theme/icons-react';
 import { format } from 'date-fns';
-import { ExternalLinkIcon, GitBranchIcon } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -125,7 +128,7 @@ function Item(props: TNonFeaturedProject) {
                 }}
               >
                 <Icon asChild>
-                  <ExternalLinkIcon />
+                  <LinkExternal02Icon strokeWidth="1.66667" />
                 </Icon>
                 <VisuallyHidden>Go to website</VisuallyHidden>
               </Link>
@@ -157,7 +160,7 @@ function Item(props: TNonFeaturedProject) {
               }}
             >
               <Icon asChild>
-                <GitBranchIcon />
+                <GitBranch02Icon strokeWidth="1.66667" />
               </Icon>
               <VisuallyHidden>Go to repository</VisuallyHidden>
             </Link>
