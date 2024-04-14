@@ -17,11 +17,6 @@ const recipe = cva({
     _active: {
       transform: 'scale(0.95)',
     },
-
-    _focusVisible: {
-      outline: '2px solid token(colors.fg.strong)',
-      outlineOffset: 0.5,
-    },
   },
   variants: {
     size: {
