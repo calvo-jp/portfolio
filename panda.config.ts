@@ -53,7 +53,6 @@ export default defineConfig({
       },
     },
   },
-  hash: true,
   clean: true,
   outdir: 'styled-system',
   polyfill: true,
