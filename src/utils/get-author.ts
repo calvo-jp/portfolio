@@ -1,8 +1,8 @@
-import { compareDesc } from "date-fns";
-import { readFile, readdir } from "fs/promises";
-import { unstable_cache as cache } from "next/cache";
-import { join } from "path";
-import { markdownToHtml } from "./markdown-to-html";
+import { compareDesc } from 'date-fns';
+import { readFile, readdir } from 'fs/promises';
+import { unstable_cache as cache } from 'next/cache';
+import { join } from 'path';
+import { markdownToHtml } from './markdown-to-html';
 import {
   PrimaryInfoSchema,
   ProjectSchema,
@@ -10,7 +10,7 @@ import {
   TProject,
   TWorkHistory,
   WorkHistorySchema,
-} from "./types";
+} from './types';
 
 export const getAuthor = cache(
   async (): Promise<TAuthor> => {
@@ -20,16 +20,16 @@ export const getAuthor = cache(
 
     return { ...primaryInfo, projects, workHistory };
   },
-  ["author"],
+  ['author'],
   {
-    tags: ["author"],
-  },
+    tags: ['author'],
+  }
 );
 
-const MARKDOWN_DIR = join(process.cwd(), "src/assets/markdown");
+const MARKDOWN_DIR = join(process.cwd(), 'src/assets/markdown');
 
 async function getPrimaryInfo() {
-  const buffer = await readFile(join(MARKDOWN_DIR, "about.md"));
+  const buffer = await readFile(join(MARKDOWN_DIR, 'about.md'));
   const result = await markdownToHtml(buffer.toString());
 
   return PrimaryInfoSchema.parse({
@@ -39,7 +39,7 @@ async function getPrimaryInfo() {
 }
 
 async function getWorkHistory() {
-  const subdir = join(MARKDOWN_DIR, "work-history");
+  const subdir = join(MARKDOWN_DIR, 'work-history');
   const files = await readdir(subdir);
   const items: TWorkHistory[] = [];
 
@@ -56,13 +56,13 @@ async function getWorkHistory() {
   }
 
   items.sort((i, j) =>
-    compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start),
+    compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start)
   );
   return items;
 }
 
 async function getProjects() {
-  const subdir = join(MARKDOWN_DIR, "projects");
+  const subdir = join(MARKDOWN_DIR, 'projects');
   const files = await readdir(subdir);
   const items: TProject[] = [];
 

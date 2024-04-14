@@ -1,4 +1,4 @@
-import { Button } from "@/components/button";
+import { Button } from '@/components/button';
 import {
   Dialog,
   DialogBackdrop,
@@ -6,14 +6,14 @@ import {
   DialogContent,
   DialogPositioner,
   DialogTrigger,
-} from "@/components/dialog";
-import { Icon } from "@/components/icon";
-import { Link } from "@/components/link";
-import { Box, Flex, VisuallyHidden, styled } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
-import { Portal } from "@ark-ui/react";
-import { MenuIcon, XIcon } from "lucide-react";
-import { NAVBAR_NAV_ITEMS } from "./navbar-nav";
+} from '@/components/dialog';
+import { Icon } from '@/components/icon';
+import { Link } from '@/components/link';
+import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { Portal } from '@ark-ui/react';
+import { MenuIcon, XIcon } from 'lucide-react';
+import { NAVBAR_NAV_ITEMS } from './navbar-nav';
 
 export async function NavbarDrawer() {
   const author = await getAuthor();
@@ -21,9 +21,9 @@ export async function NavbarDrawer() {
   return (
     <Dialog>
       <DialogTrigger
-        color="fg.strongest"
+        color="neutral.100"
         lg={{
-          display: "none",
+          display: 'none',
         }}
       >
         <Icon w={8} h={8} asChild>
@@ -39,10 +39,10 @@ export async function NavbarDrawer() {
           inset={0}
           backdropFilter="blur(4px)"
           _open={{
-            animation: "fade-in token(durations.slow)",
+            animation: 'fade-in token(durations.slow)',
           }}
           _closed={{
-            animation: "fade-out token(durations.slow)",
+            animation: 'fade-out token(durations.slow)',
           }}
         />
 
@@ -61,23 +61,23 @@ export async function NavbarDrawer() {
             h="full"
             w={80}
             maxW="full"
-            bg="bg.light"
+            bg="neutral.800"
             pos="relative"
             overflowY="auto"
             css={{
-              "&::-webkit-scrollbar": {
-                display: "none",
+              '&::-webkit-scrollbar': {
+                display: 'none',
               },
             }}
             _open={{
-              animation: "slide-in-right token(durations.slow)",
+              animation: 'slide-in-right token(durations.slow)',
             }}
             _closed={{
-              animation: "slide-out-right token(durations.slow)",
+              animation: 'slide-out-right token(durations.slow)',
             }}
           >
             <Flex justifyContent="flex-end">
-              <DialogCloseTrigger color="fg.strong">
+              <DialogCloseTrigger color="neutral.300">
                 <Icon w={8} h={8} asChild>
                   <XIcon />
                 </Icon>
@@ -97,10 +97,10 @@ export async function NavbarDrawer() {
                   >
                     <DialogCloseTrigger asChild>
                       <Link py={1} href={item.path}>
-                        <Box fontFamily="mono" color="fg.accent">
-                          {(++index).toString().padStart(2, "0")}.
+                        <Box fontFamily="mono" color="violet.500">
+                          {(++index).toString().padStart(2, '0')}.
                         </Box>
-                        <Box fontSize="lg" color="fg.stronger">
+                        <Box fontSize="lg" color="neutral.200">
                           {item.label}
                         </Box>
                       </Link>

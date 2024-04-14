@@ -1,12 +1,12 @@
-import selfie from "@/assets/images/selfie.jpg";
-import { Icon } from "@/components/icon";
-import { Image } from "@/components/image";
-import { Link } from "@/components/link";
-import { Prose } from "@/components/prose";
-import { Box, Flex, VisuallyHidden, styled } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
-import { AsteriskIcon } from "lucide-react";
-import { SectionHeading } from "./section-heading";
+import selfie from '@/assets/images/selfie.jpg';
+import { Icon } from '@/components/icon';
+import { Image } from '@/components/image';
+import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
+import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { AsteriskIcon } from 'lucide-react';
+import { SectionHeading } from './section-heading';
 
 export async function About() {
   const { about, skills } = await getAuthor();
@@ -23,7 +23,7 @@ export async function About() {
         index={1}
         title="About Me"
         lg={{
-          w: "1/2",
+          w: '1/2',
         }}
       />
 
@@ -37,15 +37,15 @@ export async function About() {
           lg: 24,
         }}
         flexDir={{
-          base: "column",
-          lg: "row",
+          base: 'column',
+          lg: 'row',
         }}
         alignItems="start"
       >
         <Box
           flexShrink={0}
           lg={{
-            w: "1/2",
+            w: '1/2',
           }}
         >
           <Prose fontSize="lg">{about}</Prose>
@@ -64,7 +64,7 @@ export async function About() {
                 alignItems="center"
                 gap={1}
               >
-                <Icon color="fg.accent" w={3} h={3} asChild>
+                <Icon color="violet.500" w={3} h={3} asChild>
                   <AsteriskIcon />
                 </Icon>
                 <styled.span fontSize="sm">{skill}</styled.span>

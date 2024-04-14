@@ -1,7 +1,7 @@
-import { Button } from "@/components/button";
-import { Link } from "@/components/link";
-import { styled } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
+import { Button } from '@/components/button';
+import { Link } from '@/components/link';
+import { styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 
 export async function Contact() {
   const { contact } = await getAuthor();
@@ -15,14 +15,14 @@ export async function Contact() {
       }}
       textAlign="center"
     >
-      <styled.p color="fg.accent" fontFamily="mono">
+      <styled.p color="violet.500" fontFamily="mono">
         04. What&rsquo;s next?
       </styled.p>
       <styled.h2
-        color="fg.stronger"
+        color="neutral.200"
         fontSize={{
-          base: "4xl",
-          lg: "6xl",
+          base: '4xl',
+          lg: '6xl',
         }}
         fontWeight="bold"
       >

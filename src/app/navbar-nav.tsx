@@ -1,7 +1,7 @@
-import { Button } from "@/components/button";
-import { Link } from "@/components/link";
-import { VisuallyHidden, styled } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
+import { Button } from '@/components/button';
+import { Link } from '@/components/link';
+import { VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 
 export async function NavbarNav() {
   const author = await getAuthor();
@@ -11,7 +11,7 @@ export async function NavbarNav() {
       display="flex"
       alignItems="center"
       lgDown={{
-        display: "none",
+        display: 'none',
       }}
     >
       <styled.ul display="flex" alignItems="center" gap={8}>
@@ -24,15 +24,15 @@ export async function NavbarNav() {
               gap={1}
               className="group"
             >
-              <styled.span fontFamily="mono" color="fg.accent" fontSize="xs">
-                {(++index).toString().padStart(2, "0")}.
+              <styled.span fontFamily="mono" color="violet.500" fontSize="xs">
+                {(++index).toString().padStart(2, '0')}.
               </styled.span>
               <styled.span
                 fontSize="sm"
                 transition="colors token(durations.slow)"
                 color={{
-                  base: "fg.stronger",
-                  _groupHover: "fg.accent",
+                  base: 'neutral.200',
+                  _groupHover: 'fg.accent',
                 }}
               >
                 {item.label}
@@ -58,19 +58,19 @@ export async function NavbarNav() {
 
 export const NAVBAR_NAV_ITEMS = [
   {
-    path: "/#about",
-    label: "About",
+    path: '/#about',
+    label: 'About',
   },
   {
-    path: "/#experience",
-    label: "Experience",
+    path: '/#experience',
+    label: 'Experience',
   },
   {
-    path: "/#projects",
-    label: "Projects",
+    path: '/#projects',
+    label: 'Projects',
   },
   {
-    path: "/#contact",
-    label: "Contact",
+    path: '/#contact',
+    label: 'Contact',
   },
 ];

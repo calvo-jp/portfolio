@@ -1,7 +1,7 @@
-import { Icon } from "@/components/icon";
-import { Image } from "@/components/image";
-import { Link } from "@/components/link";
-import { Prose } from "@/components/prose";
+import { Icon } from '@/components/icon';
+import { Image } from '@/components/image';
+import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
 import {
   Tooltip,
   TooltipArrow,
@@ -9,14 +9,14 @@ import {
   TooltipContent,
   TooltipPositioner,
   TooltipTrigger,
-} from "@/components/tooltip";
-import { Box, Flex, HStack, VisuallyHidden, styled } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
-import { TFeaturedProject } from "@/utils/types";
-import { Portal } from "@ark-ui/react";
-import { ExternalLinkIcon, GitBranchIcon } from "lucide-react";
-import { Fragment } from "react";
-import { SectionHeading } from "./section-heading";
+} from '@/components/tooltip';
+import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { TFeaturedProject } from '@/utils/types';
+import { Portal } from '@ark-ui/react';
+import { ExternalLinkIcon, GitBranchIcon } from 'lucide-react';
+import { Fragment } from 'react';
+import { SectionHeading } from './section-heading';
 
 export async function Projects() {
   const { projects } = await getAuthor();
@@ -33,7 +33,7 @@ export async function Projects() {
         index={3}
         title={<Fragment>Some things I&rsquo;ve built</Fragment>}
         lg={{
-          w: "1/2",
+          w: '1/2',
         }}
       />
 
@@ -44,7 +44,7 @@ export async function Projects() {
         }}
       >
         {projects.map((o) =>
-          !o.featured ? null : <Item key={o.title} data={o} />,
+          !o.featured ? null : <Item key={o.title} data={o} />
         )}
       </Box>
     </styled.section>
@@ -66,10 +66,10 @@ function Item(props: ItemProps) {
         _first: 0,
       }}
       flexDir={{
-        base: "column",
+        base: 'column',
         lg: {
-          base: "row",
-          _even: "row-reverse",
+          base: 'row',
+          _even: 'row-reverse',
         },
       }}
       gap={10}
@@ -85,7 +85,7 @@ function Item(props: ItemProps) {
         border="1px solid token(colors.bg.light)"
         flexShrink={0}
         lgDown={{
-          display: "none",
+          display: 'none',
         }}
       >
         <Image
@@ -105,7 +105,7 @@ function Item(props: ItemProps) {
         <Box
           fontFamily="mono"
           fontSize="sm"
-          color="fg.accent"
+          color="violet.500"
           lineHeight="none"
         >
           Featured Project
@@ -116,7 +116,7 @@ function Item(props: ItemProps) {
           fontSize="2xl"
           fontWeight="bold"
           lineHeight="none"
-          color="fg.stronger"
+          color="neutral.200"
         >
           {title}
         </styled.h3>
@@ -125,7 +125,7 @@ function Item(props: ItemProps) {
           mt={4}
           border="1px solid token(colors.bg.light)"
           lg={{
-            display: "none",
+            display: 'none',
           }}
         >
           <Image
@@ -142,11 +142,11 @@ function Item(props: ItemProps) {
 
         <Prose
           mt={5}
-          color="fg.strong"
+          color="neutral.300"
           lg={{
             px: 5,
             py: 4,
-            bg: "bg.light",
+            bg: 'bg.light',
           }}
         >
           {description}
@@ -175,8 +175,8 @@ function Item(props: ItemProps) {
                   rel="noreferrer noopener"
                   prefetch={false}
                   color={{
-                    base: "fg.strong",
-                    _hover: "fg.accent",
+                    base: 'neutral.300',
+                    _hover: 'fg.accent',
                   }}
                   transition="colors token(durations.slow)"
                 >
@@ -208,8 +208,8 @@ function Item(props: ItemProps) {
                 rel="noreferrer noopener"
                 prefetch={false}
                 color={{
-                  base: "fg.strong",
-                  _hover: "fg.accent",
+                  base: 'neutral.300',
+                  _hover: 'fg.accent',
                 }}
                 transition="colors token(durations.slow)"
               >

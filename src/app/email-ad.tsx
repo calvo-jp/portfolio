@@ -1,7 +1,7 @@
-import { Link } from "@/components/link";
-import { Box } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
-import { Portal } from "@ark-ui/react";
+import { Link } from '@/components/link';
+import { Box } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { Portal } from '@ark-ui/react';
 
 export async function EmailAd() {
   const { contact } = await getAuthor();
@@ -17,7 +17,7 @@ export async function EmailAd() {
         display="flex"
         justifyContent="start"
         lgDown={{
-          display: "none",
+          display: 'none',
         }}
       >
         <Box w={5} display="flex" flexDir="column" alignItems="center" gap={6}>
@@ -30,12 +30,12 @@ export async function EmailAd() {
             letterSpacing="widest"
             transition="colors token(durations.slow)"
             color={{
-              _hover: "fg.accent",
+              _hover: 'violet.500',
             }}
           >
             {contact.email}
           </Link>
-          <Box h="15vh" w="1px" bg="bg.light" />
+          <Box h="15vh" w="1px" bg="neutral.800" />
         </Box>
       </Box>
     </Portal>

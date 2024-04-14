@@ -1,16 +1,16 @@
-import "./globals.css";
+import './globals.css';
 
-import { cx } from "@/styled-system/css";
-import { styled } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
-import { Metadata } from "next";
-import { PropsWithChildren } from "react";
-import { EmailAd } from "./email-ad";
-import { Footer } from "./footer";
-import { Navbar } from "./navbar";
-import { Socials } from "./socials";
+import { cx } from '@/styled-system/css';
+import { styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
+import { Metadata } from 'next';
+import { PropsWithChildren } from 'react';
+import { EmailAd } from './email-ad';
+import { Footer } from './footer';
+import { Navbar } from './navbar';
+import { Socials } from './socials';
 
 export async function generateMetadata(): Promise<Metadata> {
   const author = await getAuthor();
@@ -23,19 +23,19 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `${title} - %s`,
     },
     description,
-    metadataBase: new URL("https://calvojp.vercel.app"),
+    metadataBase: new URL('https://calvojp.vercel.app'),
     keywords: [
-      "Porfolio",
-      "Dark Mode",
-      "Philippines",
-      "Web Developer",
-      "John Paul Calvo",
+      'Porfolio',
+      'Dark Mode',
+      'Philippines',
+      'Web Developer',
+      'John Paul Calvo',
     ],
     openGraph: {
-      type: "website",
+      type: 'website',
       title,
       description,
-      images: ["/opengraph-banner.jpg"],
+      images: ['/opengraph-banner.jpg'],
     },
   };
 }
@@ -50,17 +50,22 @@ export default async function RootLayout({ children }: PropsWithChildren) {
       scrollbarGutter="stable"
       lgDown={{
         _scrollbar: {
-          display: "none",
+          display: 'none',
         },
       }}
       smOnly={{
-        fontSize: "lg",
+        fontSize: 'lg',
       }}
       mdOnly={{
-        fontSize: "xl",
+        fontSize: 'xl',
       }}
     >
-      <styled.body bg="bg" color="fg" minHeight="dvh" fontFamily="sans">
+      <styled.body
+        bg="neutral.900"
+        color="neutral.400"
+        minHeight="dvh"
+        fontFamily="sans"
+      >
         <Navbar />
         <styled.main
           id="content"
@@ -70,9 +75,9 @@ export default async function RootLayout({ children }: PropsWithChildren) {
             lg: 4,
           }}
           lg={{
-            w: "75vw",
-            mx: "auto",
-            maxW: "breakpoint-lg",
+            w: '75vw',
+            mx: 'auto',
+            maxW: 'breakpoint-lg',
           }}
         >
           {children}

@@ -1,8 +1,8 @@
-import { Box, Flex } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
-import { format } from "date-fns";
-import { PropsWithChildren } from "react";
-import { ExperienceItem } from "./experience-item";
+import { Box, Flex } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { format } from 'date-fns';
+import { PropsWithChildren } from 'react';
+import { ExperienceItem } from './experience-item';
 
 export async function ExperienceTree() {
   const { workHistory } = await getAuthor();
@@ -11,7 +11,7 @@ export async function ExperienceTree() {
     <Flex
       mt={14}
       lg={{
-        display: "none",
+        display: 'none',
       }}
       flexDir="column"
       gap={6}
@@ -20,8 +20,8 @@ export async function ExperienceTree() {
         <Flex key={item.company.name} flexDir="column" gap={6}>
           <Separator bottomOnly={index === 0}>
             {item.dateOfEmployment.until
-              ? format(item.dateOfEmployment.until, "MMM yyyy")
-              : "Present"}
+              ? format(item.dateOfEmployment.until, 'MMM yyyy')
+              : 'Present'}
           </Separator>
           <ExperienceItem data={item} />
         </Flex>
@@ -45,7 +45,7 @@ function Separator({
             rounded="full"
             flexShrink={0}
           />
-          <Box h={8} w="1px" bg="bg.light" />
+          <Box h={8} w="1px" bg="neutral.800" />
         </>
       )}
 
@@ -58,7 +58,7 @@ function Separator({
         {children}
       </Box>
 
-      <Box h={8} w="1px" bg="bg.light" />
+      <Box h={8} w="1px" bg="neutral.800" />
       <Box
         w={3}
         h={3}

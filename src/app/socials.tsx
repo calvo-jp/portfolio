@@ -1,5 +1,5 @@
-import { Icon } from "@/components/icon";
-import { Link } from "@/components/link";
+import { Icon } from '@/components/icon';
+import { Link } from '@/components/link';
 import {
   Tooltip,
   TooltipArrow,
@@ -7,12 +7,12 @@ import {
   TooltipContent,
   TooltipPositioner,
   TooltipTrigger,
-} from "@/components/tooltip";
-import { Box, VisuallyHidden, styled } from "@/styled-system/jsx";
-import { capitalize } from "@/utils/capitalize";
-import { getAuthor } from "@/utils/get-author";
-import { Portal } from "@ark-ui/react";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
+} from '@/components/tooltip';
+import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { capitalize } from '@/utils/capitalize';
+import { getAuthor } from '@/utils/get-author';
+import { Portal } from '@ark-ui/react';
+import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
 
 export async function Socials() {
   const { socials } = await getAuthor();
@@ -28,7 +28,7 @@ export async function Socials() {
         display="flex"
         justifyContent="end"
         lgDown={{
-          display: "none",
+          display: 'none',
         }}
       >
         <styled.ul
@@ -43,7 +43,7 @@ export async function Socials() {
               <Tooltip
                 id={`socials:${name}`}
                 positioning={{
-                  placement: "right",
+                  placement: 'right',
                 }}
               >
                 <TooltipTrigger asChild>
@@ -54,7 +54,7 @@ export async function Socials() {
                     prefetch={false}
                     transition="colors token(durations.slow)"
                     color={{
-                      _hover: "fg.accent",
+                      _hover: 'violet.500',
                     }}
                   >
                     <Icon asChild>{getSocialIcon(name)}</Icon>
@@ -77,7 +77,7 @@ export async function Socials() {
           ))}
 
           <styled.li pt={2}>
-            <Box h="15vh" w="1px" bg="bg.light" />
+            <Box h="15vh" w="1px" bg="neutral.800" />
           </styled.li>
         </styled.ul>
       </styled.nav>
@@ -87,16 +87,16 @@ export async function Socials() {
 
 export function getSocialIcon(name: string) {
   switch (name) {
-    case "github":
+    case 'github':
       return <GithubIcon />;
-    case "twitter":
+    case 'twitter':
       return <TwitterIcon />;
-    case "linkedin":
+    case 'linkedin':
       return <LinkedinIcon />;
     default: {
       const error = new Error();
 
-      error.name = "SocialIconNotSet";
+      error.name = 'SocialIconNotSet';
       error.message = `No icon set for '${name}'`;
       Error.captureStackTrace?.(error);
 

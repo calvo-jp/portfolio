@@ -1,7 +1,7 @@
-import { Link } from "@/components/link";
-import { Center, VisuallyHidden, styled } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
-import { getSocialIcon } from "./socials";
+import { Link } from '@/components/link';
+import { Center, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { getSocialIcon } from './socials';
 
 export async function Footer() {
   const author = await getAuthor();
@@ -11,7 +11,7 @@ export async function Footer() {
       <Center
         mb={4}
         lg={{
-          display: "none",
+          display: 'none',
         }}
       >
         <styled.nav>
@@ -23,7 +23,7 @@ export async function Footer() {
                   target="_blank"
                   rel="noreferrer noopener"
                   prefetch={false}
-                  color="fg.strong"
+                  color="neutral.300"
                 >
                   {getSocialIcon(name)}
                   <VisuallyHidden>{name}</VisuallyHidden>

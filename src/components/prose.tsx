@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import { css, cx } from "@/styled-system/css";
-import { styled } from "@/styled-system/jsx";
-import { Assign, HTMLStyledProps } from "@/styled-system/types";
-import { HTMLArkProps, ark } from "@ark-ui/react";
-import { forwardRef } from "react";
+import { css, cx } from '@/styled-system/css';
+import { styled } from '@/styled-system/jsx';
+import { Assign, HTMLStyledProps } from '@/styled-system/types';
+import { HTMLArkProps, ark } from '@ark-ui/react';
+import { forwardRef } from 'react';
 
 const StyledArkDiv = styled(ark.div);
 
 interface ProseProps
-  extends Assign<HTMLArkProps<"div">, HTMLStyledProps<"div">> {}
+  extends Assign<HTMLArkProps<'div'>, HTMLStyledProps<'div'>> {}
 
 export const Prose = forwardRef<HTMLDivElement, ProseProps>(function RawHtml(
   { children, className, ...props },
-  ref,
+  ref
 ) {
-  if (typeof children === "string") {
+  if (typeof children === 'string') {
     return (
       <StyledArkDiv
         ref={ref}
@@ -33,21 +33,21 @@ export const Prose = forwardRef<HTMLDivElement, ProseProps>(function RawHtml(
   );
 });
 
-Prose.displayName = "Prose";
+Prose.displayName = 'Prose';
 
 /* 📝 TODO: better styling */
 const prose = css({
-  hyphens: "auto",
+  hyphens: 'auto',
 
-  "& a": {
-    color: "fg.accent",
-    textUnderlineOffset: "0.35rem",
+  '& a': {
+    color: 'violet.500',
+    textUnderlineOffset: '0.35rem',
     _hover: {
-      textDecoration: "underline",
+      textDecoration: 'underline',
     },
   },
 
-  "& p": {
+  '& p': {
     mt: 4,
 
     _first: {

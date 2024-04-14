@@ -4,9 +4,9 @@ import {
   TabList,
   TabTrigger,
   Tabs,
-} from "@/components/tabs";
-import { getAuthor } from "@/utils/get-author";
-import { ExperienceItem } from "./experience-item";
+} from '@/components/tabs';
+import { getAuthor } from '@/utils/get-author';
+import { ExperienceItem } from './experience-item';
 
 export async function ExperienceTabs() {
   const { workHistory } = await getAuthor();
@@ -14,12 +14,12 @@ export async function ExperienceTabs() {
   return (
     <Tabs
       display={{
-        base: "none",
-        lg: "flex",
+        base: 'none',
+        lg: 'flex',
       }}
       flexDir={{
-        _vertical: "row",
-        _horizontal: "column",
+        _vertical: 'row',
+        _horizontal: 'column',
       }}
       mt={16}
       gap={12}
@@ -31,7 +31,7 @@ export async function ExperienceTabs() {
         pos="relative"
         flexShrink={0}
         _horizontal={{
-          display: "flex",
+          display: 'flex',
         }}
       >
         {workHistory.map(({ company }) => (
@@ -46,8 +46,8 @@ export async function ExperienceTabs() {
             color="inherit"
             transition="all token(durations.slow)"
             _selected={{
-              bg: "bg.light",
-              color: "fg.accent",
+              bg: 'bg.light',
+              color: 'violet.500',
             }}
           >
             {company.name}
@@ -55,9 +55,9 @@ export async function ExperienceTabs() {
         ))}
 
         <TabIndicator
-          bg="fg.accent"
+          bg="violet.500"
           _vertical={{
-            h: "var(--height)",
+            h: 'var(--height)',
             w: 0.5,
           }}
         />

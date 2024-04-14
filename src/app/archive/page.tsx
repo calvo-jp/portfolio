@@ -1,6 +1,6 @@
-import { Icon } from "@/components/icon";
-import { Link } from "@/components/link";
-import { Prose } from "@/components/prose";
+import { Icon } from '@/components/icon';
+import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
 import {
   Tooltip,
   TooltipArrow,
@@ -8,17 +8,17 @@ import {
   TooltipContent,
   TooltipPositioner,
   TooltipTrigger,
-} from "@/components/tooltip";
-import { Box, Flex, HStack, VisuallyHidden, styled } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
-import { TNonFeaturedProject } from "@/utils/types";
-import { Portal } from "@ark-ui/react";
-import { format } from "date-fns";
-import { ExternalLinkIcon, GitBranchIcon } from "lucide-react";
-import { Metadata } from "next";
+} from '@/components/tooltip';
+import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { TNonFeaturedProject } from '@/utils/types';
+import { Portal } from '@ark-ui/react';
+import { format } from 'date-fns';
+import { ExternalLinkIcon, GitBranchIcon } from 'lucide-react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Archive",
+  title: 'Archive',
 };
 
 export default async function Archive() {
@@ -33,15 +33,15 @@ export default async function Archive() {
     >
       <styled.h1
         fontSize={{
-          base: "5xl",
-          lg: "7xl",
+          base: '5xl',
+          lg: '7xl',
         }}
         fontWeight="bold"
-        color="fg.stronger"
+        color="neutral.200"
       >
         Archive
       </styled.h1>
-      <styled.p fontFamily="mono" color="fg.accent">
+      <styled.p fontFamily="mono" color="violet.500">
         A list of things I&rsquo;ve worked&nbsp;on
       </styled.p>
 
@@ -58,15 +58,15 @@ export default async function Archive() {
               _first: 0,
             }}
             flexDir={{
-              base: "column",
-              lg: "row",
+              base: 'column',
+              lg: 'row',
             }}
           >
             <Box
               fontFamily="mono"
               fontSize="sm"
               lineHeight="loose"
-              color="fg.accent"
+              color="violet.500"
             >
               {year}
             </Box>
@@ -93,10 +93,10 @@ function Item(props: TNonFeaturedProject) {
       }}
     >
       <Box>
-        <styled.h2 fontSize="xl" fontWeight="bold" color="fg.stronger">
+        <styled.h2 fontSize="xl" fontWeight="bold" color="neutral.200">
           {title}
         </styled.h2>
-        <Prose color="fg.strong">{description}</Prose>
+        <Prose color="neutral.300">{description}</Prose>
         <styled.ul
           mt={3}
           display="flex"
@@ -121,7 +121,7 @@ function Item(props: TNonFeaturedProject) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: "fg.accent",
+                  color: 'fg.accent',
                 }}
               >
                 <Icon asChild>
@@ -153,7 +153,7 @@ function Item(props: TNonFeaturedProject) {
               prefetch={false}
               transition="colors token(durations.slow)"
               _hover={{
-                color: "fg.accent",
+                color: 'fg.accent',
               }}
             >
               <Icon asChild>
@@ -187,7 +187,7 @@ async function getItems() {
 
   projects.forEach((i) => {
     if (!i.featured && !i.noteworthy) {
-      const k = format(i.createdAt, "yyyy");
+      const k = format(i.createdAt, 'yyyy');
 
       if (r[k]) {
         r[k].push(i);

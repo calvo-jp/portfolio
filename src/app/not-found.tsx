@@ -1,6 +1,6 @@
-import { Button } from "@/components/button";
-import { Link } from "@/components/link";
-import { Box, styled } from "@/styled-system/jsx";
+import { Button } from '@/components/button';
+import { Link } from '@/components/link';
+import { Box, styled } from '@/styled-system/jsx';
 
 export default function NotFound() {
   return (
@@ -19,22 +19,22 @@ export default function NotFound() {
       <styled.h1
         fontFamily="mono"
         fontSize={{
-          base: "8xl",
-          lg: "9xl",
+          base: '8xl',
+          lg: '9xl',
         }}
         fontWeight="black"
         lineHeight="none"
-        color="fg.accent"
+        color="violet.500"
       >
         404
       </styled.h1>
       <styled.h2
         fontSize={{
-          base: "2xl",
-          lg: "3xl",
+          base: '2xl',
+          lg: '3xl',
         }}
         lineHeight="none"
-        color="fg.strong"
+        color="neutral.300"
       >
         Page Not Found
       </styled.h2>

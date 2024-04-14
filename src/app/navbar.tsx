@@ -1,9 +1,9 @@
-import { Icon } from "@/components/icon";
-import { Link } from "@/components/link";
-import { Spacer, VisuallyHidden, styled } from "@/styled-system/jsx";
-import { TerminalIcon } from "lucide-react";
-import { NavbarDrawer } from "./navbar-drawer";
-import { NavbarNav } from "./navbar-nav";
+import { Icon } from '@/components/icon';
+import { Link } from '@/components/link';
+import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { TerminalIcon } from 'lucide-react';
+import { NavbarDrawer } from './navbar-drawer';
+import { NavbarNav } from './navbar-nav';
 
 export async function Navbar() {
   return (
@@ -28,7 +28,7 @@ export async function Navbar() {
         <Icon
           w={8}
           h={8}
-          color="fg.accent"
+          color="violet.500"
           lg={{
             w: 6,
             h: 6,

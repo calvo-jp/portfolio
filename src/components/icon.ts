@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { styled } from "@/styled-system/jsx";
-import { ark } from "@ark-ui/react";
+import { styled } from '@/styled-system/jsx';
+import { ark } from '@ark-ui/react';
 
 export const Icon = styled(
   ark.svg,
@@ -16,7 +16,7 @@ export const Icon = styled(
       strokeWidth: 1.66667,
     },
     shouldForwardProp(prop) {
-      return ["strokeWidth"].includes(prop);
+      return ['strokeWidth'].includes(prop);
     },
-  },
+  }
 );

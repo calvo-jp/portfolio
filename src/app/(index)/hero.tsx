@@ -1,7 +1,7 @@
-import { Button } from "@/components/button";
-import { Link } from "@/components/link";
-import { styled } from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
+import { Button } from '@/components/button';
+import { Link } from '@/components/link';
+import { styled } from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
 
 export async function Hero() {
   const author = await getAuthor();
@@ -16,16 +16,16 @@ export async function Hero() {
         pb: 20,
       }}
     >
-      <styled.h3 fontFamily="mono" color="fg.accent">
+      <styled.h3 fontFamily="mono" color="violet.500">
         Hi, I&rsquo;m
       </styled.h3>
 
       <styled.h1
         mt={5}
-        color="fg.high"
+        color="white"
         fontSize={{
-          base: "5xl",
-          lg: "7xl",
+          base: '5xl',
+          lg: '7xl',
         }}
         fontWeight="black"
         lineHeight="none"
@@ -35,10 +35,10 @@ export async function Hero() {
 
       <styled.h2
         mt={2}
-        color="fg.strong"
+        color="neutral.300"
         fontSize={{
-          base: "4xl",
-          lg: "7xl",
+          base: '4xl',
+          lg: '7xl',
         }}
         fontWeight="extrabold"
         lineHeight="none"
@@ -58,8 +58,8 @@ export async function Hero() {
           lg: 12,
         }}
         lgDown={{
-          w: "full",
-          justifyContent: "center",
+          w: 'full',
+          justifyContent: 'center',
         }}
         asChild
       >

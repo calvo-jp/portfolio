@@ -1,6 +1,6 @@
-import { Icon } from "@/components/icon";
-import { Link } from "@/components/link";
-import { Prose } from "@/components/prose";
+import { Icon } from '@/components/icon';
+import { Link } from '@/components/link';
+import { Prose } from '@/components/prose';
 import {
   Tooltip,
   TooltipArrow,
@@ -8,7 +8,7 @@ import {
   TooltipContent,
   TooltipPositioner,
   TooltipTrigger,
-} from "@/components/tooltip";
+} from '@/components/tooltip';
 import {
   Box,
   Flex,
@@ -16,11 +16,11 @@ import {
   Spacer,
   VisuallyHidden,
   styled,
-} from "@/styled-system/jsx";
-import { getAuthor } from "@/utils/get-author";
-import { TNonFeaturedProject } from "@/utils/types";
-import { Portal } from "@ark-ui/react";
-import { ExternalLinkIcon, FolderIcon, GitBranchIcon } from "lucide-react";
+} from '@/styled-system/jsx';
+import { getAuthor } from '@/utils/get-author';
+import { TNonFeaturedProject } from '@/utils/types';
+import { Portal } from '@ark-ui/react';
+import { ExternalLinkIcon, FolderIcon, GitBranchIcon } from 'lucide-react';
 
 export async function NoteworthyProjects() {
   const { projects } = await getAuthor();
@@ -36,11 +36,11 @@ export async function NoteworthyProjects() {
       <Box textAlign="center">
         <styled.h2
           fontSize={{
-            base: "2xl",
-            lg: "3xl",
+            base: '2xl',
+            lg: '3xl',
           }}
           fontWeight="black"
-          color="fg.stronger"
+          color="neutral.200"
         >
           Other Noteworthy Projects
         </styled.h2>
@@ -49,14 +49,14 @@ export async function NoteworthyProjects() {
           w="fit"
           mx="auto"
           mt={2}
-          color="fg.accent"
+          color="violet.500"
           fontFamily="mono"
           fontSize="sm"
           display="block"
           whiteSpace="nowrap"
           textUnderlineOffset="0.35rem"
           _hover={{
-            textDecoration: "underline",
+            textDecoration: 'underline',
           }}
         >
           view the archive
@@ -71,8 +71,8 @@ export async function NoteworthyProjects() {
         display="grid"
         gap={4}
         gridTemplateColumns={{
-          lg: "repeat(2,1fr)",
-          xl: "repeat(3,1fr)",
+          lg: 'repeat(2,1fr)',
+          xl: 'repeat(3,1fr)',
         }}
       >
         {projects.map((o) => {
@@ -97,9 +97,9 @@ function Item(props: ItemProps) {
   const { title, description, repository, website, tags } = props.data;
 
   return (
-    <Flex bg="bg.light" p={8} flexDir="column" minH="token(spacing.80)">
+    <Flex bg="neutral.800" p={8} flexDir="column" minH="token(spacing.80)">
       <Flex alignItems="start">
-        <Icon w={9} h={9} color="fg.accent" asChild>
+        <Icon w={9} h={9} color="violet.500" asChild>
           <FolderIcon />
         </Icon>
         <Spacer />
@@ -114,7 +114,7 @@ function Item(props: ItemProps) {
                   prefetch={false}
                   transition="colors token(durations.slow)"
                   _hover={{
-                    color: "fg.accent",
+                    color: 'fg.accent',
                   }}
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
@@ -146,7 +146,7 @@ function Item(props: ItemProps) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: "fg.accent",
+                  color: 'fg.accent',
                 }}
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>
@@ -170,11 +170,11 @@ function Item(props: ItemProps) {
         </HStack>
       </Flex>
 
-      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="fg.stronger">
+      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="neutral.200">
         {title}
       </styled.h3>
 
-      <Prose mt={2} fontSize="sm" color="fg.strong" flexGrow={1}>
+      <Prose mt={2} fontSize="sm" color="neutral.300" flexGrow={1}>
         {description}
       </Prose>
 
