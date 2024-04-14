@@ -82,7 +82,7 @@ function Item(props: ItemProps) {
     >
       <Box
         w="1/2"
-        border="1px solid token(colors.bg.light)"
+        border="1px solid token(colors.neutral.800)"
         flexShrink={0}
         lgDown={{
           display: 'none',
@@ -123,7 +123,7 @@ function Item(props: ItemProps) {
 
         <Box
           mt={4}
-          border="1px solid token(colors.bg.light)"
+          border="1px solid token(colors.neutral.800)"
           lg={{
             display: 'none',
           }}
