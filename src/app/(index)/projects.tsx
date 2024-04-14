@@ -18,7 +18,6 @@ import {
   GitBranch02Icon,
   LinkExternal02Icon,
 } from '@untitled-theme/icons-react';
-import { Fragment } from 'react';
 import { SectionHeading } from './section-heading';
 
 export async function Projects() {
@@ -34,7 +33,7 @@ export async function Projects() {
     >
       <SectionHeading
         index={3}
-        title={<Fragment>Some things I&rsquo;ve built</Fragment>}
+        title={<>Things I&rsquo;ve built</>}
         lg={{
           w: '1/2',
         }}

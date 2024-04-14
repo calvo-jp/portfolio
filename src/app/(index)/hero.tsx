@@ -38,7 +38,7 @@ export async function Hero() {
         color="neutral.300"
         fontSize={{
           base: '4xl',
-          lg: '7xl',
+          lg: '6xl',
         }}
         fontWeight="extrabold"
         lineHeight="none"

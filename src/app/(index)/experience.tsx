@@ -1,5 +1,4 @@
 import { styled } from '@/styled-system/jsx';
-import { Fragment } from 'react';
 import { ExperienceTabs } from './experience-tabs';
 import { ExperienceTree } from './experience-tree';
 import { SectionHeading } from './section-heading';
@@ -15,7 +14,7 @@ export async function Experience() {
     >
       <SectionHeading
         index={2}
-        title={<Fragment>Where I&rsquo;ve Worked</Fragment>}
+        title={<>Where I&rsquo;ve Worked</>}
         lg={{
           w: '1/2',
         }}

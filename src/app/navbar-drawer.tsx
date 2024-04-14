@@ -64,6 +64,7 @@ export async function NavbarDrawer() {
             bg="neutral.800"
             pos="relative"
             overflowY="auto"
+            borderLeft="1px solid token(colors.neutral.600)"
             css={{
               '&::-webkit-scrollbar': {
                 display: 'none',
