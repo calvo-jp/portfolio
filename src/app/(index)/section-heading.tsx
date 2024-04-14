@@ -20,7 +20,7 @@ export function SectionHeading(props: SectionHeadingProps) {
   return (
     <styled.h2 display="flex" alignItems="center" {...others}>
       <styled.span
-        color="violet.500"
+        color="emerald.500"
         fontSize="lg"
         fontFamily="mono"
         lineHeight="none"
@@ -30,7 +30,7 @@ export function SectionHeading(props: SectionHeadingProps) {
 
       <styled.span
         ml={2}
-        color="neutral.200"
+        color="zinc.200"
         fontSize={{
           base: '2xl',
           lg: '3xl',
@@ -41,13 +41,13 @@ export function SectionHeading(props: SectionHeadingProps) {
         {title}
       </styled.span>
 
-      <Box mx={3} flexGrow={1} h="1px" bg="neutral.800" />
+      <Box mx={3} flexGrow={1} h="1px" bg="zinc.800" />
 
       <Flex>
         <Icon
           w={4}
           h={4}
-          color="neutral.600"
+          color="zinc.600"
           display={{
             base: 'none',
             lg: 'block',
@@ -59,7 +59,7 @@ export function SectionHeading(props: SectionHeadingProps) {
         <Icon
           w={4}
           h={4}
-          color="neutral.600"
+          color="zinc.600"
           display={{
             base: 'none',
             lg: 'block',

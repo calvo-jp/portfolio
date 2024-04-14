@@ -15,11 +15,11 @@ export async function Contact() {
       }}
       textAlign="center"
     >
-      <styled.p color="violet.500" fontFamily="mono">
+      <styled.p color="emerald.500" fontFamily="mono">
         04. What&rsquo;s next?
       </styled.p>
       <styled.h2
-        color="neutral.200"
+        color="zinc.200"
         fontSize={{
           base: '4xl',
           lg: '6xl',

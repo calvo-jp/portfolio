@@ -40,7 +40,7 @@ const prose = css({
   hyphens: 'auto',
 
   '& a': {
-    color: 'violet.500',
+    color: 'emerald.500',
     textUnderlineOffset: '0.35rem',
     _hover: {
       textDecoration: 'underline',

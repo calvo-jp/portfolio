@@ -41,28 +41,28 @@ function Separator({
           <Box
             w={3}
             h={3}
-            border="1px solid token(colors.neutral.800)"
+            border="1px solid token(colors.zinc.800)"
             rounded="full"
             flexShrink={0}
           />
-          <Box h={8} w="1px" bg="neutral.800" />
+          <Box h={8} w="1px" bg="zinc.800" />
         </>
       )}
 
       <Box
         py={2}
         px={4}
-        border="1px solid token(colors.neutral.800)"
+        border="1px solid token(colors.zinc.800)"
         fontSize="sm"
       >
         {children}
       </Box>
 
-      <Box h={8} w="1px" bg="neutral.800" />
+      <Box h={8} w="1px" bg="zinc.800" />
       <Box
         w={3}
         h={3}
-        border="1px solid token(colors.neutral.800)"
+        border="1px solid token(colors.zinc.800)"
         rounded="full"
         flexShrink={0}
       />

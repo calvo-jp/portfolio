@@ -61,8 +61,8 @@ export default async function RootLayout({ children }: PropsWithChildren) {
       }}
     >
       <styled.body
-        bg="neutral.900"
-        color="neutral.400"
+        bg="zinc.900"
+        color="zinc.400"
         minHeight="dvh"
         fontFamily="sans"
       >

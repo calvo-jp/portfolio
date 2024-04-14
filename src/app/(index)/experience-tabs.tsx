@@ -46,8 +46,8 @@ export async function ExperienceTabs() {
             color="inherit"
             transition="all token(durations.slow)"
             _selected={{
-              bg: 'neutral.800',
-              color: 'violet.500',
+              bg: 'zinc.800',
+              color: 'emerald.500',
             }}
           >
             {company.name}
@@ -55,7 +55,7 @@ export async function ExperienceTabs() {
         ))}
 
         <TabIndicator
-          bg="violet.500"
+          bg="emerald.500"
           _vertical={{
             h: 'var(--height)',
             w: 0.5,

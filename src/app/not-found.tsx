@@ -24,7 +24,7 @@ export default function NotFound() {
         }}
         fontWeight="black"
         lineHeight="none"
-        color="violet.500"
+        color="emerald.500"
       >
         404
       </styled.h1>
@@ -34,7 +34,7 @@ export default function NotFound() {
           lg: '3xl',
         }}
         lineHeight="none"
-        color="neutral.300"
+        color="zinc.300"
       >
         Page Not Found
       </styled.h2>

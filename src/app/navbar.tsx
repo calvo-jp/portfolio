@@ -13,11 +13,11 @@ export async function Navbar() {
         base: 4,
         md: 6,
       }}
-      bg="bg/75"
+      bg="zinc.900/75"
       pos="sticky"
       top={0}
       zIndex="sticky"
-      backdropFilter="blur(8px)"
+      backdropFilter="blur(6px)"
       display="flex"
       alignItems="center"
       lg={{
@@ -28,7 +28,7 @@ export async function Navbar() {
         <Icon
           w={8}
           h={8}
-          color="violet.500"
+          color="emerald.500"
           lg={{
             w: 6,
             h: 6,

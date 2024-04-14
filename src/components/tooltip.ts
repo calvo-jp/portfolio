@@ -26,8 +26,8 @@ export const TooltipContent = styled(ArkTooltip.Content, {
   base: {
     px: 4,
     py: 2,
-    bg: 'neutral.700',
-    color: 'neutral.100',
+    bg: 'zinc.700',
+    color: 'zinc.100',
     zIndex: 'tooltip',
     fontSize: 'sm',
   },
@@ -36,7 +36,7 @@ export const TooltipContent = styled(ArkTooltip.Content, {
 export const TooltipArrow = styled(ArkTooltip.Arrow, {
   base: {
     '--arrow-size': 'token(sizes.3)',
-    '--arrow-background': 'token(colors.neutral.700)',
+    '--arrow-background': 'token(colors.zinc.700)',
   },
 });
 

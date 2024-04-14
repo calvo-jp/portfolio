@@ -30,12 +30,12 @@ export async function EmailAd() {
             letterSpacing="widest"
             transition="colors token(durations.slow)"
             color={{
-              _hover: 'violet.500',
+              _hover: 'emerald.500',
             }}
           >
             {contact.email}
           </Link>
-          <Box h="15vh" w="1px" bg="neutral.800" />
+          <Box h="15vh" w="1px" bg="zinc.800" />
         </Box>
       </Box>
     </Portal>

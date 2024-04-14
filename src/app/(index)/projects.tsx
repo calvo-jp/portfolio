@@ -84,7 +84,7 @@ function Item(props: ItemProps) {
     >
       <Box
         w="1/2"
-        border="1px solid token(colors.neutral.800)"
+        border="1px solid token(colors.zinc.800)"
         flexShrink={0}
         lgDown={{
           display: 'none',
@@ -107,7 +107,7 @@ function Item(props: ItemProps) {
         <Box
           fontFamily="mono"
           fontSize="sm"
-          color="violet.500"
+          color="emerald.500"
           lineHeight="none"
         >
           Featured Project
@@ -118,14 +118,14 @@ function Item(props: ItemProps) {
           fontSize="2xl"
           fontWeight="bold"
           lineHeight="none"
-          color="neutral.200"
+          color="zinc.200"
         >
           {title}
         </styled.h3>
 
         <Box
           mt={4}
-          border="1px solid token(colors.neutral.800)"
+          border="1px solid token(colors.zinc.800)"
           lg={{
             display: 'none',
           }}
@@ -144,11 +144,11 @@ function Item(props: ItemProps) {
 
         <Prose
           mt={5}
-          color="neutral.300"
+          color="zinc.300"
           lg={{
             px: 5,
             py: 4,
-            bg: 'neutral.800',
+            bg: 'zinc.800',
           }}
         >
           {description}
@@ -177,12 +177,12 @@ function Item(props: ItemProps) {
                   rel="noreferrer noopener"
                   prefetch={false}
                   color={{
-                    base: 'neutral.300',
-                    _hover: 'violet.500',
+                    base: 'zinc.300',
+                    _hover: 'emerald.500',
                   }}
                   transition="colors token(durations.slow)"
                 >
-                  <Icon w={6} h={6} asChild>
+                  <Icon asChild>
                     <LinkExternal02Icon strokeWidth="1.66667" />
                   </Icon>
                   <VisuallyHidden>Go to website</VisuallyHidden>
@@ -210,12 +210,12 @@ function Item(props: ItemProps) {
                 rel="noreferrer noopener"
                 prefetch={false}
                 color={{
-                  base: 'neutral.300',
-                  _hover: 'violet.500',
+                  base: 'zinc.300',
+                  _hover: 'emerald.500',
                 }}
                 transition="colors token(durations.slow)"
               >
-                <Icon w={6} h={6} asChild>
+                <Icon asChild>
                   <GitBranch02Icon strokeWidth="1.66667" />
                 </Icon>
                 <VisuallyHidden>Go to repository</VisuallyHidden>

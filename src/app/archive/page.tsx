@@ -40,11 +40,11 @@ export default async function Archive() {
           lg: '7xl',
         }}
         fontWeight="bold"
-        color="neutral.200"
+        color="zinc.200"
       >
         Archive
       </styled.h1>
-      <styled.p fontFamily="mono" color="violet.500">
+      <styled.p fontFamily="mono" color="emerald.500">
         A list of things I&rsquo;ve worked&nbsp;on
       </styled.p>
 
@@ -69,7 +69,7 @@ export default async function Archive() {
               fontFamily="mono"
               fontSize="sm"
               lineHeight="loose"
-              color="violet.500"
+              color="emerald.500"
             >
               {year}
             </Box>
@@ -96,10 +96,10 @@ function Item(props: TNonFeaturedProject) {
       }}
     >
       <Box>
-        <styled.h2 fontSize="xl" fontWeight="bold" color="neutral.200">
+        <styled.h2 fontSize="xl" fontWeight="bold" color="zinc.200">
           {title}
         </styled.h2>
-        <Prose color="neutral.300">{description}</Prose>
+        <Prose color="zinc.300">{description}</Prose>
         <styled.ul
           mt={3}
           display="flex"
@@ -124,7 +124,7 @@ function Item(props: TNonFeaturedProject) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: 'violet.500',
+                  color: 'emerald.500',
                 }}
               >
                 <Icon asChild>
@@ -156,7 +156,7 @@ function Item(props: TNonFeaturedProject) {
               prefetch={false}
               transition="colors token(durations.slow)"
               _hover={{
-                color: 'violet.500',
+                color: 'emerald.500',
               }}
             >
               <Icon asChild>

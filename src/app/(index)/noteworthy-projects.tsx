@@ -44,7 +44,7 @@ export async function NoteworthyProjects() {
             lg: '3xl',
           }}
           fontWeight="black"
-          color="neutral.200"
+          color="zinc.200"
         >
           Other Noteworthy Projects
         </styled.h2>
@@ -53,7 +53,7 @@ export async function NoteworthyProjects() {
           w="fit"
           mx="auto"
           mt={2}
-          color="violet.500"
+          color="emerald.500"
           fontFamily="mono"
           fontSize="sm"
           display="block"
@@ -101,9 +101,9 @@ function Item(props: ItemProps) {
   const { title, description, repository, website, tags } = props.data;
 
   return (
-    <Flex bg="neutral.800" p={8} flexDir="column" minH="token(spacing.80)">
+    <Flex bg="zinc.800" p={8} flexDir="column" minH="token(spacing.80)">
       <Flex alignItems="start">
-        <Icon w={9} h={9} color="violet.500" asChild>
+        <Icon w={9} h={9} color="emerald.500" asChild>
           <FolderIcon strokeWidth="1.66667" />
         </Icon>
         <Spacer />
@@ -118,7 +118,7 @@ function Item(props: ItemProps) {
                   prefetch={false}
                   transition="colors token(durations.slow)"
                   _hover={{
-                    color: 'violet.500',
+                    color: 'emerald.500',
                   }}
                 >
                   <VisuallyHidden>Go to website</VisuallyHidden>
@@ -150,7 +150,7 @@ function Item(props: ItemProps) {
                 prefetch={false}
                 transition="colors token(durations.slow)"
                 _hover={{
-                  color: 'violet.500',
+                  color: 'emerald.500',
                 }}
               >
                 <VisuallyHidden>Go to repository</VisuallyHidden>
@@ -174,11 +174,11 @@ function Item(props: ItemProps) {
         </HStack>
       </Flex>
 
-      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="neutral.200">
+      <styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="zinc.200">
         {title}
       </styled.h3>
 
-      <Prose mt={2} fontSize="sm" color="neutral.300" flexGrow={1}>
+      <Prose mt={2} fontSize="sm" color="zinc.300" flexGrow={1}>
         {description}
       </Prose>
 
