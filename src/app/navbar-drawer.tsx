@@ -99,7 +99,7 @@ export async function NavbarDrawer() {
                     <DialogCloseTrigger asChild>
                       <Link py={1} href={item.path}>
                         <Box fontFamily="mono" color="emerald.500">
-                          {(++index).toString().padStart(2, '0')}.
+                          {index.toString().padStart(2, '0')}.
                         </Box>
                         <Box fontSize="lg" color="zinc.200">
                           {item.label}

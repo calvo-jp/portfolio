@@ -25,7 +25,7 @@ export async function NavbarNav() {
               className="group"
             >
               <styled.span fontFamily="mono" color="emerald.500" fontSize="xs">
-                {(++index).toString().padStart(2, '0')}.
+                {index.toString().padStart(2, '0')}.
               </styled.span>
               <styled.span
                 fontSize="sm"

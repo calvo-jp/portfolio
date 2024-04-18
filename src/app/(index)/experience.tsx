@@ -13,7 +13,7 @@ export async function Experience() {
       }}
     >
       <SectionHeading
-        index={2}
+        index={1}
         title={<>Where I&rsquo;ve Worked</>}
         lg={{
           w: '1/2',

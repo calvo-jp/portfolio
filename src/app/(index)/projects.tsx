@@ -32,7 +32,7 @@ export async function Projects() {
       }}
     >
       <SectionHeading
-        index={3}
+        index={2}
         title={<>Things I&rsquo;ve built</>}
         lg={{
           w: '1/2',

@@ -5,7 +5,6 @@ import { Asterisk02Icon } from '@untitled-theme/icons-react';
 import { ReactNode } from 'react';
 
 interface BaseProps {
-  /** non-zero based index */
   index: number;
   title: ReactNode;
   children?: never;

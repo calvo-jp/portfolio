@@ -16,7 +16,7 @@ export async function Contact() {
       textAlign="center"
     >
       <styled.p color="emerald.500" fontFamily="mono">
-        04. What&rsquo;s next?
+        03. What&rsquo;s next?
       </styled.p>
       <styled.h2
         color="zinc.200"

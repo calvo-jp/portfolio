@@ -20,7 +20,7 @@ export async function About() {
       }}
     >
       <SectionHeading
-        index={1}
+        index={0}
         title="About Me"
         lg={{
           w: '1/2',
