@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { compareDesc } from 'date-fns';
 import { readFile, readdir } from 'fs/promises';
 import { unstable_cache as cache } from 'next/cache';

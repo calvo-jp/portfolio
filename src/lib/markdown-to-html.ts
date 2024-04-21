@@ -1,3 +1,5 @@
+import 'server-only';
+
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeStringify from 'rehype-stringify';
 import remarkFrontmatter from 'remark-frontmatter';
