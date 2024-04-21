@@ -1,4 +1,4 @@
-import { Icon } from '@/components/icon';
+import { Icon } from '@/lib/icon';
 import { Box, Flex, styled } from '@/styled-system/jsx';
 import { Assign, HTMLStyledProps } from '@/styled-system/types';
 import { Asterisk02Icon } from '@untitled-theme/icons-react';

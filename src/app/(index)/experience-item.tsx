@@ -1,4 +1,4 @@
-import { Prose } from '@/components/prose';
+import { Prose } from '@/lib/prose';
 import { TWorkHistory } from '@/lib/types';
 import { Box, styled } from '@/styled-system/jsx';
 import { format, isSameYear } from 'date-fns';

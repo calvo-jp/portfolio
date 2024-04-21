@@ -1,11 +1,11 @@
+import { getAuthor } from '@/lib/get-author';
 import {
   TabContent,
   TabIndicator,
   TabList,
   TabTrigger,
   Tabs,
-} from '@/components/tabs';
-import { getAuthor } from '@/lib/get-author';
+} from '@/lib/tabs';
 import { ExperienceItem } from './experience-item';
 
 export async function ExperienceTabs() {

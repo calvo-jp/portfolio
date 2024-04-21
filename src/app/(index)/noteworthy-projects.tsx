@@ -1,6 +1,7 @@
-import { Icon } from '@/components/icon';
-import { Link } from '@/components/link';
-import { Prose } from '@/components/prose';
+import { getAuthor } from '@/lib/get-author';
+import { Icon } from '@/lib/icon';
+import { Link } from '@/lib/link';
+import { Prose } from '@/lib/prose';
 import {
   Tooltip,
   TooltipArrow,
@@ -8,8 +9,7 @@ import {
   TooltipContent,
   TooltipPositioner,
   TooltipTrigger,
-} from '@/components/tooltip';
-import { getAuthor } from '@/lib/get-author';
+} from '@/lib/tooltip';
 import { TNonFeaturedProject } from '@/lib/types';
 import {
   Box,

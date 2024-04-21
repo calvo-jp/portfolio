@@ -1,5 +1,7 @@
-import { Icon } from '@/components/icon';
-import { Link } from '@/components/link';
+import { capitalize } from '@/lib/capitalize';
+import { getAuthor } from '@/lib/get-author';
+import { Icon } from '@/lib/icon';
+import { Link } from '@/lib/link';
 import {
   Tooltip,
   TooltipArrow,
@@ -7,9 +9,7 @@ import {
   TooltipContent,
   TooltipPositioner,
   TooltipTrigger,
-} from '@/components/tooltip';
-import { capitalize } from '@/lib/capitalize';
-import { getAuthor } from '@/lib/get-author';
+} from '@/lib/tooltip';
 import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
 import { SVGProps, forwardRef } from 'react';

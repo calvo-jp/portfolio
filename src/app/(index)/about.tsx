@@ -1,9 +1,9 @@
 import selfie from '@/assets/images/selfie.jpg';
-import { Icon } from '@/components/icon';
-import { Image } from '@/components/image';
-import { Link } from '@/components/link';
-import { Prose } from '@/components/prose';
 import { getAuthor } from '@/lib/get-author';
+import { Icon } from '@/lib/icon';
+import { Image } from '@/lib/image';
+import { Link } from '@/lib/link';
+import { Prose } from '@/lib/prose';
 import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Asterisk02Icon } from '@untitled-theme/icons-react';
 import { SectionHeading } from './section-heading';

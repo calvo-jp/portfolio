@@ -1,5 +1,5 @@
-import { Link } from '@/components/link';
 import { getAuthor } from '@/lib/get-author';
+import { Link } from '@/lib/link';
 import { Box } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
 

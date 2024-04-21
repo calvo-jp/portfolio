@@ -1,5 +1,5 @@
-import { Icon } from '@/components/icon';
-import { Link } from '@/components/link';
+import { Icon } from '@/lib/icon';
+import { Link } from '@/lib/link';
 import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { TerminalIcon } from '@untitled-theme/icons-react';
 import { NavbarDrawer } from './navbar-drawer';

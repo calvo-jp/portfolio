@@ -1,6 +1,6 @@
-import { Button } from '@/components/button';
-import { Link } from '@/components/link';
+import { Button } from '@/lib/button';
 import { getAuthor } from '@/lib/get-author';
+import { Link } from '@/lib/link';
 import { styled } from '@/styled-system/jsx';
 
 export async function Contact() {

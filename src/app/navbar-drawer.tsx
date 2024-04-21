@@ -1,4 +1,4 @@
-import { Button } from '@/components/button';
+import { Button } from '@/lib/button';
 import {
   Dialog,
   DialogBackdrop,
@@ -6,10 +6,10 @@ import {
   DialogContent,
   DialogPositioner,
   DialogTrigger,
-} from '@/components/dialog';
-import { Icon } from '@/components/icon';
-import { Link } from '@/components/link';
+} from '@/lib/dialog';
 import { getAuthor } from '@/lib/get-author';
+import { Icon } from '@/lib/icon';
+import { Link } from '@/lib/link';
 import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
 import { Portal } from '@ark-ui/react';
 import { Menu05Icon, XIcon } from '@untitled-theme/icons-react';
