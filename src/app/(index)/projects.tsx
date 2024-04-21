@@ -21,7 +21,7 @@ import {
 import { SectionHeading } from './section-heading';
 
 export async function Projects() {
-  const { projects } = await getAuthor();
+  const author = await getAuthor();
 
   return (
     <styled.section
@@ -45,7 +45,7 @@ export async function Projects() {
           lg: 16,
         }}
       >
-        {projects.map((o) =>
+        {author.projects.map((o) =>
           !o.featured ? null : <Item key={o.title} data={o} />
         )}
       </Box>

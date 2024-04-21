@@ -27,7 +27,7 @@ import {
 } from '@untitled-theme/icons-react';
 
 export async function NoteworthyProjects() {
-  const { projects } = await getAuthor();
+  const author = await getAuthor();
 
   return (
     <styled.section
@@ -79,7 +79,7 @@ export async function NoteworthyProjects() {
           xl: 'repeat(3,1fr)',
         }}
       >
-        {projects.map((o) => {
+        {author.projects.map((o) => {
           if (o.featured) {
             return null;
           } else if (!o.noteworthy) {

@@ -184,11 +184,11 @@ function Item(props: TNonFeaturedProject) {
 
 /* group by year */
 async function getItems() {
-  const { projects } = await getAuthor();
+  const author = await getAuthor();
 
   const r: Record<string, TNonFeaturedProject[]> = {};
 
-  projects.forEach((i) => {
+  author.projects.forEach((i) => {
     if (!i.featured && !i.noteworthy) {
       const k = format(i.createdAt, 'yyyy');
 

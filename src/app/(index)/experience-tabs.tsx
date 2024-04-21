@@ -9,7 +9,7 @@ import {
 import { ExperienceItem } from './experience-item';
 
 export async function ExperienceTabs() {
-  const { workHistory } = await getAuthor();
+  const author = await getAuthor();
 
   return (
     <Tabs
@@ -23,7 +23,7 @@ export async function ExperienceTabs() {
       }}
       mt={16}
       gap={12}
-      defaultValue={workHistory.at(0)?.company.name}
+      defaultValue={author.workHistory.at(0)?.company.name}
       orientation="vertical"
     >
       <TabList
@@ -34,10 +34,10 @@ export async function ExperienceTabs() {
           display: 'flex',
         }}
       >
-        {workHistory.map(({ company }) => (
+        {author.workHistory.map((o) => (
           <TabTrigger
-            key={company.name}
-            value={company.name}
+            key={o.company.name}
+            value={o.company.name}
             w="full"
             px={6}
             py={2}
@@ -50,7 +50,7 @@ export async function ExperienceTabs() {
               color: 'emerald.500',
             }}
           >
-            {company.name}
+            {o.company.name}
           </TabTrigger>
         ))}
 
@@ -63,7 +63,7 @@ export async function ExperienceTabs() {
         />
       </TabList>
 
-      {workHistory.map((o) => (
+      {author.workHistory.map((o) => (
         <TabContent key={o.company.name} value={o.company.name}>
           <ExperienceItem data={o} />
         </TabContent>

@@ -5,7 +5,7 @@ import { PropsWithChildren } from 'react';
 import { ExperienceItem } from './experience-item';
 
 export async function ExperienceTree() {
-  const { workHistory } = await getAuthor();
+  const author = await getAuthor();
 
   return (
     <Flex
@@ -16,7 +16,7 @@ export async function ExperienceTree() {
       flexDir="column"
       gap={6}
     >
-      {workHistory.map((item, index) => (
+      {author.workHistory.map((item, index) => (
         <Flex key={item.company.name} flexDir="column" gap={6}>
           <Separator bottomOnly={index === 0}>
             {item.dateOfEmployment.until

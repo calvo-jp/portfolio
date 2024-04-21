@@ -15,7 +15,8 @@ import { Portal } from '@ark-ui/react';
 import { SVGProps, forwardRef } from 'react';
 
 export async function Socials() {
-  const { socials } = await getAuthor();
+  const author = await getAuthor();
+  const items = Object.entries(author.socials);
 
   return (
     <Portal>
@@ -38,7 +39,7 @@ export async function Socials() {
           alignItems="center"
           gap={6}
         >
-          {Object.entries(socials).map(([name, url]) => (
+          {items.map(([name, url]) => (
             <styled.li key={name}>
               <Tooltip
                 id={`socials:${name}`}

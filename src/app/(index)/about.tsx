@@ -9,7 +9,7 @@ import { SectionHeading } from './section-heading';
 import selfie from './selfie.jpg';
 
 export async function About() {
-  const { about, skills } = await getAuthor();
+  const author = await getAuthor();
 
   return (
     <styled.section
@@ -48,7 +48,7 @@ export async function About() {
             w: '1/2',
           }}
         >
-          <Prose fontSize="lg">{about}</Prose>
+          <Prose fontSize="lg">{author.about}</Prose>
 
           <Box mt={5} fontSize="lg">
             Here are a few technologies I&rsquo;ve been working
@@ -56,7 +56,7 @@ export async function About() {
           </Box>
 
           <styled.ul mt={5}>
-            {skills.map((skill) => (
+            {author.skills.map((skill) => (
               <styled.li
                 key={skill}
                 fontFamily="mono"

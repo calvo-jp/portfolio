@@ -4,7 +4,7 @@ import { Link } from '@/lib/link';
 import { styled } from '@/styled-system/jsx';
 
 export async function Contact() {
-  const { contact } = await getAuthor();
+  const author = await getAuthor();
 
   return (
     <styled.section
@@ -35,7 +35,7 @@ export async function Contact() {
         to&nbsp;you!
       </styled.p>
       <Button w="fit" mx="auto" mt={16} asChild>
-        <Link href={`mailto:${contact.email}`} prefetch={false}>
+        <Link href={`mailto:${author.contact.email}`} prefetch={false}>
           Say Hello
         </Link>
       </Button>
