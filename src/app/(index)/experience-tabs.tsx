@@ -5,7 +5,7 @@ import {
   TabTrigger,
   Tabs,
 } from '@/components/tabs';
-import { getAuthor } from '@/utils/get-author';
+import { getAuthor } from '@/lib/get-author';
 import { ExperienceItem } from './experience-item';
 
 export async function ExperienceTabs() {

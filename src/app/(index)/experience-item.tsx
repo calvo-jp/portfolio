@@ -1,6 +1,6 @@
 import { Prose } from '@/components/prose';
+import { TWorkHistory } from '@/lib/types';
 import { Box, styled } from '@/styled-system/jsx';
-import { TWorkHistory } from '@/utils/types';
 import { format, isSameYear } from 'date-fns';
 
 interface ExperienceItemProps {

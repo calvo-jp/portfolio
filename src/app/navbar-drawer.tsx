@@ -9,8 +9,8 @@ import {
 } from '@/components/dialog';
 import { Icon } from '@/components/icon';
 import { Link } from '@/components/link';
+import { getAuthor } from '@/lib/get-author';
 import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 import { Menu05Icon, XIcon } from '@untitled-theme/icons-react';
 import { NAVBAR_NAV_ITEMS } from './navbar-nav';

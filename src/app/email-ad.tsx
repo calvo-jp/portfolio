@@ -1,6 +1,6 @@
 import { Link } from '@/components/link';
+import { getAuthor } from '@/lib/get-author';
 import { Box } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 
 export async function EmailAd() {

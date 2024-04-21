@@ -3,8 +3,8 @@ import { Icon } from '@/components/icon';
 import { Image } from '@/components/image';
 import { Link } from '@/components/link';
 import { Prose } from '@/components/prose';
+import { getAuthor } from '@/lib/get-author';
 import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
 import { Asterisk02Icon } from '@untitled-theme/icons-react';
 import { SectionHeading } from './section-heading';
 

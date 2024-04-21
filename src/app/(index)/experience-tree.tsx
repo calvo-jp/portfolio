@@ -1,5 +1,5 @@
+import { getAuthor } from '@/lib/get-author';
 import { Box, Flex } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
 import { format } from 'date-fns';
 import { PropsWithChildren } from 'react';
 import { ExperienceItem } from './experience-item';

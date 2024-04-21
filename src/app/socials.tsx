@@ -8,9 +8,9 @@ import {
   TooltipPositioner,
   TooltipTrigger,
 } from '@/components/tooltip';
+import { capitalize } from '@/lib/capitalize';
+import { getAuthor } from '@/lib/get-author';
 import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { capitalize } from '@/utils/capitalize';
-import { getAuthor } from '@/utils/get-author';
 import { Portal } from '@ark-ui/react';
 import { SVGProps, forwardRef } from 'react';
 

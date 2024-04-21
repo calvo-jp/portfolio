@@ -9,9 +9,9 @@ import {
   TooltipPositioner,
   TooltipTrigger,
 } from '@/components/tooltip';
+import { getAuthor } from '@/lib/get-author';
+import { TNonFeaturedProject } from '@/lib/types';
 import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
-import { TNonFeaturedProject } from '@/utils/types';
 import { Portal } from '@ark-ui/react';
 import {
   GitBranch02Icon,

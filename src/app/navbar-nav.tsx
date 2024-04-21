@@ -1,7 +1,7 @@
 import { Button } from '@/components/button';
 import { Link } from '@/components/link';
+import { getAuthor } from '@/lib/get-author';
 import { VisuallyHidden, styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
 
 export async function NavbarNav() {
   const author = await getAuthor();

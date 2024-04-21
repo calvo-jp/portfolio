@@ -1,8 +1,8 @@
 import './globals.css';
 
+import { getAuthor } from '@/lib/get-author';
 import { cx } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import { Metadata } from 'next';

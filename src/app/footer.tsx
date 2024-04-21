@@ -1,6 +1,6 @@
 import { Link } from '@/components/link';
+import { getAuthor } from '@/lib/get-author';
 import { Center, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { getAuthor } from '@/utils/get-author';
 import { getSocialIcon } from './socials';
 
 export async function Footer() {
