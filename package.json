@@ -28,11 +28,11 @@
     "sharp": "0.33.3",
     "unified": "11.0.4",
     "vfile-matter": "5.0.0",
-    "zod": "3.23.4"
+    "zod": "3.23.8"
   },
   "devDependencies": {
-    "@pandacss/dev": "0.37.2",
-    "@types/node": "20.12.7",
+    "@pandacss/dev": "0.39.1",
+    "@types/node": "20.12.11",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
     "eslint": "8.57.0",
