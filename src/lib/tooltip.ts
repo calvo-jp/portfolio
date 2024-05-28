@@ -1,3 +1,5 @@
+'use client';
+
 import {styled} from '@/styled-system/jsx';
 import {Tooltip as ArkTooltip} from '@ark-ui/react';
 

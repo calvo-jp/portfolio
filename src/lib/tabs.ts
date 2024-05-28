@@ -1,3 +1,5 @@
+'use client';
+
 import {styled} from '@/styled-system/jsx';
 import {Tabs as ArkTabs} from '@ark-ui/react';
 

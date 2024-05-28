@@ -1,3 +1,5 @@
+'use client';
+
 import {styled} from '@/styled-system/jsx';
 import {Dialog as ArkDialog} from '@ark-ui/react';
 
