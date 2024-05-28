@@ -1,41 +1,39 @@
-'use client';
-
-import { styled } from '@/styled-system/jsx';
-import { Dialog as ArkDialog } from '@ark-ui/react';
+import {styled} from '@/styled-system/jsx';
+import {Dialog as ArkDialog} from '@ark-ui/react';
 
 export const Dialog = styled(
-  ArkDialog.Root,
-  {},
-  {
-    defaultProps: {
-      lazyMount: true,
-    },
-  }
+	ArkDialog.Root,
+	{},
+	{
+		defaultProps: {
+			lazyMount: true,
+		},
+	},
 );
 
 export const DialogTrigger = styled(ArkDialog.Trigger, {
-  base: {
-    cursor: 'pointer',
-  },
+	base: {
+		cursor: 'pointer',
+	},
 });
 
 export const DialogBackdrop = styled(ArkDialog.Backdrop, {
-  base: {
-    zIndex: 'overlay',
-  },
+	base: {
+		zIndex: 'overlay',
+	},
 });
 
 export const DialogPositioner = styled(ArkDialog.Positioner);
 export const DialogContent = styled(ArkDialog.Content, {
-  base: {
-    zIndex: 'modal',
-  },
+	base: {
+		zIndex: 'modal',
+	},
 });
 
 export const DialogTitle = styled(ArkDialog.Title);
 export const DialogDescription = styled(ArkDialog.Description);
 export const DialogCloseTrigger = styled(ArkDialog.CloseTrigger, {
-  base: {
-    cursor: 'pointer',
-  },
+	base: {
+		cursor: 'pointer',
+	},
 });

@@ -1,85 +1,83 @@
-import 'server-only';
-
-import { compareDesc } from 'date-fns';
-import { readFile, readdir } from 'fs/promises';
-import { unstable_cache as cache } from 'next/cache';
-import { join } from 'path';
-import { markdownToHtml } from './markdown-to-html';
+import {compareDesc} from 'date-fns';
+import {unstable_cache as cache} from 'next/cache';
+import {readFile, readdir} from 'node:fs/promises';
+import {join} from 'node:path';
+import {markdownToHtml} from './markdown-to-html';
 import {
-  PrimaryInfoSchema,
-  ProjectSchema,
-  TAuthor,
-  TProject,
-  TWorkHistory,
-  WorkHistorySchema,
+	PrimaryInfoSchema,
+	ProjectSchema,
+	WorkHistorySchema,
+	type TAuthor,
+	type TProject,
+	type TWorkHistory,
 } from './types';
 
 export const getAuthor = cache(
-  async (): Promise<TAuthor> => {
-    const projects = await getProjects();
-    const workHistory = await getWorkHistory();
-    const primaryInfo = await getPrimaryInfo();
+	async (): Promise<TAuthor> => {
+		const projects = await getProjects();
+		const workHistory = await getWorkHistory();
+		const primaryInfo = await getPrimaryInfo();
 
-    return { ...primaryInfo, projects, workHistory };
-  },
-  ['author'],
-  {
-    tags: ['author'],
-  }
+		return {...primaryInfo, projects, workHistory};
+	},
+	['author'],
+	{
+		tags: ['author'],
+	},
 );
 
 const MARKDOWN_DIR = join(process.cwd(), 'src/assets/markdown');
 
 async function getPrimaryInfo() {
-  const buffer = await readFile(join(MARKDOWN_DIR, 'about.md'));
-  const result = await markdownToHtml(buffer.toString());
+	const buffer = await readFile(join(MARKDOWN_DIR, 'about.md'));
+	const result = await markdownToHtml(buffer.toString());
 
-  return PrimaryInfoSchema.parse({
-    ...result.meta.matter,
-    about: result.html,
-  });
+	return PrimaryInfoSchema.parse({
+		...result.meta.matter,
+		about: result.html,
+	});
 }
 
 async function getWorkHistory() {
-  const subdir = join(MARKDOWN_DIR, 'work-history');
-  const files = await readdir(subdir);
-  const items: TWorkHistory[] = [];
+	const subdir = join(MARKDOWN_DIR, 'work-history');
+	const files = await readdir(subdir);
+	const items: TWorkHistory[] = [];
 
-  for (const file of files) {
-    const buffer = await readFile(join(subdir, file));
-    const result = await markdownToHtml(buffer.toString());
+	for (const file of files) {
+		const buffer = await readFile(join(subdir, file));
+		const result = await markdownToHtml(buffer.toString());
 
-    const history = WorkHistorySchema.parse({
-      ...result.meta.matter,
-      responsibilities: result.html,
-    });
+		const history = WorkHistorySchema.parse({
+			...result.meta.matter,
+			responsibilities: result.html,
+		});
 
-    items.push(history);
-  }
+		items.push(history);
+	}
 
-  items.sort((i, j) =>
-    compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start)
-  );
-  return items;
+	items.sort((i, j) =>
+		compareDesc(i.dateOfEmployment.start, j.dateOfEmployment.start),
+	);
+	return items;
 }
 
 async function getProjects() {
-  const subdir = join(MARKDOWN_DIR, 'projects');
-  const files = await readdir(subdir);
-  const items: TProject[] = [];
+	const subdir = join(MARKDOWN_DIR, 'projects');
+	const files = await readdir(subdir);
+	const items: TProject[] = [];
 
-  for (const file of files) {
-    const buffer = await readFile(join(subdir, file));
-    const result = await markdownToHtml(buffer.toString());
+	for (const file of files) {
+		const buffer = await readFile(join(subdir, file));
+		const result = await markdownToHtml(buffer.toString());
 
-    const project = ProjectSchema.parse({
-      ...result.meta.matter,
-      description: result.html,
-    });
+		const project = ProjectSchema.parse({
+			...result.meta.matter,
+			description: result.html,
+		});
 
-    items.push(project);
-  }
+		items.push(project);
+	}
 
-  items.sort((i, j) => compareDesc(i.createdAt, j.createdAt));
-  return items;
+	items.sort((i, j) => compareDesc(i.createdAt, j.createdAt));
+	return items;
 }
