@@ -12,4 +12,4 @@ featured: true
 createdAt: 2024-02-25
 ---
 
-Icons library for React, Solid and Svelte
+Untitled UI icons, colors and etc library for React, Solid and Svelte
