@@ -1,29 +1,29 @@
-import {getAuthor} from '@/lib/get-author';
-import {Icon} from '@/lib/icon';
-import {Link} from '@/lib/link';
-import {Prose} from '@/lib/prose';
+import { getAuthor } from '@/lib/get-author';
+import { Icon } from '@/lib/icon';
+import { Link } from '@/lib/link';
+import { Prose } from '@/lib/prose';
 import {
-	Tooltip,
-	TooltipArrow,
-	TooltipArrowTip,
-	TooltipContent,
-	TooltipPositioner,
-	TooltipTrigger,
+    Tooltip,
+    TooltipArrow,
+    TooltipArrowTip,
+    TooltipContent,
+    TooltipPositioner,
+    TooltipTrigger,
 } from '@/lib/tooltip';
-import type {TNonFeaturedProject} from '@/lib/types';
+import type { TNonFeaturedProject } from '@/lib/types';
 import {
-	Box,
-	Flex,
-	HStack,
-	Spacer,
-	VisuallyHidden,
-	styled,
+    Box,
+    Flex,
+    HStack,
+    Spacer,
+    VisuallyHidden,
+    styled,
 } from '@/styled-system/jsx';
-import {Portal} from '@ark-ui/react';
+import { Portal } from '@ark-ui/react';
 import {
-	FolderIcon,
-	GitBranch02Icon,
-	LinkExternal02Icon,
+    FolderIcon,
+    GitBranch02Icon,
+    LinkExternal02Icon,
 } from '@untitled-theme/icons-react';
 
 export async function NoteworthyProjects() {
@@ -44,7 +44,7 @@ export async function NoteworthyProjects() {
 						lg: '3xl',
 					}}
 					fontWeight="black"
-					color="zinc.200"
+					color="gray-true.200"
 				>
 					Other Noteworthy Projects
 				</styled.h2>
@@ -53,7 +53,7 @@ export async function NoteworthyProjects() {
 					w="fit"
 					mx="auto"
 					mt={2}
-					color="emerald.500"
+					color="green.500"
 					fontFamily="mono"
 					fontSize="sm"
 					display="block"
@@ -101,9 +101,9 @@ function Item(props: ItemProps) {
 	const {title, description, repository, website, tags} = props.data;
 
 	return (
-		<Flex bg="zinc.800" p={8} flexDir="column" minH="token(spacing.80)">
+		<Flex bg="gray-true.800" p={8} flexDir="column" minH="token(spacing.80)">
 			<Flex alignItems="start">
-				<Icon w={9} h={9} color="emerald.500" asChild>
+				<Icon w={9} h={9} color="green.500" asChild>
 					<FolderIcon strokeWidth="1.66667" />
 				</Icon>
 				<Spacer />
@@ -118,7 +118,7 @@ function Item(props: ItemProps) {
 									prefetch={false}
 									transition="colors token(durations.slow)"
 									_hover={{
-										color: 'emerald.500',
+										color: 'green.500',
 									}}
 								>
 									<VisuallyHidden>Go to website</VisuallyHidden>
@@ -150,7 +150,7 @@ function Item(props: ItemProps) {
 								prefetch={false}
 								transition="colors token(durations.slow)"
 								_hover={{
-									color: 'emerald.500',
+									color: 'green.500',
 								}}
 							>
 								<VisuallyHidden>Go to repository</VisuallyHidden>
@@ -174,11 +174,11 @@ function Item(props: ItemProps) {
 				</HStack>
 			</Flex>
 
-			<styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="zinc.200">
+			<styled.h3 mt={6} fontSize="lg" fontWeight="bold" color="gray-true.200">
 				{title}
 			</styled.h3>
 
-			<Prose mt={2} fontSize="sm" color="zinc.300" flexGrow={1}>
+			<Prose mt={2} fontSize="sm" color="gray-true.300" flexGrow={1}>
 				{description}
 			</Prose>
 

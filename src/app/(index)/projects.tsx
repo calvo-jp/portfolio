@@ -1,21 +1,21 @@
-import {getAuthor} from '@/lib/get-author';
-import {Icon} from '@/lib/icon';
-import {Image} from '@/lib/image';
-import {Link} from '@/lib/link';
-import {Prose} from '@/lib/prose';
+import { getAuthor } from '@/lib/get-author';
+import { Icon } from '@/lib/icon';
+import { Image } from '@/lib/image';
+import { Link } from '@/lib/link';
+import { Prose } from '@/lib/prose';
 import {
-	Tooltip,
-	TooltipArrow,
-	TooltipArrowTip,
-	TooltipContent,
-	TooltipPositioner,
-	TooltipTrigger,
+    Tooltip,
+    TooltipArrow,
+    TooltipArrowTip,
+    TooltipContent,
+    TooltipPositioner,
+    TooltipTrigger,
 } from '@/lib/tooltip';
-import type {TFeaturedProject} from '@/lib/types';
-import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {Portal} from '@ark-ui/react';
-import {GitBranch02Icon, LinkExternal02Icon} from '@untitled-theme/icons-react';
-import {SectionHeading} from './section-heading';
+import type { TFeaturedProject } from '@/lib/types';
+import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Portal } from '@ark-ui/react';
+import { GitBranch02Icon, LinkExternal02Icon } from '@untitled-theme/icons-react';
+import { SectionHeading } from './section-heading';
 
 export async function Projects() {
 	const author = await getAuthor();
@@ -81,7 +81,7 @@ function Item(props: ItemProps) {
 		>
 			<Box
 				w="1/2"
-				border="1px solid token(colors.zinc.800)"
+				border="1px solid token(colors.gray-true.800)"
 				flexShrink={0}
 				lgDown={{
 					display: 'none',
@@ -104,7 +104,7 @@ function Item(props: ItemProps) {
 				<Box
 					fontFamily="mono"
 					fontSize="sm"
-					color="emerald.500"
+					color="green.500"
 					lineHeight="none"
 				>
 					Featured Project
@@ -115,14 +115,14 @@ function Item(props: ItemProps) {
 					fontSize="2xl"
 					fontWeight="bold"
 					lineHeight="none"
-					color="zinc.200"
+					color="gray-true.200"
 				>
 					{title}
 				</styled.h3>
 
 				<Box
 					mt={4}
-					border="1px solid token(colors.zinc.800)"
+					border="1px solid token(colors.gray-true.800)"
 					lg={{
 						display: 'none',
 					}}
@@ -141,11 +141,11 @@ function Item(props: ItemProps) {
 
 				<Prose
 					mt={5}
-					color="zinc.300"
+					color="gray-true.300"
 					lg={{
 						px: 5,
 						py: 4,
-						bg: 'zinc.800',
+						bg: 'gray-true.800',
 					}}
 				>
 					{description}
@@ -174,8 +174,8 @@ function Item(props: ItemProps) {
 									rel="noreferrer noopener"
 									prefetch={false}
 									color={{
-										base: 'zinc.300',
-										_hover: 'emerald.500',
+										base: 'gray-true.300',
+										_hover: 'green.500',
 									}}
 									transition="colors token(durations.slow)"
 								>
@@ -207,8 +207,8 @@ function Item(props: ItemProps) {
 								rel="noreferrer noopener"
 								prefetch={false}
 								color={{
-									base: 'zinc.300',
-									_hover: 'emerald.500',
+									base: 'gray-true.300',
+									_hover: 'green.500',
 								}}
 								transition="colors token(durations.slow)"
 							>

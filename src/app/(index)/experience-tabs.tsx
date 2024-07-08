@@ -1,6 +1,6 @@
-import {getAuthor} from '@/lib/get-author';
-import {TabContent, TabIndicator, TabList, TabTrigger, Tabs} from '@/lib/tabs';
-import {ExperienceItem} from './experience-item';
+import { getAuthor } from '@/lib/get-author';
+import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/tabs';
+import { ExperienceItem } from './experience-item';
 
 export async function ExperienceTabs() {
 	const author = await getAuthor();
@@ -40,8 +40,8 @@ export async function ExperienceTabs() {
 						color="inherit"
 						transition="all token(durations.slow)"
 						_selected={{
-							bg: 'zinc.800',
-							color: 'emerald.500',
+							bg: 'gray-true.800',
+							color: 'green.500',
 						}}
 					>
 						{o.company.name}
@@ -49,7 +49,7 @@ export async function ExperienceTabs() {
 				))}
 
 				<TabIndicator
-					bg="emerald.500"
+					bg="green.500"
 					_vertical={{
 						h: 'var(--height)',
 						w: 0.5,

@@ -1,19 +1,19 @@
-import {Button} from '@/lib/button';
+import { Button } from '@/lib/button';
 import {
-	Dialog,
-	DialogBackdrop,
-	DialogCloseTrigger,
-	DialogContent,
-	DialogPositioner,
-	DialogTrigger,
+    Dialog,
+    DialogBackdrop,
+    DialogCloseTrigger,
+    DialogContent,
+    DialogPositioner,
+    DialogTrigger,
 } from '@/lib/dialog';
-import {getAuthor} from '@/lib/get-author';
-import {Icon} from '@/lib/icon';
-import {Link} from '@/lib/link';
-import {Box, Flex, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {Portal} from '@ark-ui/react';
-import {Menu05Icon, XIcon} from '@untitled-theme/icons-react';
-import {NAVBAR_NAV_ITEMS} from './navbar-nav';
+import { getAuthor } from '@/lib/get-author';
+import { Icon } from '@/lib/icon';
+import { Link } from '@/lib/link';
+import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Portal } from '@ark-ui/react';
+import { Menu05Icon, XIcon } from '@untitled-theme/icons-react';
+import { NAVBAR_NAV_ITEMS } from './navbar-nav';
 
 export async function NavbarDrawer() {
 	const author = await getAuthor();
@@ -21,7 +21,7 @@ export async function NavbarDrawer() {
 	return (
 		<Dialog>
 			<DialogTrigger
-				color="zinc.100"
+				color="gray-true.100"
 				lg={{
 					display: 'none',
 				}}
@@ -61,10 +61,10 @@ export async function NavbarDrawer() {
 						h="full"
 						w={80}
 						maxW="full"
-						bg="zinc.800"
+						bg="gray-true.800"
 						pos="relative"
 						overflowY="auto"
-						borderLeft="1px solid token(colors.zinc.600)"
+						borderLeft="1px solid token(colors.gray-true.600)"
 						css={{
 							'&::-webkit-scrollbar': {
 								display: 'none',
@@ -78,7 +78,7 @@ export async function NavbarDrawer() {
 						}}
 					>
 						<Flex justifyContent="flex-end">
-							<DialogCloseTrigger color="zinc.300">
+							<DialogCloseTrigger color="gray-true.300">
 								<Icon w={8} h={8} asChild>
 									<XIcon strokeWidth="1.66667" />
 								</Icon>
@@ -98,10 +98,10 @@ export async function NavbarDrawer() {
 									>
 										<DialogCloseTrigger asChild>
 											<Link py={1} href={item.path}>
-												<Box fontFamily="mono" color="emerald.500">
+												<Box fontFamily="mono" color="green.500">
 													{index.toString().padStart(2, '0')}.
 												</Box>
-												<Box fontSize="lg" color="zinc.200">
+												<Box fontSize="lg" color="gray-true.200">
 													{item.label}
 												</Box>
 											</Link>

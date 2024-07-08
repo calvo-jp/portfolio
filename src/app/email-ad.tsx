@@ -1,7 +1,7 @@
-import {getAuthor} from '@/lib/get-author';
-import {Link} from '@/lib/link';
-import {Box} from '@/styled-system/jsx';
-import {Portal} from '@ark-ui/react';
+import { getAuthor } from '@/lib/get-author';
+import { Link } from '@/lib/link';
+import { Box } from '@/styled-system/jsx';
+import { Portal } from '@ark-ui/react';
 
 export async function EmailAd() {
 	const author = await getAuthor();
@@ -30,12 +30,12 @@ export async function EmailAd() {
 						letterSpacing="widest"
 						transition="colors token(durations.slow)"
 						color={{
-							_hover: 'emerald.500',
+							_hover: 'green.500',
 						}}
 					>
 						{author.contact.email}
 					</Link>
-					<Box h="15vh" w="1px" bg="zinc.800" />
+					<Box h="15vh" w="1px" bg="gray-true.800" />
 				</Box>
 			</Box>
 		</Portal>

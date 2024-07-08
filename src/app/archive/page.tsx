@@ -1,7 +1,7 @@
-import {getAuthor} from '@/lib/get-author';
-import {Icon} from '@/lib/icon';
-import {Link} from '@/lib/link';
-import {Prose} from '@/lib/prose';
+import { getAuthor } from '@/lib/get-author';
+import { Icon } from '@/lib/icon';
+import { Link } from '@/lib/link';
+import { Prose } from '@/lib/prose';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -10,12 +10,12 @@ import {
 	TooltipPositioner,
 	TooltipTrigger,
 } from '@/lib/tooltip';
-import type {TNonFeaturedProject} from '@/lib/types';
-import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {Portal} from '@ark-ui/react';
-import {GitBranch02Icon, LinkExternal02Icon} from '@untitled-theme/icons-react';
-import {format} from 'date-fns';
-import type {Metadata} from 'next';
+import type { TNonFeaturedProject } from '@/lib/types';
+import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { Portal } from '@ark-ui/react';
+import { GitBranch02Icon, LinkExternal02Icon } from '@untitled-theme/icons-react';
+import { format } from 'date-fns';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
 	title: 'Archive',
@@ -37,11 +37,11 @@ export default async function Archive() {
 					lg: '7xl',
 				}}
 				fontWeight="bold"
-				color="zinc.200"
+				color="gray-true.200"
 			>
 				Archive
 			</styled.h1>
-			<styled.p fontFamily="mono" color="emerald.500">
+			<styled.p fontFamily="mono" color="green.500">
 				A list of things I&rsquo;ve worked&nbsp;on
 			</styled.p>
 
@@ -66,7 +66,7 @@ export default async function Archive() {
 							fontFamily="mono"
 							fontSize="sm"
 							lineHeight="loose"
-							color="emerald.500"
+							color="green.500"
 						>
 							{year}
 						</Box>
@@ -93,10 +93,10 @@ function Item(props: TNonFeaturedProject) {
 			}}
 		>
 			<Box>
-				<styled.h2 fontSize="xl" fontWeight="bold" color="zinc.200">
+				<styled.h2 fontSize="xl" fontWeight="bold" color="gray-true.200">
 					{title}
 				</styled.h2>
-				<Prose color="zinc.300">{description}</Prose>
+				<Prose color="gray-true.300">{description}</Prose>
 				<styled.ul
 					mt={3}
 					display="flex"
@@ -121,7 +121,7 @@ function Item(props: TNonFeaturedProject) {
 								prefetch={false}
 								transition="colors token(durations.slow)"
 								_hover={{
-									color: 'emerald.500',
+									color: 'green.500',
 								}}
 							>
 								<Icon asChild>
@@ -153,7 +153,7 @@ function Item(props: TNonFeaturedProject) {
 							prefetch={false}
 							transition="colors token(durations.slow)"
 							_hover={{
-								color: 'emerald.500',
+								color: 'green.500',
 							}}
 						>
 							<Icon asChild>

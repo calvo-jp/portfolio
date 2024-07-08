@@ -1,9 +1,9 @@
-import {Icon} from '@/lib/icon';
-import {Link} from '@/lib/link';
-import {Spacer, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {TerminalIcon} from '@untitled-theme/icons-react';
-import {NavbarDrawer} from './navbar-drawer';
-import {NavbarNav} from './navbar-nav';
+import { Icon } from '@/lib/icon';
+import { Link } from '@/lib/link';
+import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { TerminalIcon } from '@untitled-theme/icons-react';
+import { NavbarDrawer } from './navbar-drawer';
+import { NavbarNav } from './navbar-nav';
 
 export async function Navbar() {
 	return (
@@ -13,7 +13,7 @@ export async function Navbar() {
 				base: 4,
 				md: 6,
 			}}
-			bg="zinc.900/75"
+			bg="gray-true.900/75"
 			pos="sticky"
 			top={0}
 			zIndex="sticky"
@@ -28,7 +28,7 @@ export async function Navbar() {
 				<Icon
 					w={8}
 					h={8}
-					color="emerald.500"
+					color="green.500"
 					lg={{
 						w: 6,
 						h: 6,

@@ -1,7 +1,7 @@
-import {Button} from '@/lib/button';
-import {getAuthor} from '@/lib/get-author';
-import {Link} from '@/lib/link';
-import {styled} from '@/styled-system/jsx';
+import { Button } from '@/lib/button';
+import { getAuthor } from '@/lib/get-author';
+import { Link } from '@/lib/link';
+import { styled } from '@/styled-system/jsx';
 
 export async function Hero() {
 	const author = await getAuthor();
@@ -16,7 +16,7 @@ export async function Hero() {
 				pb: 20,
 			}}
 		>
-			<styled.h3 fontFamily="mono" color="emerald.500">
+			<styled.h3 fontFamily="mono" color="green.500">
 				Hi, I&rsquo;m
 			</styled.h3>
 
@@ -35,7 +35,7 @@ export async function Hero() {
 
 			<styled.h2
 				mt={2}
-				color="zinc.300"
+				color="gray-true.300"
 				fontSize={{
 					base: '4xl',
 					lg: '6xl',

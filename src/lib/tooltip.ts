@@ -1,7 +1,7 @@
 'use client';
 
-import {styled} from '@/styled-system/jsx';
-import {Tooltip as ArkTooltip} from '@ark-ui/react';
+import { styled } from '@/styled-system/jsx';
+import { Tooltip as ArkTooltip } from '@ark-ui/react';
 
 export const Tooltip = styled(
 	ArkTooltip.Root,
@@ -26,8 +26,8 @@ export const TooltipContent = styled(ArkTooltip.Content, {
 	base: {
 		px: 4,
 		py: 2,
-		bg: 'zinc.700',
-		color: 'zinc.100',
+		bg: 'gray-true.700',
+		color: 'gray-true.100',
 		zIndex: 'tooltip',
 		fontSize: 'sm',
 	},
@@ -36,7 +36,7 @@ export const TooltipContent = styled(ArkTooltip.Content, {
 export const TooltipArrow = styled(ArkTooltip.Arrow, {
 	base: {
 		'--arrow-size': 'token(sizes.3)',
-		'--arrow-background': 'token(colors.zinc.700)',
+		'--arrow-background': 'token(colors.gray-true.700)',
 	},
 });
 

@@ -1,7 +1,7 @@
-import {getAuthor} from '@/lib/get-author';
-import {Link} from '@/lib/link';
-import {Center, VisuallyHidden, styled} from '@/styled-system/jsx';
-import {getSocialIcon} from './socials';
+import { getAuthor } from '@/lib/get-author';
+import { Link } from '@/lib/link';
+import { Center, VisuallyHidden, styled } from '@/styled-system/jsx';
+import { getSocialIcon } from './socials';
 
 export async function Footer() {
 	const author = await getAuthor();
@@ -23,7 +23,7 @@ export async function Footer() {
 									target="_blank"
 									rel="noreferrer noopener"
 									prefetch={false}
-									color="zinc.300"
+									color="gray-true.300"
 								>
 									{getSocialIcon(name)}
 									<VisuallyHidden>{name}</VisuallyHidden>

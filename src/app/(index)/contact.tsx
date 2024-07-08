@@ -1,7 +1,7 @@
-import {Button} from '@/lib/button';
-import {getAuthor} from '@/lib/get-author';
-import {Link} from '@/lib/link';
-import {styled} from '@/styled-system/jsx';
+import { Button } from '@/lib/button';
+import { getAuthor } from '@/lib/get-author';
+import { Link } from '@/lib/link';
+import { styled } from '@/styled-system/jsx';
 
 export async function Contact() {
 	const author = await getAuthor();
@@ -15,11 +15,11 @@ export async function Contact() {
 			}}
 			textAlign="center"
 		>
-			<styled.p color="emerald.500" fontFamily="mono">
+			<styled.p color="green.500" fontFamily="mono">
 				03. What&rsquo;s next?
 			</styled.p>
 			<styled.h2
-				color="zinc.200"
+				color="gray-true.200"
 				fontSize={{
 					base: '4xl',
 					lg: '6xl',

@@ -1,8 +1,8 @@
-import {Icon} from '@/lib/icon';
-import {Box, Flex, styled} from '@/styled-system/jsx';
-import type {Assign, HTMLStyledProps} from '@/styled-system/types';
-import {Asterisk02Icon} from '@untitled-theme/icons-react';
-import type {ReactNode} from 'react';
+import { Icon } from '@/lib/icon';
+import { Box, Flex, styled } from '@/styled-system/jsx';
+import type { Assign, HTMLStyledProps } from '@/styled-system/types';
+import { Asterisk02Icon } from '@untitled-theme/icons-react';
+import type { ReactNode } from 'react';
 
 interface BaseProps {
 	index: number;
@@ -19,7 +19,7 @@ export function SectionHeading(props: SectionHeadingProps) {
 	return (
 		<styled.h2 display="flex" alignItems="center" {...others}>
 			<styled.span
-				color="emerald.500"
+				color="green.500"
 				fontSize="lg"
 				fontFamily="mono"
 				lineHeight="none"
@@ -29,7 +29,7 @@ export function SectionHeading(props: SectionHeadingProps) {
 
 			<styled.span
 				ml={2}
-				color="zinc.200"
+				color="gray-true.200"
 				fontSize={{
 					base: '2xl',
 					lg: '3xl',
@@ -40,13 +40,13 @@ export function SectionHeading(props: SectionHeadingProps) {
 				{title}
 			</styled.span>
 
-			<Box mx={3} flexGrow={1} h="1px" bg="zinc.800" />
+			<Box mx={3} flexGrow={1} h="1px" bg="gray-true.800" />
 
 			<Flex>
 				<Icon
 					w={4}
 					h={4}
-					color="zinc.600"
+					color="gray-true.600"
 					display={{
 						base: 'none',
 						lg: 'block',
@@ -58,7 +58,7 @@ export function SectionHeading(props: SectionHeadingProps) {
 				<Icon
 					w={4}
 					h={4}
-					color="zinc.600"
+					color="gray-true.600"
 					display={{
 						base: 'none',
 						lg: 'block',

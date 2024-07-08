@@ -1,10 +1,10 @@
 'use client';
 
-import {css, cx} from '@/styled-system/css';
-import {styled} from '@/styled-system/jsx';
-import type {Assign, HTMLStyledProps} from '@/styled-system/types';
-import {ark, type HTMLArkProps} from '@ark-ui/react';
-import {forwardRef} from 'react';
+import { css, cx } from '@/styled-system/css';
+import { styled } from '@/styled-system/jsx';
+import type { Assign, HTMLStyledProps } from '@/styled-system/types';
+import { type HTMLArkProps, ark } from '@ark-ui/react';
+import { forwardRef } from 'react';
 
 const StyledArkDiv = styled(ark.div);
 
@@ -40,7 +40,7 @@ const prose = css({
 	hyphens: 'auto',
 
 	'& a': {
-		color: 'emerald.500',
+		color: 'green.500',
 		textUnderlineOffset: '0.35rem',
 		_hover: {
 			textDecoration: 'underline',

@@ -1,7 +1,7 @@
-import {Button} from '@/lib/button';
-import {getAuthor} from '@/lib/get-author';
-import {Link} from '@/lib/link';
-import {VisuallyHidden, styled} from '@/styled-system/jsx';
+import { Button } from '@/lib/button';
+import { getAuthor } from '@/lib/get-author';
+import { Link } from '@/lib/link';
+import { VisuallyHidden, styled } from '@/styled-system/jsx';
 
 export async function NavbarNav() {
 	const author = await getAuthor();
@@ -24,15 +24,15 @@ export async function NavbarNav() {
 							gap={1}
 							className="group"
 						>
-							<styled.span fontFamily="mono" color="emerald.500" fontSize="xs">
+							<styled.span fontFamily="mono" color="green.500" fontSize="xs">
 								{index.toString().padStart(2, '0')}.
 							</styled.span>
 							<styled.span
 								fontSize="sm"
 								transition="colors token(durations.slow)"
 								color={{
-									base: 'zinc.200',
-									_groupHover: 'emerald.500',
+									base: 'gray-true.200',
+									_groupHover: 'green.500',
 								}}
 							>
 								{item.label}

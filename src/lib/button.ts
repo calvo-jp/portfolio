@@ -1,13 +1,13 @@
 'use client';
 
-import {cva} from '@/styled-system/css';
-import {styled} from '@/styled-system/jsx';
-import {ark} from '@ark-ui/react';
+import { cva } from '@/styled-system/css';
+import { styled } from '@/styled-system/jsx';
+import { ark } from '@ark-ui/react';
 
 const recipe = cva({
 	base: {
-		color: 'emerald.500',
-		border: '1px solid token(colors.emerald.500)',
+		color: 'green.500',
+		border: '1px solid token(colors.green.500)',
 		cursor: 'pointer',
 		display: 'flex',
 		alignItems: 'center',

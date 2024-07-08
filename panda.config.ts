@@ -1,4 +1,5 @@
-import {defineConfig} from '@pandacss/dev';
+import { defineConfig } from '@pandacss/dev';
+import colors from '@untitled-theme/colors/panda';
 
 export default defineConfig({
 	preflight: true,
@@ -6,6 +7,7 @@ export default defineConfig({
 	theme: {
 		extend: {
 			tokens: {
+				colors,
 				fonts: {
 					sans: {value: 'var(--font-geist-sans)'},
 					mono: {value: 'var(--font-geist-mono)'},

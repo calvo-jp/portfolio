@@ -1,6 +1,6 @@
-import {Button} from '@/lib/button';
-import {Link} from '@/lib/link';
-import {Box, styled} from '@/styled-system/jsx';
+import { Button } from '@/lib/button';
+import { Link } from '@/lib/link';
+import { Box, styled } from '@/styled-system/jsx';
 
 export default function NotFound() {
 	return (
@@ -24,7 +24,7 @@ export default function NotFound() {
 				}}
 				fontWeight="black"
 				lineHeight="none"
-				color="emerald.500"
+				color="green.500"
 			>
 				404
 			</styled.h1>
@@ -34,7 +34,7 @@ export default function NotFound() {
 					lg: '3xl',
 				}}
 				lineHeight="none"
-				color="zinc.300"
+				color="gray-true.300"
 			>
 				Page Not Found
 			</styled.h2>

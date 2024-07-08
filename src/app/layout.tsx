@@ -1,16 +1,16 @@
 import './globals.css';
 
-import {getAuthor} from '@/lib/get-author';
-import {cx} from '@/styled-system/css';
-import {styled} from '@/styled-system/jsx';
-import {GeistMono} from 'geist/font/mono';
-import {GeistSans} from 'geist/font/sans';
-import type {Metadata} from 'next';
-import type {PropsWithChildren} from 'react';
-import {EmailAd} from './email-ad';
-import {Footer} from './footer';
-import {Navbar} from './navbar';
-import {Socials} from './socials';
+import { getAuthor } from '@/lib/get-author';
+import { cx } from '@/styled-system/css';
+import { styled } from '@/styled-system/jsx';
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
+import type { Metadata } from 'next';
+import type { PropsWithChildren } from 'react';
+import { EmailAd } from './email-ad';
+import { Footer } from './footer';
+import { Navbar } from './navbar';
+import { Socials } from './socials';
 
 export async function generateMetadata(): Promise<Metadata> {
 	const author = await getAuthor();
@@ -61,8 +61,8 @@ export default async function RootLayout({children}: PropsWithChildren) {
 			}}
 		>
 			<styled.body
-				bg="zinc.900"
-				color="zinc.400"
+				bg="gray-true.900"
+				color="gray-true.400"
 				minHeight="dvh"
 				fontFamily="sans"
 			>
