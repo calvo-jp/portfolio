@@ -2,7 +2,7 @@
 title: Untitled Theme
 repository: https://github.com/calvo-jp/untitled-theme
 website: https://untitled-theme-docs.vercel.app
-image: /untitled-theme.jpeg
+image: /untitled-theme.png
 tags:
   - npm
   - React
