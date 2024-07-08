@@ -1,7 +1,7 @@
-import { Prose } from '@/lib/prose';
-import type { TWorkHistory } from '@/lib/types';
-import { Box, styled } from '@/styled-system/jsx';
-import { format, isSameYear } from 'date-fns';
+import {Prose} from '@/lib/prose';
+import type {TWorkHistory} from '@/lib/types';
+import {Box, styled} from '@/styled-system/jsx';
+import {format, isSameYear} from 'date-fns';
 
 interface ExperienceItemProps {
 	data: TWorkHistory;
@@ -41,11 +41,14 @@ export async function ExperienceItem(props: ExperienceItemProps) {
 
 function formatEmploymentDate(start: Date, until?: Date): [string, string] {
 	/* ie. January 2021 - Present */
-	if (!until) return [format(start, 'MMMM yyyy'), 'Present'];
+	if (!until) {
+		return [format(start, 'MMMM yyyy'), 'Present'];
+	}
 
 	/* ie. January - December 2021 */
-	if (isSameYear(start, until))
+	if (isSameYear(start, until)) {
 		return [format(start, 'MMMM'), format(until, 'MMMM yyyy')];
+	}
 
 	/* ie. January 2021 - December 2022 */
 	return [format(start, 'MMMM yyyy'), format(until, 'MMMM yyyy')];

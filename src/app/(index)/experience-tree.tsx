@@ -1,8 +1,8 @@
-import { getAuthor } from '@/lib/get-author';
-import { Box, Flex } from '@/styled-system/jsx';
-import { format } from 'date-fns';
-import type { PropsWithChildren } from 'react';
-import { ExperienceItem } from './experience-item';
+import {getAuthor} from '@/lib/get-author';
+import {Box, Flex} from '@/styled-system/jsx';
+import {format} from 'date-fns';
+import type {PropsWithChildren} from 'react';
+import {ExperienceItem} from './experience-item';
 
 export async function ExperienceTree() {
 	const author = await getAuthor();
