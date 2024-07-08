@@ -3,14 +3,65 @@ import './globals.css';
 import { getAuthor } from '@/lib/get-author';
 import { cx } from '@/styled-system/css';
 import { styled } from '@/styled-system/jsx';
-import { GeistMono } from 'geist/font/mono';
-import { GeistSans } from 'geist/font/sans';
-import type { Metadata } from 'next';
+import { token } from '@/styled-system/tokens';
+import type { Metadata, Viewport } from 'next';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import type { PropsWithChildren } from 'react';
 import { EmailAd } from './email-ad';
 import { Footer } from './footer';
 import { Navbar } from './navbar';
 import { Socials } from './socials';
+
+export const viewport: Viewport = {
+	width: 'device-width',
+	viewportFit: 'contain',
+	userScalable: false,
+	initialScale: 1,
+	minimumScale: 1,
+	maximumScale: 1,
+	colorScheme: 'dark light',
+	themeColor: [
+		{media: '(prefers-color-scheme: light)', color: token('colors.white')},
+		{media: '(prefers-color-scheme: dark)', color: token('colors.gray-true.900')},
+	],
+};
+
+const sans = Inter({
+	weight: ['400', '500', '600', '700'],
+	display: 'swap',
+	subsets: ['latin'],
+	preload: true,
+	adjustFontFallback: true,
+	variable: '--font-sans',
+	fallback: [
+		'system-ui',
+		'-apple-system',
+		'BlinkMacSystemFont',
+		"'Segoe UI'",
+		'Roboto',
+		'Oxygen',
+		'Ubuntu',
+		'Cantarell',
+		"'Open Sans'",
+		"'Helvetica Neue'",
+		'sans-serif',
+	],
+});
+
+const mono = JetBrains_Mono({
+	weight: ['400'],
+	display: 'swap',
+	subsets: ['latin'],
+	preload: true,
+	adjustFontFallback: true,
+	variable: '--font-mono',
+	fallback: [
+		/**/
+		"'Courier New'",
+		'Courier',
+		'monospace',
+	],
+});
 
 export async function generateMetadata(): Promise<Metadata> {
 	const author = await getAuthor();
@@ -44,7 +95,7 @@ export default async function RootLayout({children}: PropsWithChildren) {
 	return (
 		<styled.html
 			lang="en"
-			className={cx(GeistSans.variable, GeistMono.variable)}
+			className={cx(sans.variable, mono.variable)}
 			colorScheme="dark"
 			scrollBehavior="smooth"
 			scrollbarGutter="stable"
