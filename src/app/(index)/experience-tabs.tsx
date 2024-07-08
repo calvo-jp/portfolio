@@ -1,6 +1,6 @@
-import { getAuthor } from '@/lib/get-author';
-import { TabContent, TabIndicator, TabList, TabTrigger, Tabs } from '@/lib/tabs';
-import { ExperienceItem } from './experience-item';
+import {getAuthor} from '@/lib/get-author';
+import {TabContent, TabIndicator, TabList, TabTrigger, Tabs} from '@/lib/tabs';
+import {ExperienceItem} from './experience-item';
 
 export async function ExperienceTabs() {
 	const author = await getAuthor();

@@ -1,9 +1,9 @@
-import { Icon } from '@/lib/icon';
-import { Link } from '@/lib/link';
-import { Spacer, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { TerminalIcon } from '@untitled-theme/icons-react';
-import { NavbarDrawer } from './navbar-drawer';
-import { NavbarNav } from './navbar-nav';
+import {Icon} from '@/lib/icon';
+import {Link} from '@/lib/link';
+import {Spacer, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {TerminalIcon} from '@untitled-theme/icons-react';
+import {NavbarDrawer} from './navbar-drawer';
+import {NavbarNav} from './navbar-nav';
 
 export async function Navbar() {
 	return (

@@ -1,7 +1,7 @@
-import { getAuthor } from '@/lib/get-author';
-import { Icon } from '@/lib/icon';
-import { Link } from '@/lib/link';
-import { Prose } from '@/lib/prose';
+import {getAuthor} from '@/lib/get-author';
+import {Icon} from '@/lib/icon';
+import {Link} from '@/lib/link';
+import {Prose} from '@/lib/prose';
 import {
 	Tooltip,
 	TooltipArrow,
@@ -10,12 +10,12 @@ import {
 	TooltipPositioner,
 	TooltipTrigger,
 } from '@/lib/tooltip';
-import type { TNonFeaturedProject } from '@/lib/types';
-import { Box, Flex, HStack, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { Portal } from '@ark-ui/react';
-import { GitBranch02Icon, LinkExternal02Icon } from '@untitled-theme/icons-react';
-import { format } from 'date-fns';
-import type { Metadata } from 'next';
+import type {TNonFeaturedProject} from '@/lib/types';
+import {Box, Flex, HStack, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {Portal} from '@ark-ui/react';
+import {GitBranch02Icon, LinkExternal02Icon} from '@untitled-theme/icons-react';
+import {format} from 'date-fns';
+import type {Metadata} from 'next';
 
 export const metadata: Metadata = {
 	title: 'Archive',

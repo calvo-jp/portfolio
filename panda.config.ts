@@ -1,4 +1,4 @@
-import { defineConfig } from '@pandacss/dev';
+import {defineConfig} from '@pandacss/dev';
 import colors from '@untitled-theme/colors/panda';
 
 export default defineConfig({

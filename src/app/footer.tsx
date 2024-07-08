@@ -1,7 +1,7 @@
-import { getAuthor } from '@/lib/get-author';
-import { Link } from '@/lib/link';
-import { Center, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { getSocialIcon } from './socials';
+import {getAuthor} from '@/lib/get-author';
+import {Link} from '@/lib/link';
+import {Center, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {getSocialIcon} from './socials';
 
 export async function Footer() {
 	const author = await getAuthor();

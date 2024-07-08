@@ -1,18 +1,18 @@
-import { capitalize } from '@/lib/capitalize';
-import { getAuthor } from '@/lib/get-author';
-import { Icon } from '@/lib/icon';
-import { Link } from '@/lib/link';
+import {capitalize} from '@/lib/capitalize';
+import {getAuthor} from '@/lib/get-author';
+import {Icon} from '@/lib/icon';
+import {Link} from '@/lib/link';
 import {
-    Tooltip,
-    TooltipArrow,
-    TooltipArrowTip,
-    TooltipContent,
-    TooltipPositioner,
-    TooltipTrigger,
+	Tooltip,
+	TooltipArrow,
+	TooltipArrowTip,
+	TooltipContent,
+	TooltipPositioner,
+	TooltipTrigger,
 } from '@/lib/tooltip';
-import { Box, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { Portal } from '@ark-ui/react';
-import { type SVGProps, forwardRef } from 'react';
+import {Box, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {Portal} from '@ark-ui/react';
+import {type SVGProps, forwardRef} from 'react';
 
 export async function Socials() {
 	const author = await getAuthor();

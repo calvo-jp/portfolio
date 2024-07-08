@@ -1,10 +1,10 @@
 'use client';
 
-import { css, cx } from '@/styled-system/css';
-import { styled } from '@/styled-system/jsx';
-import type { Assign, HTMLStyledProps } from '@/styled-system/types';
-import { type HTMLArkProps, ark } from '@ark-ui/react';
-import { forwardRef } from 'react';
+import {css, cx} from '@/styled-system/css';
+import {styled} from '@/styled-system/jsx';
+import type {Assign, HTMLStyledProps} from '@/styled-system/types';
+import {type HTMLArkProps, ark} from '@ark-ui/react';
+import {forwardRef} from 'react';
 
 const StyledArkDiv = styled(ark.div);
 

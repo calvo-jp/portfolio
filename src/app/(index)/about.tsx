@@ -1,11 +1,11 @@
-import { getAuthor } from '@/lib/get-author';
-import { Icon } from '@/lib/icon';
-import { Image } from '@/lib/image';
-import { Link } from '@/lib/link';
-import { Prose } from '@/lib/prose';
-import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { Asterisk02Icon } from '@untitled-theme/icons-react';
-import { SectionHeading } from './section-heading';
+import {getAuthor} from '@/lib/get-author';
+import {Icon} from '@/lib/icon';
+import {Image} from '@/lib/image';
+import {Link} from '@/lib/link';
+import {Prose} from '@/lib/prose';
+import {Box, Flex, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {Asterisk02Icon} from '@untitled-theme/icons-react';
+import {SectionHeading} from './section-heading';
 import selfie from './selfie.jpg';
 
 export async function About() {

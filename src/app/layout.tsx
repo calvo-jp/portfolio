@@ -1,16 +1,16 @@
 import './globals.css';
 
-import { getAuthor } from '@/lib/get-author';
-import { cx } from '@/styled-system/css';
-import { styled } from '@/styled-system/jsx';
-import { token } from '@/styled-system/tokens';
-import type { Metadata, Viewport } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
-import type { PropsWithChildren } from 'react';
-import { EmailAd } from './email-ad';
-import { Footer } from './footer';
-import { Navbar } from './navbar';
-import { Socials } from './socials';
+import {getAuthor} from '@/lib/get-author';
+import {cx} from '@/styled-system/css';
+import {styled} from '@/styled-system/jsx';
+import {token} from '@/styled-system/tokens';
+import type {Metadata, Viewport} from 'next';
+import {Inter, JetBrains_Mono} from 'next/font/google';
+import type {PropsWithChildren} from 'react';
+import {EmailAd} from './email-ad';
+import {Footer} from './footer';
+import {Navbar} from './navbar';
+import {Socials} from './socials';
 
 export const viewport: Viewport = {
 	width: 'device-width',
@@ -22,7 +22,10 @@ export const viewport: Viewport = {
 	colorScheme: 'dark light',
 	themeColor: [
 		{media: '(prefers-color-scheme: light)', color: token('colors.white')},
-		{media: '(prefers-color-scheme: dark)', color: token('colors.gray-true.900')},
+		{
+			media: '(prefers-color-scheme: dark)',
+			color: token('colors.gray-true.900'),
+		},
 	],
 };
 

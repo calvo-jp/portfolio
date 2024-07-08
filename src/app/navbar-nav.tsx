@@ -1,7 +1,7 @@
-import { Button } from '@/lib/button';
-import { getAuthor } from '@/lib/get-author';
-import { Link } from '@/lib/link';
-import { VisuallyHidden, styled } from '@/styled-system/jsx';
+import {Button} from '@/lib/button';
+import {getAuthor} from '@/lib/get-author';
+import {Link} from '@/lib/link';
+import {VisuallyHidden, styled} from '@/styled-system/jsx';
 
 export async function NavbarNav() {
 	const author = await getAuthor();

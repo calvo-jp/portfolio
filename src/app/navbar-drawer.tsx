@@ -1,19 +1,19 @@
-import { Button } from '@/lib/button';
+import {Button} from '@/lib/button';
 import {
-    Dialog,
-    DialogBackdrop,
-    DialogCloseTrigger,
-    DialogContent,
-    DialogPositioner,
-    DialogTrigger,
+	Dialog,
+	DialogBackdrop,
+	DialogCloseTrigger,
+	DialogContent,
+	DialogPositioner,
+	DialogTrigger,
 } from '@/lib/dialog';
-import { getAuthor } from '@/lib/get-author';
-import { Icon } from '@/lib/icon';
-import { Link } from '@/lib/link';
-import { Box, Flex, VisuallyHidden, styled } from '@/styled-system/jsx';
-import { Portal } from '@ark-ui/react';
-import { Menu05Icon, XIcon } from '@untitled-theme/icons-react';
-import { NAVBAR_NAV_ITEMS } from './navbar-nav';
+import {getAuthor} from '@/lib/get-author';
+import {Icon} from '@/lib/icon';
+import {Link} from '@/lib/link';
+import {Box, Flex, VisuallyHidden, styled} from '@/styled-system/jsx';
+import {Portal} from '@ark-ui/react';
+import {Menu05Icon, XIcon} from '@untitled-theme/icons-react';
+import {NAVBAR_NAV_ITEMS} from './navbar-nav';
 
 export async function NavbarDrawer() {
 	const author = await getAuthor();
